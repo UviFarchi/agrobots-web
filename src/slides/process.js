@@ -5,13 +5,21 @@ export default {
     title: 'Bioromization',
     component: 'ConnectionCircles',
     content: {
-        connectMessageBgColor: colors.primary,
+        connectMessageBgColor: colors.secondary,
         connectMessageTextColor: colors.textDark,
         connectButtonBgColor: colors.secondary,
         connectButtonTextColor: colors.textDark,
         circlesClosedDiameter:"30vh",
         circlesOpenDiameter:"60vh",
         circles: [
+            {
+                id: "intro",
+                position: "center-middle",
+                title: "From Farm to Biorome",
+                text: "Our process is a continuous cycle of design, deployment, operations, and optimization. Each phase feeds into the next, creating a self-improving system.",
+                activeOnStart: true,
+                textColor: colors.primary
+            },
             {
                 id: "design",
                 position: "center-left",
@@ -21,7 +29,7 @@ export default {
                 borderColor: colors.primary,
                 borderWidth: 2,
                 bgColor: colors.backgroundDark,
-                textColor: colors.primary,
+                textColor: colors.textLight,
                 connectionText: "Blueprint established and verified, proceed to biorome installation",
                 target: "deployment",
                 arrowColor: colors.primary
@@ -35,7 +43,7 @@ export default {
                 borderColor: colors.primary,
                 borderWidth: 2,
                 bgColor: colors.backgroundDark,
-                textColor: colors.primary,
+                textColor: colors.textLight,
                 connectionText: "Infrastructure in place and biotic elements introduced, system primed for full-scale production",
                 target: "operations",
                 arrowColor: colors.primary
@@ -49,7 +57,7 @@ export default {
                 borderColor: colors.primary,
                 borderWidth: 2,
                 bgColor: colors.backgroundDark,
-                textColor: colors.primary,
+                textColor: colors.textLight,
                 connectionText: "Operational data flows into the system, setting the stage for continuous refinement.",
                 target: "optimization",
                 arrowColor: colors.primary
@@ -63,18 +71,10 @@ export default {
                 borderColor: colors.primary,
                 borderWidth: 2,
                  bgColor: colors.backgroundDark,
-                textColor: colors.primary,
+                textColor: colors.textLight,
                 connectionText: "Optimized parameters feed back into operations, ensuring the system evolves for sustained performance.",
                 target: "operations",
                 arrowColor: colors.primary
-            } ,
-            {
-                id: "intro",
-                position: "center-middle",
-                title: "From Farm to Biorome",
-                text: "Our process is a continuous cycle of design, deployment, operations, and optimization. Each phase feeds into the next, creating a self-improving system.",
-                activeOnStart: true,
-                textColor: colors.primary
             }
         ]
     }

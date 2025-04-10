@@ -14,6 +14,12 @@ export default {
         circlesOpenDiameter: "60vh",
         circles: [
             {
+                id: "landOsLogo",
+                position: "center-middle",
+                img: "../assets/img/landos_logo_glow.png",
+                textColor: colors.secondary,
+                title: "Unified Terrain Management Platform"
+            }, {
                 id: "optimizationEngine",
                 position: "top-middle",
                 title: "Optimization Engine",
@@ -28,13 +34,7 @@ export default {
                 bgColor: colors.backgroundDark,
                 textColor: colors.primary,
             },
-            {
-                id: "landOsLogo",
-                position: "center-middle",
-                img: "../assets/img/landos_logo_glow.png",
-                textColor: colors.secondary,
-                title: "Unified Terrain Management Platform"
-            },
+
             {
                 id: "operationsEngine",
                 position: "bottom-right",

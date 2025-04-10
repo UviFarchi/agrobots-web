@@ -1,5 +1,5 @@
 <template>
-  <div class="slide-wrapper">
+  <div class="contact-wrapper">
     <h1 class="slide-title" :style="{ color: slideTitleColor }">
       {{ slideTitle }}
     </h1>
@@ -7,33 +7,33 @@
       {{ slideIntro }}
     </p>
     <div
-      class="card-grid"
-      :style="{ gridTemplateColumns: `repeat(${columns}, minmax(300px, 1fr))` }"
+        class="card-grid"
+        :style="{ gridTemplateColumns: `repeat(${columns}, minmax(300px, 1fr))` }"
     >
       <div
-        v-for="(card, i) in cards"
-        :key="i"
-        class="flip-card-container"
+          v-for="(card, i) in cards"
+          :key="i"
+          class="flip-card-container"
       >
         <div
-          v-if="lockedSet.has(i)"
-          class="placeholder"
+            v-if="lockedSet.has(i)"
+            class="placeholder"
         ></div>
         <div
-          class="flip-card"
-          :class="{
+            class="flip-card"
+            :class="{
             active: lockedSet.has(i) && activeCard !== i,
             initialPosition: activeCard === i
           }"
-          :style="activeCard === i ? initialPosition : {}"
-          @mouseenter="handleMouseEnter(i)"
-          @mouseleave="handleMouseLeave(i)"
-          @click="handleClick(i)"
+            :style="activeCard === i ? initialPosition : {}"
+            @mouseenter="handleMouseEnter(i)"
+            @mouseleave="handleMouseLeave(i)"
+            @click="handleClick(i)"
         >
           <div class="flip-card-inner" :class="{ flipped: isFlipped(i) }">
             <div
-              class="flip-card-front"
-              :style="{
+                class="flip-card-front"
+                :style="{
                 background: card.frontBg,
                 color: card.frontColor,
                 border: `1px solid ${card.frontBorder}`
@@ -43,8 +43,8 @@
               <div class="cardTitle">{{ card.title }}</div>
             </div>
             <div
-              class="flip-card-back"
-              :style="{
+                class="flip-card-back"
+                :style="{
                 background: card.backBg,
                 color: card.backColor,
                 border: `1px solid ${card.backBorder}`,
@@ -142,18 +142,21 @@ export default {
   position: relative;
   margin-top: 1.2rem;
 }
+
 .flip-card-container {
   position: relative;
   width: 30vh;
   height: 30vh;
   margin: 0 auto;
 }
+
 .placeholder {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   background: transparent;
 }
+
 .flip-card {
   perspective: 1000px;
   width: 100%;
@@ -167,6 +170,7 @@ export default {
   z-index: 1;
   transform-origin: center center;
 }
+
 @keyframes fadeInText {
   0%, 99% {
     opacity: 0;
@@ -175,16 +179,19 @@ export default {
     opacity: 1;
   }
 }
+
 .flip-card.active .flip-card-back p,
 .flip-card.active .flip-card-back .read-more {
   animation: fadeInText 0.3s forwards;
 }
+
 .flip-card.initialPosition {
   position: fixed;
   transition: none;
   transform: none;
   z-index: 1000;
 }
+
 .flip-card.active {
   position: fixed;
   top: 50%;
@@ -195,6 +202,7 @@ export default {
   z-index: 1000;
   transition: all 0.3s ease;
 }
+
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -204,11 +212,13 @@ export default {
   transition: transform 0.6s;
   border-radius: 50%;
 }
+
 .flip-card-inner.flipped {
   transform: rotateY(180deg);
   z-index: 1000;
   position: absolute;
 }
+
 .flip-card-front,
 .flip-card-back {
   position: absolute;
@@ -222,19 +232,23 @@ export default {
   align-items: center;
   justify-content: center;
 }
+
 .flip-card-back {
   transform: rotateY(180deg);
   z-index: 12;
 }
+
 .cardIcon {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
+
 .cardTitle {
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
 }
+
 .flip-card:not(.active) .flip-card-back p {
   line-height: 1.2em;
   max-height: calc(1.2em * 6);
@@ -242,6 +256,7 @@ export default {
   position: relative;
   padding: 1rem;
 }
+
 .flip-card:not(.active) .flip-card-back p::after {
   content: "\.\.\.";
   position: absolute;
@@ -253,6 +268,7 @@ export default {
   text-indent: 7rem;
   color: var(--card-bg-color);
 }
+
 .flip-card:not(.active) .flip-card-back .read-more {
   display: block;
   position: absolute;
@@ -263,26 +279,53 @@ export default {
   cursor: pointer;
   font-weight: bold;
 }
+
 .flip-card.active .flip-card-back p {
   max-height: none;
   overflow: visible;
   padding: 3rem;
   font-weight: lighter;
+  overflow: auto;
 }
+
 .flip-card.active .flip-card-back .read-more {
   display: none;
 }
+
 .slide-title {
   margin-top: 0;
   margin-bottom: 1rem;
   flex: 1;
 }
+
 .slide-intro {
   flex: 1;
 }
+
 @media (max-width: 768px) {
   .card-grid {
     grid-template-columns: repeat(1, minmax(200px, 1fr)) !important;
+  }
+
+  .flip-card.active {
+    height: 100vh;
+    width: 100vh;
+    padding-top: 3rem;
+  }
+
+  .flip-card.active .flip-card-back p {
+    max-width: 100vw;
+  }
+
+  .flip-card:not(.active) .flip-card-back p {
+    line-height: 1.2em;
+    max-height: calc(1.2em * 4);
+  }
+
+  .flip-card:not(.active) .flip-card-back .read-more {
+    display: block;
+    position: absolute;
+    margin-top: calc(1.2em * 7);
   }
 }
 </style>

@@ -9,7 +9,6 @@
     />
 
     <nav class="main-nav">
-      <div class="nav-container">
         <div class="nav-controls">
           <button @click="prevSlide" class="nav-arrow" :style="{ visibility: currentSlide > 0 ? 'visible' : 'hidden' }">
             ‹
@@ -27,7 +26,6 @@
             ›
           </button>
         </div>
-      </div>
 
       <ul :class="['nav-menu', { 'active': menuOpen }]">
         <li v-for="(slide, index) in slides" :key="slide.name">
@@ -68,7 +66,7 @@
         <a class="footer-button footer-link" href="/privacy">Privacy Policy</a>
       </div>
       <div class="footer-center">
-        <p>© 2025 Agrobots — All rights reserved</p>
+        <p>© 2025 Agrobots</p>
       </div>
       <div class="footer-right">
         <button @click="toggleContact" class="footer-button">Contact</button>

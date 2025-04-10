@@ -19,7 +19,7 @@ export default {
         frontBg: colors.primary,
         frontColor: colors.textDark,
         frontBorder: colors.accent,
-        backBg: colors.secondary,
+        backBg: colors.backgroundLight,
         backColor: colors.textDark,
         backBorder: colors.accent
       },
@@ -30,7 +30,7 @@ export default {
         frontBg: colors.primary,
         frontColor: colors.textDark,
         frontBorder: colors.accent,
-        backBg: colors.secondary,
+        backBg: colors.backgroundLight,
         backColor: colors.textDark,
         backBorder: colors.accent
       },
@@ -41,7 +41,7 @@ export default {
         frontBg: colors.primary,
         frontColor: colors.textDark,
         frontBorder: colors.accent,
-        backBg: colors.secondary,
+        backBg: colors.backgroundLight,
         backColor: colors.textDark,
         backBorder: colors.accent
       }

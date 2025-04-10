@@ -1,5 +1,5 @@
 <template>
-  <div class="slide-wrapper">
+  <div class="contact-wrapper">
     <!-- Apply dynamic order using inline styles -->
     <div class="panner-content" :style="{ order: contentOrder }">
       <template v-if="modes && modes[mode]">
@@ -133,7 +133,7 @@ export default {
 </script>
 
 <style scoped>
-.slide-wrapper {
+.contact-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -141,7 +141,7 @@ export default {
 }
 
 .panner-content {
-  background: rgba(0, 0, 0, 0.75);
+  background: var(--backgroundDarkTranslucent);
   padding: 1.2rem;
   padding-top: 5%;          /* Top buffer */
   box-sizing: border-box;
@@ -152,7 +152,7 @@ export default {
 
 .panner-button-panel {
   flex: 0.15;
-  background: rgba(0, 0, 0, 0.75);
+  background: var(--backgroundDarkTranslucent);
   padding: 1.2rem;
   box-sizing: border-box;
   align-self: flex-start;   /* Align to top */
@@ -240,12 +240,44 @@ h1, h2 {
 }
 
 @media (max-width: 768px) {
-  .slide-wrapper {
+  .contact-wrapper {
     flex-direction: column;
+    height: 100vh;
+    position: relative;
+    justify-content: flex-start;
+    padding-bottom: 0;
   }
-  .panner-content, .panner-button-panel {
+
+  .panner-content {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    order: unset !important;
+  }
+
+  .panner-button-panel {
     width: 100%;
-    margin: 5% 0;
+    background: var(--backgroundDarkTranslucent);
+    padding: 0.8rem;
+    order: unset !important;
+  }
+
+  .buttons-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .panner-button {
+    flex-grow: 1;
+    max-width: 45%;
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  .buttons-legend {
+    margin: 0.5rem 0;
   }
 }
 </style>

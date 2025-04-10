@@ -1,11 +1,11 @@
 <template>
-  <div class="slide-wrapper">
+  <div class="contact-wrapper">
+    <div class="mobile-spacer"></div>
     <h1 class="video-title">{{ introTitle }}</h1>
-    <!-- First paragraph before the video -->
-    <div class="pre-video-text" v-if="introText && introText.length">
-      <p>{{ introText[0] }}</p>
-    </div>
     <div class="video-container">
+      <div class="pre-video-text" v-if="introText && introText.length">
+        <p>{{ introText[0] }}</p>
+      </div>
       <div class="video-wrapper">
         <iframe
             width="100%"
@@ -66,6 +66,7 @@ export default {
 .pre-video-text p,
 .post-video-text p {
   margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
 .video-title {
@@ -75,6 +76,19 @@ export default {
 }
 
 @media (max-width: 768px) {
+  .mobile-spacer {
+    height: 15vh;
+    width: 100%;
+    background: var(--backgroundDark);
+    display: block;
+    position: fixed;
+    top: 5vh;
+  }
+  .video-title {
+    margin-top: 10vh;
+    text-align: center;
+  }
+
   .video-wrapper {
     float: none;
     width: 100%;
@@ -85,5 +99,9 @@ export default {
   .post-video-text {
     margin-top: 0;
   }
+
+
 }
+
+
 </style>

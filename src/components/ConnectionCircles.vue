@@ -1,5 +1,5 @@
 <template>
-  <div class="slide-wrapper">
+  <div class="contact-wrapper">
     <div
         v-for="(circle, idx) in circles"
         :key="idx"
@@ -356,6 +356,7 @@ export default {
   width: 15vw;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
 }
 
 .svg-overlay {
@@ -398,26 +399,86 @@ export default {
 }
 
 @media (max-width: 768px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: auto;
+    overflow-y: auto;
+    max-height: 100vh;
+  }
+
   .action-circle {
-    position: static !important;
-    margin: 1rem 0;
-    max-width: 90vw !important;
+    position: relative !important;
+    margin: 0.8rem 0;
+    width: 100% !important;
+    height: auto !important;
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    border-radius: 10vw;
+    padding: 1.5rem;
+    cursor: default;
+    pointer-events: none;
   }
 
-  .connect-message {
-    position: static;
+  /* Show all content by default */
+  .action-circle p {
+    display: block !important;
+    animation: none !important;
     margin-top: 1rem;
-    transform: none;
-    width: 100%;
-    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1.4;
   }
 
+  .action-circle img {
+    margin-bottom: 1rem;
+  }
+
+  .action-circle .circle-title {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+
+  .action-circle button {
+ display: none;
+  }
+
+  /* Display connection messages between circles */
+  .mobile-connection {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+    margin: 0.3rem 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .mobile-connection::before {
+    content: "↓";
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  /* Hide desktop elements */
   .svg-overlay {
     display: none;
   }
+
+  .connect-message {
+    position: relative;
+    width: 100%;
+    margin: 0.5rem 0;
+    text-align: center;
+    box-sizing: border-box;
+    color: white;
+  }
 }
 
-.circle-title {
-  margin-top: 1.2rem;
-}
+
+
 </style>

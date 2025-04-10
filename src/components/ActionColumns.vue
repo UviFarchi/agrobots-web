@@ -41,7 +41,7 @@
                   </script>
 
                   <template>
-                    <div class="slide-wrapper">
+                    <div class="contact-wrapper">
                       <h1 class="slide-title" :style="{ color: general.slideTitleColor }">
                         {{ general.slideTitle }}
                       </h1>
@@ -61,6 +61,7 @@
                             borderWidth: column.borderWidth ? column.borderWidth + 'px' : '1px'
                           }"
                         >
+                          <div class="columnIcon">{{column.columnIcon}}</div>
                           <h2 class="columnTitle">{{ column.columnTitle }}</h2>
                           <p class="columnText">{{ column.columnText }}</p>
 
@@ -143,7 +144,7 @@
                   }
 
                   .buttonLink {
-                    width: 10rem;
+                    width: 50%;
                     height: 50px;
                     margin-top: auto;
                     margin-bottom: 10px;
@@ -151,7 +152,9 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border-radius: 25px;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    font-weight: bold;
                   }
 
                   .slide-title{
@@ -160,5 +163,22 @@
                   }.slide-intro{
                     text-align: center;
                     margin: 1.2rem;
+                  }
+
+                  .columnIcon {
+                    text-align: center;
+                    margin: 1.2rem;
+                    font-size: 4rem;
+                  }
+
+                  @media (max-width: 768px) {
+                    .columnsContainer {
+                      flex-direction: column;
+                      align-items: center;
+                    }
+                    .actionColumns {
+                      width: 90%;
+                      margin: 1rem auto;
+                    }
                   }
                   </style>
