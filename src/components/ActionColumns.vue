@@ -41,7 +41,7 @@
                   </script>
 
                   <template>
-                    <div class="slide-wrapper">
+                    <div class="contact-wrapper">
                       <h1 class="slide-title" :style="{ color: general.slideTitleColor }">
                         {{ general.slideTitle }}
                       </h1>
@@ -169,5 +169,16 @@
                     text-align: center;
                     margin: 1.2rem;
                     font-size: 4rem;
+                  }
+
+                  @media (max-width: 768px) {
+                    .columnsContainer {
+                      flex-direction: column;
+                      align-items: center;
+                    }
+                    .actionColumns {
+                      width: 90%;
+                      margin: 1rem auto;
+                    }
                   }
                   </style>

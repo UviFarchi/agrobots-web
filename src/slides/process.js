@@ -13,6 +13,14 @@ export default {
         circlesOpenDiameter:"60vh",
         circles: [
             {
+                id: "intro",
+                position: "center-middle",
+                title: "From Farm to Biorome",
+                text: "Our process is a continuous cycle of design, deployment, operations, and optimization. Each phase feeds into the next, creating a self-improving system.",
+                activeOnStart: true,
+                textColor: colors.primary
+            },
+            {
                 id: "design",
                 position: "center-left",
                 title: "Step 1:<br><br><strong>Design</strong>",
@@ -67,14 +75,6 @@ export default {
                 connectionText: "Optimized parameters feed back into operations, ensuring the system evolves for sustained performance.",
                 target: "operations",
                 arrowColor: colors.primary
-            } ,
-            {
-                id: "intro",
-                position: "center-middle",
-                title: "From Farm to Biorome",
-                text: "Our process is a continuous cycle of design, deployment, operations, and optimization. Each phase feeds into the next, creating a self-improving system.",
-                activeOnStart: true,
-                textColor: colors.primary
             }
         ]
     }

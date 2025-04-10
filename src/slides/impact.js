@@ -19,7 +19,6 @@ export default {
                     "Yet, the cost of inaction is steep. Relying on conventional methods—fossil-fuel machinery, chemical inputs, and rigid monocultures—drains our soils, strains water resources, and drives up storage and transport costs. Without innovation, supply chains become unpredictable and our food systems vulnerable to climate shocks and market disruptions. This degradation not only jeopardizes the future of agriculture but also inflates expenses and undermines reliable access to fresh produce.",
                     "Now, more than ever, we have a unique opportunity to transform challenges into promise. By embracing the just-in-place and just-in-time principles of Agriculture 4.0, Agrobots ensures that food is produced exactly where and when it’s needed. Our approach creates vibrant ecosystems that preserve biodiversity while delivering high-quality, affordable, and sufficient food for everyone. The choice is clear: a future built on balance, innovation, and respect for nature will nourish both the land and the communities that depend on it."
 
-
                 ],
                 titleColor: colors.primary,
                 paragraphsColor: colors.textLight,

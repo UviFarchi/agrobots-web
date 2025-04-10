@@ -1,5 +1,5 @@
 <template>
-    <div class="slide-wrapper">
+    <div class="contact-wrapper">
       <div class="form-container">
         <button class="close-btn" @click="closeForm">Close</button>
         <h1>Let’s talk</h1>
@@ -48,7 +48,7 @@
   </script>
 
   <style scoped>
-  .slide-wrapper {
+  .contact-wrapper {
     background: var(--backgroundDark);
     width: 100vw;
     min-height: 100vh;
@@ -143,5 +143,29 @@
 
   .mt-2 {
     margin-top: 0.5rem;
+  }
+
+
+  .contact-container > div {
+    width: 100%;
+
+    margin: auto;
+    background-color: var(--backgroundDark);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Mobile specific adjustments */
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 0.5rem;
+    }
+
+    .contact-container > div {
+      width: 95%;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
   }
   </style>

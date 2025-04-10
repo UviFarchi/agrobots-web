@@ -69,17 +69,13 @@ body {
 .main-nav {
     background-color: var(--backgroundDark);
     border-bottom: 1px solid var(--primary);
-    padding: 0.5rem 1rem;
     z-index: 20;
     height: 5vh;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
 }
 
-.nav-container {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 0 1rem;
-}
 
 .nav-arrow {
     font-size: 2rem;
@@ -149,7 +145,7 @@ body {
 
 
 /* Content layout specific */
-.slide-wrapper {
+.contact-wrapper {
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -222,8 +218,6 @@ body {
     display: none;
     gap: 1rem;
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
 }
 
 /* Footer styles */
@@ -260,7 +254,7 @@ body {
     align-items: center;
     align-self: center;
     justify-content: center;
-    border-radius: 4vh;
+    border-radius: 5px;
     margin: 0 25%;
 }
 
@@ -274,19 +268,23 @@ body {
     text-align: left;
     justify-items: start;
 }
+
 .app-footer .footer-center {
     flex: 1;
     text-align: center;
 }
+
 .app-footer .footer-right {
     flex: 1;
     text-align: right;
     justify-items: end;
 }
+
 .app-footer .footer-button {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
 }
+
 .app-footer .footer-link {
     font-size: 0.9rem;
     text-decoration: none;
@@ -294,15 +292,21 @@ body {
 
 
 .contact-container {
-    position: absolute;
+    position: fixed; /* Changed from absolute to fixed */
     bottom: 0;
     left: 0;
     right: 0;
+    top: 0; /* Added to ensure full coverage */
     background-color: var(--backgroundDarkTranslucent);
-    padding: 2rem;
-    z-index: 100;
+    padding: 1rem; /* Reduced padding for mobile */
+    z-index: 1000; /* Increased to ensure it's above everything */
     height: 100vh;
+    display: flex; /* Added flexbox */
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* Allow scrolling if content is too tall */
 }
+
 
 @media (max-width: 768px) {
     .html, body {
@@ -310,7 +314,7 @@ body {
     }
 
     .menu-toggle {
-        display: none;
+        display: flex;
     }
 
     .app-wrapper[data-slide="0"] .menu-toggle {
@@ -319,14 +323,26 @@ body {
     }
 
     .app-wrapper[data-slide="0"] .agrobots-logo {
-        top: 6rem;
+        top: 5rem;
         width: auto;
-        height: 15vh;
+        height: 10vh;
         z-index: 19;
     }
 
-    .slide-wrapper {
-        overflow: visible;
+    .agrobots-logo {
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 5rem;
+        display: none;
+        transition: top 0.3s ease, left 0.3s ease;
+    }
+
+    .contact-wrapper {
+        overflow: scroll;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
     }
 
     .nav-menu {
@@ -354,18 +370,24 @@ body {
         width: 100%;
         justify-content: space-between;
         align-items: center;
+
     }
 
     .arrow-left,
     .arrow-right {
         display: none;
     }
-
-    .agrobots-logo {
-        top: 1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 5rem;
-        transition: top 0.3s ease, left 0.3s ease;
+    .app-footer{
+        height: 10vh;
     }
+    .app-footer .footer-link, .app-footer .footer-button {
+        display: flex;
+        flex:1;
+        margin: 0px;
+        padding: 10px;
+    }
+    .main-nav {
+        height: 10vh;
+    }
+
 }
