@@ -2,7 +2,7 @@
     <div class="slide-wrapper">
       <div class="form-container">
         <button class="close-btn" @click="closeForm">Close</button>
-        <h2>Let’s talk</h2>
+        <h1>Let’s talk</h1>
         <p>Send us a message and we’ll get back to you shortly.</p>
         <form
           action="https://formsubmit.co/info@agrobots.ai"
@@ -78,10 +78,9 @@
     padding: 0.5rem;
   }
 
-  h2 {
-    color: var(--textLight);
+  h1 {
+    color: var(--secondary);
     margin-top: 3rem;
-    margin-bottom: 0.5rem;
   }
 
   p {
@@ -102,12 +101,12 @@
   .input {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid var(--secondary);
+    border: 1px solid var(--primary);
     border-radius: 6px;
     font-size: 1rem;
     box-sizing: border-box;
-    background: var(--backgroundLight);
-    color: var(--textDark);
+    background: var(--backgroundDark);
+    color: var(--primary);
     margin-bottom: 1rem;
   }
 
@@ -129,11 +128,11 @@
   }
 
   .send-btn {
-    background: var(--backgroundDark);
-    color: var(--primary);
+    background: var(--accent);
+    color: var(--textDark);
     cursor: pointer;
     font-size: 1rem;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--accent);
     border-radius: 0.2rem;
     padding: 0.5rem;
   }

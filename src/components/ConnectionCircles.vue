@@ -356,6 +356,7 @@ export default {
   width: 15vw;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
 }
 
 .svg-overlay {
@@ -410,6 +411,7 @@ export default {
     transform: none;
     width: 100%;
     box-sizing: border-box;
+    font-size: 1.2rem;
   }
 
   .svg-overlay {
