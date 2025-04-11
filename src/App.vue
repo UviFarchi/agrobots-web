@@ -2,7 +2,7 @@
   <div class="app-wrapper" :data-slide="currentSlide">
     <img
         :key="'main-logo'"
-        src="./assets/img/agrobots_logo_white_glow.png"
+        src="../public/img/agrobots_logo_white_glow.png"
         alt="Agrobots Logo"
         class="agrobots-logo"
         @click="toggleMenu"

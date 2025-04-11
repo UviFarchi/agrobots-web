@@ -11,7 +11,7 @@ export default {
         buttonTextColor: colors.textDark,
         modes: {
             default: {
-                bgImage: "../assets/img/biorome_1.png",
+                bgImage: "/img/biorome_1.png",
                 title: "Our Vision",
                 paragraphs: [
                     "We envision an agriculture that is not at odds with its environment but an integral part of it—a system that embraces the best of both biological and digital sciences to optimize the use of our land and water. In this new paradigm, farming becomes a process of working with natural cycles, harnessing advanced technology to fine-tune the delicate balance between nature’s inherent rhythms and human ingenuity. This is agriculture reimagined, where every action is designed to recycle nutrients and boost the health of local ecosystems.",

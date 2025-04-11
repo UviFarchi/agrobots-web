@@ -11,7 +11,7 @@ export default {
         buttonTextColor: colors.textDark,
         modes: {
             default: {
-                bgImage: "../assets/img/biorome_2.png",
+                bgImage: "/img/biorome_2.png",
                 title: "Bio-Robotic Modular Ecosystems (bioromes)",
                 paragraphs: [
                     "Bio-Robotic Modular Ecosystems, or bioromes, are at the heart of our vision for a new kind of agriculture. Instead of relying on enormous, single-purpose machines that enforce rigid, single-crop systems, we deploy a network of simple, specialized modules—each designed to perform one task, whether it's seeding, feeding, monitoring, or harvesting. This modular approach ensures that every action is precise and adaptable, reducing waste and energy consumption.",
@@ -22,7 +22,7 @@ export default {
                 paragraphsColor: colors.textLight,
             },
             Day: {
-                bgImage: "../assets/img/biorome_day.png",
+                bgImage: "/img/biorome_day.png",
                 title: "A day in the biorome",
                 paragraphs: [
                     "As dawn breaks over the biorome, the landscape comes alive with the near-invisible presence of technology. Birds begin their morning calls, small animals stir, and the air is thick with the scent of damp earth and growing plants.",
@@ -34,7 +34,7 @@ export default {
                 paragraphsColor: colors.textLight,
             },
             Night: {
-                bgImage: "../assets/img/biorome_night.png",
+                bgImage: "/img/biorome_night.png",
                 title: "A night in the biorome",
                 paragraphs: [
                     "As dusk settles, the biorome transitions into night mode. The last rays of sunlight fade, but the system remains fully operational. Nocturnal pollinators emerge, guided by natural patterns rather than artificial interference. The temperature drops, and Athena updates its models in real time, adjusting growth strategies for the coming day.",

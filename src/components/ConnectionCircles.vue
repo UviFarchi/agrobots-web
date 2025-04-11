@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-wrapper">
+  <div class="panner-wrapper">
     <div
         v-for="(circle, idx) in circles"
         :key="idx"
@@ -399,7 +399,7 @@ export default {
 }
 
 @media (max-width: 768px) {
-  .contact-wrapper {
+  .panner-wrapper {
     display: flex;
     flex-direction: column;
     padding: 1rem;

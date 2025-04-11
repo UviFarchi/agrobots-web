@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-wrapper">
+  <div class="panner-wrapper">
     <h1 class="slide-title" :style="{ color: slideTitleColor }">
       {{ slideTitle }}
     </h1>

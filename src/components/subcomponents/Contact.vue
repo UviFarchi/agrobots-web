@@ -1,5 +1,5 @@
 <template>
-    <div class="contact-wrapper">
+    <div class="panner-wrapper">
       <div class="form-container">
         <button class="close-btn" @click="closeForm">Close</button>
         <h1>Let’s talk</h1>
@@ -48,7 +48,7 @@
   </script>
 
   <style scoped>
-  .contact-wrapper {
+  .panner-wrapper {
     background: var(--backgroundDark);
     width: 100vw;
     min-height: 100vh;

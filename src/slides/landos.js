@@ -16,7 +16,7 @@ export default {
             {
                 id: "landOsLogo",
                 position: "center-middle",
-                img: "../assets/img/landos_logo_glow.png",
+                img: "/img/landos_logo_glow.png",
                 textColor: colors.secondary,
                 title: "Unified Terrain Management Platform"
             }, {

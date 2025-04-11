@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-wrapper">
+  <div class="panner-wrapper">
     <!-- Apply dynamic order using inline styles -->
     <div class="panner-content" :style="{ order: contentOrder }">
       <template v-if="modes && modes[mode]">
@@ -86,9 +86,11 @@ export default {
     currentBgImage() {
       if (!this.modes) return "";
       if (this.mode && this.modes[this.mode]) {
-        return `url(${new URL(this.modes[this.mode].bgImage, import.meta.url)})`;
+        // Use absolute path for public folder images
+        return `url(${this.modes[this.mode].bgImage})`;
       } else if (this.modes.default) {
-        return `url(${new URL(this.modes.default.bgImage, import.meta.url)})`;
+        // Use absolute path for public folder images
+        return `url(${this.modes.default.bgImage})`;
       }
       return "";
     },
@@ -133,7 +135,7 @@ export default {
 </script>
 
 <style scoped>
-.contact-wrapper {
+.panner-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -240,7 +242,7 @@ h1, h2 {
 }
 
 @media (max-width: 768px) {
-  .contact-wrapper {
+  .panner-wrapper {
     flex-direction: column;
     height: 100vh;
     position: relative;

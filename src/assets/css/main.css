@@ -145,7 +145,7 @@ body {
 
 
 /* Content layout specific */
-.contact-wrapper {
+.panner-wrapper {
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -338,7 +338,7 @@ body {
         transition: top 0.3s ease, left 0.3s ease;
     }
 
-    .contact-wrapper {
+    .panner-wrapper {
         overflow: scroll;
         height: 100%;
         display: flex;

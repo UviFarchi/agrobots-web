@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-wrapper">
+  <div class="panner-wrapper">
     <div class="mobile-spacer"></div>
     <h1 class="video-title">{{ introTitle }}</h1>
     <div class="video-container">
