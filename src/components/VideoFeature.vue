@@ -1,5 +1,5 @@
 <template>
-  <div class="panner-wrapper">
+
     <div class="mobile-spacer"></div>
     <h1 class="video-title">{{ introTitle }}</h1>
     <div class="video-container">
@@ -22,7 +22,7 @@
         <p v-for="(text, index) in introText.slice(1)" :key="index">{{ text }}</p>
       </div>
     </div>
-  </div>
+
 </template>
 
 <script>
