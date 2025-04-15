@@ -10,8 +10,8 @@
 
     <nav class="main-nav">
         <div class="nav-controls">
-          <button @click="prevSlide" class="nav-arrow" :style="{ visibility: currentSlide > 0 ? 'visible' : 'hidden' }">
-            ‹
+          <button @click="prevSlide" class="nav-arrow back-arrow" :style="{ visibility: currentSlide > 0 ? 'visible' : 'hidden' }">
+            Back
           </button>
           <button class="menu-toggle" @click="toggleMenu">
             <span></span>
@@ -20,10 +20,10 @@
           </button>
           <button
               @click="nextSlide"
-              class="nav-arrow"
+              class="nav-arrow next-arrow"
               :style="{ visibility: currentSlide < slides.length - 1 ? 'visible' : 'hidden' }"
           >
-            ›
+           Next
           </button>
         </div>
 

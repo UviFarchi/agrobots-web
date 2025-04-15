@@ -78,22 +78,47 @@ body {
 
 
 .nav-arrow {
-    font-size: 2rem;
+    font-size: 1.2rem;
     background-color: transparent;
     color: var(--textLight);
     border: none;
     padding: 0;
+    margin: 0 2rem;
     border-radius: 0;
     font-weight: bold;
     cursor: pointer;
     width: 2rem;
-    height: 3rem;
+    height: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-shadow: 1px 1px 2px black;
 }
+.back-arrow::before {
+    content: "‹";
+    color: var(--textLight);
+    margin: 0 1rem;
+    font-size: 2rem;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    line-height: 1;
+    position: relative;
+    top: -0.2rem; /* Fine adjustment if needed */
+}
 
+.next-arrow::after {
+    content: "›";
+    color: var(--textLight);
+    margin: 0 1rem;
+    font-size: 2rem;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    line-height: 1;
+    position: relative;
+    top: -0.2rem; /* Fine adjustment if needed */
+}
 .menu-toggle {
     display: none;
     flex-direction: column;
