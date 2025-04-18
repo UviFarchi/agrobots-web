@@ -10,7 +10,8 @@
       </template>
     </div>
 
-    <div class="panner-button-panel" v-if="availableModes.length > 0 || mode !== 'default'" :style="{ order: buttonOrder }">
+    <div class="panner-button-panel" v-if="availableModes.length > 0 || mode !== 'default'"
+         :style="{ order: buttonOrder }">
       <h2 class="buttons-legend">{{ buttonsLegend }}</h2>
       <div class="buttons-container">
         <button
@@ -139,25 +140,34 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding-top: 2.4rem;
+  padding: 2.4rem 10% 10% 10%;
+  width: 100vw;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
 }
 
 .panner-content {
   background: var(--backgroundDarkTranslucent);
-  padding: 1.2rem;
-  padding-top: 5%;          /* Top buffer */
+  padding: 5% 0.6rem 1.2rem 1.2rem;
   box-sizing: border-box;
   flex: 0.4;
   overflow: auto;
-  align-self: flex-start;   /* Align to top */
+  align-self: flex-start;
+  height: 100%;
+  scrollbar-width: thin;
+  scrollbar-color:  var(--textLight) var(--backgroundDarkTranslucent);
+  scrollbar-arrow-color: black;
 }
 
 .panner-button-panel {
-  flex: 0.15;
+  flex: 0.25;
   background: var(--backgroundDarkTranslucent);
   padding: 1.2rem;
   box-sizing: border-box;
-  align-self: flex-start;   /* Align to top */
+  align-self: flex-start; /* Align to top */
 }
 
 .buttons-container {
@@ -248,8 +258,9 @@ h1, h2 {
     position: relative;
     justify-content: flex-start;
     padding-bottom: 0;
+    overflow: scroll;
+    display: flex;
   }
-
   .panner-content {
     flex: 1;
     overflow-y: auto;

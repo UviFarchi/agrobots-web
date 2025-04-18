@@ -1,5 +1,4 @@
 <template>
-  <div class="panner-wrapper">
     <h1 class="slide-title" :style="{ color: slideTitleColor }">
       {{ slideTitle }}
     </h1>
@@ -59,7 +58,6 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -67,6 +65,10 @@
 export default {
   name: "CardGrid",
   props: {
+    currentSlideIndex: {
+      type: Number,
+      default: 0
+    },
     slideTitle: {
       type: String,
       required: true
@@ -113,7 +115,7 @@ export default {
         this.lockedSet.delete(i);
         return;
       }
-      const el = this.$el.querySelectorAll('.flip-card')[i];
+      const el = document.querySelectorAll('.flip-card')[i];
       const rect = el.getBoundingClientRect();
       this.initialPosition = {
         top: rect.top + 'px',
@@ -137,10 +139,10 @@ export default {
 <style scoped>
 .card-grid {
   display: grid;
-  gap: 10vh;
+  gap: 5vh;
   flex: 8;
   position: relative;
-  margin-top: 1.2rem;
+  margin: 1.2rem;
 }
 
 .flip-card-container {
@@ -293,8 +295,7 @@ export default {
 }
 
 .slide-title {
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin: 1rem;
   flex: 1;
 }
 

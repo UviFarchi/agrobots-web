@@ -1,5 +1,4 @@
 <template>
-  <div class="panner-wrapper">
     <div
         v-for="(circle, idx) in circles"
         :key="idx"
@@ -62,13 +61,16 @@
         </marker>
       </defs>
     </svg>
-  </div>
 </template>
 
 <script>
 export default {
   name: "ConnectionCircles",
   props: {
+    currentSlideIndex: {
+      type: Number,
+      default: 0
+    },
     circles: {
       type: Array,
       required: true
@@ -221,10 +223,10 @@ export default {
     drawArrow(fromIdx, toIdx, arrowColor) {
       const fromId = this.circles[fromIdx].id || `circle-${fromIdx}`;
       const toId = this.circles[toIdx].id || `circle-${toIdx}`;
-      const fromEl = this.$el.querySelector(`#${fromId}`);
-      const toEl = this.$el.querySelector(`#${toId}`);
+      const fromEl = document.querySelector(`#${fromId}`);
+      const toEl = document.querySelector(`#${toId}`);
       if (!fromEl || !toEl || window.innerWidth <= 768) return;
-      const svgElement = this.$el.querySelector(".svg-overlay");
+      const svgElement = document.querySelector(".svg-overlay");
       const svgRect = svgElement.getBoundingClientRect();
       const reverseConnection = this.arrows.some(arrow => {
         return this.circles[toIdx].target === this.circles[fromIdx].id ||
@@ -399,7 +401,7 @@ export default {
 }
 
 @media (max-width: 768px) {
-  .panner-wrapper {
+  .slide-wrapper {
     display: flex;
     flex-direction: column;
     padding: 1rem;

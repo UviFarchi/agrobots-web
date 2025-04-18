@@ -1,5 +1,4 @@
 <template>
-    <div class="panner-wrapper">
       <div class="form-container">
         <button class="close-btn" @click="closeForm">Close</button>
         <h1>Let’s talk</h1>
@@ -21,7 +20,6 @@
           ✅ Thank you! Your message has been sent.
         </div>
       </div>
-    </div>
   </template>
 
   <script>
@@ -48,7 +46,7 @@
   </script>
 
   <style scoped>
-  .panner-wrapper {
+  .slide-wrapper {
     background: var(--backgroundDark);
     width: 100vw;
     min-height: 100vh;

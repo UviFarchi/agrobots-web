@@ -41,7 +41,6 @@
                   </script>
 
                   <template>
-                    <div class="panner-wrapper">
                       <h1 class="slide-title" :style="{ color: general.slideTitleColor }">
                         {{ general.slideTitle }}
                       </h1>
@@ -114,7 +113,6 @@
                           </a>
                         </div>
                       </div>
-                    </div>
                   </template>
 
                   <style scoped>
@@ -155,6 +153,7 @@
                     border-radius: 5px;
                     text-decoration: none;
                     font-weight: bold;
+                    text-align: center;
                   }
 
                   .slide-title{

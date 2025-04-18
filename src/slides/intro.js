@@ -12,6 +12,7 @@ export default {
             "Our mission is to make agriculture more intelligent, adaptive, and sustainable. By reimagining how we interact with the land, we aim to leave a positive legacy for future generations. Whether you are curious about the technology or passionate about regenerative practices, we invite you to explore how Agrobots is shaping the future of farming."
         ],
         videoSource: 'https://www.youtube.com/embed/NLG7D5_fcNk',
-        videoTitle: 'Agrobots Explainer'
+        videoTitle: 'Agrobots Explainer',
+        imgSource: '/img/agrobots_logo_white_glow.png'
     }
 };

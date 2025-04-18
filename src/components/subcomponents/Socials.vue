@@ -95,12 +95,11 @@ const sharingInfo = {
           :description="sharingInfo.description"
       >
         <div
-            class="social-network"
+            class="social-network-button"
             @click="share"
             :style="{ backgroundColor: network.color }"
         >
           <i :class="network.icon"></i>
-          <span>{{ network.name }}</span>
         </div>
       </share-network>
     </div>
@@ -115,25 +114,44 @@ const sharingInfo = {
 .social-list {
   max-width: 900px;
   margin: 20px auto;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
   gap: 0.6rem;
   padding: 10px;
 }
-.social-network {
-  display: flex;
-  align-items: center;
-  color: white;
+
+.social-network-button {
+  aspect-ratio: 1/1; /* Make buttons square */
+  color: var(--textLight);
   cursor: pointer;
   border-radius: 10px;
-  flex: 0.33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 3rem;
 }
 
-.social-network i {
-  padding: 1rem;
+.social-network-button i {
+
+
 }
-.social-network span {
+
+.social-network-button span {
   font-weight: 700;
   padding: 0.7rem;
+}
+
+
+@media (max-width: 768px) {
+  .social-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media (max-width: 480px) {
+  .social-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 </style>
