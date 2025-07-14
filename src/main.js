@@ -5,9 +5,9 @@ import App from './App.vue';
 import SocialSharing from "vue3-social-sharing";
 import router from './router';
 import i18n from './i18n/index.js'
-const storedLang = localStorage.getItem('lang');
-if (storedLang) {
-  i18n.global.locale.value = storedLang;
+const storedLocale = localStorage.getItem('locale');
+if (storedLocale) {
+  i18n.global.locale.value = storedLocale;
 }
 const app = createApp(App);
 app.use(SocialSharing);

@@ -105,15 +105,50 @@ import Contact from './subcomponents/Contact.vue';
 import ActionColumns from "@/components/ActionColumns.vue";
 import i18n from '@/i18n/index.js';
 
-import introSlide from '../slides/intro.js';
-import issueSlide from '../slides/issue.js';
-import servicesSlide from '../slides/services.js';
-import bioromeSlide from '../slides/biorome.js';
-import visionSlide from '../slides/vision.js';
-import landosSlide from '../slides/landos.js';
-import processSlides from '../slides/process.js';
-import impactSlide from '../slides/impact.js';
-import participateSlide from '../slides/participate.js';
+import introSlideEn from '../slides/en/intro.js';
+import issueSlideEn from '../slides/en/issue.js';
+import servicesSlideEn from '../slides/en/services.js';
+import bioromeSlideEn from '../slides/en/biorome.js';
+import visionSlideEn from '../slides/en/vision.js';
+import landosSlideEn from '../slides/en/landos.js';
+import processSlidesEn from '../slides/en/process.js';
+import impactSlideEn from '../slides/en/impact.js';
+import participateSlideEn from '../slides/en/participate.js';
+
+import introSlideEs from '../slides/es/intro.js';
+import issueSlideEs from '../slides/es/issue.js';
+import servicesSlideEs from '../slides/es/services.js';
+import bioromeSlideEs from '../slides/es/biorome.js';
+import visionSlideEs from '../slides/es/vision.js';
+import landosSlideEs from '../slides/es/landos.js';
+import processSlidesEs from '../slides/es/process.js';
+import impactSlideEs from '../slides/es/impact.js';
+import participateSlideEs from '../slides/es/participate.js';
+
+const slideSets = {
+  en: [
+    introSlideEn,
+    issueSlideEn,
+    visionSlideEn,
+    bioromeSlideEn,
+    landosSlideEn,
+    servicesSlideEn,
+    processSlidesEn,
+    impactSlideEn,
+    participateSlideEn
+  ],
+  es: [
+    introSlideEs,
+    issueSlideEs,
+    visionSlideEs,
+    bioromeSlideEs,
+    landosSlideEs,
+    servicesSlideEs,
+    processSlidesEs,
+    impactSlideEs,
+    participateSlideEs
+  ]
+};
 
 export default {
   name: 'AgrobotsMiniSite',
@@ -126,22 +161,13 @@ export default {
     Contact
   },
   data() {
+    const lang = i18n.global.locale.value;
     return {
       currentSlide: 0,
-      slides: [
-        introSlide,
-        issueSlide,
-        visionSlide,
-        bioromeSlide,
-        landosSlide,
-        servicesSlide,
-        processSlides,
-        impactSlide,
-        participateSlide
-      ],
+      slides: slideSets[lang],
       menuOpen: false,
       contactVisible: false,
-      currentLang: i18n.global.locale.value,
+      currentLang: lang,
       showLangMenu: false,
       availableLangs: ['en', 'es']
     };
@@ -150,8 +176,9 @@ export default {
     currentLang(newLang) {
       if (i18n.global.locale.value !== newLang) {
         i18n.global.locale.value = newLang;
-        localStorage.setItem('lang', newLang);
+        localStorage.setItem('locale', newLang);
       }
+      this.slides = slideSets[newLang];
     }
   },
   methods: {
