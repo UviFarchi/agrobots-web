@@ -2,22 +2,21 @@
   <div class="app-wrapper" :data-slide="currentSlide">
 
     <nav class="main-nav">
-        <div class="nav-controls">
-          <button @click="prevSlide" class="nav-arrow back-arrow" :style="{ visibility: currentSlide > 0 ? 'visible' : 'hidden' }">
-            Back
-          </button>
-          <button class="menu-toggle" @click="toggleMenu">
-            <img src="/img/single_flower_logo.png" alt="menu" class="toggle-menu-img"/>
-
-          </button>
-          <button
-              @click="nextSlide"
-              class="nav-arrow next-arrow"
-              :style="{ visibility: currentSlide < slides.length - 1 ? 'visible' : 'hidden' }"
-          >
-           Next
-          </button>
-        </div>
+      <div class="nav-controls">
+        <button @click="prevSlide" class="nav-arrow back-arrow" :style="{ visibility: currentSlide > 0 ? 'visible' : 'hidden' }">
+          Back
+        </button>
+        <button class="menu-toggle" @click="toggleMenu">
+          <img src="/img/single_flower_logo.png" alt="menu" class="toggle-menu-img"/>
+        </button>
+        <button
+            @click="nextSlide"
+            class="nav-arrow next-arrow"
+            :style="{ visibility: currentSlide < slides.length - 1 ? 'visible' : 'hidden' }"
+        >
+          Next
+        </button>
+      </div>
 
       <ul :class="['nav-menu', { 'active': menuOpen }]">
         <li v-for="(slide, index) in slides" :key="slide.name">
@@ -28,6 +27,26 @@
             {{ slide.title }}
           </button>
         </li>
+        <li>
+          <div class="lang-dropdown" @click="showLangMenu = !showLangMenu" @blur="showLangMenu = false" tabindex="0">
+            <img
+                :src="`/img/${currentLang}.png`"
+                :alt="currentLang.toUpperCase()"
+                class="lang-flag"
+            />
+            <div v-if="showLangMenu" class="lang-menu">
+              <img
+                  v-for="lang in availableLangs"
+                  :key="lang"
+                  :src="`/img/${lang}.png`"
+                  :alt="lang.toUpperCase()"
+                  class="lang-flag"
+                  :class="{ active: currentLang === lang }"
+                  @click.stop="selectLang(lang)"
+              />
+            </div>
+          </div>
+        </li>
       </ul>
     </nav>
 
@@ -35,11 +54,13 @@
       <div class="arrow-left" v-if="currentSlide > 0">
         <button @click="prevSlide" class="body-arrow">‹</button>
       </div>
+
       <transition name="slide-fade" mode="out-in">
         <div
             :key="currentSlide"
             class="slide-component"
         >
+
           <component
               :is="slides[currentSlide].component"
               v-bind="slides[currentSlide].content"
@@ -56,6 +77,7 @@
     <footer class="app-footer">
       <div class="footer-left">
         <a class="footer-button footer-link" href="/privacy">Privacy Policy</a>
+        <a class="footer-button footer-link" href="/quote">Get A Quote</a>
       </div>
       <div class="footer-center">
         <p>© 2025 Agrobots</p>
@@ -81,7 +103,7 @@ import ScrollingFullBg from './ScrollingFullBg.vue';
 import ConnectionCircles from './ConnectionCircles.vue';
 import Contact from './subcomponents/Contact.vue';
 import ActionColumns from "@/components/ActionColumns.vue";
-
+import i18n from '@/i18n/index.js';
 
 import introSlide from '../slides/intro.js';
 import issueSlide from '../slides/issue.js';
@@ -93,14 +115,13 @@ import processSlides from '../slides/process.js';
 import impactSlide from '../slides/impact.js';
 import participateSlide from '../slides/participate.js';
 
-
 export default {
   name: 'AgrobotsMiniSite',
   components: {
     VideoFeature,
     CardGrid,
     ScrollingFullBg,
-   ConnectionCircles,
+    ConnectionCircles,
     ActionColumns,
     Contact
   },
@@ -119,8 +140,19 @@ export default {
         participateSlide
       ],
       menuOpen: false,
-      contactVisible: false
+      contactVisible: false,
+      currentLang: i18n.global.locale.value,
+      showLangMenu: false,
+      availableLangs: ['en', 'es']
     };
+  },
+  watch: {
+    currentLang(newLang) {
+      if (i18n.global.locale.value !== newLang) {
+        i18n.global.locale.value = newLang;
+        localStorage.setItem('lang', newLang);
+      }
+    }
   },
   methods: {
     nextSlide() {
@@ -140,12 +172,49 @@ export default {
     },
     toggleContact() {
       this.contactVisible = !this.contactVisible;
+    },
+    selectLang(lang) {
+      this.currentLang = lang;
+      this.showLangMenu = false;
     }
   }
 };
 </script>
 
 <style scoped>
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+}
+.lang-menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: var(--backgroundDark, #222);
+  z-index: 100;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  margin: 0;
+  background: none;
+  padding:0;
+}
+.lang-flag {
+  width: 26px;
+  height: 26px;
+  opacity: 0.8;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: opacity .11s, box-shadow .12s;
+}
+.lang-flag.active {
+  opacity: 1;
+  border-color: var(--primary);
+  box-shadow: 0 0 4px var(--accent);
+}
+
 .app-wrapper {
   display: flex;
   flex-direction: column;
@@ -382,6 +451,9 @@ export default {
   align-items: center;
   overflow-y: auto;
 }
+
+
+
 
 @media (max-width: 768px) {
   .menu-toggle {

@@ -121,5 +121,126 @@ export default {
             }
         }
     },
-    es: {}
+    es: {
+        next: "Siguiente",
+        back: "Atrás",
+        submit: "Enviar",
+        add: "Agregar",
+        remove: "Eliminar",
+        none: "Ninguno",
+        close: "Cerrar",
+        errors: {
+            choose_purpose: "Por favor, selecciona una opción.",
+            enter_land_size: "Por favor, introduce el tamaño de tu terreno.",
+            choose_country: "Por favor, selecciona un país.",
+            choose_region: "Por favor, selecciona una región.",
+            choose_land_use: "Por favor, selecciona el uso del terreno.",
+            choose_service_tier: "Por favor, selecciona un nivel de servicio.",
+            choose_at_least_one_kpi: "Por favor, selecciona al menos un KPI o introduce uno propio.",
+            enter_name: "Por favor, introduce tu nombre.",
+            enter_valid_email: "Por favor, introduce una dirección de correo válida.",
+            choose_contact_method: "Por favor, elige cómo deseas ser contactado.",
+            enter_phone: "Por favor, introduce tu número de teléfono.",
+            toast_title: "Por favor revisa lo siguiente:",
+        },
+        steps: {
+            purpose: {
+                title: "Selecciona el propósito de tu terreno",
+                options: {
+                    ecological_monitoring: "Monitoreo ecológico",
+                    brownfield_bioremediation: "Biorremediación de terrenos contaminados",
+                    agricultural_production: "Producción agrícola"
+                }
+            },
+            details: {
+                title: "Describe tu terreno",
+                land_size: "Tamaño del terreno",
+                land_area_units: {
+                    ha: "hectáreas (ha)",
+                    ac: "acres (ac)",
+                    km2: "kilómetros cuadrados (km²)"
+                },
+                country: "País",
+                region: "Región/Estado",
+                land_use: "Uso del terreno",
+                land_use_options: {
+                    idle: "Inactivo",
+                    light_use: "Uso ligero",
+                    contaminated: "Contaminado",
+                    actively_farmed: "En explotación activa"
+                },
+                available_infra: "Infraestructura disponible",
+                infra: {
+                    water: "Agua",
+                    electricity: "Electricidad",
+                    internet: "Internet"
+                }
+            },
+            service: {
+                title: "Elige el nivel de servicio",
+                service_tiers: {
+                    essentials: {
+                        label: "Esencial",
+                        subhead: "Monitorización e informes",
+                        desc: "Monitorizamos tu terreno y entregamos informes periódicos — sin intervenciones, solo datos y análisis independientes.",
+                        ideal: "Ideal si deseas monitorizar el estado ecológico o agrícola de tu terreno para cumplir con regulaciones, obtener una certificación o tener información base. Recibes datos, informes y análisis regulares—sin intervenciones, solo medición independiente."
+                    },
+                    design_plus: {
+                        label: "Diseño+",
+                        subhead: "Monitoreo, informes y diseño ecosistémico",
+                        desc: "Incluye el nivel Esencial, más un plan personalizado para regenerar tu terreno. Recibes recomendaciones científicas y una hoja de ruta para la acción.",
+                        ideal: "Perfecto para propietarios que buscan recomendaciones prácticas y científicas, pero que desean implementar los cambios ellos mismos. Incluye monitorización, informes y el diseñoi de un ecosistema adaptado a tus objetivos."
+                    },
+                    full_service: {
+                        label: "Servicio completo",
+                        subhead: "Gestión integral del terreno",
+                        desc: "Incluye monitorización, informes, diseño ecosistémico — y nosotros realizamos toda la implementación y gestión continua.",
+                        ideal: "La mejor opción para quienes desean gestión total — monitorización, análisis, diseño e implementación práctica. Ejecutamos y adaptamos el plan por ti, optimizando los resultados a lo largo del tiempo."
+                    }
+                }
+            },
+            kpis: {
+                title: "Selecciona tus métricas de éxito",
+                kpi_options: {
+                    increase_productivity: "Aumentar la productividad",
+                    improve_soil_health: "Mejorar la salud del suelo",
+                    maximize_biodiversity: "Maximizar la biodiversidad",
+                    reduce_water_usage: "Reducir el uso de agua",
+                    eliminate_chemicals: "Eliminar insumos químicos",
+                    generate_carbon_offsets: "Generar créditos de carbono",
+                    meet_environmental_standards: "Cumplir estándares medioambientales",
+                    restore_land: "Restaurar el terreno",
+                    reduce_operating_costs: "Reducir costes operativos",
+                    transition_regenerative: "Transfomar a regenerativo"
+                },
+                other_priorities_placeholder: "Agrega tu propio KPI",
+                selected_kpis: "KPIs seleccionados"
+            },
+            estimate: {
+                title: "Tu presupuesto personalizado",
+                purpose: "Propósito",
+                land_size: "Tamaño del terreno",
+                location: "Ubicación",
+                service_tier: "Nivel de servicio",
+                kpis: "KPIs",
+                per_unit: "por {unit} / año",
+                note: "El precio final se confirmará tras la evaluación del sitio.\nContrato mínimo de 3 años."
+            },
+            contact: {
+                title: "Tus datos",
+                name: "Nombre",
+                email: "Correo electrónico",
+                organization: "Organización (opcional)",
+                schedule_call: "¿Te gustaría agendar una llamada para evaluación del sitio?",
+                call_yes: "Sí, agendar llamada",
+                call_no: "No, prefiero correo electrónico",
+                phone: "Número de teléfono"
+            },
+            confirm: {
+                title: "Confirmación",
+                thank_you: "Gracias",
+                confirmation: "Hemos recibido tu solicitud. Nuestro equipo revisará tu información y te contactará con una propuesta personalizada de gestión del terreno."
+            }
+        }
+    }
 };

@@ -1,9 +1,9 @@
 <script setup>
-import { ref, reactive, computed, watch } from "vue";
-import { useI18n } from "vue-i18n";
+import {ref, reactive, computed, watch} from "vue";
+import {useI18n} from "vue-i18n";
 
-const { t, locale, messages } = useI18n();
-locale.value = 'en';
+const {t, locale, messages} = useI18n();
+
 
 const steps = [
   "purpose",
@@ -19,19 +19,19 @@ const currentStep = ref(0);
 const form = reactive({
   useCase: "",
   landSize: null,
-  region: { country: "", region: "" },
+  region: {country: "", region: ""},
   landUse: "",
-  infrastructure: { water: false, electricity: false, internet: false },
+  infrastructure: {water: false, electricity: false, internet: false},
   serviceTier: "",
   selectedKPIs: [],
   additionalNotes: "",
-  contact: { name: "", email: "", organization: "", wantsCall: null, phone: "" }
+  contact: {name: "", email: "", organization: "", wantsCall: null, phone: ""}
 });
 
 const landAreaUnits = [
-  { value: "ha", label: computed(() => t("steps.details.land_area_units.ha")), toHa: v => v },
-  { value: "ac", label: computed(() => t("steps.details.land_area_units.ac")), toHa: v => v * 0.404686 },
-  { value: "km2", label: computed(() => t("steps.details.land_area_units.km2")), toHa: v => v * 100 }
+  {value: "ha", label: computed(() => t("steps.details.land_area_units.ha")), toHa: v => v},
+  {value: "ac", label: computed(() => t("steps.details.land_area_units.ac")), toHa: v => v * 0.404686},
+  {value: "km2", label: computed(() => t("steps.details.land_area_units.km2")), toHa: v => v * 100}
 ];
 const selectedUnit = ref("ha");
 const convertedHa = computed(() => {
@@ -100,21 +100,17 @@ function validateStep() {
 
   if (steps[currentStep.value] === "purpose") {
     if (!form.useCase) messages.push(t('errors.choose_purpose'));
-  }
-  else if (steps[currentStep.value] === "details") {
+  } else if (steps[currentStep.value] === "details") {
     if (!form.landSize || form.landSize <= 0) messages.push(t('errors.enter_land_size'));
     if (!form.region.country) messages.push(t('errors.choose_country'));
     if (regionList.value.length && !form.region.region) messages.push(t('errors.choose_region'));
     if (!form.landUse) messages.push(t('errors.choose_land_use'));
-  }
-  else if (steps[currentStep.value] === "service") {
+  } else if (steps[currentStep.value] === "service") {
     if (!form.serviceTier) messages.push(t('errors.choose_service_tier'));
-  }
-  else if (steps[currentStep.value] === "kpis") {
+  } else if (steps[currentStep.value] === "kpis") {
     if (selectedKpis.value.length + customKpis.value.length < 1)
       messages.push(t('errors.choose_at_least_one_kpi'));
-  }
-  else if (steps[currentStep.value] === "contact") {
+  } else if (steps[currentStep.value] === "contact") {
     if (!form.contact.name || !form.contact.name.trim())
       messages.push(t('errors.enter_name'));
     if (!form.contact.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.contact.email))
@@ -139,13 +135,16 @@ function handleFormInput() {
 function nextStep() {
   if (validateStep()) currentStep.value++;
 }
+
 function prevStep() {
   if (currentStep.value > 0) currentStep.value--;
 }
+
 function submitQuote() {
   if (!validateStep()) return;
   currentStep.value = steps.length - 1;
 }
+
 function selectWantsCall(val) {
   form.contact.wantsCall = val;
 }
@@ -166,12 +165,13 @@ const customKpiInput = ref("");
 // Watch for available KPIs
 watch(kpiKeys, (newList) => {
   availableKpis.value = newList.filter(k => !selectedKpis.value.includes(k));
-}, { immediate: true });
+}, {immediate: true});
 
 function selectKpi(k) {
   availableKpis.value = availableKpis.value.filter(item => item !== k);
   selectedKpis.value.push(k);
 }
+
 function deselectKpi(k) {
   selectedKpis.value = selectedKpis.value.filter(item => item !== k);
   if (!availableKpis.value.includes(k)) {
@@ -179,6 +179,7 @@ function deselectKpi(k) {
     availableKpis.value.sort((a, b) => kpiKeys.value.indexOf(a) - kpiKeys.value.indexOf(b));
   }
 }
+
 function addCustomKpi() {
   const clean = customKpiInput.value.trim();
   if (clean && !customKpis.value.includes(clean)) {
@@ -186,9 +187,11 @@ function addCustomKpi() {
     customKpiInput.value = "";
   }
 }
+
 function removeCustomKpi(k) {
   customKpis.value = customKpis.value.filter(item => item !== k);
 }
+
 const allSelectedKpis = computed(() => [...selectedKpis.value, ...customKpis.value]);
 
 const basePricePerIC = 1200;
@@ -280,7 +283,8 @@ const estimate = computed(() => {
             <span class="question">{{ t('steps.details.land_use') }}:</span>
             <select v-model="form.landUse" class="input">
               <option value="" disabled selected hidden></option>
-              <option v-for="key in Object.keys(messages[locale].steps.details.land_use_options)" :key="key" :value="key">
+              <option v-for="key in Object.keys(messages[locale].steps.details.land_use_options)" :key="key"
+                      :value="key">
                 {{ t('steps.details.land_use_options.' + key) }}
               </option>
             </select>
@@ -330,13 +334,13 @@ const estimate = computed(() => {
             />
             <div class="card-header">
               <span class="card-title">{{ t('steps.service.service_tiers.' + tier + '.label') }}</span>
-              <span class="tooltip-icon" tabindex="0">
-                &#9432;
-                <span class="tooltip-box left-tooltip">{{ t('steps.service.service_tiers.' + tier + '.ideal') }}</span>
-              </span>
+              <span class="tooltip-icon" tabindex="0">&#9432;</span>
+              <span class="tooltip-box">{{ t('steps.service.service_tiers.' + tier + '.ideal') }}</span>
             </div>
             <span class="card-subhead">{{ t('steps.service.service_tiers.' + tier + '.subhead') }}</span>
             <span class="card-desc">{{ t('steps.service.service_tiers.' + tier + '.desc') }}</span>
+
+
           </label>
         </div>
 
@@ -410,7 +414,9 @@ const estimate = computed(() => {
               <th>{{ t('steps.estimate.land_size') }}</th>
               <td>
                 {{ form.landSize }} {{ t('steps.details.land_area_units.' + selectedUnit) }}
-                <span v-if="selectedUnit !== 'ha'">({{ convertedHa.toFixed(2) }} {{ t('steps.details.land_area_units.ha') }})</span>
+                <span v-if="selectedUnit !== 'ha'">({{
+                    convertedHa.toFixed(2)
+                  }} {{ t('steps.details.land_area_units.ha') }})</span>
               </td>
             </tr>
             <tr>
@@ -439,7 +445,9 @@ const estimate = computed(() => {
               <td>
                 <span v-if="allSelectedKpis.length">
                   <span v-for="(k, idx) in allSelectedKpis" :key="k">
-                    {{ t('steps.kpis.kpi_options.' + k) !== 'steps.kpis.kpi_options.' + k ? t('steps.kpis.kpi_options.' + k) : k }}
+                    {{
+                      t('steps.kpis.kpi_options.' + k) !== 'steps.kpis.kpi_options.' + k ? t('steps.kpis.kpi_options.' + k) : k
+                    }}
                     <span v-if="idx !== allSelectedKpis.length - 1">, </span>
                   </span>
                 </span>
@@ -523,11 +531,9 @@ const estimate = computed(() => {
 </template>
 
 
-
 <style scoped>
-
 .quote-builder {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background: var(--backgroundDark);
   color: var(--textLight);
@@ -543,7 +549,8 @@ const estimate = computed(() => {
   justify-content: flex-start;
   align-items: stretch;
   height: 90vh;
-  max-height: 99vh;
+  max-height: 96vh;
+  overflow-y: auto;
   width: 100%;
   max-width: 540px;
   min-width: 320px;
@@ -552,19 +559,8 @@ const estimate = computed(() => {
   background: var(--backgroundDarkTranslucent, rgba(20, 30, 30, 0.96));
   border-radius: 28px;
   box-shadow: 0 8px 44px 0 rgba(0, 0, 0, 0.24);
-  overflow: hidden;
 }
 
-@media (max-width: 700px) {
-  .form-card {
-    height: 100vh;
-    max-height: 100vh;
-    padding: 0.7rem 0.2rem;
-    border-radius: 0;
-  }
-}
-
-/* Step layout */
 .step-title {
   font-size: 1.4em;
   font-weight: 600;
@@ -598,6 +594,7 @@ const estimate = computed(() => {
   transition: border 0.19s, background 0.19s;
   margin: 0;
   width: 100%;
+  height: 100%;
   box-sizing: border-box;
   position: relative;
   font-size: 1.09em;
@@ -609,6 +606,7 @@ const estimate = computed(() => {
 }
 
 .card-header {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.5em;
@@ -638,52 +636,44 @@ const estimate = computed(() => {
 }
 
 .tooltip-icon {
-  position: relative;
-  display: inline-block;
-  font-size: 1.14em;
+  position: absolute;
+  top: 0;
+  right: -0.85em;
+  transform: translateY(-50%);
+  font-size: 2em;
+  width: 1.7em;
+  height: 1.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--accent);
   cursor: pointer;
-  width: 1.2em;
-  height: 1.2em;
-  text-align: center;
-  line-height: 1.2em;
   border-radius: 50%;
   transition: background 0.18s;
 }
 
-.tooltip-icon:focus,
-.tooltip-icon:hover {
-  background: rgba(255, 235, 59, 0.10);
-}
 
 .tooltip-box {
-  display: block;
   position: absolute;
-  z-index: 100;
-  right: 2.2em;
-  top: 0.1em;
-  min-width: 180px;
-  max-width: 360px;
-  background: #20292b;
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height:inherit;
+  z-index: 1000;
+  background: black;
   color: #ffe388;
   border-radius: 8px;
-  padding: 0.7em 1em;
+  padding: 2.2em 1em 1em 1em;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.13);
   white-space: normal;
   visibility: hidden;
-  font-size: small;
+
 }
 
-.left-tooltip {
-  right: 2.2em;
-  left: auto;
-}
-
-.tooltip-icon:focus .tooltip-box,
-.tooltip-icon:hover .tooltip-box {
+.tooltip-icon:focus ~ .tooltip-box,
+.tooltip-icon:hover ~ .tooltip-box {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
@@ -727,6 +717,7 @@ const estimate = computed(() => {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.1em;
+  margin-top: 1.1em;
   font-size: 1.05em;
   font-weight: 500;
   width: 100%;
@@ -774,6 +765,8 @@ const estimate = computed(() => {
   flex-wrap: wrap;
   gap: 0.5em 0.5em;
   margin-bottom: 1.1em;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .kpi-section {
@@ -848,7 +841,6 @@ const estimate = computed(() => {
   gap: 1.2em;
 }
 
-
 .btn {
   padding: 0.7em 2.2em;
   font-size: 1.1rem;
@@ -906,13 +898,6 @@ const estimate = computed(() => {
   color: var(--textLight);
 }
 
-@media (max-width: 700px) {
-  .estimate-table th, .estimate-table td {
-    padding: 0.38em 0.2em;
-    font-size: 0.98em;
-  }
-}
-
 .estimate-amount {
   font-size: 2.2em;
   font-weight: bold;
@@ -936,10 +921,12 @@ const estimate = computed(() => {
   }
 
   .form-card {
-    padding: 0.7rem 0.2rem;
+    padding: 2rem 2rem;
     max-width: 100vw;
     min-width: 0;
     border-radius: 0;
+    height: 100vh;
+    max-height: 100vh;
   }
 
   .card-group, .pill-group, .icon-group {
@@ -954,6 +941,11 @@ const estimate = computed(() => {
 
   .inline-row {
     gap: 0.6em;
+  }
+
+  .estimate-table th, .estimate-table td {
+    padding: 0.38em 0.2em;
+    font-size: 0.98em;
   }
 }
 
@@ -1008,5 +1000,5 @@ const estimate = computed(() => {
 .toast-fade-enter-from, .toast-fade-leave-to {
   opacity: 0;
 }
-
 </style>
+

@@ -1,7 +1,7 @@
 import { createI18n } from 'vue-i18n';
 import quoteMessages from './quote';
 import countriesAndRegions from "@/i18n/countriesAndRegions.js";
-
+const locale = localStorage.getItem('locale') || 'en';
 const messages = {
     en: {
         ...quoteMessages.en,
@@ -15,7 +15,7 @@ const messages = {
 
 export default createI18n({
     legacy: false,
-    locale: 'en',
+    locale,
     fallbackLocale: 'en',
     messages
 });
