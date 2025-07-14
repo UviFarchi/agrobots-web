@@ -1,217 +1,212 @@
-<script setup>
-import {ref, reactive, computed, watch} from "vue";
-import {useI18n} from "vue-i18n";
+<script>
+import { useI18n } from "vue-i18n";
 
-const {t, locale, messages} = useI18n();
+export default {
+  name: "QuoteBuilder",
+  setup() {
+    const { t, locale, messages } = useI18n();
+    return { t, locale, messages };
+  },
+  data() {
+    return {
+      steps: [
+        "purpose",
+        "details",
+        "service",
+        "kpis",
+        "estimate",
+        "contact",
+        "confirm"
+      ],
+      currentStep: 0,
+      form: {
+        useCase: "",
+        landSize: null,
+        region: { country: "", region: "" },
+        landUse: "",
+        infrastructure: { water: false, electricity: false, internet: false },
+        serviceTier: "",
+        selectedKPIs: [],
+        additionalNotes: "",
+        contact: { name: "", email: "", organization: "", wantsCall: null, phone: "" }
+      },
+      selectedUnit: "ha",
+      errors: {},
+      showToast: false,
+      toastMessages: [],
+      toastTimeout: null,
+      serviceTiers: ["essentials", "design_plus", "full_service"],
+      availableKpis: [],
+      selectedKpis: [],
+      customKpis: [],
+      customKpiInput: "",
+      basePricePerIC: 1200,
+      CONTINENT_ORDER: ["EU", "NA", "SA", "AS", "AF", "OC"]
+    };
+  },
+  computed: {
+    landAreaUnits() {
+      return [
+        { value: "ha", label: this.t("steps.details.land_area_units.ha"), toHa: v => v },
+        { value: "ac", label: this.t("steps.details.land_area_units.ac"), toHa: v => v * 0.404686 },
+        { value: "km2", label: this.t("steps.details.land_area_units.km2"), toHa: v => v * 100 }
+      ];
+    },
+    convertedHa() {
+      const val = this.form.landSize || 0;
+      const unit = this.landAreaUnits.find(u => u.value === this.selectedUnit);
+      return unit ? unit.toHa(val) : val;
+    },
+    continentList() {
+      const dict = this.messages[this.locale];
+      return Object.entries(dict)
+        .filter(([code, val]) => val && val.countries)
+        .map(([contCode, contObj]) => ({
+          code: contCode,
+          name: contObj.name,
+          countries: Object.entries(contObj.countries)
+            .map(([cc, cObj]) => ({
+              code: cc,
+              name: cObj.name
+            }))
+            .sort((a, b) => a.name.localeCompare(b.name, this.locale))
+        }))
+        .sort((a, b) => {
+          const idxA = this.CONTINENT_ORDER.indexOf(a.code);
+          const idxB = this.CONTINENT_ORDER.indexOf(b.code);
+          return idxA - idxB;
+        });
+    },
+    regionList() {
+      if (!this.form.region.country) return [];
+      for (const cont of this.continentList) {
+        const match = cont.countries.find(c => c.code === this.form.region.country);
+        if (match) {
+          const countryObj = this.messages[this.locale][cont.code].countries[this.form.region.country];
+          return countryObj.regions || [];
+        }
+      }
+      return [];
+    },
+    kpiKeys() {
+      const dict = this.messages[this.locale]?.steps?.kpis?.kpi_options || this.messages.en.steps.kpis.kpi_options;
+      return Object.keys(dict);
+    },
+    allSelectedKpis() {
+      return [...this.selectedKpis, ...this.customKpis];
+    },
+    estimate() {
+      let ic = 1;
+      if (this.form.serviceTier === "design_plus") ic += 0.5;
+      if (this.form.serviceTier === "full_service") ic += 1.2;
+      if (this.form.selectedKPIs.length > 1) ic += (this.form.selectedKPIs.length - 1) * 0.3;
+      if (this.form.landUse === "contaminated") ic += 0.7;
+      if (this.convertedHa > 50) ic += 0.3;
+      if (this.form.useCase === "brownfield_bioremediation") ic += 0.8;
+      const priceHa = Math.round(this.basePricePerIC * ic);
+      const unitObj = this.landAreaUnits.find(u => u.value === this.selectedUnit);
+      const priceUserUnit = unitObj ? Math.round(priceHa / unitObj.toHa(1)) : priceHa;
+      return {
+        ic: ic.toFixed(2),
+        priceHa,
+        priceUserUnit
+      };
+    }
+  },
+  watch: {
+    "form.region.country"() {
+      this.form.region.region = "";
+    },
+    kpiKeys: {
+      handler(newList) {
+        this.availableKpis = newList.filter(k => !this.selectedKpis.includes(k));
+      },
+      immediate: true
+    }
+  },
+  methods: {
+    openToast(messages) {
+      this.toastMessages = messages;
+      this.showToast = true;
+      if (this.toastTimeout) clearTimeout(this.toastTimeout);
+      this.toastTimeout = setTimeout(() => (this.showToast = false), 5000);
+    },
+    closeToast() {
+      this.showToast = false;
+      if (this.toastTimeout) clearTimeout(this.toastTimeout);
+    },
+    validateStep() {
+      Object.keys(this.errors).forEach(k => delete this.errors[k]);
+      const messages = [];
 
+      if (this.steps[this.currentStep] === "purpose") {
+        if (!this.form.useCase) messages.push(this.t("errors.choose_purpose"));
+      } else if (this.steps[this.currentStep] === "details") {
+        if (!this.form.landSize || this.form.landSize <= 0) messages.push(this.t("errors.enter_land_size"));
+        if (!this.form.region.country) messages.push(this.t("errors.choose_country"));
+        if (this.regionList.length && !this.form.region.region) messages.push(this.t("errors.choose_region"));
+        if (!this.form.landUse) messages.push(this.t("errors.choose_land_use"));
+      } else if (this.steps[this.currentStep] === "service") {
+        if (!this.form.serviceTier) messages.push(this.t("errors.choose_service_tier"));
+      } else if (this.steps[this.currentStep] === "kpis") {
+        if (this.selectedKpis.length + this.customKpis.length < 1)
+          messages.push(this.t("errors.choose_at_least_one_kpi"));
+      } else if (this.steps[this.currentStep] === "contact") {
+        if (!this.form.contact.name || !this.form.contact.name.trim())
+          messages.push(this.t("errors.enter_name"));
+        if (!this.form.contact.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.form.contact.email))
+          messages.push(this.t("errors.enter_valid_email"));
+        if (this.form.contact.wantsCall !== true && this.form.contact.wantsCall !== false)
+          messages.push(this.t("errors.choose_contact_method"));
+        if (this.form.contact.wantsCall === true && (!this.form.contact.phone || !this.form.contact.phone.trim()))
+          messages.push(this.t("errors.enter_phone"));
+      }
 
-const steps = [
-  "purpose",
-  "details",
-  "service",
-  "kpis",
-  "estimate",
-  "contact",
-  "confirm"
-];
-const currentStep = ref(0);
-
-const form = reactive({
-  useCase: "",
-  landSize: null,
-  region: {country: "", region: ""},
-  landUse: "",
-  infrastructure: {water: false, electricity: false, internet: false},
-  serviceTier: "",
-  selectedKPIs: [],
-  additionalNotes: "",
-  contact: {name: "", email: "", organization: "", wantsCall: null, phone: ""}
-});
-
-const landAreaUnits = [
-  {value: "ha", label: computed(() => t("steps.details.land_area_units.ha")), toHa: v => v},
-  {value: "ac", label: computed(() => t("steps.details.land_area_units.ac")), toHa: v => v * 0.404686},
-  {value: "km2", label: computed(() => t("steps.details.land_area_units.km2")), toHa: v => v * 100}
-];
-const selectedUnit = ref("ha");
-const convertedHa = computed(() => {
-  const val = form.landSize || 0;
-  const unit = landAreaUnits.find(u => u.value === selectedUnit.value);
-  return unit ? unit.toHa(val) : val;
-});
-
-const CONTINENT_ORDER = ['EU', 'NA', 'SA', 'AS', 'AF', 'OC'];
-
-const continentList = computed(() => {
-  const dict = messages.value[locale.value];
-  return Object.entries(dict)
-      .filter(([code, val]) => val && val.countries)
-      .map(([contCode, contObj]) => ({
-        code: contCode,
-        name: contObj.name,
-        countries: Object.entries(contObj.countries).map(([cc, cObj]) => ({
-          code: cc,
-          name: cObj.name
-        })).sort((a, b) => a.name.localeCompare(b.name, locale.value))
-      }))
-      .sort((a, b) => {
-        const idxA = CONTINENT_ORDER.indexOf(a.code);
-        const idxB = CONTINENT_ORDER.indexOf(b.code);
-        return idxA - idxB;
-      });
-});
-
-const regionList = computed(() => {
-  if (!form.region.country) return [];
-  for (const cont of continentList.value) {
-    const match = cont.countries.find(c => c.code === form.region.country);
-    if (match) {
-      const countryObj = messages.value[locale.value][cont.code].countries[form.region.country];
-      return countryObj.regions || [];
+      if (messages.length > 0) {
+        this.openToast(messages);
+        return false;
+      }
+      return true;
+    },
+    handleFormInput() {
+      if (this.showToast) this.closeToast();
+    },
+    nextStep() {
+      if (this.validateStep()) this.currentStep++;
+    },
+    prevStep() {
+      if (this.currentStep > 0) this.currentStep--;
+    },
+    submitQuote() {
+      if (!this.validateStep()) return;
+      this.currentStep = this.steps.length - 1;
+    },
+    selectWantsCall(val) {
+      this.form.contact.wantsCall = val;
+    },
+    selectKpi(k) {
+      this.availableKpis = this.availableKpis.filter(item => item !== k);
+      this.selectedKpis.push(k);
+    },
+    deselectKpi(k) {
+      this.selectedKpis = this.selectedKpis.filter(item => item !== k);
+      if (!this.availableKpis.includes(k)) {
+        this.availableKpis.push(k);
+        this.availableKpis.sort((a, b) => this.kpiKeys.indexOf(a) - this.kpiKeys.indexOf(b));
+      }
+    },
+    addCustomKpi() {
+      const clean = this.customKpiInput.trim();
+      if (clean && !this.customKpis.includes(clean)) {
+        this.customKpis.push(clean);
+        this.customKpiInput = "";
+      }
+    },
+    removeCustomKpi(k) {
+      this.customKpis = this.customKpis.filter(item => item !== k);
     }
   }
-  return [];
-});
-
-watch(() => form.region.country, () => {
-  form.region.region = "";
-});
-
-const errors = reactive({});
-const showToast = ref(false);
-const toastMessages = ref([]);
-let toastTimeout = null;
-
-function openToast(messages) {
-  toastMessages.value = messages;
-  showToast.value = true;
-  if (toastTimeout) clearTimeout(toastTimeout);
-  toastTimeout = setTimeout(() => showToast.value = false, 5000);
-}
-
-function closeToast() {
-  showToast.value = false;
-  if (toastTimeout) clearTimeout(toastTimeout);
-}
-
-function validateStep() {
-  Object.keys(errors).forEach(k => delete errors[k]);
-  const messages = [];
-
-  if (steps[currentStep.value] === "purpose") {
-    if (!form.useCase) messages.push(t('errors.choose_purpose'));
-  } else if (steps[currentStep.value] === "details") {
-    if (!form.landSize || form.landSize <= 0) messages.push(t('errors.enter_land_size'));
-    if (!form.region.country) messages.push(t('errors.choose_country'));
-    if (regionList.value.length && !form.region.region) messages.push(t('errors.choose_region'));
-    if (!form.landUse) messages.push(t('errors.choose_land_use'));
-  } else if (steps[currentStep.value] === "service") {
-    if (!form.serviceTier) messages.push(t('errors.choose_service_tier'));
-  } else if (steps[currentStep.value] === "kpis") {
-    if (selectedKpis.value.length + customKpis.value.length < 1)
-      messages.push(t('errors.choose_at_least_one_kpi'));
-  } else if (steps[currentStep.value] === "contact") {
-    if (!form.contact.name || !form.contact.name.trim())
-      messages.push(t('errors.enter_name'));
-    if (!form.contact.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.contact.email))
-      messages.push(t('errors.enter_valid_email'));
-    if (form.contact.wantsCall !== true && form.contact.wantsCall !== false)
-      messages.push(t('errors.choose_contact_method'));
-    if (form.contact.wantsCall === true && (!form.contact.phone || !form.contact.phone.trim()))
-      messages.push(t('errors.enter_phone'));
-  }
-
-  if (messages.length > 0) {
-    openToast(messages);
-    return false;
-  }
-  return true;
-}
-
-function handleFormInput() {
-  if (showToast.value) closeToast();
-}
-
-function nextStep() {
-  if (validateStep()) currentStep.value++;
-}
-
-function prevStep() {
-  if (currentStep.value > 0) currentStep.value--;
-}
-
-function submitQuote() {
-  if (!validateStep()) return;
-  currentStep.value = steps.length - 1;
-}
-
-function selectWantsCall(val) {
-  form.contact.wantsCall = val;
-}
-
-const serviceTiers = ["essentials", "design_plus", "full_service"];
-
-// KPI keys now from nested structure
-const kpiKeys = computed(() => {
-  const dict = messages.value[locale.value]?.steps?.kpis?.kpi_options || messages.value.en.steps.kpis.kpi_options;
-  return Object.keys(dict);
-});
-
-const availableKpis = ref([]);
-const selectedKpis = ref([]);
-const customKpis = ref([]);
-const customKpiInput = ref("");
-
-// Watch for available KPIs
-watch(kpiKeys, (newList) => {
-  availableKpis.value = newList.filter(k => !selectedKpis.value.includes(k));
-}, {immediate: true});
-
-function selectKpi(k) {
-  availableKpis.value = availableKpis.value.filter(item => item !== k);
-  selectedKpis.value.push(k);
-}
-
-function deselectKpi(k) {
-  selectedKpis.value = selectedKpis.value.filter(item => item !== k);
-  if (!availableKpis.value.includes(k)) {
-    availableKpis.value.push(k);
-    availableKpis.value.sort((a, b) => kpiKeys.value.indexOf(a) - kpiKeys.value.indexOf(b));
-  }
-}
-
-function addCustomKpi() {
-  const clean = customKpiInput.value.trim();
-  if (clean && !customKpis.value.includes(clean)) {
-    customKpis.value.push(clean);
-    customKpiInput.value = "";
-  }
-}
-
-function removeCustomKpi(k) {
-  customKpis.value = customKpis.value.filter(item => item !== k);
-}
-
-const allSelectedKpis = computed(() => [...selectedKpis.value, ...customKpis.value]);
-
-const basePricePerIC = 1200;
-const estimate = computed(() => {
-  let ic = 1;
-  if (form.serviceTier === "design_plus") ic += 0.5;
-  if (form.serviceTier === "full_service") ic += 1.2;
-  if (form.selectedKPIs.length > 1) ic += (form.selectedKPIs.length - 1) * 0.3;
-  if (form.landUse === "contaminated") ic += 0.7;
-  if (convertedHa.value > 50) ic += 0.3;
-  if (form.useCase === "brownfield_bioremediation") ic += 0.8;
-  const priceHa = Math.round(basePricePerIC * ic);
-  const unitObj = landAreaUnits.find(u => u.value === selectedUnit.value);
-  const priceUserUnit = unitObj ? Math.round(priceHa / unitObj.toHa(1)) : priceHa;
-  return {
-    ic: ic.toFixed(2),
-    priceHa,
-    priceUserUnit
-  };
-});
+};
 </script>
 
 <template>
