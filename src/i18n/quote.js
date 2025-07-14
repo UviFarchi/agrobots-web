@@ -28,6 +28,15 @@ export default {
                     ecological_monitoring: "Ecological Monitoring",
                     brownfield_bioremediation: "Brownfield Bioremediation",
                     agricultural_production: "Agricultural Production"
+                },
+                agriculture_type: {
+                    cereals: "Cereals and grains",
+                    oilseeds: "Oilseeds / legumes",
+                    orchard: "Orchards, vineyards, olive groves",
+                    open_veg: "Open-field vegetables",
+                    greenhouse: "Greenhouse vegetables",
+                    mixed: "Mixed / permaculture",
+                    livestock: "Livestock"
                 }
             },
             details: {
@@ -150,6 +159,15 @@ export default {
                     ecological_monitoring: "Monitoreo ecológico",
                     brownfield_bioremediation: "Biorremediación de terrenos contaminados",
                     agricultural_production: "Producción agrícola"
+                },
+                agriculture_type: {
+                    cereals:"Cereales y granos",
+                    oilseeds:"Oleaginosas / leguminosas",
+                    orchard:"Frutales, viñedos, olivares",
+                    open_veg:"Hortalizas al aire libre",
+                    greenhouse:"Hortalizas en invernadero",
+                    mixed:"Mixto / permacultura" ,
+                    livestock:"Agroganadería"
                 }
             },
             details: {

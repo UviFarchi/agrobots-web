@@ -21,6 +21,7 @@ export default {
       currentStep: 0,
       form: {
         useCase: "",
+        agricultureCategory: "",
         landSize: null,
         region: { country: "", region: "" },
         landUse: "",
@@ -97,13 +98,39 @@ export default {
     },
     estimate() {
       let ic = 1;
+
+      // Service tier
       if (this.form.serviceTier === "design_plus") ic += 0.5;
       if (this.form.serviceTier === "full_service") ic += 1.2;
+
+      // KPIs
       if (this.form.selectedKPIs.length > 1) ic += (this.form.selectedKPIs.length - 1) * 0.3;
+      if (this.form.customKpis && this.form.customKpis.length > 0) ic += this.form.customKpis.length * 0.5;
+
+      // Land use
       if (this.form.landUse === "contaminated") ic += 0.7;
-      if (this.convertedHa > 50) ic += 0.3;
       if (this.form.useCase === "brownfield_bioremediation") ic += 0.8;
-      const priceHa = Math.round(this.basePricePerIC * ic);
+
+      // Land area
+      const ha = this.convertedHa;
+      if (ha < 100) ic += 0.4;     // penalty for small land
+      if (ha > 50) ic += 0.3;      // as before
+      if (ha > 200) ic -= 0.2;     // small reduction for >200ha
+
+      // Infrastructure
+      if (!this.form.infrastructure.electricity) ic += 0.4;
+      if (!this.form.infrastructure.water) ic += 0.6;
+      if (!this.form.infrastructure.internet) ic += 0.2;
+
+      // Optionally, rough adjustment for location if you want
+      // Example: higher IC for countries far from a service hub
+      // Could use a helper that maps countries to a "distance penalty"
+      if (this.form.region && this.form.region.country) {
+        ic += this.getLocationICPenalty(this.form.region.country);
+      }
+
+      const basePrice = this.getBasePricePerIC();
+      const priceHa = Math.round(basePrice * ic);
       const unitObj = this.landAreaUnits.find(u => u.value === this.selectedUnit);
       const priceUserUnit = unitObj ? Math.round(priceHa / unitObj.toHa(1)) : priceHa;
       return {
@@ -112,6 +139,14 @@ export default {
         priceUserUnit
       };
     }
+  },
+  mounted() {
+    // When the form is first shown, replace state so back button knows we're on step 0
+    window.history.replaceState({ step: 0 }, "");
+    window.addEventListener("popstate", this.onPopState);
+  },
+  beforeUnmount() {
+    window.removeEventListener("popstate", this.onPopState);
   },
   watch: {
     "form.region.country"() {
@@ -125,6 +160,32 @@ export default {
     }
   },
   methods: {
+    getLocationICPenalty(countryCode) {
+      // Barcelona, Guatemala City, Texas are hubs
+      // Spain, France, Portugal: 0, nearby EU (Italy, Germany, NL): 0.1
+      // Central America: 0
+      // North America: 0.1, South America: 0.3, Africa/Asia/Australia: 0.5
+      const eu = ["ES", "PT", "FR", "IT", "NL", "DE", "BE", "CH", "AT"];
+      const centralAmerica = ["GT", "HN", "SV", "NI", "CR", "PA", "BZ"];
+      const northAmerica = ["US", "MX", "CA"];
+      if (eu.includes(countryCode)) return 0;
+      if (centralAmerica.includes(countryCode)) return 0;
+      if (northAmerica.includes(countryCode)) return 0.1;
+      // You can expand these rules as needed.
+      return 0.3; // Default penalty for other continents
+    },
+    getBasePricePerIC() {
+      switch (this.form.agricultureCategory) {
+        case "cereals": return 900;
+        case "oilseeds": return 1000;
+        case "orchard": return 1200;
+        case "open_veg": return 1300;
+        case "greenhouse": return 2000;
+        case "mixed": return 1200;
+        case "livestock": return 2200;
+        default: return 1200;
+      }
+    },
     openToast(messages) {
       this.toastMessages = messages;
       this.showToast = true;
@@ -173,9 +234,11 @@ export default {
     },
     nextStep() {
       if (this.validateStep()) this.currentStep++;
+      window.history.pushState({ step: this.currentStep }, "");
     },
     prevStep() {
       if (this.currentStep > 0) this.currentStep--;
+
     },
     submitQuote() {
       if (!this.validateStep()) return;
@@ -204,6 +267,13 @@ export default {
     },
     removeCustomKpi(k) {
       this.customKpis = this.customKpis.filter(item => item !== k);
+    },
+    onPopState(event) {
+      if (event.state && typeof event.state.step === "number") {
+        this.currentStep = event.state.step;
+      } else {
+        window.removeEventListener("popstate", this.onPopState);
+      }
     }
   }
 };
@@ -235,7 +305,24 @@ export default {
             <input type="radio" v-model="form.useCase" :value="option" class="visually-hidden"/>
             <span>{{ t('steps.purpose.options.' + option) }}</span>
           </label>
+
+          <div
+              v-if="form.useCase === 'agricultural_production'"
+              class="subcard-group"
+              style="margin-top: 1.2em;"
+          >
+            <label
+                v-for="option in Object.keys(messages[locale].steps.purpose.agriculture_type)"
+                :key="option"
+                class="subcard"
+                :class="{ selected: form.agricultureCategory === option }"
+            >
+              <input type="radio" v-model="form.agricultureCategory" :value="option" class="visually-hidden"/>
+              <span>{{ t('steps.purpose.agriculture_type.' + option) }}</span>
+            </label>
+          </div>
         </div>
+
 
         <!-- Step 2: Details -->
         <div v-if="steps[currentStep] === 'details'" class="details-fields">
@@ -403,7 +490,8 @@ export default {
             <tbody>
             <tr>
               <th>{{ t('steps.estimate.purpose') }}</th>
-              <td>{{ t('steps.purpose.options.' + form.useCase) }}</td>
+              <td>{{ t('steps.purpose.options.' + form.useCase) }} <span v-if="form.useCase === 'agricultural_production'"> - {{ t('steps.purpose.agriculture_type.' + form.agricultureCategory) }}</span></td>
+
             </tr>
             <tr>
               <th>{{ t('steps.estimate.land_size') }}</th>
@@ -578,9 +666,10 @@ export default {
   flex-direction: column;
   gap: 1.15em;
   width: 100%;
+
 }
 
-.card {
+.card, .subcard {
   background: rgba(40, 50, 54, 0.62);
   border: 2px solid var(--primary);
   border-radius: 1.2em;
@@ -595,7 +684,26 @@ export default {
   font-size: 1.09em;
 }
 
-.card.selected, .pill.selected, .icon-btn.active {
+.subcard-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1em 2%;
+  align-items: flex-start;
+}
+
+.subcard {
+  width: 48%;
+  min-height: 5em;
+  margin-bottom: 0.251em;
+  box-sizing: border-box;
+  height: auto;
+  align-self: flex-start;
+  display: block;
+  align-content: center;
+}
+
+
+.card.selected, .subcard.selected, .pill.selected, .icon-btn.active {
   border-color: var(--accent);
   background: rgba(70, 110, 100, 0.21);
 }
@@ -941,6 +1049,10 @@ export default {
   .estimate-table th, .estimate-table td {
     padding: 0.38em 0.2em;
     font-size: 0.98em;
+  }
+
+ .subcard {
+    width: 100%;
   }
 }
 
