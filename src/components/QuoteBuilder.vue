@@ -240,8 +240,18 @@ export default {
       if (this.currentStep > 0) this.currentStep--;
 
     },
-    submitQuote() {
+    async submitQuote() {
       if (!this.validateStep()) return;
+      try {
+        await fetch('/api/quote', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(this.form)
+        });
+      } catch (err) {
+        console.error(err);
+        this.openToast([this.t('contact.error')]);
+      }
       this.currentStep = this.steps.length - 1;
     },
     selectWantsCall(val) {

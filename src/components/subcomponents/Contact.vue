@@ -32,12 +32,20 @@
       closeForm() {
         this.$emit("close");
       },
-      sendForm() {
-        this.submitted = true;
-        this.$emit("sent");
-        this.$nextTick(() => {
-          this.$el.submit();
-        });
+      async sendForm() {
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(this.form)
+          });
+          if (!res.ok) throw new Error('Request failed');
+          this.submitted = true;
+          this.$emit("sent");
+        } catch (err) {
+          console.error(err);
+          alert(this.$t('contact.error'));
+        }
       }
     }
   };
