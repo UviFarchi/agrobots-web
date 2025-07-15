@@ -3,16 +3,31 @@ export default {
     title: 'Welcome',
     component: 'VideoFeature',
     content: {
-        introTitle: 'Welcome to Agrobots',
-        introText: [
-            "We are on the brink of a new era in agriculture—one shaped by the convergence of advanced technologies and ecological thinking. Industry 4.0, characterized by the integration of automation, AI, and the Internet of Things (IoT), is redefining how we approach farming. At Agrobots, we are at the forefront of this revolution, pioneering the use of robotics and intelligent systems to create self-sustaining ecosystems.",
-            "Imagine a world where farming doesn't deplete the land but enriches it. Regenerative farming principles guide our approach, leveraging biological processes to restore soil health and promote biodiversity. By combining these principles with cutting-edge robotics and data-driven intelligence, we aim to transform agriculture into a regenerative force—productive, resilient, and ecologically balanced.",
-            "The future of farming lies in the harmonious interaction between natural processes and technological precision. Our autonomous systems—powered by AI and real-time data—continuously learn from the environment, making intelligent decisions about irrigation, planting, and maintenance. This dynamic adaptation minimizes human intervention while maximizing ecological integrity.",
-            "In a time when environmental and food security challenges are more pressing than ever, we believe that blending robotics with regenerative farming is the path forward. Agrobots is not just about efficiency—it's about creating agricultural systems that thrive in harmony with nature, ensuring long-term sustainability and community resilience.",
-            "Our mission is to make agriculture more intelligent, adaptive, and sustainable. By reimagining how we interact with the land, we aim to leave a positive legacy for future generations. Whether you are curious about the technology or passionate about regenerative practices, we invite you to explore how Agrobots is shaping the future of farming."
-        ],
-        videoSource: 'https://www.youtube.com/embed/NLG7D5_fcNk',
-        videoTitle: 'Agrobots Explainer',
-        imgSource: '/img/agrobots_logo_white_glow.png'
+        en: {
+            introTitle: "Transforming Land with TMaaS",
+            introText: [
+                "Agrobots is leading the transition to Agriculture 4.0 with Terrain Management as a Service (TMaaS). We transform underutilized or degraded land into intelligent, self-optimizing ecosystems using AI, robotics, and modular design.",
+                "Our platform, Land OS, unifies advanced sensors, drones, and robotic modules to continuously monitor, adapt, and improve every hectare—delivering predictable productivity and measurable ecological restoration for a single, fixed annual fee.",
+                "With Agrobots, landowners, institutions, and cooperatives benefit from increased yields, lower input costs, and regenerative practices that rebuild soil health and preserve water. Every deployment becomes smarter over time as our systems learn and optimize.",
+                "We believe the future of agriculture lies in harmonizing nature and technology—creating systems that are productive, resilient, and sustainable.",
+                "Discover how Agrobots is redefining the way land is managed and food is produced—efficient, profitable, and in balance with the planet."
+            ],
+            videoSource: 'https://www.youtube.com/embed/NLG7D5_fcNk',
+            videoTitle: 'Agrobots Explainer',
+            imgSource: '/img/agrobots_logo_white_glow.png'
+        },
+        es: {
+            introTitle: "Transformando la Tierra con TMaaS",
+            introText: [
+                "Agrobots lidera la transición hacia la Agricultura 4.0 con un modelo de Gestión de Terreno como Servicio (TMaaS). Convertimos terrenos infrautilizados o degradados en ecosistemas inteligentes y auto-optimizados mediante IA, robótica y un diseño modular.",
+                "Nuestra plataforma, Land OS, integra sensores avanzados, drones y módulos robóticos para monitorizar, adaptar y mejorar cada hectárea de forma continua, ofreciendo productividad predecible y restauración ecológica medible por una sola tarifa anual fija.",
+                "Con Agrobots, propietarios de tierras, instituciones y cooperativas obtienen mayores rendimientos, menores costes de insumos y prácticas regenerativas que reconstruyen el suelo y preservan el agua. Cada despliegue se vuelve más inteligente con el tiempo gracias al aprendizaje y la optimización continua del sistema.",
+                "Creemos que el futuro de la agricultura está en la armonía entre naturaleza y tecnología, creando sistemas productivos, resilientes y sostenibles.",
+                "Descubre cómo Agrobots está redefiniendo la gestión del terreno y la producción de alimentos: eficiente, rentable y en equilibrio con el planeta."
+            ],
+            videoSource: 'https://www.youtube.com/embed/NLG7D5_fcNk',
+            videoTitle: 'Agrobots Explainer',
+            imgSource: '/img/agrobots_logo_white_glow.png'
+        }
     }
-};
+}

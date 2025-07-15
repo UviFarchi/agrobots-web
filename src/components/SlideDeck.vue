@@ -3,7 +3,8 @@
 
     <nav class="main-nav">
       <div class="nav-controls">
-        <button @click="prevSlide" class="nav-arrow back-arrow" :style="{ visibility: currentSlide > 0 ? 'visible' : 'hidden' }">
+        <button @click="prevSlide" class="nav-arrow back-arrow"
+                :style="{ visibility: currentSlide > 0 ? 'visible' : 'hidden' }">
           Back
         </button>
         <button class="menu-toggle" @click="toggleMenu">
@@ -63,8 +64,9 @@
 
           <component
               :is="slides[currentSlide].component"
-              v-bind="slides[currentSlide].content"
+              v-bind="slides[currentSlide].content[currentLang]"
               :currentSlideIndex="currentSlide"
+              @contact="toggleContact"
           />
         </div>
       </transition>
@@ -113,6 +115,8 @@ import visionSlide from '../slides/vision.js';
 import landosSlide from '../slides/landos.js';
 import processSlides from '../slides/process.js';
 import impactSlide from '../slides/impact.js';
+import teamSlide from '../slides/team.js';
+import partnerSlide from '../slides/partners.js';
 import participateSlide from '../slides/participate.js';
 
 export default {
@@ -137,6 +141,8 @@ export default {
         servicesSlide,
         processSlides,
         impactSlide,
+        teamSlide,
+        partnerSlide,
         participateSlide
       ],
       menuOpen: false,
@@ -188,6 +194,7 @@ export default {
   cursor: pointer;
   outline: none;
 }
+
 .lang-menu {
   position: absolute;
   top: 120%;
@@ -199,8 +206,9 @@ export default {
   flex-direction: column;
   margin: 0;
   background: none;
-  padding:0;
+  padding: 0;
 }
+
 .lang-flag {
   width: 26px;
   height: 26px;
@@ -209,6 +217,7 @@ export default {
   border: 1px solid transparent;
   transition: opacity .11s, box-shadow .12s;
 }
+
 .lang-flag.active {
   opacity: 1;
   border-color: var(--primary);
@@ -453,11 +462,9 @@ export default {
 }
 
 
-
-
 @media (max-width: 768px) {
   .menu-toggle {
-    display: flex  ;
+    display: flex;
     height: 6vh;
     z-index: 2002;
     padding: 2vw;
@@ -499,13 +506,13 @@ export default {
     display: none;
   }
 
-  .app-footer{
+  .app-footer {
     height: 10vh;
   }
 
   .app-footer .footer-link, .app-footer .footer-button {
     display: flex;
-    flex:1;
+    flex: 1;
     margin: 0px;
     padding: 10px;
   }

@@ -34,7 +34,7 @@
                       },
                       contactButtonClicked() {
                         // Directly call toggleContact on the root (App.vue)
-                        this.$root.toggleContact();
+                        this.$emit('contact');
                       }
                     }
                   };

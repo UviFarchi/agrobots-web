@@ -1,49 +1,92 @@
 import colors from "@/assets/colors.js";
 
-export default {
+export default{
     name: 'impact',
     title: 'Impact',
     component: 'ScrollingFullBg',
     content: {
-        buttonsLegend: "Impacts",
-        defaultButtonLabel: "Back",
-        buttonBgColor: colors.accent,
-        buttonTextColor: colors.textDark,
-        modes: {
-            default: {
-                textPosition: "right",
-                bgImage: "/img/impact_main.png",
-                title: "What we aim to achieve",
-                paragraphs: [
-                    "Agrobots isn’t merely a technological upgrade—it’s a reimagining of agriculture from the ground up. In our vision, every field transforms into a living, breathing ecosystem where nature and innovation work together. We convert overworked, barren soils into regenerative landscapes that continuously learn from the rhythms of the earth. Every acre is managed by intelligent systems that not only boost yields but also restore balance, nurture the land back to life, and cut waste, redefining productivity in a sustainable way.",
-                    "Yet, the cost of inaction is steep. Relying on conventional methods—fossil-fuel machinery, chemical inputs, and rigid monocultures—drains our soils, strains water resources, and drives up storage and transport costs. Without innovation, supply chains become unpredictable and our food systems vulnerable to climate shocks and market disruptions. This degradation not only jeopardizes the future of agriculture but also inflates expenses and undermines reliable access to fresh produce.",
-                    "Now, more than ever, we have a unique opportunity to transform challenges into promise. By embracing the just-in-place and just-in-time principles of Agriculture 4.0, Agrobots ensures that food is produced exactly where and when it’s needed. Our approach creates vibrant ecosystems that preserve biodiversity while delivering high-quality, affordable, and sufficient food for everyone. The choice is clear: a future built on balance, innovation, and respect for nature will nourish both the land and the communities that depend on it."
-
-                ],
-                titleColor: colors.primary,
-                paragraphsColor: colors.textLight,
-            },
-            Human: {
-                textPosition: "right",
-                bgImage: "/img/impact_human.png",
-                title: "Human Impact",
-                paragraphs: [
-                    "At the heart of Agrobots is a profound commitment to uplifting communities. For farmers and rural workers, our technology offers more than increased efficiency—it brings renewed hope and opportunity. By automating laborious tasks and optimizing every aspect of the farming process, we free up time and resources, empowering communities to focus on innovation, education, and local prosperity.",
-                    "Imagine a rural landscape where modern technology blends seamlessly with tradition. Agrobots equips people with the tools and knowledge they need to thrive, creating a future where job creation goes hand in hand with sustainable practices. Our system builds stronger, self-reliant communities by ensuring that every stakeholder—from small family farms to large-scale producers—benefits from a healthier, more reliable food supply."
-                ],
-                titleColor: colors.primary,
-                paragraphsColor: colors.textLight,
-            },
-            Environmental: {
-                textPosition: "right",
-                bgImage: "/img/impact_environmental.png",
-                title: "Environmental Impact",
-                paragraphs: [
-                    "Our approach to agriculture is as much about healing the planet as it is about feeding it. Agrobots champions a regenerative model that significantly reduces reliance on harmful chemicals and fossil fuels. By carefully orchestrating the interplay of plants, microbes, and robotic interventions, we restore the natural balance of the soil, conserve water resources, and enhance biodiversity. Over time, the land transforms into a vibrant, self-sustaining ecosystem that sequesters carbon and adapts to climate fluctuations. This isn’t just sustainable farming—it’s a blueprint for environmental renewal, where every harvest contributes to rebuilding a healthier planet for generations to come."
-                ],
-                titleColor: colors.primary,
-                paragraphsColor: colors.textLight,
+        en: {
+            buttonsLegend: "Impacts",
+            defaultButtonLabel: "Back",
+            buttonBgColor: colors.accent,
+            buttonTextColor: colors.textDark,
+            modes: {
+                default: {
+                    textPosition: "right",
+                    bgImage: "/img/impact_main.png",
+                    title: "What we aim to achieve",
+                    paragraphs: [
+                        "Agrobots is more than a technological upgrade—it’s a complete reimagining of agriculture. Every field becomes a living ecosystem where nature and technology work in harmony. We restore overworked soils, turning them into regenerative landscapes managed by intelligent systems that boost yields, restore balance, and reduce waste—redefining productivity sustainably.",
+                        "The cost of inaction is high. Relying on conventional methods—fossil-fuel machinery, chemical inputs, monocultures—depletes soils, strains water, and increases storage and transport costs. Without innovation, supply chains become fragile and food systems vulnerable to climate and market shocks.",
+                        "Now, more than ever, we can turn these challenges into opportunities. With just-in-place and just-in-time Agriculture 4.0 principles, Agrobots produces food exactly where and when it’s needed. We create vibrant ecosystems that preserve biodiversity while delivering affordable, high-quality food for everyone. The choice is clear: innovation and balance will nourish both the land and our communities."
+                    ],
+                    titleColor: colors.primary,
+                    paragraphsColor: colors.textLight,
+                },
+                Human: {
+                    textPosition: "right",
+                    bgImage: "/img/impact_human.png",
+                    title: "Human Impact",
+                    paragraphs: [
+                        "Agrobots is committed to uplifting communities. For farmers and rural workers, our technology brings not just efficiency, but hope and opportunity. Automating laborious tasks and optimizing every aspect of farming frees time and resources, empowering communities to focus on innovation, education, and prosperity.",
+                        "Picture rural landscapes where technology and tradition blend. Agrobots equips people with the tools and knowledge they need to thrive, fostering job creation and sustainable practices. Every stakeholder—from family farms to large producers—benefits from a healthier, more reliable food supply."
+                    ],
+                    titleColor: colors.primary,
+                    paragraphsColor: colors.textLight,
+                },
+                Environmental: {
+                    textPosition: "right",
+                    bgImage: "/img/impact_environmental.png",
+                    title: "Environmental Impact",
+                    paragraphs: [
+                        "Our approach is about healing the planet as much as feeding it. Agrobots enables a regenerative model that dramatically reduces chemical and fossil fuel use. By orchestrating the interplay of plants, microbes, and robotics, we restore soil balance, save water, and enhance biodiversity. The land evolves into a vibrant, self-sustaining ecosystem that stores carbon and adapts to climate change—a blueprint for environmental renewal and a healthier planet for future generations."
+                    ],
+                    titleColor: colors.primary,
+                    paragraphsColor: colors.textLight,
+                }
+            }
+        },
+        es: {
+            buttonsLegend: "Impactos",
+            defaultButtonLabel: "Volver",
+            buttonBgColor: colors.accent,
+            buttonTextColor: colors.textDark,
+            modes: {
+                default: {
+                    textPosition: "right",
+                    bgImage: "/img/impact_main.png",
+                    title: "Nuestro impacto esperado",
+                    paragraphs: [
+                        "Agrobots es mucho más que una actualización tecnológica: es una reinvención total de la agricultura. Cada parcela se convierte en un ecosistema vivo donde naturaleza y tecnología trabajan en armonía. Recuperamos suelos agotados, transformándolos en paisajes regenerativos gestionados por sistemas inteligentes que aumentan el rendimiento, restauran el equilibrio y reducen el desperdicio—definiendo una nueva productividad sostenible.",
+                        "El coste de no innovar es alto. Seguir con métodos convencionales—maquinaria fósil, insumos químicos, monocultivos—empobrece el suelo, presiona los recursos hídricos y encarece el almacenamiento y transporte. Sin innovación, las cadenas de suministro se vuelven frágiles y los sistemas alimentarios son vulnerables al clima y el mercado.",
+                        "Hoy más que nunca, podemos convertir estos retos en oportunidades. Con los principios de Agricultura 4.0—just-in-place y just-in-time—Agrobots produce alimentos justo donde y cuando se necesitan. Creamos ecosistemas vibrantes que conservan la biodiversidad y ofrecen alimentos accesibles y de calidad para todos. La elección es clara: innovación y equilibrio nutrirán tanto la tierra como las comunidades."
+                    ],
+                    titleColor: colors.primary,
+                    paragraphsColor: colors.textLight,
+                },
+                Humano: {
+                    textPosition: "right",
+                    bgImage: "/img/impact_human.png",
+                    title: "Impacto social",
+                    paragraphs: [
+                        "El compromiso de Agrobots es con las comunidades. Para agricultores y trabajadores rurales, nuestra tecnología aporta no solo eficiencia, sino esperanza y oportunidad. Automatizar tareas pesadas y optimizar cada aspecto agrícola libera tiempo y recursos, empoderando a las comunidades para centrarse en la innovación, la educación y la prosperidad local.",
+                        "Imagina paisajes rurales donde tecnología y tradición conviven. Agrobots brinda herramientas y conocimiento para prosperar, fomentando empleo y sostenibilidad. Todos los actores—desde pequeñas familias hasta grandes productores—se benefician de un suministro más sano y fiable."
+                    ],
+                    titleColor: colors.primary,
+                    paragraphsColor: colors.textLight,
+                },
+                Medioambiental: {
+                    textPosition: "right",
+                    bgImage: "/img/impact_environmental.png",
+                    title: "Impacto ambiental",
+                    paragraphs: [
+                        "Nuestra visión es sanar el planeta a la vez que lo alimentamos. Agrobots impulsa un modelo regenerativo que reduce drásticamente el uso de químicos y combustibles fósiles. Al coordinar plantas, microbios y robótica, restauramos el equilibrio del suelo, ahorramos agua y mejoramos la biodiversidad. El terreno evoluciona hacia un ecosistema vivo, capaz de almacenar carbono y adaptarse al cambio climático—una hoja de ruta para la renovación ambiental y un planeta más sano para las próximas generaciones."
+                    ],
+                    titleColor: colors.primary,
+                    paragraphsColor: colors.textLight,
+                }
             }
         }
     }
-};
+}
+;

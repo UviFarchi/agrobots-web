@@ -1,15 +1,19 @@
-import { createI18n } from 'vue-i18n';
+import {createI18n} from 'vue-i18n';
 import quoteMessages from './quote';
 import countriesAndRegions from "@/i18n/countriesAndRegions.js";
-const locale = localStorage.getItem('locale') || 'en';
+import contact from "@/i18n/contact.js";
+
+const locale = localStorage.getItem('lang') || 'en';
 const messages = {
     en: {
         ...quoteMessages.en,
-        ...countriesAndRegions.en
+        ...countriesAndRegions.en,
+        ...contact.en
     },
     es: {
         ...quoteMessages.es,
-        ...countriesAndRegions.es
+        ...countriesAndRegions.es,
+        ...contact.es
     }
 };
 

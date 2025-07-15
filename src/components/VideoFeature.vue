@@ -83,7 +83,7 @@ export default {
   margin: 5vh auto 0 auto;
   display: block;
   height: auto;
-  width: 50vw;
+  width:20vw;
   max-width: 500px;
 }
 @media (max-width: 768px) {

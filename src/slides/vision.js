@@ -5,24 +5,47 @@ export default {
     title: 'Our Vision',
     component: 'ScrollingFullBg',
     content: {
-        buttonsLegend: "",
-        defaultButtonLabel: "Back",
-        buttonBgColor: colors.accent,
-        buttonTextColor: colors.textDark,
-        modes: {
-            default: {
-                bgImage: "/img/biorome_1.png",
-                title: "Our Vision",
-                paragraphs: [
-                    "We envision an agriculture that is not at odds with its environment but an integral part of it—a system that embraces the best of both biological and digital sciences to optimize the use of our land and water. In this new paradigm, farming becomes a process of working with natural cycles, harnessing advanced technology to fine-tune the delicate balance between nature’s inherent rhythms and human ingenuity. This is agriculture reimagined, where every action is designed to recycle nutrients and boost the health of local ecosystems.",
-                    "At the core of our vision is the belief that the future of agriculture lies in intelligent, autonomous systems powered by artificial intelligence and the Internet of Things. Our mission is to revolutionize farming by developing technology that integrates real-time environmental data with precise automated control. By doing so, we can optimize resource use, reduce environmental impacts, and create resilient systems that adapt to changing conditions—ensuring a steady, sustainable food supply even in times of crisis.",
-                    "This approach represents a significant departure from traditional methods that often rely on heavy machinery and chemical inputs. Instead, we leverage innovations from Industry 4.0 to design systems that work harmoniously with the natural world. We use modular technologies—each tailored to a specific task—to create dynamic, adaptable systems that continuously learn and improve. While each component is simple, together they form a complex, responsive network capable of fine-tuning agricultural processes in real time.",
-                    "Our commitment is to bring together cutting-edge digital tools and time-tested ecological practices. The result is an agriculture that is not only more efficient and sustainable but also more in tune with the environment it depends on. By adopting this vision, we aim to set a new standard for farming—one where technology and nature coalesce to create a future that is both innovative and regenerative."
-                ],
-                titleColor: colors.primary,
-                paragraphsColor: colors.textLight,
-                textPosition: "right"
+        en: {
+            buttonsLegend: "",
+            defaultButtonLabel: "Back",
+            buttonBgColor: colors.accent,
+            buttonTextColor: colors.textDark,
+            modes: {
+                default: {
+                    bgImage: "/img/biorome_1.png",
+                    title: "Our Vision",
+                    paragraphs: [
+                        "We believe agriculture can be regenerative, productive, and resilient—all at once. Our vision is to transform land management by integrating the intelligence of nature with the precision of advanced technology.",
+                        "With Agrobots, every hectare becomes a self-optimizing ecosystem—guided by AI, managed through modular robotics, and designed to restore the health of soil, water, and biodiversity.",
+                        "Our platform, Land OS, unites real-time environmental data, automated decision-making, and decentralized field operations. By replacing the old model of extractive, input-heavy agriculture, we create systems that adapt and improve with every season—lowering costs, increasing yields, and regenerating the land.",
+                        "We are committed to setting a new standard: agriculture that operates in harmony with natural cycles, leverages data to boost efficiency, and leaves a positive legacy for future generations. This is the future we are building—where technology and ecology thrive together."
+                    ],
+                    titleColor: colors.primary,
+                    paragraphsColor: colors.textLight,
+                    textPosition: "right"
+                }
+            }
+        },
+        es: {
+            buttonsLegend: "",
+            defaultButtonLabel: "Volver",
+            buttonBgColor: colors.accent,
+            buttonTextColor: colors.textDark,
+            modes: {
+                default: {
+                    bgImage: "/img/biorome_1.png",
+                    title: "Nuestra Visión",
+                    paragraphs: [
+                        "Creemos que la agricultura puede ser regenerativa, productiva y resiliente a la vez. Nuestra visión es transformar la gestión de la tierra integrando la inteligencia de la naturaleza con la precisión de la tecnología avanzada.",
+                        "Con Agrobots, cada hectárea se convierte en un ecosistema auto-optimizador, guiado por IA, gestionado mediante robótica modular y diseñado para restaurar la salud del suelo, el agua y la biodiversidad.",
+                        "Nuestra plataforma, Land OS, unifica datos ambientales en tiempo real, toma de decisiones automatizada y operaciones de campo descentralizadas. Al reemplazar el modelo antiguo de agricultura extractiva y dependiente de insumos, creamos sistemas que se adaptan y mejoran con cada temporada—reduciendo costes, aumentando el rendimiento y regenerando la tierra.",
+                        "Nos comprometemos a marcar un nuevo estándar: una agricultura que funciona en armonía con los ciclos naturales, utiliza datos para mejorar la eficiencia y deja un legado positivo para las próximas generaciones. Este es el futuro que construimos—donde la tecnología y la ecología prosperan juntas."
+                    ],
+                    titleColor: colors.primary,
+                    paragraphsColor: colors.textLight,
+                    textPosition: "right"
+                }
             }
         }
     }
-};
+}

@@ -1,23 +1,16 @@
 <template>
       <div class="form-container">
-        <button class="close-btn" @click="closeForm">Close</button>
-        <h1>Let’s talk</h1>
-        <p>Send us a message and we’ll get back to you shortly.</p>
-        <form
-          action="https://formsubmit.co/info@agrobots.ai"
-          method="POST"
-          class="contact-form"
-          @submit.prevent="sendForm"
-          v-if="!submitted"
-        >
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="text" name="name" required placeholder="Your name" class="input" />
-          <input type="email" name="email" required placeholder="Your email" class="input" />
-          <textarea name="message" required placeholder="Your message" class="input h-32"></textarea>
-          <button type="submit" class="btn send-btn mt-2">Send</button>
+        <button class="close-btn" @click="closeForm">{{ $t('contact.close') }}</button>
+        <h1>{{ $t('contact.title') }}</h1>
+        <p>{{ $t('contact.description') }}</p>
+        <form @submit.prevent="sendForm" v-if="!submitted">
+          <input type="text" v-model="form.name" required :placeholder="$t('contact.name')" class="input" />
+          <input type="email" v-model="form.email" required :placeholder="$t('contact.email')" class="input" />
+          <textarea v-model="form.message" required :placeholder="$t('contact.message')" class="input h-32"></textarea>
+          <button type="submit" class="btn send-btn mt-2">{{ $t('contact.send') }}</button>
         </form>
         <div v-else>
-          ✅ Thank you! Your message has been sent.
+          {{ $t('contact.sent') }}
         </div>
       </div>
   </template>
@@ -27,7 +20,12 @@
     name: "contact",
     data() {
       return {
-        submitted: false
+        submitted: false,
+        form: {
+          name: '',
+          email: '',
+          message: ''
+        }
       };
     },
     methods: {

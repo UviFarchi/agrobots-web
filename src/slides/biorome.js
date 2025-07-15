@@ -5,46 +5,90 @@ export default {
     title: 'The Biorome',
     component: 'ScrollingFullBg',
     content: {
-        buttonsLegend: "Life in a Biorome",
-        defaultButtonLabel: "Back",
-        buttonBgColor: colors.accent,
-        buttonTextColor: colors.textDark,
-        modes: {
-            default: {
-                bgImage: "/img/biorome_2.png",
-                title: "Bio-Robotic Modular Ecosystems (bioromes)",
-                paragraphs: [
-                    "Bio-Robotic Modular Ecosystems, or bioromes, are at the heart of our vision for a new kind of agriculture. Instead of relying on enormous, single-purpose machines that enforce rigid, single-crop systems, we deploy a network of simple, specialized modules—each designed to perform one task, whether it's seeding, feeding, monitoring, or harvesting. This modular approach ensures that every action is precise and adaptable, reducing waste and energy consumption.",
-                    "An advanced AI engine orchestrates these modules in real time, continuously monitoring and responding to the needs of the ecosystem. It integrates data from local environmental sensors, weather forecasts, and even market trends to guide the system towards optimal performance. As a result, each biorome becomes a self-optimizing ecosystem, dynamically balancing plants, animals, and microbes. This harmonious integration drastically reduces the need for chemical inputs, allowing the land to regenerate itself while producing food more efficiently.",
-                    "Over time, a biorome evolves into a living, responsive system that is perfectly attuned to the needs of both the land and the community it serves. By continuously adapting to local conditions and leveraging the inherent diversity of nature, bioromes offer a sustainable path forward—one that supports resilient agriculture, minimizes environmental impacts, and secures a steady supply of nutritious produce even in the face of changing climatic and economic conditions."
-                   ],
-                titleColor: colors.primary,
-                paragraphsColor: colors.textLight,
-            },
-            Day: {
-                bgImage: "/img/biorome_day.png",
-                title: "A day in the biorome",
-                paragraphs: [
-                    "As dawn breaks over the biorome, the landscape comes alive with the near-invisible presence of technology. Birds begin their morning calls, small animals stir, and the air is thick with the scent of damp earth and growing plants.",
-                    "Hidden in the undergrowth, sensors begin their daily reports, registering moisture levels, soil composition, and plant health. Drones lift off from their charging stations, scanning the terrain with quiet precision. A patch of crops has absorbed more water than expected overnight—no need for irrigation in that sector. Meanwhile, a robotic module adjusts a water valve nearby, redirecting resources to drier zones.",
-                    "Deep in the vegetation, a monitoring unit detects an animal behaving unusually. The system flags it, analyzing past movement patterns to determine if intervention is needed. A drone glides overhead, zooming in to confirm—one hen shows signs of illness. The data flows seamlessly into Athena’s model, which recommends isolating the bird. A simple adjustment to the feed dispenser ensures the affected animal receives a tailored treatment, without disrupting the entire ecosystem.",
-                    "At midday, a light rain rolls in, anticipated hours before by the system. No need to activate irrigation. A feeding module dispenses a carefully balanced mix for the livestock, based on real-time nutritional tracking. The land adapts fluidly, responding to the needs of plants, animals, and microbes alike, without human intervention."
-                ],
-                titleColor: colors.primary,
-                paragraphsColor: colors.textLight,
-            },
-            Night: {
-                bgImage: "/img/biorome_night.png",
-                title: "A night in the biorome",
-                paragraphs: [
-                    "As dusk settles, the biorome transitions into night mode. The last rays of sunlight fade, but the system remains fully operational. Nocturnal pollinators emerge, guided by natural patterns rather than artificial interference. The temperature drops, and Athena updates its models in real time, adjusting growth strategies for the coming day.",
-                    "This is the ideal time for certain tasks. Cooler air reduces plant stress, making it the perfect window for precision irrigation. Water is directed exactly where it’s needed, minimizing evaporation. Some robotic modules move to apply slow-release nutrients where Athena has detected deficiencies, ensuring optimal absorption by morning. Others handle delicate harvesting operations—some crops are best collected under the dew-laden air to retain freshness.",
-                    "A slow-moving drone glides silently through the canopy, performing infrared scans to ensure all monitored species are where they should be. Its faint red navigation lights flicker momentarily against the foliage. Nearby, a small rodent disturbs a patch of soil, prompting the sensors to log the micro-disturbance, an indicator of healthy underground biodiversity.",
-                    "A soft hum of activity persists: water is redirected, micro-adjustments are made, and a few robotic modules shift position for their next task.",
-                    "By dawn, the cycle begins anew—seamlessly adjusting, growing, and optimizing, without ever disrupting the balance of the land."
-                ],
-                titleColor: colors.primary,
-                paragraphsColor: colors.textLight,
+        en: {
+            buttonsLegend: "Life in a Biorome",
+            defaultButtonLabel: "Back",
+            buttonBgColor: colors.accent,
+            buttonTextColor: colors.textDark,
+            modes: {
+                default: {
+                    bgImage: "/img/biorome_2.png",
+                    title: "Bio-Robotic Modular Ecosystems (bioromes)",
+                    paragraphs: [
+                        "Bio-Robotic Modular Ecosystems, or bioromes, are at the core of our approach to agriculture. Rather than depending on massive, single-purpose machines and uniform fields, we deploy a network of modular, specialized robotic units—each dedicated to a specific function like seeding, monitoring, feeding, or harvesting. This flexible, task-based approach ensures every action is precise and adaptable, minimizing waste and resource use.",
+                        "Our advanced AI coordinates all modules in real time, continuously integrating sensor data, weather, and even market signals to guide the system toward optimal performance. Each biorome becomes a living, self-optimizing ecosystem that balances plants, animals, and microbes. The result is higher productivity with drastically fewer chemical inputs and ongoing regeneration of soil and biodiversity.",
+                        "Bioromes evolve as living systems, adapting to local conditions and serving the communities around them. By leveraging diversity and natural cycles, they deliver resilient agriculture, reduced environmental impact, and a steady supply of fresh food—even as climate and market conditions shift."
+                    ],
+                    titleColor: colors.primary,
+                    paragraphsColor: colors.textLight
+                },
+                Day: {
+                    bgImage: "/img/biorome_day.png",
+                    title: "A day in the biorome",
+                    paragraphs: [
+                        "As dawn breaks, the biorome comes alive. Birds sing, small animals stir, and sensors hidden in the landscape begin collecting real-time data on moisture, soil health, and plant growth.",
+                        "Drones rise quietly to scan the fields; a robotic module adjusts water valves based on the night’s absorption patterns, ensuring efficient use of resources. Meanwhile, another module redirects irrigation to drier sectors, guided by real-time AI analysis.",
+                        "When the system detects unusual animal behavior, a drone inspects and, if needed, triggers a targeted intervention—such as isolating a sick hen and adapting its feed. All adjustments are seamless, guided by the central optimization engine.",
+                        "Midday rain is anticipated hours ahead, so irrigation is paused. A feeding module dispenses a precise mix for livestock based on up-to-the-minute nutritional data. The ecosystem continually adapts, optimizing every resource with minimal human input."
+                    ],
+                    titleColor: colors.primary,
+                    paragraphsColor: colors.textLight
+                },
+                Night: {
+                    bgImage: "/img/biorome_night.png",
+                    title: "A night in the biorome",
+                    paragraphs: [
+                        "As dusk settles, the biorome shifts into night mode. Nocturnal pollinators emerge, and the system adapts strategies for cooler temperatures, updating models in real time.",
+                        "Night is optimal for some tasks—like precision irrigation, which minimizes evaporation, or targeted nutrient application. Delicate crops may be harvested under dew-laden air, ensuring freshness and quality.",
+                        "Drones conduct infrared scans to verify the presence and health of all monitored species. Micro-disturbances, like a rodent digging, are logged as signs of healthy biodiversity.",
+                        "Throughout the night, resources are redistributed, and robotic modules reposition for upcoming tasks. By dawn, the biorome is ready to begin the adaptive cycle anew—optimizing, regenerating, and maintaining balance."
+                    ],
+                    titleColor: colors.primary,
+                    paragraphsColor: colors.textLight
+                }
+            }
+        },
+        es: {
+            buttonsLegend: "Vida en un Biorome",
+            defaultButtonLabel: "Volver",
+            buttonBgColor: colors.accent,
+            buttonTextColor: colors.textDark,
+            modes: {
+                default: {
+                    bgImage: "/img/biorome_2.png",
+                    title: "Ecosistemas Bio-Robóticos Modulares (bioromes)",
+                    paragraphs: [
+                        "Los Ecosistemas Bio-Robóticos Modulares, o bioromes, están en el corazón de nuestra propuesta agrícola. En lugar de depender de grandes máquinas de un solo uso y monocultivos, desplegamos una red de unidades robóticas modulares, cada una especializada en una función: siembra, monitorización, alimentación o cosecha. Esta arquitectura flexible y basada en tareas permite una acción precisa y adaptable, minimizando el desperdicio y el uso de recursos.",
+                        "Nuestra IA avanzada coordina todos los módulos en tiempo real, integrando datos de sensores, previsiones climáticas e incluso señales de mercado para guiar el sistema hacia el rendimiento óptimo. Cada biorome se convierte en un ecosistema vivo y auto-optimizador que equilibra plantas, animales y microbios. El resultado es una mayor productividad con muchos menos insumos químicos y una regeneración continua del suelo y la biodiversidad.",
+                        "Con el tiempo, los bioromes evolucionan como sistemas vivos, adaptándose a las condiciones locales y sirviendo a las comunidades. Al aprovechar la diversidad y los ciclos naturales, ofrecen una agricultura resiliente, menor impacto ambiental y un suministro estable de alimentos frescos—adaptándose tanto al clima como a las condiciones del mercado."
+                    ],
+                    titleColor: colors.primary,
+                    paragraphsColor: colors.textLight
+                },
+                "Día": {
+                    bgImage: "/img/biorome_day.png",
+                    title: "Un día en el biorome",
+                    paragraphs: [
+                        "Al amanecer, el biorome cobra vida. Cantan los pájaros, se mueven pequeños animales y sensores ocultos en el paisaje recopilan datos en tiempo real sobre humedad, salud del suelo y crecimiento de las plantas.",
+                        "Drones despegan en silencio para escanear los campos; un módulo robótico ajusta las válvulas de agua según la absorción nocturna, optimizando el uso de recursos. Otro módulo redirige el riego hacia sectores más secos, guiado por el análisis de IA en tiempo real.",
+                        "Cuando el sistema detecta un comportamiento animal inusual, un dron inspecciona y, si es necesario, activa una intervención precisa, como aislar una gallina enferma y ajustar su alimentación. Todos los ajustes se realizan de forma fluida, dirigidos por el motor central de optimización.",
+                        "La lluvia de mediodía se anticipa con horas de antelación, por lo que el riego se detiene. Un módulo de alimentación distribuye una mezcla precisa al ganado, basada en datos nutricionales actualizados. El ecosistema se adapta de manera continua, optimizando cada recurso con mínima intervención humana."
+                    ],
+                    titleColor: colors.primary,
+                    paragraphsColor: colors.textLight
+                },
+                Noche: {
+                    bgImage: "/img/biorome_night.png",
+                    title: "Una noche en el biorome",
+                    paragraphs: [
+                        "Al anochecer, el biorome entra en modo nocturno. Surgen polinizadores nocturnos y el sistema adapta sus estrategias para las temperaturas más frescas, actualizando los modelos en tiempo real.",
+                        "La noche es óptima para ciertas tareas—como el riego de precisión, que minimiza la evaporación, o la aplicación selectiva de nutrientes. Los cultivos delicados pueden cosecharse bajo el rocío, garantizando frescura y calidad.",
+                        "Drones realizan escaneos infrarrojos para verificar la presencia y salud de todas las especies monitoreadas. Las micro-perturbaciones, como el excavar de un roedor, se registran como señales de biodiversidad saludable.",
+                        "Durante la noche se redistribuyen recursos y los módulos robóticos se reposicionan para las tareas del nuevo día. Al amanecer, el biorome está listo para reiniciar el ciclo adaptativo—optimizando, regenerando y manteniendo el equilibrio."
+                    ],
+                    titleColor: colors.primary,
+                    paragraphsColor: colors.textLight
+                }
             }
         }
     }
