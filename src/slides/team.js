@@ -2,10 +2,10 @@ import colors from "@/assets/colors.js";
 
 export default {
     name: 'team',
-    title: 'Team',
     component: 'ActionColumns',
     content: {
         en: {
+            title: 'Our Team',
             general: {
                 slideTitle: 'Team',
                 slideTitleColor: colors.primary,
@@ -94,6 +94,7 @@ export default {
             ]
         },
         es: {
+            title: 'El Equipo',
             general: {
                 slideTitle: 'Equipo',
                 slideTitleColor: colors.primary,

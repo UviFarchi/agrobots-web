@@ -2,10 +2,10 @@ import colors from "@/assets/colors.js";
 
 export default {
     name: 'participate',
-    title: 'Get Involved',
     component: 'ActionColumns',
     content: {
         en: {
+            title: 'Get Involved',
             general: {
                 slideTitle: 'Get Involved',
                 slideTitleColor: colors.primary,
@@ -55,6 +55,7 @@ export default {
             ]
         },
         es: {
+            title: 'Toma Parte',
             general: {
                 slideTitle: 'Involúcrate',
                 slideTitleColor: colors.primary,

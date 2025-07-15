@@ -2,10 +2,10 @@ import colors from "@/assets/colors.js";
 
 export default {
   name: 'services',
-  title: 'On the ground',
   component: 'CardGrid',
   content: {
     en: {
+      title: 'On the ground',
       slideTitle: 'What can bioromes do?',
       slideIntro: 'Our system can be adapted to many uses.',
       slideTitleColor: colors.secondary,
@@ -48,6 +48,7 @@ export default {
       ]
     },
     es: {
+      title: 'Sobre el Terreno',
       slideTitle: '¿Qué pueden hacer los bioromes?',
       slideIntro: 'Nuestro sistema se adapta a muchos usos.',
       slideTitleColor: colors.secondary,

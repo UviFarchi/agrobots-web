@@ -25,7 +25,7 @@
               :class="['nav-link', slide.name, { active: currentSlide === index }]"
               @click="navigateTo(index)"
           >
-            {{ slide.title }}
+            {{ slide.content[currentLang].title }}
           </button>
         </li>
         <li>

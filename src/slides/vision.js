@@ -2,10 +2,10 @@ import colors from "@/assets/colors.js";
 
 export default {
     name: 'vision',
-    title: 'Our Vision',
     component: 'ScrollingFullBg',
     content: {
         en: {
+            title: 'Our Vision',
             buttonsLegend: "",
             defaultButtonLabel: "Back",
             buttonBgColor: colors.accent,
@@ -27,6 +27,7 @@ export default {
             }
         },
         es: {
+            title: 'Nuestra Visión',
             buttonsLegend: "",
             defaultButtonLabel: "Volver",
             buttonBgColor: colors.accent,

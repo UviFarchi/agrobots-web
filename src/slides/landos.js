@@ -2,10 +2,10 @@ import colors from "@/assets/colors.js";
 
 export default {
     name: 'landos',
-    title: 'Land OS',
     component: 'ConnectionCircles',
     content: {
         en: {
+            title: 'Land OS',
             connectMessageBgColor: colors.primary,
             connectMessageTextColor: colors.textDark,
             connectButtonBgColor: colors.secondary,
@@ -68,6 +68,7 @@ export default {
             ]
         },
         es: {
+            title: 'Land OS',
             connectMessageBgColor: colors.primary,
             connectMessageTextColor: colors.textDark,
             connectButtonBgColor: colors.secondary,

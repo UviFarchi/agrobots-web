@@ -2,10 +2,10 @@ import colors from "@/assets/colors.js";
 
 export default {
   name: 'partners',
-  title: 'Partners',
   component: 'CardGrid',
   content: {
     en: {
+      title: 'Partners',
       slideTitle: 'Partners & Consortium',
       slideIntro:
           "Agrobots is building an open, collaborative ecosystem for the future of land management. Through the ACES protocol and our growing consortium, we unite leading partners in robotics, sensors, regenerative agriculture, and digital infrastructure. Together, we accelerate innovation and ensure seamless compatibility across the TMaaS platform.",
@@ -44,6 +44,7 @@ export default {
       ]
     },
     es: {
+      title: 'Asociados',
       slideTitle: 'Partners y Consorcio',
       slideIntro:
           "Agrobots está construyendo un ecosistema abierto y colaborativo para el futuro de la gestión del terreno. A través del protocolo ACES y nuestro consorcio en expansión, unimos a los principales socios en robótica, sensores, agricultura regenerativa e infraestructura digital. Juntos aceleramos la innovación y garantizamos compatibilidad total en la plataforma TMaaS.",

@@ -2,10 +2,10 @@ import colors from "@/assets/colors.js";
 
 export default {
     name: "issue",
-    title: "Trouble in Paradise",
     component: "CardGrid",
     content: {
         en: {
+            title: "Trouble in Paradise",
             slideTitle: "What’s Wrong with Farming?",
             slideIntro:
                 "Modern agriculture delivers more food than ever, but at a serious cost: degraded soils, dwindling water, rising emissions, and growing waste. Current models push for maximum yield using chemicals and heavy machinery, leaving ecosystems fragile and farmers exposed to risk. To ensure food security and restore the land, we need a smarter, regenerative approach—one that uses advanced technology to work with nature, not against it. Here’s what we’re up against:",
@@ -60,6 +60,7 @@ export default {
             ]
         },
         es: {
+            title: "Problemas en el paraiso",
             slideTitle: "¿Qué está mal en la agricultura?",
             slideIntro:
                 "La agricultura moderna produce más alimentos que nunca, pero a un coste grave: suelos degradados, agua cada vez más escasa, emisiones crecientes y desperdicio alimentario. El modelo actual prioriza el rendimiento máximo usando insumos químicos y maquinaria pesada, dejando los ecosistemas frágiles y a los agricultores expuestos. Para garantizar la seguridad alimentaria y restaurar el suelo, necesitamos un enfoque más inteligente y regenerativo, apoyado en tecnología avanzada que trabaje con la naturaleza. Estos son los grandes retos:",

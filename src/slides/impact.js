@@ -2,10 +2,11 @@ import colors from "@/assets/colors.js";
 
 export default{
     name: 'impact',
-    title: 'Impact',
+
     component: 'ScrollingFullBg',
     content: {
         en: {
+            title: 'Impact',
             buttonsLegend: "Impacts",
             defaultButtonLabel: "Back",
             buttonBgColor: colors.accent,
@@ -47,6 +48,7 @@ export default{
             }
         },
         es: {
+            title: 'Impacto',
             buttonsLegend: "Impactos",
             defaultButtonLabel: "Volver",
             buttonBgColor: colors.accent,

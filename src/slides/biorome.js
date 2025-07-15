@@ -2,10 +2,10 @@ import colors from "@/assets/colors.js";
 
 export default {
     name: 'biorome',
-    title: 'The Biorome',
     component: 'ScrollingFullBg',
     content: {
         en: {
+            title: 'The Biorome',
             buttonsLegend: "Life in a Biorome",
             defaultButtonLabel: "Back",
             buttonBgColor: colors.accent,
@@ -49,6 +49,7 @@ export default {
             }
         },
         es: {
+            title: 'El Biorome',
             buttonsLegend: "Vida en un Biorome",
             defaultButtonLabel: "Volver",
             buttonBgColor: colors.accent,

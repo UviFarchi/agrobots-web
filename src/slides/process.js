@@ -2,10 +2,10 @@ import colors from "@/assets/colors.js";
 
 export default {
     name: 'process',
-    title: 'Bioromization',
     component: 'ConnectionCircles',
     content: {
         en: {
+            title: 'Bioromization',
             connectMessageBgColor: colors.secondary,
             connectMessageTextColor: colors.textDark,
             connectButtonBgColor: colors.secondary,
@@ -80,6 +80,7 @@ export default {
             ]
         },
         es: {
+            title: 'Bioromización',
             connectMessageBgColor: colors.secondary,
             connectMessageTextColor: colors.textDark,
             connectButtonBgColor: colors.secondary,
