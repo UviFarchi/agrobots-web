@@ -77,17 +77,23 @@
     </div>
 
     <footer class="app-footer">
-      <div class="footer-left">
-        <a class="footer-button footer-link" href="/privacy">Privacy Policy</a>
-        <a class="footer-button footer-link" href="/quote">Get A Quote</a>
+      <div class="footer-cta-row">
+        <button @click="toggleContact" class="footer-cta contact-cta">
+          <span class="cta-icon">📨</span>
+          {{ $t('footer.contact') }}
+        </button>
+        <a class="footer-cta quote-cta" href="/quote">
+          <span class="cta-icon">💡</span>
+          {{ $t('footer.quote') }}
+        </a>
       </div>
-      <div class="footer-center">
-        <p>© 2025 Agrobots</p>
-      </div>
-      <div class="footer-right">
-        <button @click="toggleContact" class="footer-button">Contact</button>
+      <div class="footer-info-row">
+        <a class="footer-link" href="/privacy">{{ $t('footer.privacy') }}</a>
+        <span class="footer-copyright">© 2025 Agrobots</span>
       </div>
     </footer>
+
+
 
     <div v-if="contactVisible" class="contact-container">
       <Contact
@@ -310,7 +316,6 @@ export default {
   display: none;
 }
 
-
 .nav-menu {
   display: flex;
   justify-content: center;
@@ -335,9 +340,17 @@ export default {
 }
 
 .nav-link.participate {
-  background-color: var(--accent);
-  color: var(--textDark);
+  background: var(--secondary, #237aff);
+  color: var(--textLight, #fff);
   font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px 0 rgba(35,122,255,0.16);
+  border: 2px solid var(--primary, #0b874b);
+}
+.nav-link.participate:hover {
+  background: var(--primary, #0b874b);
+  color: var(--textLight, #fff);
+  border-color: var(--secondary, #237aff);
 }
 
 /* Arrow navigation */
@@ -375,76 +388,84 @@ export default {
   width: 100%;
 }
 
-/* Footer styles */
+/* FOOTER STYLES */
 .app-footer {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  text-align: center;
   padding: 1rem;
   background-color: var(--backgroundDark);
   border-top: 1px solid var(--primary);
-  font-size: 0.9rem;
   color: var(--textLight);
-  height: 5vh;
+  min-height: 64px;
+  font-size: 0.97rem;
 }
 
-.app-footer p {
-  color: var(--accent);
-  flex: 1;
-  margin: 0 auto;
-}
-
-.app-footer .footer-button {
-  background-color: transparent;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  flex: 1;
-  height: 4vh;
-  font-size: large;
+.footer-info-row {
   display: flex;
   align-items: center;
-  align-self: center;
+  gap: 1rem;
+}
+
+.footer-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto; /* aligns right on desktop */
+}
+
+.footer-link {
+  background: none;
+  border: none;
+  color: var(--textLight);
+  font-size: 0.97rem;
+  text-decoration: underline;
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--accent);
+}
+
+.footer-copyright {
+  color: var(--accent);
+  font-size: 0.97rem;
+  margin-left: 0.5rem;
+}
+
+.footer-cta {
+  width: 170px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  border-radius: 5px;
-  margin: 0 25%;
-}
-
-.app-footer .footer-button:hover {
-  background-color: var(--accent);
-  color: var(--textDark);
-}
-
-.app-footer .footer-left {
-  flex: 1;
-  text-align: left;
-  justify-items: start;
-}
-
-.app-footer .footer-center {
-  flex: 1;
-  text-align: center;
-}
-
-.app-footer .footer-right {
-  flex: 1;
-  text-align: right;
-  justify-items: end;
-}
-
-.app-footer .footer-button {
-  font-size: 0.9rem;
-  padding: 0.5rem 1rem;
-}
-
-.app-footer .footer-link {
-  font-size: 0.9rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  background: var(--secondary, #237aff);
+  color: var(--textLight, #fff);
+  border: 2px solid var(--secondary, #237aff);
+  box-shadow: 0 4px 20px 0 rgba(35,122,255,0.10);
+  cursor: pointer;
+  transition: transform 0.14s, box-shadow 0.15s, background 0.17s, color 0.13s;
   text-decoration: none;
+  outline: none;
+  gap: 0.5em;
+  margin: 0;
+}
+.footer-cta .cta-icon { font-size: 1.2em; margin-right: 0.5em; }
+.footer-cta:hover {
+  background: var(--primary, #0b874b);
+  color: var(--textLight, #fff);
+  border-color: var(--primary, #0b874b);
+  transform: scale(1.07);
 }
 
+/* Contact form/modal styles */
 .contact-container {
   position: fixed;
   bottom: 0;
@@ -461,7 +482,7 @@ export default {
   overflow-y: auto;
 }
 
-
+/* Responsive tweaks */
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
@@ -472,7 +493,6 @@ export default {
     border-radius: 50%;
     border: 1px solid var(--primary);
   }
-
 
   .nav-menu {
     position: fixed;
@@ -507,16 +527,40 @@ export default {
   }
 
   .app-footer {
-    height: 10vh;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.8rem 0.1rem;
+    min-height: 130px;
+    gap: 0.5rem;
   }
-
-  .app-footer .footer-link, .app-footer .footer-button {
-    display: flex;
-    flex: 1;
-    margin: 0px;
-    padding: 10px;
+  .footer-cta-row {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 0.6rem;
+    margin-left: 0;
+    margin-bottom: 0.5rem;
   }
-
+  .footer-cta {
+    width: 48vw;
+    min-width: 120px;
+    max-width: 210px;
+    height: 48px;
+    font-size: 0.97rem;
+    margin: 0;
+    padding: 0.7rem 0.4rem;
+  }
+  .footer-info-row {
+    width: 100%;
+    justify-content: center;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    font-size: 0.93rem;
+  }
+  .footer-link, .footer-copyright {
+    font-size: 0.93rem;
+    padding: 0.4rem 0.3rem;
+  }
   .main-nav {
     height: 10vh;
   }

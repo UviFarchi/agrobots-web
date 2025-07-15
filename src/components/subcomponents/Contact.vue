@@ -34,7 +34,7 @@
       },
       async sendForm() {
         try {
-          const res = await fetch('/api/receive', {
+          const res = await fetch('http://localhost:3001/api/receive', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ type: 'contact', ...this.form })
