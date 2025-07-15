@@ -34,10 +34,10 @@
       },
       async sendForm() {
         try {
-          const res = await fetch('/api/contact', {
+          const res = await fetch('/api/receive', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(this.form)
+            body: JSON.stringify({ type: 'contact', ...this.form })
           });
           if (!res.ok) throw new Error('Request failed');
           this.submitted = true;

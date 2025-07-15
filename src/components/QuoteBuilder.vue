@@ -243,10 +243,10 @@ export default {
     async submitQuote() {
       if (!this.validateStep()) return;
       try {
-        await fetch('/api/quote', {
+        await fetch('/api/receive', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(this.form)
+          body: JSON.stringify({ type: 'quote', ...this.form })
         });
       } catch (err) {
         console.error(err);
