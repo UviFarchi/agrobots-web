@@ -413,7 +413,6 @@ export default {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-left: auto; /* aligns right on desktop */
 }
 
 .footer-link {
