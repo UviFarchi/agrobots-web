@@ -92,12 +92,18 @@ export default {
 </script>
 
 <style scoped>
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 .video-feature-root {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100vw;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .video-hero-logo {
@@ -293,6 +299,16 @@ export default {
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
+  .video-hero-logo {
+    width: 110px;
+    max-width: 35vw;
+    min-width: 48px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+  .video-feature-root {
+    overflow-x: hidden;
+  }
   .video-flex-row {
     align-items: stretch;
     max-width: 99vw;

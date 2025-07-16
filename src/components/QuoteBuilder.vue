@@ -1,11 +1,11 @@
 <script>
-import { useI18n } from "vue-i18n";
+import {useI18n} from "vue-i18n";
 
 export default {
   name: "QuoteBuilder",
   setup() {
-    const { t, locale, messages } = useI18n();
-    return { t, locale, messages };
+    const {t, locale, messages} = useI18n();
+    return {t, locale, messages};
   },
   data() {
     return {
@@ -23,13 +23,13 @@ export default {
         useCase: "",
         agricultureCategory: "",
         landSize: null,
-        region: { country: "", region: "" },
+        region: {country: "", region: ""},
         landUse: "",
-        infrastructure: { water: false, electricity: false, internet: false },
+        infrastructure: {water: false, electricity: false, internet: false},
         serviceTier: "",
         selectedKPIs: [],
         additionalNotes: "",
-        contact: { name: "", email: "", organization: "", wantsCall: null, phone: "" }
+        contact: {name: "", email: "", organization: "", wantsCall: null, phone: ""}
       },
       selectedUnit: "ha",
       errors: {},
@@ -42,15 +42,16 @@ export default {
       customKpis: [],
       customKpiInput: "",
       basePricePerIC: 1200,
-      CONTINENT_ORDER: ["EU", "NA", "SA", "AS", "AF", "OC"]
+      CONTINENT_ORDER: ["EU", "NA", "SA", "AS", "AF", "OC"],
+      submitting: false
     };
   },
   computed: {
     landAreaUnits() {
       return [
-        { value: "ha", label: this.t("steps.details.land_area_units.ha"), toHa: v => v },
-        { value: "ac", label: this.t("steps.details.land_area_units.ac"), toHa: v => v * 0.404686 },
-        { value: "km2", label: this.t("steps.details.land_area_units.km2"), toHa: v => v * 100 }
+        {value: "ha", label: this.t("steps.details.land_area_units.ha"), toHa: v => v},
+        {value: "ac", label: this.t("steps.details.land_area_units.ac"), toHa: v => v * 0.404686},
+        {value: "km2", label: this.t("steps.details.land_area_units.km2"), toHa: v => v * 100}
       ];
     },
     convertedHa() {
@@ -61,22 +62,22 @@ export default {
     continentList() {
       const dict = this.messages[this.locale];
       return Object.entries(dict)
-        .filter(([code, val]) => val && val.countries)
-        .map(([contCode, contObj]) => ({
-          code: contCode,
-          name: contObj.name,
-          countries: Object.entries(contObj.countries)
-            .map(([cc, cObj]) => ({
-              code: cc,
-              name: cObj.name
-            }))
-            .sort((a, b) => a.name.localeCompare(b.name, this.locale))
-        }))
-        .sort((a, b) => {
-          const idxA = this.CONTINENT_ORDER.indexOf(a.code);
-          const idxB = this.CONTINENT_ORDER.indexOf(b.code);
-          return idxA - idxB;
-        });
+          .filter(([code, val]) => val && val.countries)
+          .map(([contCode, contObj]) => ({
+            code: contCode,
+            name: contObj.name,
+            countries: Object.entries(contObj.countries)
+                .map(([cc, cObj]) => ({
+                  code: cc,
+                  name: cObj.name
+                }))
+                .sort((a, b) => a.name.localeCompare(b.name, this.locale))
+          }))
+          .sort((a, b) => {
+            const idxA = this.CONTINENT_ORDER.indexOf(a.code);
+            const idxB = this.CONTINENT_ORDER.indexOf(b.code);
+            return idxA - idxB;
+          });
     },
     regionList() {
       if (!this.form.region.country) return [];
@@ -113,18 +114,16 @@ export default {
 
       // Land area
       const ha = this.convertedHa;
-      if (ha < 100) ic += 0.4;     // penalty for small land
-      if (ha > 50) ic += 0.3;      // as before
-      if (ha > 200) ic -= 0.2;     // small reduction for >200ha
+      if (ha < 100) ic += 0.4;
+      if (ha > 50) ic += 0.3;
+      if (ha > 200) ic -= 0.2;
 
       // Infrastructure
       if (!this.form.infrastructure.electricity) ic += 0.4;
       if (!this.form.infrastructure.water) ic += 0.6;
       if (!this.form.infrastructure.internet) ic += 0.2;
 
-      // Optionally, rough adjustment for location if you want
-      // Example: higher IC for countries far from a service hub
-      // Could use a helper that maps countries to a "distance penalty"
+      // Location penalty
       if (this.form.region && this.form.region.country) {
         ic += this.getLocationICPenalty(this.form.region.country);
       }
@@ -141,8 +140,7 @@ export default {
     }
   },
   mounted() {
-    // When the form is first shown, replace state so back button knows we're on step 0
-    window.history.replaceState({ step: 0 }, "");
+    window.history.replaceState({step: 0}, "");
     window.addEventListener("popstate", this.onPopState);
   },
   beforeUnmount() {
@@ -161,29 +159,32 @@ export default {
   },
   methods: {
     getLocationICPenalty(countryCode) {
-      // Barcelona, Guatemala City, Texas are hubs
-      // Spain, France, Portugal: 0, nearby EU (Italy, Germany, NL): 0.1
-      // Central America: 0
-      // North America: 0.1, South America: 0.3, Africa/Asia/Australia: 0.5
       const eu = ["ES", "PT", "FR", "IT", "NL", "DE", "BE", "CH", "AT"];
       const centralAmerica = ["GT", "HN", "SV", "NI", "CR", "PA", "BZ"];
       const northAmerica = ["US", "MX", "CA"];
       if (eu.includes(countryCode)) return 0;
       if (centralAmerica.includes(countryCode)) return 0;
       if (northAmerica.includes(countryCode)) return 0.1;
-      // You can expand these rules as needed.
-      return 0.3; // Default penalty for other continents
+      return 0.3;
     },
     getBasePricePerIC() {
       switch (this.form.agricultureCategory) {
-        case "cereals": return 900;
-        case "oilseeds": return 1000;
-        case "orchard": return 1200;
-        case "open_veg": return 1300;
-        case "greenhouse": return 2000;
-        case "mixed": return 1200;
-        case "livestock": return 2200;
-        default: return 1200;
+        case "cereals":
+          return 900;
+        case "oilseeds":
+          return 1000;
+        case "orchard":
+          return 1200;
+        case "open_veg":
+          return 1300;
+        case "greenhouse":
+          return 2000;
+        case "mixed":
+          return 1200;
+        case "livestock":
+          return 2200;
+        default:
+          return 1200;
       }
     },
     openToast(messages) {
@@ -234,24 +235,29 @@ export default {
     },
     nextStep() {
       if (this.validateStep()) this.currentStep++;
-      window.history.pushState({ step: this.currentStep }, "");
+      window.history.pushState({step: this.currentStep}, "");
     },
     prevStep() {
       if (this.currentStep > 0) this.currentStep--;
-
     },
     async submitQuote() {
       if (!this.validateStep()) return;
+      this.submitting = true;
       try {
         await fetch('/api/receive', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ type: 'quote', ...this.form })
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            type: 'quote',
+            ...this.form,
+            selectedKPIs: this.allSelectedKpis // All KPIs, custom and preset
+          })
         });
       } catch (err) {
         console.error(err);
         this.openToast([this.t('contact.error')]);
       }
+      this.submitting = false;
       this.currentStep = this.steps.length - 1;
     },
     selectWantsCall(val) {
@@ -289,8 +295,10 @@ export default {
 };
 </script>
 
+
 <template>
-  <a href="/" class="floating_logo"><img src="/img/single_flower_logo.png" alt="back to home page"/>Back to home page </a>
+  <a href="/" class="floating_logo"><img src="/img/single_flower_logo.png" alt="back to home page"/>Back to home page
+  </a>
   <div class="quote-builder">
     <transition name="toast-fade">
       <div v-if="showToast" class="toast" @click="closeToast">
@@ -302,7 +310,8 @@ export default {
       </div>
     </transition>
     <div class="form-card" @input="handleFormInput" @focusin="handleFormInput">
-      <!-- Step Title -->
+
+
       <h2 class="step-title">{{ t('steps.' + steps[currentStep] + '.title') }}</h2>
       <div class="step-content">
         <!-- Step 1: Purpose -->
@@ -501,7 +510,10 @@ export default {
             <tbody>
             <tr>
               <th>{{ t('steps.estimate.purpose') }}</th>
-              <td>{{ t('steps.purpose.options.' + form.useCase) }} <span v-if="form.useCase === 'agricultural_production'"> - {{ t('steps.purpose.agriculture_type.' + form.agricultureCategory) }}</span></td>
+              <td>{{ t('steps.purpose.options.' + form.useCase) }} <span
+                  v-if="form.useCase === 'agricultural_production'"> - {{
+                  t('steps.purpose.agriculture_type.' + form.agricultureCategory)
+                }}</span></td>
 
             </tr>
             <tr>
@@ -614,9 +626,15 @@ export default {
         </div>
         <div class="nav-right">
           <button v-if="currentStep < steps.length - 2" @click="nextStep" class="btn">{{ t('next') }}</button>
-          <button v-if="currentStep === steps.length - 2" @click="submitQuote" class="btn submit">{{
-              t('submit')
-            }}
+          <button
+              v-if="currentStep === steps.length - 2"
+              @click="submitQuote"
+              class="btn submit"
+              :disabled="submitting"
+              style="min-width:120px;position:relative"
+          >
+            <span v-if="submitting" class="spinner" aria-label="Loading"></span>
+            <span v-else>{{ t('submit') }}</span>
           </button>
         </div>
       </div>
@@ -626,6 +644,22 @@ export default {
 
 
 <style scoped>
+
+.spinner {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  border-top-color: var(--primary, #12cbc4);
+  animation: spin 0.8s linear infinite;
+  vertical-align: middle;
+  margin-right: 0.8em;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 .quote-builder {
   min-height: 100vh;
   width: 100vw;
@@ -772,7 +806,7 @@ export default {
   top: -50%;
   left: 0;
   width: 100%;
-  height:inherit;
+  height: inherit;
   z-index: 1000;
   background: black;
   color: #ffe388;
@@ -1028,6 +1062,7 @@ export default {
   color: var(--accent);
   font-size: 0.98em;
 }
+
 .floating_logo {
   position: absolute;
   top: 18px;
@@ -1058,17 +1093,22 @@ export default {
 }
 
 
-
 @media (max-width: 700px) {
+  .button-row {
+    align-items: self-start;
+    flex: 2; }
+
   .floating_logo {
     top: 7px;
     right: 8px;
     font-size: 0.95rem;
     gap: 6px;
   }
+
   .floating_logo img {
     width: 22px;
   }
+
   .step-title {
     font-size: 1.08em;
   }
@@ -1078,7 +1118,6 @@ export default {
     max-width: 100vw;
     min-width: 0;
     border-radius: 0;
-    height: 100vh;
     max-height: 100vh;
   }
 
@@ -1101,7 +1140,7 @@ export default {
     font-size: 0.98em;
   }
 
- .subcard {
+  .subcard {
     width: 100%;
   }
 }
@@ -1157,7 +1196,6 @@ export default {
 .toast-fade-enter-from, .toast-fade-leave-to {
   opacity: 0;
 }
-
 
 
 </style>

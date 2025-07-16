@@ -453,9 +453,9 @@ export default {
   font-weight: 600;
   font-size: 1rem;
   border-radius: 8px;
-  background: var(--secondary, #237aff);
-  color: var(--textLight, #fff);
-  border: 2px solid var(--secondary, #237aff);
+  background: var(--primary);
+  color: var(--textDark);
+  border: 2px solid var(--accent);
   box-shadow: 0 4px 20px 0 rgba(35,122,255,0.10);
   cursor: pointer;
   transition: transform 0.14s, box-shadow 0.15s, background 0.17s, color 0.13s;
