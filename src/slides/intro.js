@@ -20,6 +20,7 @@ export default {
         es: {
             title: 'Bienvenidos',
             introTitle: "Transformando la Agricultura con LandOS",
+            thumbnail: "/img/thumbnail.png",
             introText: [
                 "Agrobots lidera la transición hacia la Agricultura 4.0 con un modelo de Gestión de Terreno como Servicio (TMaaS). Convertimos terrenos infrautilizados o degradados en ecosistemas inteligentes y auto-optimizados mediante IA, robótica y un diseño modular.",
                 "Nuestra plataforma, Land OS, integra sensores avanzados, drones y módulos robóticos para monitorizar, adaptar y mejorar cada hectárea de forma continua, ofreciendo productividad predecible y restauración ecológica medible por una sola tarifa anual fija.",
