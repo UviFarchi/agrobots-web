@@ -6,7 +6,7 @@ export default {
     content: {
         en: {
             title: 'Land OS',
-            connectMessageBgColor: colors.primary,
+            connectMessageBgColor: colors.backgroundLightTranslucent,
             connectMessageTextColor: colors.textDark,
             connectButtonBgColor: colors.secondary,
             connectButtonTextColor: colors.textDark,
@@ -18,7 +18,8 @@ export default {
                     position: "center-middle",
                     img: "/img/landos_logo_glow.png",
                     textColor: colors.secondary,
-                    title: "Unified Terrain Management Platform"
+                    title: "Unified Terrain Management Platform",
+                    activeOnStart: true
                 },
                 {
                     id: "optimizationEngine",
@@ -69,7 +70,7 @@ export default {
         },
         es: {
             title: 'Land OS',
-            connectMessageBgColor: colors.primary,
+            connectMessageBgColor: colors.backgroundLightTranslucent,
             connectMessageTextColor: colors.textDark,
             connectButtonBgColor: colors.secondary,
             connectButtonTextColor: colors.textDark,
@@ -78,10 +79,11 @@ export default {
             circles: [
                 {
                     id: "landOsLogo",
-                    position: "center-middle",
+                    position: "center-bottom",
                     img: "/img/landos_logo_glow.png",
                     textColor: colors.secondary,
-                    title: "Plataforma Unificada de Gestión del Terreno"
+                    title: "Plataforma Unificada de Gestión del Terreno",
+                    activeOnStart: true
                 },
                 {
                     id: "optimizationEngine",

@@ -38,7 +38,7 @@
                 border: `1px solid ${card.frontBorder}`
               }"
             >
-              <div class="cardIcon">{{ card.icon }}</div>
+              <div class="cardIcon" v-html="card.icon"></div>
               <div class="cardTitle">{{ card.title }}</div>
             </div>
             <div
@@ -51,8 +51,8 @@
               }"
             >
               <div class="cardTitle">{{ card.title }}</div>
-              <p>{{ card.backText }}</p>
-              <span class="read-more">Click to read more</span>
+              <p v-html=" card.backText"></p>
+              <span class="read-more">{{expandText}}</span>
             </div>
           </div>
         </div>
@@ -65,9 +65,14 @@
 export default {
   name: "CardGrid",
   props: {
+    title: {type: String, required: true},
     currentSlideIndex: {
       type: Number,
       default: 0
+    },
+    expandText:{
+      type: String,
+      required: true
     },
     slideTitle: {
       type: String,
@@ -110,7 +115,6 @@ export default {
       this.hoveredIndex = null;
     },
     handleClick(i) {
-      // Toggle the card. If already open, remove from lockedSet to close it.
       if (this.lockedSet.has(i)) {
         this.lockedSet.delete(i);
         return;
@@ -243,6 +247,7 @@ export default {
 .cardIcon {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
+  max-width: 100px;
 }
 
 .cardTitle {
@@ -253,17 +258,17 @@ export default {
 
 .flip-card:not(.active) .flip-card-back p {
   line-height: 1.2em;
-  max-height: calc(1.2em * 6);
+  max-height: calc(1.2em * 4);
   overflow: hidden;
   position: relative;
-  padding: 1rem;
+  padding-top: 1rem;
 }
 
 .flip-card:not(.active) .flip-card-back p::after {
   content: "\.\.\.";
   position: absolute;
   bottom: 3px;
-  right: 1rem;
+  right: 0;
   background: linear-gradient(to right, transparent, var(--card-bg-color) 80%);
   width: 10rem;
   text-align: right;
@@ -274,7 +279,7 @@ export default {
 .flip-card:not(.active) .flip-card-back .read-more {
   display: block;
   position: absolute;
-  margin-top: calc(1.2em * 9);
+  margin-top: calc(1.2em * 8);
   left: 0;
   width: 100%;
   text-align: center;

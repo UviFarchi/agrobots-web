@@ -290,6 +290,7 @@ export default {
 </script>
 
 <template>
+  <a href="/" class="floating_logo"><img src="/img/single_flower_logo.png" alt="back to home page"/>Back to home page </a>
   <div class="quote-builder">
     <transition name="toast-fade">
       <div v-if="showToast" class="toast" @click="closeToast">
@@ -1027,8 +1028,47 @@ export default {
   color: var(--accent);
   font-size: 0.98em;
 }
+.floating_logo {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  left: unset;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary, #12cbc4);
+  font-size: 1.08rem;
+  font-weight: 500;
+  text-decoration: underline;
+  z-index: 30;
+  background: none;
+  border: none;
+  outline: none;
+  transition: color 0.16s;
+}
+
+.floating_logo img {
+  width: 30px;
+  height: auto;
+  display: block;
+}
+
+.floating_logo:hover {
+  color: var(--accent, #ffe75a);
+}
+
+
 
 @media (max-width: 700px) {
+  .floating_logo {
+    top: 7px;
+    right: 8px;
+    font-size: 0.95rem;
+    gap: 6px;
+  }
+  .floating_logo img {
+    width: 22px;
+  }
   .step-title {
     font-size: 1.08em;
   }
@@ -1117,5 +1157,8 @@ export default {
 .toast-fade-enter-from, .toast-fade-leave-to {
   opacity: 0;
 }
+
+
+
 </style>
 

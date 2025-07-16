@@ -20,7 +20,7 @@
       </div>
 
       <ul :class="['nav-menu', { 'active': menuOpen }]">
-        <li v-for="(slide, index) in slides" :key="slide.name">
+        <li v-for="(slide, index) in slides" :key="slide.name" class="nav-item">
           <button
               :class="['nav-link', slide.name, { active: currentSlide === index }]"
               @click="navigateTo(index)"
@@ -66,7 +66,7 @@
               :is="slides[currentSlide].component"
               v-bind="slides[currentSlide].content[currentLang]"
               :currentSlideIndex="currentSlide"
-              @contact="toggleContact"
+              v-on="componentEventMap"
           />
         </div>
       </transition>
@@ -79,11 +79,11 @@
     <footer class="app-footer">
       <div class="footer-cta-row">
         <button @click="toggleContact" class="footer-cta contact-cta">
-          <span class="cta-icon">📨</span>
+
           {{ $t('footer.contact') }}
         </button>
         <a class="footer-cta quote-cta" href="/quote">
-          <span class="cta-icon">💡</span>
+
           {{ $t('footer.quote') }}
         </a>
       </div>
@@ -164,6 +164,15 @@ export default {
         i18n.global.locale.value = newLang;
         localStorage.setItem('lang', newLang);
       }
+    }
+  },
+  computed: {
+    componentEventMap() {
+      const compName = this.slides[this.currentSlide].component;
+      if (this.slides[this.currentSlide].name === 'participate') {
+        return { contact: this.toggleContact };
+      }
+      return {};
     }
   },
   methods: {
@@ -261,7 +270,6 @@ export default {
   background-color: var(--backgroundDark);
   border-bottom: 1px solid var(--primary);
   z-index: 20;
-  height: 5vh;
   justify-content: space-evenly;
   align-items: center;
   display: flex;
@@ -565,4 +573,7 @@ export default {
   }
 }
 
+.nav-item {
+  display: flex;
+}
 </style>

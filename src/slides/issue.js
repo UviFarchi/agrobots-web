@@ -6,6 +6,7 @@ export default {
     content: {
         en: {
             title: "Trouble in Paradise",
+            expandText: "Click to read more",
             slideTitle: "What’s Wrong with Farming?",
             slideIntro:
                 "Modern agriculture delivers more food than ever, but at a serious cost: degraded soils, dwindling water, rising emissions, and growing waste. Current models push for maximum yield using chemicals and heavy machinery, leaving ecosystems fragile and farmers exposed to risk. To ensure food security and restore the land, we need a smarter, regenerative approach—one that uses advanced technology to work with nature, not against it. Here’s what we’re up against:",
@@ -16,7 +17,7 @@ export default {
                 {
                     icon: "🌍",
                     title: "Ecological Damage",
-                    backText: "Intensive farming practices—monocultures, pesticides, synthetic fertilizers—degrade soil, pollute water, and reduce biodiversity. Over 70% of freshwater is used for agriculture, much of it wasted or contaminated. We need systems that heal the land while producing more with less.",
+                    backText: "Intensive farming practices — monocultures, pesticides, synthetic fertilizers—degrade soil, pollute water, and reduce biodiversity. Over 70% of freshwater is used for agriculture, much of it wasted or contaminated. We need systems that heal the land while producing more with less.",
                     frontBg: colors.primary,
                     frontColor: colors.textDark,
                     frontBorder: colors.secondary,
@@ -61,6 +62,7 @@ export default {
         },
         es: {
             title: "Problemas en el paraiso",
+            expandText: "Pulsa para expandir",
             slideTitle: "¿Qué está mal en la agricultura?",
             slideIntro:
                 "La agricultura moderna produce más alimentos que nunca, pero a un coste grave: suelos degradados, agua cada vez más escasa, emisiones crecientes y desperdicio alimentario. El modelo actual prioriza el rendimiento máximo usando insumos químicos y maquinaria pesada, dejando los ecosistemas frágiles y a los agricultores expuestos. Para garantizar la seguridad alimentaria y restaurar el suelo, necesitamos un enfoque más inteligente y regenerativo, apoyado en tecnología avanzada que trabaje con la naturaleza. Estos son los grandes retos:",
@@ -71,7 +73,7 @@ export default {
                 {
                     icon: "🌍",
                     title: "Daño ecológico",
-                    backText: "Las prácticas intensivas—monocultivos, pesticidas, fertilizantes sintéticos—degradan el suelo, contaminan el agua y reducen la biodiversidad. Más del 70% del agua dulce se destina a la agricultura, gran parte desperdiciada o contaminada. Necesitamos sistemas que regeneren la tierra y produzcan más con menos.",
+                    backText: "Las prácticas intensivas — monocultivos, pesticidas, fertilizantes sintéticos—degradan el suelo, contaminan el agua y reducen la biodiversidad. Más del 70% del agua dulce se destina a la agricultura, gran parte desperdiciada o contaminada. Necesitamos sistemas que regeneren la tierra y produzcan más con menos.",
                     frontBg: colors.primary,
                     frontColor: colors.textDark,
                     frontBorder: colors.secondary,

@@ -67,6 +67,7 @@
 export default {
   name: "ConnectionCircles",
   props: {
+    title: {type: String, required: true},
     currentSlideIndex: {
       type: Number,
       default: 0
@@ -443,6 +444,7 @@ export default {
     font-size: 1.2rem;
     margin: 0.5rem 0;
   }
+
 
   .action-circle button {
  display: none;

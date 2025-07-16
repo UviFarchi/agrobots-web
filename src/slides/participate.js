@@ -11,6 +11,7 @@ export default {
                 slideTitleColor: colors.primary,
                 slideIntro: 'Help us bring regenerative, autonomous agriculture to life.',
                 slideIntroColor: colors.secondary,
+                columnsPerRow: 3,
             },
             columns: [
                 {
@@ -23,7 +24,7 @@ export default {
                     buttonTextColor: colors.textDark,
                     buttonBorderColor: colors.accent,
                     columnsBgColor: colors.backgroundDark,
-                    textColor: colors.primary,
+                    textColor: colors.secondary,
                     borderColor: colors.primary,
                 },
                 {
@@ -36,7 +37,7 @@ export default {
                     buttonTextColor: colors.textDark,
                     buttonBorderColor: colors.accent,
                     columnsBgColor: colors.backgroundDark,
-                    textColor: colors.primary,
+                    textColor: colors.secondary,
                     borderColor: colors.primary,
                 },
                 {
@@ -49,7 +50,7 @@ export default {
                     buttonTextColor: colors.textDark,
                     buttonBorderColor: colors.accent,
                     columnsBgColor: colors.backgroundDark,
-                    textColor: colors.primary,
+                    textColor: colors.secondary,
                     borderColor: colors.primary,
                 }
             ]
@@ -61,6 +62,7 @@ export default {
                 slideTitleColor: colors.primary,
                 slideIntro: 'Ayúdanos a hacer realidad una agricultura regenerativa y autónoma.',
                 slideIntroColor: colors.secondary,
+                columnsPerRow: 3,
             },
             columns: [
                 {
@@ -73,7 +75,7 @@ export default {
                     buttonTextColor: colors.textDark,
                     buttonBorderColor: colors.accent,
                     columnsBgColor: colors.backgroundDark,
-                    textColor: colors.primary,
+                    textColor: colors.secondary,
                     borderColor: colors.primary,
                 },
                 {
@@ -86,7 +88,7 @@ export default {
                     buttonTextColor: colors.textDark,
                     buttonBorderColor: colors.accent,
                     columnsBgColor: colors.backgroundDark,
-                    textColor: colors.primary,
+                    textColor: colors.secondary,
                     borderColor: colors.primary,
                 },
                 {
@@ -99,7 +101,7 @@ export default {
                     buttonTextColor: colors.textDark,
                     buttonBorderColor: colors.accent,
                     columnsBgColor: colors.backgroundDark,
-                    textColor: colors.primary,
+                    textColor: colors.secondary,
                     borderColor: colors.primary,
                 }
             ]

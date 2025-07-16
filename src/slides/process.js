@@ -6,7 +6,7 @@ export default {
     content: {
         en: {
             title: 'Bioromization',
-            connectMessageBgColor: colors.secondary,
+            connectMessageBgColor: colors.backgroundLightTranslucent,
             connectMessageTextColor: colors.textDark,
             connectButtonBgColor: colors.secondary,
             connectButtonTextColor: colors.textDark,
@@ -81,7 +81,7 @@ export default {
         },
         es: {
             title: 'Bioromización',
-            connectMessageBgColor: colors.secondary,
+            connectMessageBgColor: colors.backgroundLightTranslucent,
             connectMessageTextColor: colors.textDark,
             connectButtonBgColor: colors.secondary,
             connectButtonTextColor: colors.textDark,
