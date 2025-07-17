@@ -496,8 +496,12 @@ export default {
   .menu-toggle {
     display: flex;
     height: 6vh;
+    width:6vh;
     z-index: 2002;
-    padding: 2vw;
+    box-sizing: border-box;
+    padding: 1vh;
+    align-items: center;
+    justify-content: center;
     background: radial-gradient(circle at center, darkslategray 0%, black 100%);
     border-radius: 50%;
     border: 1px solid var(--primary);
