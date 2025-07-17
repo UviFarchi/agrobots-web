@@ -15,6 +15,7 @@
     </div>
 
     <!-- Video Modal -->
+    <teleport to="body">
     <div v-if="showModal" class="video-modal" @click.self="closeModal">
       <div class="modal-content">
         <!-- Landscape tip for mobile -->
@@ -33,6 +34,7 @@
         <button class="modal-close" @click="closeModal" aria-label="Close video">×</button>
       </div>
     </div>
+    </teleport>
   </div>
 </template>
 
@@ -349,6 +351,7 @@ img {
     height: 60vw;
     font-size: 1rem;
     border-radius: 13px;
+    text-align: center;
   }
 }
 </style>
