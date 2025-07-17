@@ -488,7 +488,9 @@ export default {
   align-items: center;
   overflow-y: auto;
 }
-
+.nav-item {
+  display: flex;
+}
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .menu-toggle {
@@ -500,7 +502,11 @@ export default {
     border-radius: 50%;
     border: 1px solid var(--primary);
   }
-
+  .toggle-menu-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
   .nav-menu {
     position: fixed;
     top: 0;
@@ -573,7 +579,6 @@ export default {
   }
 }
 
-.nav-item {
-  display: flex;
-}
+
+
 </style>
