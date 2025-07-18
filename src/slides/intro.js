@@ -13,7 +13,7 @@ export default {
                 "We believe the future of agriculture lies in harmonizing nature and technology—creating systems that are productive, resilient, and sustainable.",
                 "Discover how Agrobots is redefining the way land is managed and food is produced—efficient, profitable, and in balance with the planet."
             ],
-            videoSource: 'https://www.youtube.com/embed/NLG7D5_fcNk?autoplay=1',
+            videoSource: 'https://www.youtube.com/embed/NLG7D5_fcNk?autoplay=1&fullscreen=1',
             videoTitle: 'Agrobots Explainer',
             imgSource: '/img/agrobots_logo_white_glow.png'
         },
@@ -28,7 +28,7 @@ export default {
                 "Creemos que el futuro de la agricultura está en la armonía entre naturaleza y tecnología, creando sistemas productivos, resilientes y sostenibles.",
                 "Descubre cómo Agrobots está redefiniendo la gestión del terreno y la producción de alimentos: eficiente, rentable y en equilibrio con el planeta."
             ],
-            videoSource: 'https://www.youtube.com/embed/NLG7D5_fcNk?autoplay=1',
+            videoSource: 'https://www.youtube.com/embed/NLG7D5_fcNk?autoplay=1&fullscreen=1',
             videoTitle: 'Agrobots Explainer',
             imgSource: '/img/agrobots_logo_white_glow.png'
         }

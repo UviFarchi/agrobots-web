@@ -226,18 +226,30 @@ img {
   filter: brightness(1.1) drop-shadow(0 0 10px var(--accent));
 }
 
-/* Modal styles */
+/* Modal styles: Use dynamic viewport for mobile browser chrome */
 .video-modal {
   position: fixed;
   top: 0; left: 0;
-  width: 100vw; height: 100vh;
+  width: 100vw;
+  height: 100dvh;      /* <-- Use dynamic viewport height */
+  max-height: 100dvh;
   background: rgba(24,24,24,0.98);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2100;
   animation: fadeInModal 0.19s cubic-bezier(.44,.23,.58,.85);
+  /* fallback for old browsers */
+  /* height: 100vh; */
 }
+
+@supports not (height: 100dvh) {
+  .video-modal {
+    height: 100vh;
+    max-height: 100vh;
+  }
+}
+
 @keyframes fadeInModal {
   0% { opacity: 0; }
   100% { opacity: 1; }
@@ -255,7 +267,12 @@ img {
   justify-content: center;
   box-shadow: 0 12px 64px #000a;
   overflow: hidden;
+
+  /* Add top/bottom margin to avoid browser UI overlays */
+  margin-top: 3vw;
+  margin-bottom: 3vw;
 }
+
 .modal-content iframe {
   width: 100%;
   height: 100%;
@@ -345,6 +362,8 @@ img {
     min-width: 0;
     aspect-ratio: 16/9;
     border-radius: 13px;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
   }
   .landscape-tip {
     width: 99vw;
@@ -355,3 +374,4 @@ img {
   }
 }
 </style>
+
