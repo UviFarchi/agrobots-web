@@ -28,27 +28,26 @@
             {{ slide.content[currentLang].title }}
           </button>
         </li>
-        <li>
-          <div class="lang-dropdown" @click="showLangMenu = !showLangMenu" @blur="showLangMenu = false" tabindex="0">
-            <img
-                :src="`/img/${currentLang}.png`"
-                :alt="currentLang.toUpperCase()"
-                class="lang-flag"
-            />
-            <div v-if="showLangMenu" class="lang-menu">
-              <img
-                  v-for="lang in availableLangs"
-                  :key="lang"
-                  :src="`/img/${lang}.png`"
-                  :alt="lang.toUpperCase()"
-                  class="lang-flag"
-                  :class="{ active: currentLang === lang }"
-                  @click.stop="selectLang(lang)"
-              />
-            </div>
-          </div>
-        </li>
       </ul>
+
+      <div class="lang-dropdown" @click="showLangMenu = !showLangMenu" @blur="showLangMenu = false" tabindex="0">
+        <img
+            :src="`/img/${currentLang}.png`"
+            :alt="currentLang.toUpperCase()"
+            class="lang-flag"
+        />
+        <div v-if="showLangMenu" class="lang-menu">
+          <img
+              v-for="lang in availableLangs"
+              :key="lang"
+              :src="`/img/${lang}.png`"
+              :alt="lang.toUpperCase()"
+              class="lang-flag"
+              :class="{ active: currentLang === lang }"
+              @click.stop="selectLang(lang)"
+          />
+        </div>
+      </div>
     </nav>
 
     <div class="main-stage">
@@ -204,10 +203,16 @@ export default {
 
 <style scoped>
 .lang-dropdown {
-  position: relative;
-  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   outline: none;
+  z-index: 30;
 }
 
 .lang-menu {
@@ -270,10 +275,13 @@ export default {
   background-color: var(--backgroundDark);
   border-bottom: 1px solid var(--primary);
   z-index: 20;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   display: flex;
   width: 100%;
+  position: relative;
+  padding: 0.5rem 4.5rem 0.5rem 1.5rem;
+  box-sizing: border-box;
 }
 
 .nav-arrow {
@@ -330,6 +338,9 @@ export default {
   flex-wrap: nowrap;
   gap: 0.75rem;
   list-style: none;
+  margin: 0;
+  padding: 0 4.5rem 0 0;
+  width: 100%;
 }
 
 .nav-link {
