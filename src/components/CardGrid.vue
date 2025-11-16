@@ -247,7 +247,21 @@ export default {
 .cardIcon {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  max-width: 100px;
+  width: 100%;
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardIcon img {
+  display: block;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  margin: 0 auto;
 }
 
 .cardTitle {

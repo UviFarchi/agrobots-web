@@ -268,6 +268,18 @@ export default {
   background-color: var(--backgroundDark);
   color: var(--textLight);
   overflow: auto;
+  scrollbar-gutter: stable both-edges;
+}
+
+.slide-component {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.slide-component > * {
+  width: 100%;
 }
 
 /* Navigation styles */
