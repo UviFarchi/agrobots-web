@@ -88,6 +88,9 @@
 
           {{ $t('footer.quote') }}
         </a>
+        <button class="footer-news-ticker" @click="toggleNewsModal">
+          <span class="ticker-track">{{ tickerText }}</span>
+        </button>
       </div>
       <div class="footer-info-row">
         <a class="footer-link" href="/privacy">{{ $t('footer.privacy') }}</a>
