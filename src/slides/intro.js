@@ -20,6 +20,22 @@ export default {
             newsTitle: 'Agrobots News',
             newsItems: [
                 {
+                    title: 'Agrobots Selected as Technological Partner for United Nations Programme',
+                    summary: 'Agrobots has been selected as the technological partner for a Fiji programme focused on land-use intelligence, technical capacity, and digital infrastructure.',
+                    date: '29 Mar 2026',
+                    location: 'Fiji',
+                    tag: 'Press Release',
+                    body: [
+                        "Agrobots has been selected as the technological partner for a Fiji programme focused on strengthening land-use intelligence, technical capacity, and digital infrastructure through advanced geospatial systems and data architecture. The project represents an important step in supporting climate resilience and agricultural adaptation in Fiji through better land-use information, stronger institutional capacity, and improved decision-making tools.",
+                        "For Agrobots, this engagement represents the first real-world implementation of LandOS, the company’s terrain intelligence platform. It also marks the beginning of the discovery phase of a future biorome in Fiji, the stage in which the land is mapped, understood, and structured as the basis for a more intelligent and adaptive productive ecosystem.",
+                        "As part of the project, Agrobots will contribute to the design and implementation of a pilot Land Use and Land Cover, or LULC, and server environment, including system architecture, data workflows, technical documentation, training, and support for future scale-up. Working alongside the relevant Fijian authorities, Agrobots will also support the training of local personnel so that the platform strengthens long-term institutional capability as well as immediate technical capacity.",
+                        "Beyond its technical role, the platform is intended to serve as a practical policy tool, helping organize land-use data, improve visibility across stakeholders, and support more informed planning and decision-making. These foundations are essential for building more resilient agricultural systems and for improving the capacity to respond to environmental pressures and climate-related change with better information, stronger coordination, and clearer long-term strategy.",
+                        "In Agrobots’ long-term vision, this work represents the first step toward a fully intelligent biorome in which people, machines, and data work together to support more resilient and adaptive agriculture. By beginning with discovery, institutional training, and digital infrastructure, the project lays the groundwork for future phases of optimization, ecological design, and operational intelligence.",
+                        "“This project reflects a direction we believe is increasingly important for the future of agriculture and land stewardship,” said Reuven Farchi, CEO of Agrobots. “We are honored to support this work in Fiji, and to contribute both technology and technical collaboration toward building stronger foundations for resilience, planning, and adaptation.”",
+                        "Agrobots will share further updates as the project advances."
+                    ]
+                },
+                {
                     title: 'Founding of the ACES Consortium',
                     summary: 'Agrobots and partners officially launch the open-standard ACES Consortium for modular robotics and IoT interoperability.',
                     date: '16 Oct 2025',
