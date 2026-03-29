@@ -77,6 +77,9 @@
 
     <footer class="app-footer">
       <div class="footer-cta-row">
+        <button class="footer-news-ticker" @click="toggleNewsModal">
+          <span class="ticker-track">{{ tickerText }}</span>
+        </button>
         <button @click="toggleContact" class="footer-cta contact-cta">
 
           {{ $t('footer.contact') }}
@@ -308,8 +311,8 @@ export default {
 }
 
 .footer-news-ticker {
-  flex: 0 1 clamp(220px, 38vw, 520px);
-  min-width: 180px;
+  flex: 1;
+  min-width: 0;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 999px;
   background: rgba(8, 8, 8, 0.4);
@@ -324,7 +327,7 @@ export default {
   display: inline-block;
   white-space: nowrap;
   padding-left: 100%;
-  animation: ticker 24s linear infinite;
+  animation: ticker 32s linear infinite;
   font-size: 0.84rem;
 }
 
@@ -726,6 +729,7 @@ export default {
     flex: 1 1 100%;
     width: 100%;
     max-width: none;
+    order: -1;
   }
   .footer-info-row {
     width: 100%;
