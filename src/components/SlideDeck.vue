@@ -77,6 +77,9 @@
 
     <footer class="app-footer">
       <div class="footer-cta-row">
+        <button class="footer-news-ticker" @click="toggleNewsModal">
+          <span class="ticker-track">{{ tickerText }}</span>
+        </button>
         <button @click="toggleContact" class="footer-cta contact-cta">
 
           {{ $t('footer.contact') }}
@@ -86,8 +89,7 @@
           {{ $t('footer.quote') }}
         </a>
         <button class="footer-news-ticker" @click="toggleNewsModal">
-          <span class="news-button-label">News</span>
-          <span class="news-button-headline">{{ tickerText }}</span>
+          <span class="ticker-track">{{ tickerText }}</span>
         </button>
       </div>
       <div class="footer-info-row">
@@ -215,8 +217,7 @@ export default {
       return introSlide.content[this.currentLang]?.newsItems || [];
     },
     tickerText() {
-      if (!this.footerNewsItems.length) return 'Agrobots News';
-      return this.footerNewsItems[0].title;
+      return this.footerNewsItems.map(item => item.title).join('  •  ');
     }
   },
   methods: {
@@ -310,8 +311,8 @@ export default {
 }
 
 .footer-news-ticker {
-  flex: 0 1 clamp(220px, 38vw, 520px);
-  min-width: 180px;
+  flex: 1;
+  min-width: 0;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 999px;
   background: rgba(8, 8, 8, 0.4);
@@ -320,26 +321,19 @@ export default {
   height: 38px;
   cursor: pointer;
   position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0 0.75rem;
-  text-align: left;
 }
 
-.news-button-label {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  opacity: 0.78;
-  flex: 0 0 auto;
-}
-
-.news-button-headline {
-  font-size: 0.84rem;
+.ticker-track {
+  display: inline-block;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  padding-left: 100%;
+  animation: ticker 32s linear infinite;
+  font-size: 0.84rem;
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
 }
 
 .news-list-modal {
@@ -735,6 +729,7 @@ export default {
     flex: 1 1 100%;
     width: 100%;
     max-width: none;
+    order: -1;
   }
   .footer-info-row {
     width: 100%;
