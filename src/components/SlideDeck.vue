@@ -575,6 +575,7 @@ export default {
   display: flex;
   align-items: center;
   gap: 1rem;
+  min-width: 0;
 }
 
 .footer-link {
@@ -720,6 +721,12 @@ export default {
     font-size: 0.97rem;
     margin: 0;
     padding: 0.7rem 0.4rem;
+  }
+  .footer-news-ticker {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: none;
+    order: -1;
   }
   .footer-info-row {
     width: 100%;
