@@ -77,6 +77,9 @@
 
     <footer class="app-footer">
       <div class="footer-cta-row">
+        <button class="footer-news-ticker" @click="toggleNewsModal">
+          <span class="ticker-track">{{ tickerText }}</span>
+        </button>
         <button @click="toggleContact" class="footer-cta contact-cta">
 
           {{ $t('footer.contact') }}
@@ -100,19 +103,45 @@
           @sent="toggleContact"
       />
     </div>
+
+    <teleport to="body">
+      <div v-if="newsModalVisible" class="news-list-modal" @click.self="toggleNewsModal">
+        <div class="news-list-content">
+          <button class="news-list-close" @click="toggleNewsModal" aria-label="Close news">×</button>
+          <h2 class="news-list-title">Agrobots News</h2>
+          <ul class="news-list-items">
+            <li v-for="item in footerNewsItems" :key="item.title + item.date">
+              <button class="news-list-item-btn" @click="openNewsArticle(item)">
+                <span class="item-title">{{ item.title }}</span>
+                <span class="item-meta">{{ item.date }} · {{ item.location }}</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </teleport>
+
+    <NewsArticleModal
+        :visible="newsArticleModalVisible"
+        :article="activeNewsItem"
+        @close="closeNewsArticle"
+    />
   </div>
 </template>
 
 <script>
 import VideoFeature from './VideoFeature.vue';
+import AgrobotsIntro from './AgrobotsIntro.vue';
 import CardGrid from './CardGrid.vue';
 import ScrollingFullBg from './ScrollingFullBg.vue';
 import ConnectionCircles from './ConnectionCircles.vue';
 import Contact from './subcomponents/Contact.vue';
+import NewsArticleModal from './subcomponents/NewsArticleModal.vue';
 import ActionColumns from "@/components/ActionColumns.vue";
 import i18n from '@/i18n/index.js';
 
 import introSlide from '../slides/intro.js';
+import agrobotsSlide from '../slides/agrobots.js';
 import issueSlide from '../slides/issue.js';
 import servicesSlide from '../slides/services.js';
 import bioromeSlide from '../slides/biorome.js';
@@ -128,17 +157,20 @@ export default {
   name: 'AgrobotsMiniSite',
   components: {
     VideoFeature,
+    AgrobotsIntro,
     CardGrid,
     ScrollingFullBg,
     ConnectionCircles,
     ActionColumns,
-    Contact
+    Contact,
+    NewsArticleModal
   },
   data() {
     return {
       currentSlide: 0,
       slides: [
         introSlide,
+        agrobotsSlide,
         issueSlide,
         visionSlide,
         bioromeSlide,
@@ -152,6 +184,9 @@ export default {
       ],
       menuOpen: false,
       contactVisible: false,
+      newsModalVisible: false,
+      newsArticleModalVisible: false,
+      activeNewsItem: null,
       currentLang: i18n.global.locale.value,
       showLangMenu: false,
       availableLangs: ['en', 'es']
@@ -167,11 +202,19 @@ export default {
   },
   computed: {
     componentEventMap() {
-      const compName = this.slides[this.currentSlide].component;
+      if (this.slides[this.currentSlide].name === 'intro') {
+        return { next: this.nextSlide };
+      }
       if (this.slides[this.currentSlide].name === 'participate') {
         return { contact: this.toggleContact };
       }
       return {};
+    },
+    footerNewsItems() {
+      return introSlide.content[this.currentLang]?.newsItems || [];
+    },
+    tickerText() {
+      return this.footerNewsItems.map(item => item.title).join('  •  ');
     }
   },
   methods: {
@@ -192,6 +235,17 @@ export default {
     },
     toggleContact() {
       this.contactVisible = !this.contactVisible;
+    },
+    toggleNewsModal() {
+      this.newsModalVisible = !this.newsModalVisible;
+    },
+    openNewsArticle(item) {
+      this.activeNewsItem = item;
+      this.newsArticleModalVisible = true;
+    },
+    closeNewsArticle() {
+      this.newsArticleModalVisible = false;
+      this.activeNewsItem = null;
     },
     selectLang(lang) {
       this.currentLang = lang;
@@ -252,6 +306,83 @@ export default {
   overflow: hidden;
   position: relative;
 }
+
+.footer-news-ticker {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  background: rgba(8, 8, 8, 0.4);
+  color: #fff;
+  overflow: hidden;
+  height: 38px;
+  cursor: pointer;
+  position: relative;
+}
+
+.ticker-track {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: ticker 32s linear infinite;
+  font-size: 0.84rem;
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+.news-list-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 8, 8, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2020;
+  padding: 1rem;
+}
+
+.news-list-content {
+  width: min(90vw, 900px);
+  max-height: 85vh;
+  overflow-y: auto;
+  background: rgba(19, 19, 19, 0.96);
+  border-radius: 16px;
+  padding: 1.5rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+}
+
+.news-list-close {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.news-list-title { margin: 0 0 1rem 0; }
+.news-list-items { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .65rem; }
+.news-list-item-btn {
+  width: 100%;
+  text-align: left;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 10px;
+  padding: .75rem .8rem;
+  background: rgba(255,255,255,.04);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+.item-title { font-weight: 600; }
+.item-meta { font-size: .78rem; opacity: .76; }
 
 .main-stage {
   display: flex;
