@@ -308,8 +308,8 @@ export default {
 }
 
 .footer-news-ticker {
-  flex: 0 1 clamp(220px, 38vw, 520px);
-  min-width: 180px;
+  flex: 1;
+  min-width: 0;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 999px;
   background: rgba(8, 8, 8, 0.4);
@@ -324,7 +324,7 @@ export default {
   display: inline-block;
   white-space: nowrap;
   padding-left: 100%;
-  animation: ticker 24s linear infinite;
+  animation: ticker 32s linear infinite;
   font-size: 0.84rem;
 }
 
