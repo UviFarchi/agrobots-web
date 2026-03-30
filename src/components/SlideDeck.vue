@@ -99,6 +99,11 @@
           <span class="news-button-headline">{{ tickerText }}</span>
         </button>
       </div>
+      <div class="footer-news-slot">
+        <button class="footer-news-ticker" @click="toggleNewsModal" aria-label="Open news">
+          <span class="news-button-headline">{{ tickerText }}</span>
+        </button>
+      </div>
       <div class="footer-info-row">
         <a class="footer-link" href="/privacy">{{ $t('footer.privacy') }}</a>
         <span class="footer-copyright">© 2025 Agrobots</span>
@@ -331,8 +336,7 @@ export default {
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  padding: 0 0.75rem;
+  padding: 0 0.9rem;
   text-align: left;
 }
 
@@ -340,14 +344,6 @@ export default {
   display: flex;
   justify-content: flex-end;
   min-width: 0;
-}
-
-.news-button-label {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  opacity: 0.78;
-  flex: 0 0 auto;
 }
 
 .news-button-headline {
