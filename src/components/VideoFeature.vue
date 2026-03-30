@@ -55,6 +55,7 @@ export default {
   name: "VideoFeature",
   emits: ['next'],
   props: {
+    title: { type: String, default: '' },
     introTitle: { type: String, required: true },
     welcomeText: { type: String, default: '' },
     welcomeHint: { type: String, default: '' },

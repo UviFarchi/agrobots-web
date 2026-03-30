@@ -77,6 +77,9 @@
 
     <footer class="app-footer">
       <div class="footer-cta-row">
+        <button class="footer-news-ticker" @click="toggleNewsModal">
+          <span class="ticker-track">{{ tickerText }}</span>
+        </button>
         <button @click="toggleContact" class="footer-cta contact-cta">
 
           {{ $t('footer.contact') }}
@@ -85,6 +88,10 @@
 
           {{ $t('footer.quote') }}
         </a>
+        <button class="footer-news-ticker" @click="toggleNewsModal">
+          <span class="news-button-label">News</span>
+          <span class="news-button-headline">{{ tickerText }}</span>
+        </button>
       </div>
       <div class="footer-news-slot">
         <button class="footer-news-ticker" @click="toggleNewsModal" aria-label="Open news">
