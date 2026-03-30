@@ -3,8 +3,8 @@ export default {
     component: 'VideoFeature',
     content: {
         en: {
-            title: 'Welcome',
-            introTitle: "Welcome to Agrobots",
+            title: 'Start',
+            introTitle: "Agrobots",
             welcomeText: "Agrobots turns degraded or underused land into intelligent, regenerative production systems powered by LandOS.",
             welcomeHint: "Watch the short video below, then continue to the Agrobots slide for the full introduction.",
             nextLabel: "Continue to Agrobots",
@@ -110,8 +110,8 @@ export default {
         },
 
         es: {
-            title: 'Bienvenidos',
-            introTitle: "Bienvenidos a Agrobots",
+            title: 'Inicio',
+            introTitle: "Agrobots",
             welcomeText: "Agrobots transforma terrenos degradados o infrautilizados en sistemas productivos regenerativos e inteligentes con LandOS.",
             welcomeHint: "Mira el video breve de abajo y continúa a la diapositiva Agrobots para ver la introducción completa.",
             nextLabel: "Continuar a Agrobots",
