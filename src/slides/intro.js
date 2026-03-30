@@ -4,7 +4,7 @@ export default {
     content: {
         en: {
             title: 'Start',
-            introTitle: "Agrobots",
+            introTitle: "Welcome to The Future of Farming",
             welcomeText: "Agrobots turns degraded or underused land into intelligent, regenerative production systems powered by LandOS.",
             welcomeHint: "Watch the short video below, then continue to the Agrobots slide for the full introduction.",
             nextLabel: "Continue to Agrobots",
@@ -111,7 +111,7 @@ export default {
 
         es: {
             title: 'Inicio',
-            introTitle: "Agrobots",
+            introTitle: "Bienvenidos al Futuro de la Agricultura",
             welcomeText: "Agrobots transforma terrenos degradados o infrautilizados en sistemas productivos regenerativos e inteligentes con LandOS.",
             welcomeHint: "Mira el video breve de abajo y continúa a la diapositiva Agrobots para ver la introducción completa.",
             nextLabel: "Continuar a Agrobots",
