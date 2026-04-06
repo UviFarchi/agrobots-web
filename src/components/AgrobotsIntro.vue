@@ -1,55 +1,96 @@
 <template>
   <section class="agrobots-intro">
     <div class="intro-panel">
-      <div class="intro-header">
-        <span class="intro-label">{{ slideTitle }}</span>
-        <span v-if="eyebrow" class="intro-eyebrow">{{ eyebrow }}</span>
-      </div>
+      <div class="intro-overview">
+        <div class="intro-header">
+          <span class="intro-label">{{ slideTitle }}</span>
+          <span v-if="eyebrow" class="intro-eyebrow">{{ eyebrow }}</span>
+        </div>
 
-      <h1 class="intro-headline">{{ resolvedHeadline }}</h1>
-      <p v-if="resolvedLead" class="intro-lead">{{ resolvedLead }}</p>
+        <h1 class="intro-headline">{{ resolvedHeadline }}</h1>
+        <p v-if="resolvedLead" class="intro-lead">{{ resolvedLead }}</p>
 
-      <div v-if="displayPillars.length" class="intro-pillar-grid">
-        <article
-          v-for="(pillar, index) in displayPillars"
-          :key="`${pillar.title}-${index}`"
-          class="intro-pillar"
-        >
-          <span class="intro-pillar-title">{{ pillar.title }}</span>
-          <p>{{ pillar.text }}</p>
-        </article>
-      </div>
-
-      <div v-else class="intro-copy">
-        <p v-for="(paragraph, index) in introText" :key="index">{{ paragraph }}</p>
-      </div>
-
-      <div v-if="proofTitle || displayProofChips.length" class="intro-proof">
-        <p v-if="proofTitle" class="intro-proof-title">{{ proofTitle }}</p>
-        <div v-if="displayProofChips.length" class="intro-proof-chips">
-          <span
-            v-for="(chip, index) in displayProofChips"
-            :key="`${chip}-${index}`"
-            class="intro-proof-chip"
+        <div v-if="displayPillars.length" class="intro-pillar-grid">
+          <div
+            v-for="(pillar, index) in displayPillars"
+            :key="`${pillar.title}-${index}`"
+            class="intro-pillar-slot"
           >
-            {{ chip }}
-          </span>
+          <button
+            type="button"
+            class="intro-pillar"
+            :class="{ active: isPillarOpen(index) }"
+            :aria-expanded="isPillarOpen(index) ? 'true' : 'false'"
+            @click="togglePillar(index)"
+          >
+            <span class="intro-pillar-topline">
+              <span class="intro-pillar-step">{{ String(index + 1).padStart(2, '0') }}</span>
+              <span class="intro-pillar-toggle-indicator" aria-hidden="true">
+                {{ isPillarOpen(index) ? '−' : '+' }}
+              </span>
+            </span>
+            <span class="intro-pillar-title">{{ pillar.title }}</span>
+            <p class="intro-pillar-summary">{{ pillar.text }}</p>
+            <div v-if="isPillarOpen(index) && pillar.details?.length" class="intro-pillar-details">
+              <span
+                v-for="(detail, detailIndex) in pillar.details"
+                :key="`${pillar.title}-${detailIndex}`"
+                class="intro-pillar-detail"
+              >
+                {{ detail }}
+              </span>
+            </div>
+          </button>
+          </div>
+        </div>
+
+        <div v-if="!displayPillars.length" class="intro-copy">
+          <p v-for="(paragraph, index) in introText" :key="index">{{ paragraph }}</p>
         </div>
       </div>
 
-      <p v-if="closing" class="intro-closing">{{ closing }}</p>
+      <div
+        v-if="proofTitle || displayProofChips.length || closing"
+        class="intro-detail-stack"
+      >
+        <div v-if="proofTitle || closing" class="intro-detail-copy">
+          <p v-if="proofTitle" class="intro-proof-title">{{ proofTitle }}</p>
+          <p v-if="closing" class="intro-closing">{{ closing }}</p>
+        </div>
+
+        <div v-if="displayProofChips.length" class="intro-proof">
+          <div class="intro-proof-chips">
+            <button
+              v-for="(chip, index) in displayProofChips"
+              :key="`${chip.label}-${index}`"
+              type="button"
+              class="intro-proof-chip"
+              :class="{ active: isProofChipActive(index) }"
+              :aria-pressed="isProofChipActive(index) ? 'true' : 'false'"
+              @click="selectProofChip(index)"
+            >
+              {{ chip.label }}
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <aside class="intro-images" aria-label="Agrobots visuals">
       <div class="visual-stage" :class="{ 'single-image': !secondaryImage }">
+        <div class="visual-guides" aria-hidden="true">
+          <span class="guide guide-x"></span>
+          <span class="guide guide-y"></span>
+          <span class="guide guide-ring"></span>
+        </div>
         <img
           v-if="primaryImage"
           :class="secondaryImage ? 'visual-backdrop' : 'visual-primary-art'"
           :src="primaryImage.src"
           :alt="primaryImage.alt"
         />
-        <span v-if="visualBadge" class="visual-badge">{{ visualBadge }}</span>
-        <div v-if="visualCaption" class="visual-caption">{{ visualCaption }}</div>
+        <span v-if="resolvedVisualBadge" class="visual-badge">{{ resolvedVisualBadge }}</span>
+        <div v-if="resolvedVisualCaption" class="visual-caption">{{ resolvedVisualCaption }}</div>
         <img
           v-if="secondaryImage"
           class="visual-foreground"
@@ -58,9 +99,9 @@
         />
       </div>
 
-      <div v-if="displayMetrics.length" class="visual-metrics">
+      <div v-if="resolvedMetrics.length" class="visual-metrics">
         <article
-          v-for="(metric, index) in displayMetrics"
+          v-for="(metric, index) in resolvedMetrics"
           :key="`${metric.label}-${index}`"
           class="metric-card"
         >
@@ -75,6 +116,12 @@
 <script>
 export default {
   name: 'AgrobotsIntro',
+  data() {
+    return {
+      activePillarIndex: null,
+      activeProofIndex: null
+    };
+  },
   props: {
     slideTitle: { type: String, required: true },
     headline: { type: String, default: '' },
@@ -90,6 +137,20 @@ export default {
     visualCaption: { type: String, default: '' },
     images: { type: Array, default: () => [] }
   },
+  watch: {
+    pillars: {
+      immediate: true,
+      handler(newPillars) {
+        this.activePillarIndex = Array.isArray(newPillars) && newPillars.length ? 0 : null;
+      }
+    },
+    proofChips: {
+      immediate: true,
+      handler(newProofChips) {
+        this.activeProofIndex = Array.isArray(newProofChips) && newProofChips.length ? 0 : null;
+      }
+    }
+  },
   computed: {
     resolvedHeadline() {
       return this.headline || this.slideTitle;
@@ -101,16 +162,42 @@ export default {
       return this.pillars.filter((pillar) => pillar?.title && pillar?.text);
     },
     displayProofChips() {
-      return this.proofChips.filter(Boolean);
+      return this.proofChips
+        .map((chip) => (typeof chip === 'string' ? { label: chip } : chip))
+        .filter((chip) => chip?.label);
     },
-    displayMetrics() {
-      return this.metrics.filter((metric) => metric?.label && metric?.value);
+    activeProofChip() {
+      return this.displayProofChips[this.activeProofIndex] || null;
+    },
+    resolvedMetrics() {
+      const sourceMetrics = this.activeProofChip?.metrics?.length ? this.activeProofChip.metrics : this.metrics;
+      return sourceMetrics.filter((metric) => metric?.label && metric?.value);
+    },
+    resolvedVisualBadge() {
+      return this.activeProofChip?.visualBadge || this.visualBadge;
+    },
+    resolvedVisualCaption() {
+      return this.activeProofChip?.visualCaption || this.visualCaption;
     },
     primaryImage() {
       return this.images[0] || null;
     },
     secondaryImage() {
       return this.images[1] || null;
+    }
+  },
+  methods: {
+    isPillarOpen(index) {
+      return this.activePillarIndex === index;
+    },
+    togglePillar(index) {
+      this.activePillarIndex = this.activePillarIndex === index ? null : index;
+    },
+    isProofChipActive(index) {
+      return this.activeProofIndex === index;
+    },
+    selectProofChip(index) {
+      this.activeProofIndex = index;
     }
   }
 };
@@ -120,7 +207,7 @@ export default {
 .agrobots-intro {
   display: grid;
   grid-template-columns: minmax(0, 1.18fr) minmax(280px, 0.82fr);
-  gap: 1.15rem;
+  gap: 0;
   width: 100%;
   height: 100%;
   padding: 1.5rem;
@@ -129,17 +216,19 @@ export default {
 }
 
 .intro-panel {
-  background:
-    radial-gradient(circle at top left, rgba(35, 122, 255, 0.18), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(255, 213, 79, 0.14), transparent 34%),
-    linear-gradient(155deg, rgba(8, 24, 15, 0.96), rgba(18, 18, 18, 0.94));
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 28px;
-  padding: 1.45rem 1.55rem 1.35rem;
+  min-height: 100%;
+  padding: 1.45rem 1.8rem 1.35rem 0;
   display: flex;
   flex-direction: column;
   gap: 0.95rem;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+.intro-overview {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
 }
 
 .intro-header {
@@ -189,17 +278,84 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.7rem;
+  position: relative;
+  z-index: 4;
+}
+
+.intro-pillar-slot {
+  position: relative;
+  min-height: 8rem;
 }
 
 .intro-pillar {
-  min-height: 8rem;
+  position: absolute;
+  inset: 0 0 auto 0;
+  width: 100%;
+  min-height: 100%;
   padding: 0.88rem 0.92rem;
-  border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  border-radius: 18px 6px 18px 6px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: none;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  appearance: none;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.intro-pillar:hover,
+.intro-pillar.active {
+  transform: translateY(-2px);
+  border-color: rgba(255, 213, 79, 0.42);
+  box-shadow: 0 0 0 1px rgba(255, 213, 79, 0.12);
+}
+
+.intro-pillar.active {
+  z-index: 8;
+  background: rgba(10, 10, 10, 0.92);
+  box-shadow:
+    0 0 0 1px rgba(255, 213, 79, 0.18),
+    0 18px 32px rgba(0, 0, 0, 0.28);
+}
+
+.intro-pillar::after {
+  content: '';
+  position: absolute;
+  left: -1px;
+  right: 28%;
+  top: -1px;
+  border-top: 1px solid rgba(255, 213, 79, 0.52);
+}
+
+.intro-pillar-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.intro-pillar-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(35, 122, 255, 0.45);
+  color: var(--secondary, #237aff);
+  font-size: 0.74rem;
+  font-weight: 700;
+  background: rgba(35, 122, 255, 0.05);
+}
+
+.intro-pillar-toggle-indicator {
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--accent, #ffd54f);
 }
 
 .intro-pillar-title {
@@ -210,11 +366,36 @@ export default {
   color: var(--accent, #ffd54f);
 }
 
-.intro-pillar p {
+.intro-pillar-summary {
   margin: 0;
   font-size: 0.9rem;
   color: rgba(247, 255, 247, 0.82);
   line-height: 1.42;
+}
+
+.intro-pillar-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding-top: 0.7rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.16);
+}
+
+.intro-pillar-detail {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.86rem;
+  line-height: 1.4;
+  color: rgba(247, 255, 247, 0.74);
+}
+
+.intro-pillar-detail::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.45rem;
+  border-top: 1px solid rgba(35, 122, 255, 0.54);
 }
 
 .intro-copy {
@@ -232,38 +413,66 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
-  padding-top: 0.15rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.intro-detail-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.intro-detail-stack {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 1.15rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.2);
 }
 
 .intro-proof-title {
   margin: 0;
-  max-width: 62ch;
   font-size: 0.92rem;
   line-height: 1.45;
   color: rgba(247, 255, 247, 0.76);
 }
 
 .intro-proof-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
 }
 
 .intro-proof-chip {
   display: inline-flex;
   align-items: center;
-  padding: 0.48rem 0.76rem;
+  justify-content: center;
+  width: 100%;
+  min-height: 58px;
+  padding: 0.85rem 1rem;
   border-radius: 999px;
   border: 1px solid rgba(11, 135, 75, 0.38);
-  background: rgba(11, 135, 75, 0.18);
+  background: none;
   color: #e6fff0;
-  font-size: 0.82rem;
+  font-size: 0.88rem;
+  line-height: 1.3;
+  text-align: center;
+  cursor: pointer;
+  font: inherit;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+.intro-proof-chip.active {
+  border-color: rgba(255, 213, 79, 0.52);
+  background: rgba(255, 213, 79, 0.1);
+  box-shadow: 0 0 0 1px rgba(255, 213, 79, 0.14);
 }
 
 .intro-closing {
   margin: 0;
-  max-width: 56ch;
   color: #fff;
   font-size: 0.92rem;
   line-height: 1.45;
@@ -274,26 +483,15 @@ export default {
   gap: 1rem;
   grid-template-rows: minmax(0, 1fr) auto;
   min-height: 0;
+  padding-left: 1.8rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .visual-stage {
   position: relative;
   overflow: hidden;
   min-height: 0;
-  border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: linear-gradient(180deg, rgba(7, 22, 13, 0.96), rgba(14, 14, 14, 0.94));
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
-}
-
-.visual-stage::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg, rgba(7, 14, 10, 0.18), rgba(7, 14, 10, 0.78)),
-    radial-gradient(circle at 18% 24%, rgba(35, 122, 255, 0.24), transparent 28%),
-    radial-gradient(circle at 78% 70%, rgba(255, 213, 79, 0.18), transparent 22%);
+  background: none;
 }
 
 .visual-backdrop {
@@ -303,20 +501,6 @@ export default {
   height: 100%;
   object-fit: cover;
   filter: saturate(1.08) brightness(0.76);
-}
-
-.visual-stage.single-image {
-  background:
-    radial-gradient(circle at 22% 18%, rgba(35, 122, 255, 0.2), transparent 26%),
-    radial-gradient(circle at 76% 72%, rgba(255, 213, 79, 0.16), transparent 24%),
-    linear-gradient(180deg, rgba(7, 22, 13, 0.98), rgba(14, 14, 14, 0.94));
-}
-
-.visual-stage.single-image::after {
-  background:
-    linear-gradient(180deg, rgba(7, 14, 10, 0.08), rgba(7, 14, 10, 0.42)),
-    radial-gradient(circle at 18% 24%, rgba(35, 122, 255, 0.18), transparent 28%),
-    radial-gradient(circle at 78% 70%, rgba(255, 213, 79, 0.12), transparent 22%);
 }
 
 .visual-primary-art {
@@ -337,7 +521,45 @@ export default {
 .visual-caption,
 .visual-foreground {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
+}
+
+.visual-guides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.guide {
+  position: absolute;
+}
+
+.guide-x {
+  left: 12%;
+  right: 12%;
+  top: 50%;
+  border-top: 1px dashed rgba(35, 122, 255, 0.28);
+}
+
+.guide-y {
+  top: 12%;
+  bottom: 12%;
+  left: 50%;
+  border-left: 1px dashed rgba(255, 213, 79, 0.24);
+}
+
+.guide-ring {
+  left: 50%;
+  top: 50%;
+  width: min(52%, 270px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 0 0 20px rgba(35, 122, 255, 0.05),
+    0 0 0 40px rgba(255, 213, 79, 0.035);
 }
 
 .visual-badge {
@@ -348,8 +570,7 @@ export default {
   padding: 0.42rem 0.82rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(7, 14, 10, 0.55);
-  backdrop-filter: blur(10px);
+  background: none;
   color: #fff;
   font-size: 0.8rem;
   font-weight: 600;
@@ -360,10 +581,9 @@ export default {
   bottom: 1rem;
   max-width: 58%;
   padding: 0.95rem 1rem;
-  border-radius: 18px;
+  border-radius: 16px 4px 16px 4px;
   border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(7, 14, 10, 0.62);
-  backdrop-filter: blur(10px);
+  background: none;
   color: #fff;
   line-height: 1.45;
 }
@@ -384,16 +604,24 @@ export default {
 }
 
 .metric-card {
+  position: relative;
   min-height: 94px;
   padding: 0.88rem 0.92rem;
-  border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
-    rgba(18, 18, 18, 0.92);
+  border-radius: 16px 4px 16px 4px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: none;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 46px;
+  border-top: 1px solid rgba(255, 213, 79, 0.52);
 }
 
 .metric-label {
@@ -422,13 +650,37 @@ export default {
 
   .intro-images {
     grid-template-rows: minmax(320px, 42vh) auto;
+    padding-left: 0;
+    padding-top: 1.25rem;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+  }
+
+  .intro-detail-stack {
+    margin-top: 1.25rem;
   }
 }
 
 @media (max-width: 860px) {
   .intro-pillar-grid,
-  .visual-metrics {
+  .visual-metrics,
+  .intro-proof-chips {
     grid-template-columns: 1fr;
+  }
+
+  .intro-pillar-slot {
+    min-height: auto;
+  }
+
+  .intro-pillar {
+    position: relative;
+    inset: auto;
+    min-height: 8rem;
+  }
+
+  .intro-pillar:hover,
+  .intro-pillar.active {
+    transform: none;
   }
 }
 
@@ -438,12 +690,7 @@ export default {
   }
 
   .intro-panel {
-    padding: 1.2rem;
-    border-radius: 24px;
-  }
-
-  .visual-stage {
-    border-radius: 24px;
+    padding: 1.2rem 0 1rem 0;
   }
 
   .visual-caption {
