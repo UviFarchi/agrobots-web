@@ -488,7 +488,10 @@ export default {
   cursor: pointer;
 }
 
-.news-list-title { margin: 0 0 1rem 0; }
+.news-list-title {
+  margin: 0 0 1rem 0;
+  color: #fff;
+}
 .news-list-items { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .65rem; }
 .news-list-item-btn {
   width: 100%;
@@ -503,7 +506,10 @@ export default {
   flex-direction: column;
   gap: .25rem;
 }
-.item-title { font-weight: 600; }
+.item-title {
+  color: #fff;
+  font-weight: 600;
+}
 .item-meta { font-size: .78rem; opacity: .76; }
 
 .main-stage {
