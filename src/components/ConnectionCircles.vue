@@ -58,6 +58,7 @@
           pathLength="100"
           :stroke="arrow.color || '#00bcd4'"
           stroke-width="3.5"
+          stroke-linecap="round"
           fill="none"
           class="animated-arrow"
         />
@@ -465,12 +466,12 @@ export default {
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 0.8rem;
+  gap: 0.72rem;
   padding: 1.15rem 1.2rem;
   border-radius: 999px;
   border: 1px solid;
-  background: rgba(22, 30, 31, 0.94);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
+  background: rgba(23, 34, 35, 0.92);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   cursor: pointer;
@@ -492,15 +493,15 @@ export default {
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  padding: 1.65rem 1.2rem 1.45rem;
-  gap: 0.72rem;
+  padding: 1.5rem 1.2rem 1.35rem;
+  gap: 0.66rem;
 }
 
 .action-circle:hover,
 .action-circle.connected,
 .action-circle.active {
   transform: translateY(var(--circle-state-lift, -2px));
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
 }
 
 .action-circle.connected,
@@ -527,7 +528,7 @@ export default {
 
 .action-circle.connected::after,
 .action-circle.active::after {
-  opacity: 0.9;
+  opacity: 0.82;
 }
 
 .action-circle.hub::after {
@@ -553,7 +554,7 @@ export default {
 .circle-title {
   margin: 0;
   width: 100%;
-  font-size: clamp(1.02rem, 1.45vw, 1.28rem);
+  font-size: clamp(1rem, 1.34vw, 1.22rem);
   line-height: 1.22;
   color: inherit;
   overflow-wrap: break-word;
@@ -576,9 +577,9 @@ export default {
   min-width: 0;
   flex: 1 1 auto;
   min-height: 0;
-  font-size: 0.94rem;
-  line-height: 1.56;
-  color: rgba(247, 255, 247, 0.84);
+  font-size: 0.91rem;
+  line-height: 1.54;
+  color: rgba(247, 255, 247, 0.8);
   overflow-y: auto;
   overflow-x: hidden;
   overflow-wrap: break-word;
@@ -604,11 +605,11 @@ export default {
   gap: 0.8rem;
   margin-top: auto;
   min-width: 9.25rem;
-  min-height: 2.65rem;
-  padding: 0.68rem 0.9rem;
-  border-radius: 999px;
+  min-height: 2.5rem;
+  padding: 0.64rem 0.88rem;
+  border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.03);
   color: #fff;
   cursor: pointer;
   font: inherit;
@@ -623,13 +624,15 @@ export default {
 .connect-message {
   position: absolute;
   z-index: 25;
-  max-width: 15rem;
-  padding: 0.55rem 0.7rem;
-  border-radius: 14px;
-  font-size: 0.82rem;
-  line-height: 1.35;
+  max-width: 14rem;
+  padding: 0.46rem 0.62rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  font-size: 0.78rem;
+  line-height: 1.32;
   text-align: center;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(6px);
 }
 
 .svg-overlay {

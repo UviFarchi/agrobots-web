@@ -88,6 +88,6 @@ svg {
 }
 
 ::selection {
-  background: rgba(255, 213, 79, 0.28);
+  background: color-mix(in srgb, var(--accent, #f2b544) 28%, transparent);
   color: var(--color-text);
 }

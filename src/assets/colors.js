@@ -1,12 +1,12 @@
 export default {
-    primary:      "#0b874b",
-    secondary:    "#237aff",
-    accent:       "#ffd54f",
-    alt:          "#ff8a2b",
-    backgroundDark: "#212121",
-    backgroundLight: "#f1f8e9",
-    backgroundDarkTranslucent: "rgba(33,33,33,0.93)",
-    backgroundLightTranslucent: "rgba(241,248,233,0.92)",
-    textDark:     "#212121",
-    textLight:    "#f7fff7"
+    primary:      "#138d84",
+    secondary:    "#2bb7b2",
+    accent:       "#f2b544",
+    alt:          "#f07a2f",
+    backgroundDark: "#172426",
+    backgroundLight: "#e8f2ef",
+    backgroundDarkTranslucent: "rgba(23,36,38,0.93)",
+    backgroundLightTranslucent: "rgba(232,242,239,0.92)",
+    textDark:     "#172426",
+    textLight:    "#f4fffd"
 }

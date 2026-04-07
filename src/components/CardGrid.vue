@@ -446,7 +446,7 @@ export default {
       return style;
     },
     cardStyle(card, index) {
-      const accent = card.frontBorder || card.backBorder || card.frontBg || card.backBg || "#ffd54f";
+      const accent = card.frontBorder || card.backBorder || card.frontBg || card.backBg || "var(--accent, #f2b544)";
       const iconBg = card.frontBg || card.backBg || "rgba(255, 255, 255, 0.08)";
       const style = {
         "--card-accent": accent,
@@ -488,14 +488,14 @@ export default {
 .slide-intro {
   margin: 0 auto;
   width: min(100%, 60%);
-  max-width: 72ch;
+  max-width: 68ch;
   font-size: 1rem;
   line-height: 1.62;
 }
 
 .card-stage {
   width: 100%;
-  margin-top: 0.35rem;
+  margin-top: 0.45rem;
 }
 
 .grid-intro-slot {
@@ -513,7 +513,7 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.72rem;
   overflow: hidden;
   max-height: var(--diamond-row-height);
   transition: max-height 0.24s ease, background-color 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease, padding 0.24s ease;
@@ -527,11 +527,11 @@ export default {
 .grid-intro-slot.expandable:hover .grid-intro-panel,
 .grid-intro-slot.expandable:focus-within .grid-intro-panel {
   max-height: min(34rem, 72vh);
-  padding: 0.1rem 0.85rem 0.95rem;
-  border-radius: 18px;
+  padding: 0.18rem 0.75rem 0.9rem;
+  border-radius: 16px;
   border: 1px solid rgba(223, 239, 241, 0.14);
-  background: rgba(16, 25, 27, 0.92);
-  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.24);
+  background: rgba(18, 28, 29, 0.92);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
 }
 
 .grid-floating-title {
@@ -561,7 +561,7 @@ export default {
 
 .card-grid {
   display: grid;
-  gap: 1.55rem 1.85rem;
+  gap: 1.7rem 2rem;
   width: 100%;
   align-items: start;
   overflow: visible;
@@ -583,7 +583,7 @@ export default {
 
 .grid-card-slot {
   position: relative;
-  width: min(100%, 315px);
+  width: min(100%, 305px);
   min-height: var(--diamond-row-height);
   overflow: visible;
 }
@@ -606,8 +606,8 @@ export default {
   height: var(--card-height, 100%);
   padding: 1.05rem 1.08rem 1.08rem;
   border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(24, 35, 36, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(23, 34, 35, 0.92);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
   overflow: hidden;
   transform: translate(
@@ -624,15 +624,15 @@ export default {
 .grid-card:hover,
 .grid-card-slot:hover .grid-card {
   --card-hover-y: -2px;
-  border-color: rgba(223, 239, 241, 0.26);
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
+  border-color: rgba(223, 239, 241, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
 }
 
 .grid-card.active {
   --card-hover-y: 0px;
-  background: rgba(28, 40, 42, 0.96);
+  background: rgba(27, 39, 40, 0.96);
   border-color: rgba(223, 239, 241, 0.24);
-  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.22);
 }
 
 .grid-card-topline {
@@ -646,16 +646,16 @@ export default {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 2.9rem;
-  min-height: 2.9rem;
+  min-width: 2.7rem;
+  min-height: 2.7rem;
   max-width: 5rem;
-  padding: 0.46rem;
-  border-radius: 16px;
-  background: color-mix(in srgb, var(--card-icon-bg) 22%, rgba(255, 255, 255, 0.08));
+  padding: 0.42rem;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--card-icon-bg) 18%, rgba(255, 255, 255, 0.07));
   color: rgba(255, 255, 255, 0.96);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   line-height: 1;
-  filter: grayscale(1) brightness(1.35);
+  filter: grayscale(1) brightness(1.18);
 }
 
 .grid-card-icon.has-image {
@@ -674,16 +674,16 @@ export default {
 
 .grid-card-title {
   margin: 0;
-  font-size: clamp(1.04rem, 1.35vw, 1.26rem);
+  font-size: clamp(1.01rem, 1.28vw, 1.2rem);
   line-height: 1.24;
   color: #fff;
 }
 
 .grid-card-summary {
   margin: 0;
-  width: min(100%, 29ch);
-  font-size: 0.92rem;
-  line-height: 1.58;
+  width: min(100%, 27ch);
+  font-size: 0.9rem;
+  line-height: 1.62;
   color: rgba(236, 246, 245, 0.84);
   display: -webkit-box;
   overflow: hidden;
@@ -699,8 +699,8 @@ export default {
   min-height: 0;
   overflow: visible;
   padding-right: 0;
-  font-size: 0.92rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.62;
   color: rgba(236, 246, 245, 0.86);
 }
 
@@ -722,12 +722,12 @@ export default {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.7rem;
-  height: 2.7rem;
+  width: 2.55rem;
+  height: 2.55rem;
   padding: 0;
-  border-radius: 999px;
-  border: 1px solid color-mix(in srgb, var(--card-accent) 58%, rgba(255, 255, 255, 0.12));
-  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid color-mix(in srgb, var(--card-accent) 48%, rgba(255, 255, 255, 0.12));
+  background: rgba(255, 255, 255, 0.02);
   color: #fff;
   cursor: pointer;
   font: inherit;
@@ -742,7 +742,7 @@ export default {
 }
 
 .grid-card-toggle-indicator {
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   line-height: 1;
   color: var(--card-accent);
 }

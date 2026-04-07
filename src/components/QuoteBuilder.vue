@@ -663,7 +663,9 @@ export default {
 .quote-builder {
   min-height: 100vh;
   width: 100vw;
-  background: var(--backgroundDark);
+  background:
+    radial-gradient(circle at top, rgba(11, 135, 75, 0.1), transparent 34%),
+    var(--backgroundDark);
   color: var(--textLight);
   display: flex;
   flex-direction: column;
@@ -676,23 +678,24 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  height: 90vh;
-  max-height: 96vh;
+  height: 88vh;
+  max-height: 94vh;
   overflow-y: auto;
   width: 100%;
-  max-width: 540px;
+  max-width: 580px;
   min-width: 320px;
   margin: auto;
-  padding: 2.4rem 2rem;
-  background: var(--backgroundDarkTranslucent, rgba(20, 30, 30, 0.96));
-  border-radius: 28px;
-  box-shadow: 0 8px 44px 0 rgba(0, 0, 0, 0.24);
+  padding: 2.2rem 1.9rem;
+  background: rgba(20, 30, 31, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
 }
 
 .step-title {
-  font-size: 1.4em;
+  font-size: clamp(1.32rem, 2.35vw, 1.68rem);
   font-weight: 600;
-  margin-bottom: 1.1em;
+  margin-bottom: 1rem;
   margin-top: 0.2em;
   letter-spacing: -0.02em;
 }
@@ -709,30 +712,35 @@ export default {
 .card-group {
   display: flex;
   flex-direction: column;
-  gap: 1.15em;
+  gap: 0.95em;
   width: 100%;
 
 }
 
 .card, .subcard {
-  background: rgba(40, 50, 54, 0.62);
-  border: 2px solid var(--primary);
-  border-radius: 1.2em;
-  padding: 1.12em 1.2em;
+  background: rgba(37, 48, 51, 0.52);
+  border: 1px solid rgba(11, 135, 75, 0.58);
+  border-radius: 18px;
+  padding: 1rem 1.05rem;
   cursor: pointer;
-  transition: border 0.19s, background 0.19s;
+  transition: border-color 0.19s, background-color 0.19s, transform 0.19s, box-shadow 0.19s;
   margin: 0;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
   position: relative;
-  font-size: 1.09em;
+  font-size: 1.02em;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.card:hover, .subcard:hover, .pill:hover, .icon-btn:hover, .btn:hover {
+  transform: translateY(-1px);
 }
 
 .subcard-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.1em 2%;
+  gap: 0.6em 2%;
   align-items: flex-start;
 }
 
@@ -750,7 +758,8 @@ export default {
 
 .card.selected, .subcard.selected, .pill.selected, .icon-btn.active {
   border-color: var(--accent);
-  background: rgba(70, 110, 100, 0.21);
+  background: rgba(70, 110, 100, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(255, 213, 79, 0.12);
 }
 
 .card-header {
@@ -765,58 +774,62 @@ export default {
 
 .card-title {
   font-weight: bold;
-  font-size: 1.13em;
+  font-size: 1.08em;
 }
 
 .card-subhead {
-  font-size: 1.01em;
+  font-size: 0.98em;
   color: var(--primary);
   font-weight: 500;
-  margin-bottom: 0.11em;
+  margin-bottom: 0.18em;
   display: block;
 }
 
 .card-desc {
-  font-size: 0.97em;
+  font-size: 0.94em;
   color: var(--textLight);
   margin-bottom: 0.14em;
-  line-height: 1.4;
+  line-height: 1.48;
 }
 
 .tooltip-icon {
   position: absolute;
-  top: 0;
-  right: -0.85em;
-  transform: translateY(-50%);
-  font-size: 2em;
-  width: 1.7em;
-  height: 1.7em;
+  top: 0.05em;
+  right: -0.15em;
+  transform: translateY(-18%);
+  font-size: 1.38em;
+  width: 1.45em;
+  height: 1.45em;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--accent);
   cursor: pointer;
   border-radius: 50%;
+  background: rgba(0, 0, 0, 0.18);
   transition: background 0.18s;
 }
 
 
 .tooltip-box {
   position: absolute;
-  top: -50%;
-  left: 0;
-  width: 100%;
-  height: inherit;
+  top: -0.35rem;
+  right: 0;
+  left: auto;
+  width: min(18rem, calc(100vw - 5rem));
+  height: auto;
   z-index: 1000;
-  background: black;
+  background: rgba(12, 17, 18, 0.96);
   color: #ffe388;
-  border-radius: 8px;
-  padding: 2.2em 1em 1em 1em;
+  border: 1px solid rgba(255, 213, 79, 0.25);
+  border-radius: 12px;
+  padding: 1.05em 0.95em 0.85em;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s;
   white-space: normal;
   visibility: hidden;
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.28);
 }
 
 .tooltip-icon:focus ~ .tooltip-box,
@@ -830,7 +843,7 @@ export default {
 .icon-group {
   display: flex;
   flex-direction: row;
-  gap: 1.5em;
+  gap: 0.9em;
   margin: 1.1em 0 0.3em 0;
 }
 
@@ -839,14 +852,15 @@ export default {
   flex-direction: column;
   align-items: center;
   min-width: 88px;
-  padding: 0.6em 0.9em 0.3em 0.9em;
-  border-radius: 2em;
-  background: rgba(40, 50, 54, 0.6);
-  border: 2px solid var(--primary);
+  padding: 0.68em 0.9em 0.42em 0.9em;
+  border-radius: 18px;
+  background: rgba(40, 50, 54, 0.56);
+  border: 1px solid rgba(11, 135, 75, 0.6);
   font-weight: 500;
   color: var(--primary);
   outline: none;
   user-select: none;
+  transition: border-color 0.18s, background-color 0.18s, transform 0.18s;
 }
 
 .icon-svg {
@@ -871,17 +885,23 @@ export default {
 }
 
 .input, select, .CountrySelect, .RegionSelect {
-  font-size: 1.08em;
-  padding: 0.57em 1.08em;
-  border-radius: 9px;
-  border: 1.5px solid var(--primary);
-  background: rgba(34, 38, 38, 0.87);
+  font-size: 1.02em;
+  padding: 0.65em 1em;
+  border-radius: 14px;
+  border: 1px solid rgba(11, 135, 75, 0.56);
+  background: rgba(25, 31, 32, 0.9);
   color: var(--textLight);
   margin-top: 0.28em;
   outline: none;
   width: 100%;
   max-width: 220px;
   box-sizing: border-box;
+  transition: border-color 0.18s, box-shadow 0.18s, background-color 0.18s;
+}
+
+.input:focus, select:focus, .CountrySelect:focus, .RegionSelect:focus {
+  border-color: color-mix(in srgb, var(--primary) 72%, white 28%);
+  box-shadow: 0 0 0 3px rgba(11, 135, 75, 0.14);
 }
 
 .input-unit {
@@ -910,7 +930,7 @@ export default {
 .pill-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5em 0.5em;
+  gap: 0.55em 0.55em;
   margin-bottom: 1.1em;
   align-items: flex-start;
   width: 100%;
@@ -944,12 +964,12 @@ export default {
 
 .pill {
   display: inline-block;
-  background: var(--backgroundDark);
-  border: 1.5px solid var(--primary);
-  border-radius: 16px;
-  padding: 0.52em 1em;
+  background: rgba(28, 35, 36, 0.88);
+  border: 1px solid rgba(11, 135, 75, 0.56);
+  border-radius: 14px;
+  padding: 0.58em 1em;
   text-align: center;
-  font-size: 1em;
+  font-size: 0.96em;
   cursor: pointer;
   transition: all 0.15s;
   min-width: 120px;
@@ -971,7 +991,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2em;
+  margin-top: 1.5em;
   width: 100%;
 }
 
@@ -989,26 +1009,29 @@ export default {
 }
 
 .btn {
-  padding: 0.7em 2.2em;
-  font-size: 1.1rem;
+  padding: 0.72em 1.55em;
+  font-size: 1rem;
   background: var(--primary);
   color: var(--textDark);
-  border: none;
-  border-radius: 10px;
+  border: 1px solid rgba(11, 135, 75, 0.36);
+  border-radius: 18px;
   font-weight: 600;
   cursor: pointer;
   min-width: 110px;
+  transition: transform 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
 }
 
 .btn.submit {
   background: var(--accent);
+  border-color: rgba(255, 213, 79, 0.35);
 }
 
 .confirmation {
-  background: var(--backgroundDarkTranslucent, rgba(30, 40, 40, 0.98));
-  padding: 3rem 1.4rem;
-  border-radius: 30px;
-  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.11);
+  background: rgba(23, 34, 35, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.4rem 1.3rem;
+  border-radius: 22px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
   max-width: 480px;
   margin: 3vh auto;
   text-align: center;
@@ -1016,9 +1039,10 @@ export default {
 
 .estimate-summary {
   margin-bottom: 2em;
-  padding: 2.2em 1em 2.6em 1em;
-  background: rgba(20, 30, 30, 0.95);
-  border-radius: 18px;
+  padding: 1.9em 1em 2.2em 1em;
+  background: rgba(23, 34, 35, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
 }
 
 .estimate-table {
@@ -1071,14 +1095,16 @@ export default {
   align-items: center;
   gap: 10px;
   color: var(--primary, #12cbc4);
-  font-size: 1.08rem;
+  font-size: 1rem;
   font-weight: 500;
-  text-decoration: underline;
+  text-decoration: none;
   z-index: 30;
-  background: none;
-  border: none;
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.45rem 0.68rem;
+  border-radius: 16px;
   outline: none;
-  transition: color 0.16s;
+  transition: color 0.16s, border-color 0.16s, background-color 0.16s;
 }
 
 .floating_logo img {
@@ -1089,6 +1115,8 @@ export default {
 
 .floating_logo:hover {
   color: var(--accent, #ffe75a);
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.24);
 }
 
 
@@ -1149,11 +1177,11 @@ export default {
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
-  background: #20292b;
+  background: rgba(20, 31, 32, 0.96);
   color: #ffe388;
-  border: 2px solid #ff6474;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.32);
-  border-radius: 14px;
+  border: 1px solid rgba(255, 100, 116, 0.55);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.26);
+  border-radius: 16px;
   min-width: 320px;
   max-width: 440px;
   z-index: 4000;

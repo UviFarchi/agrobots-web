@@ -181,14 +181,14 @@ export default {
 
 .slide-intro {
   margin: 0;
-  max-width: 72ch;
+  max-width: 68ch;
   font-size: 1rem;
   line-height: 1.58;
 }
 
 .columns-grid {
   display: grid;
-  gap: 1rem;
+  gap: 1.15rem;
   width: 100%;
   align-items: stretch;
   margin-top: 0.35rem;
@@ -206,11 +206,9 @@ export default {
   min-height: 100%;
   padding: 1rem;
   border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
-    var(--column-surface);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: color-mix(in srgb, var(--column-surface) 96%, rgba(255, 255, 255, 0.02));
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
   overflow: hidden;
 }
 
@@ -218,15 +216,15 @@ export default {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
-  height: 4px;
+  height: 3px;
   background: linear-gradient(90deg, var(--column-accent), transparent 72%);
-  opacity: 0.95;
+  opacity: 0.82;
 }
 
 .columnHeader {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.95rem;
   flex: 1 1 auto;
 }
 
@@ -234,7 +232,7 @@ export default {
   display: grid;
   grid-template-columns: clamp(5.9rem, 10vw, 7rem) minmax(0, 1fr);
   align-items: start;
-  gap: 1rem;
+  gap: 1.05rem;
 }
 
 .columnVisual {
@@ -242,14 +240,12 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 10.5rem;
+  min-height: 9.4rem;
   aspect-ratio: 5 / 4;
-  border-radius: 18px;
+  border-radius: 16px;
   overflow: hidden;
-  background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 62%),
-    rgba(255, 255, 255, 0.035);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .columnVisual.has-image {
@@ -260,10 +256,9 @@ export default {
   min-height: auto;
   aspect-ratio: 1 / 1;
   align-self: start;
-  border-radius: 22px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
-    rgba(255, 255, 255, 0.025);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.028);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
 .icon-image {
@@ -302,7 +297,7 @@ export default {
 
 .columnTitle {
   margin: 0;
-  font-size: clamp(1.08rem, 1.45vw, 1.34rem);
+  font-size: clamp(1.04rem, 1.36vw, 1.26rem);
   line-height: 1.22;
   color: var(--column-title);
 }
@@ -314,16 +309,16 @@ export default {
 
 .columnText {
   margin: 0;
-  font-size: 0.96rem;
-  line-height: 1.62;
-  color: rgba(247, 255, 247, 0.84);
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: rgba(247, 255, 247, 0.8);
 }
 
 .columnFooter {
   margin-top: auto;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.72rem;
 }
 
 .columnSocials {
@@ -341,18 +336,21 @@ export default {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  width: 100%;
-  min-height: 3rem;
-  padding: 0.78rem 0.95rem;
-  border-radius: 999px;
+  width: auto;
+  max-width: 100%;
+  min-width: 10rem;
+  min-height: 2.8rem;
+  padding: 0.72rem 0.95rem;
+  border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.035);
   color: #fff;
   text-decoration: none;
   font: inherit;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 600;
   cursor: pointer;
+  align-self: flex-start;
   transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 

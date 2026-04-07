@@ -152,18 +152,16 @@ export default {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: minmax(210px, 0.6fr) minmax(0, 1.4fr);
-  gap: 1rem;
+  gap: 1.15rem;
   align-items: stretch;
 }
 
 .hero-media-panel {
   position: relative;
-  border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
-    var(--backgroundDarkTranslucent, rgba(33, 33, 33, 0.93));
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(24, 35, 36, 0.92);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
 }
 
 .intro-copy-panel {
@@ -172,7 +170,7 @@ export default {
   justify-content: flex-start;
   gap: 0;
   min-height: 100%;
-  padding: 0.4rem 0.35rem 0.4rem 0;
+  padding: 0.5rem 0.45rem 0.5rem 0;
   background: none;
   border: none;
   border-radius: 0;
@@ -183,10 +181,10 @@ export default {
   content: "";
   position: absolute;
   inset: 0 auto 0 0;
-  width: 4px;
-  border-radius: 22px 0 0 22px;
+  width: 3px;
+  border-radius: 24px 0 0 24px;
   background: linear-gradient(180deg, var(--primary, #0b874b), transparent 78%);
-  opacity: 0.95;
+  opacity: 0.78;
 }
 
 .intro-logo {
@@ -200,7 +198,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: 0.45rem;
+  gap: 0.72rem;
   width: 100%;
 }
 
@@ -215,7 +213,7 @@ export default {
   margin: 0;
   width: 100%;
   max-width: none;
-  font-size: clamp(1.9rem, 2.55vw, 2.7rem);
+  font-size: clamp(1.82rem, 2.4vw, 2.52rem);
   line-height: 1.04;
   color: #fff;
 }
@@ -224,9 +222,9 @@ export default {
   margin: 0;
   width: 100%;
   max-width: none;
-  font-size: 0.98rem;
-  line-height: 1.62;
-  color: rgba(247, 255, 247, 0.9);
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: rgba(247, 255, 247, 0.86);
 }
 
 .intro-copy {
@@ -254,17 +252,17 @@ export default {
 .guidance-heading {
   margin: 0 0 0.28rem;
   color: var(--primary, #0b874b);
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
 }
 
 .guidance-text {
   margin: 0;
-  font-size: 0.92rem;
-  line-height: 1.5;
-  color: rgba(247, 255, 247, 0.8);
+  font-size: 0.9rem;
+  line-height: 1.52;
+  color: rgba(247, 255, 247, 0.78);
 }
 
 .guidance-secondary {
@@ -285,36 +283,50 @@ export default {
   min-width: 11rem;
   min-height: 3rem;
   padding: 0.74rem 0.95rem;
-  border-radius: 999px;
-  border: 1px solid var(--secondary, #237aff);
-  background: var(--secondary, #237aff);
+  border-radius: 18px;
+  border: 1px solid color-mix(in srgb, var(--secondary, #237aff) 55%, rgba(255, 255, 255, 0.12));
+  background: color-mix(in srgb, var(--secondary, #237aff) 88%, rgba(0, 0, 0, 0.08));
   color: #fff;
   cursor: pointer;
   font: inherit;
   font-size: 0.92rem;
   font-weight: 600;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .primary-action:hover {
+  transform: translateY(-1px);
   background: color-mix(in srgb, var(--secondary, #237aff) 86%, white 14%);
+}
+
+.primary-action:focus-visible,
+.video-card:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--secondary, #237aff) 70%, white 30%);
+  outline-offset: 2px;
 }
 
 .hero-media-panel {
   display: flex;
   align-items: stretch;
-  padding: 0.85rem;
+  padding: 0.95rem;
 }
 
 .video-card {
   position: relative;
   width: 100%;
   border: none;
-  border-radius: 18px;
+  border-radius: 20px;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.28);
   cursor: pointer;
   padding: 0;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-1px);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 
 .video-card img {
@@ -330,8 +342,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0.9rem;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.48));
+  padding: 1rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.5));
 }
 
 .video-chip {
@@ -339,8 +351,9 @@ export default {
   align-items: center;
   align-self: flex-start;
   padding: 0.34rem 0.72rem;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(7, 12, 13, 0.48);
   color: #fff;
   font-size: 0.76rem;
   font-weight: 700;
@@ -354,8 +367,9 @@ export default {
   align-self: flex-start;
   gap: 0.9rem;
   padding: 0.68rem 0.84rem;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.46);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.38);
   color: #fff;
 }
 
@@ -381,7 +395,7 @@ export default {
 }
 
 .video-label {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 600;
 }
 
