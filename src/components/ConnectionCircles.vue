@@ -1,6 +1,6 @@
 <template>
   <section class="connection-shell">
-    <h1 v-if="title && hubCircleIndex() === -1" class="system-title">{{ title }}</h1>
+    <h1 v-if="title && hubIndex === -1" class="system-title">{{ title }}</h1>
 
     <div class="system-stage">
       <article
@@ -31,7 +31,7 @@
         ></p>
 
         <button
-          v-if="expanded[idx] && circle.buttonText && circle.target && !isHubCircle(idx)"
+          v-if="expanded[idx] && circle.buttonText && canConnect(circle) && !isHubCircle(idx)"
           type="button"
           class="circle-button"
           @click.stop="connect(idx)"
@@ -42,7 +42,7 @@
       </article>
 
       <div
-        v-for="(arrow, index) in arrows.filter((item) => item && item.connectionText)"
+        v-for="(arrow, index) in connectionMessages"
         :key="`arrow-message-${index}`"
         class="connect-message"
         :style="getConnectionTextStyle(arrow)"
@@ -68,6 +68,32 @@
 </template>
 
 <script>
+const POSITION_STYLES = {
+  'top-left': { top: '6%', left: '4%' },
+  'top-middle': { top: '6%', left: '50%', transform: 'translateX(-50%)' },
+  'top-right': { top: '6%', right: '4%' },
+  'center-left': { top: '50%', left: '4%', transform: 'translateY(-50%)' },
+  'center-middle': { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' },
+  'center-right': { top: '50%', right: '4%', transform: 'translateY(-50%)' },
+  'center-bottom': { top: '72%', left: '50%', transform: 'translate(-50%, -50%)' },
+  'bottom-left': { bottom: '6%', left: '4%' },
+  'bottom-middle': { bottom: '6%', left: '50%', transform: 'translateX(-50%)' },
+  'bottom-right': { bottom: '6%', right: '4%' }
+};
+
+const POSITION_ANCHORS = {
+  'top-left': { x: 0.04, y: 0.06 },
+  'top-middle': { x: 0.5, y: 0.06 },
+  'top-right': { x: 0.96, y: 0.06 },
+  'center-left': { x: 0.04, y: 0.5 },
+  'center-middle': { x: 0.5, y: 0.5 },
+  'center-right': { x: 0.96, y: 0.5 },
+  'center-bottom': { x: 0.5, y: 0.72 },
+  'bottom-left': { x: 0.04, y: 0.94 },
+  'bottom-middle': { x: 0.5, y: 0.94 },
+  'bottom-right': { x: 0.96, y: 0.94 }
+};
+
 export default {
   name: "ConnectionCircles",
   props: {
@@ -133,12 +159,22 @@ export default {
       this.initState();
     }
   },
+  computed: {
+    hubIndex() {
+      return this.circles.findIndex((circle) =>
+        circle.position === 'center-middle' || circle.position === 'center-bottom'
+      );
+    },
+    connectionMessages() {
+      return this.arrows.filter((arrow) => arrow && arrow.connectionText);
+    }
+  },
   methods: {
     initState() {
       const expandedStates = {};
       const connectedStates = {};
       this.circles.forEach((circleProps, idx) => {
-        const isHub = idx === this.hubCircleIndex();
+        const isHub = idx === this.hubIndex;
         expandedStates[idx] = isHub ? false : !!circleProps.activeOnStart;
         connectedStates[idx] = isHub ? false : !!circleProps.activeOnStart;
       });
@@ -147,13 +183,18 @@ export default {
       this.connections = [];
       this.arrows = [];
     },
-    hubCircleIndex() {
-      return this.circles.findIndex((circle) =>
-        circle.position === 'center-middle' || circle.position === 'center-bottom'
-      );
-    },
     isHubCircle(idx) {
-      return idx === this.hubCircleIndex();
+      return idx === this.hubIndex;
+    },
+    canConnect(circle) {
+      return !!(circle.target || circle.closeAllOnConnect);
+    },
+    collapseAllCircles() {
+      const next = {};
+      this.circles.forEach((circle, index) => {
+        next[index] = false;
+      });
+      return next;
     },
     resetVisualConnections() {
       if (window.innerWidth <= 900) {
@@ -169,36 +210,14 @@ export default {
       return new URL(img, import.meta.url).href;
     },
     getPositionStyle(position) {
-      const positions = {
-        'top-left': { top: '6%', left: '4%' },
-        'top-middle': { top: '6%', left: '50%', transform: 'translateX(-50%)' },
-        'top-right': { top: '6%', right: '4%' },
-        'center-left': { top: '50%', left: '4%', transform: 'translateY(-50%)' },
-        'center-middle': { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' },
-        'center-right': { top: '50%', right: '4%', transform: 'translateY(-50%)' },
-        'center-bottom': { top: '72%', left: '50%', transform: 'translate(-50%, -50%)' },
-        'bottom-left': { bottom: '6%', left: '4%' },
-        'bottom-middle': { bottom: '6%', left: '50%', transform: 'translateX(-50%)' },
-        'bottom-right': { bottom: '6%', right: '4%' }
-      };
-      return positions[position] || positions['center-middle'];
+      return POSITION_STYLES[position] || POSITION_STYLES['center-middle'];
     },
     getPositionAnchor(position, stageRect) {
-      const stageWidth = stageRect.width;
-      const stageHeight = stageRect.height;
-      const positions = {
-        'top-left': { x: stageWidth * 0.04, y: stageHeight * 0.06 },
-        'top-middle': { x: stageWidth * 0.5, y: stageHeight * 0.06 },
-        'top-right': { x: stageWidth * 0.96, y: stageHeight * 0.06 },
-        'center-left': { x: stageWidth * 0.04, y: stageHeight * 0.5 },
-        'center-middle': { x: stageWidth * 0.5, y: stageHeight * 0.5 },
-        'center-right': { x: stageWidth * 0.96, y: stageHeight * 0.5 },
-        'center-bottom': { x: stageWidth * 0.5, y: stageHeight * 0.72 },
-        'bottom-left': { x: stageWidth * 0.04, y: stageHeight * 0.94 },
-        'bottom-middle': { x: stageWidth * 0.5, y: stageHeight * 0.94 },
-        'bottom-right': { x: stageWidth * 0.96, y: stageHeight * 0.94 }
+      const anchor = POSITION_ANCHORS[position] || POSITION_ANCHORS['center-middle'];
+      return {
+        x: stageRect.width * anchor.x,
+        y: stageRect.height * anchor.y
       };
-      return positions[position] || positions['center-middle'];
     },
     circleStyle(idx, circle) {
       const isActive = !!this.expanded[idx];
@@ -208,7 +227,7 @@ export default {
       if (isHub) {
         return {
           ...this.getPositionStyle(circle.position),
-          width: 'min(24rem, 38vw)',
+          width: 'min(28rem, 44vw)',
           minHeight: '0',
           height: 'auto',
           zIndex: 10,
@@ -251,10 +270,7 @@ export default {
       this.toggleExpand(idx);
     },
     toggleExpand(idx) {
-      const next = {};
-      this.circles.forEach((circle, index) => {
-        next[index] = false;
-      });
+      const next = this.collapseAllCircles();
       next[idx] = !this.expanded[idx];
       this.expanded = next;
     },
@@ -266,23 +282,28 @@ export default {
     connect(idx) {
       const circle = this.circles[idx];
       const targetIdx = this.findTargetIndex(circle);
-      if (targetIdx === -1) return;
+      if (targetIdx === -1 && !circle.closeAllOnConnect) return;
 
-      const closesLoop = this.isCircleConnected(targetIdx);
-      const next = {};
-      this.circles.forEach((item, index) => {
-        next[index] = false;
-      });
-      if (!closesLoop) {
-        next[targetIdx] = true;
+      const autoCollapseOnArrival = !!this.circles[targetIdx]?.autoCollapseOnArrival;
+      const next = this.collapseAllCircles();
+
+      if (targetIdx !== -1) {
+        const closesLoop = this.isCircleConnected(targetIdx);
+        if (!closesLoop && !autoCollapseOnArrival && !circle.closeAllOnConnect) {
+          next[targetIdx] = true;
+        }
       }
+
       this.expanded = next;
       this.connected = {
         ...this.connected,
         [idx]: true,
-        [targetIdx]: true
+        ...(targetIdx !== -1 ? { [targetIdx]: true } : {})
       };
-      this.registerConnection(idx, targetIdx, circle.arrowColor);
+
+      if (targetIdx !== -1) {
+        this.registerConnection(idx, targetIdx, circle.arrowColor);
+      }
 
       this.$nextTick(() => {
         setTimeout(() => {
@@ -562,6 +583,13 @@ export default {
 
 .action-circle.hub .circle-title {
   font-size: clamp(1.24rem, 1.9vw, 1.58rem);
+  width: min(100%, 25.5rem);
+  margin-inline: auto;
+}
+
+.action-circle.hub .circle-text {
+  width: min(100%, 25.5rem);
+  max-width: min(100%, 25.5rem);
 }
 
 .action-circle.active:not(.hub) .circle-title {

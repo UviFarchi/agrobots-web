@@ -180,14 +180,6 @@ export default {
         .replace(/\s+/g, " ")
         .trim();
     },
-    summaryText(html) {
-      const text = this.plainText(html);
-      if (text.length <= 180) return text;
-      return `${text.slice(0, 177).trimEnd()}...`;
-    },
-    hasExtendedText(card) {
-      return !!this.plainText(card?.backText);
-    },
     introNeedsClamp() {
       return this.usesDiamondLayout() && this.plainText(this.slideIntro).length > 160;
     },
