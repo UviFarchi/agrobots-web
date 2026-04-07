@@ -32,6 +32,8 @@ export default {
                     bgColor: colors.backgroundDark,
                     textColor: colors.textLight,
                     connectionText: "Blueprint established and verified, proceed to biorome installation",
+                    curveDirection: "negative",
+                    curveStrengthMultiplier: 1.18,
                     target: "deployment",
                     arrowColor: colors.primary
                 },
@@ -46,6 +48,8 @@ export default {
                     bgColor: colors.backgroundDark,
                     textColor: colors.textLight,
                     connectionText: "Infrastructure and biotic elements in place—system ready for production",
+                    curveDirection: "negative",
+                    curveStrengthMultiplier: 1.18,
                     target: "operations",
                     arrowColor: colors.primary
                 },
@@ -60,6 +64,10 @@ export default {
                     bgColor: colors.backgroundDark,
                     textColor: colors.textLight,
                     connectionText: "Operational data flows into the system, setting the stage for continuous refinement.",
+                    curveDirection: "positive",
+                    curveStrengthMultiplier: 1.42,
+                    labelOffsetX: 18,
+                    labelOffsetY: -18,
                     target: "optimization",
                     arrowColor: colors.primary
                 },
@@ -74,6 +82,10 @@ export default {
                     bgColor: colors.backgroundDark,
                     textColor: colors.textLight,
                     connectionText: "Optimized parameters feed back into operations, ensuring the system evolves for sustained performance.",
+                    curveDirection: "positive",
+                    curveStrengthMultiplier: 1.6,
+                    labelOffsetX: -18,
+                    labelOffsetY: 22,
                     target: "operations",
                     arrowColor: colors.primary
                 }
@@ -107,6 +119,8 @@ export default {
                     bgColor: colors.backgroundDark,
                     textColor: colors.textLight,
                     connectionText: "Plano verificado, listo para instalar el biorome",
+                    curveDirection: "negative",
+                    curveStrengthMultiplier: 1.18,
                     target: "deployment",
                     arrowColor: colors.primary
                 },
@@ -121,6 +135,8 @@ export default {
                     bgColor: colors.backgroundDark,
                     textColor: colors.textLight,
                     connectionText: "Infraestructura y elementos bióticos listos—sistema preparado para producción",
+                    curveDirection: "negative",
+                    curveStrengthMultiplier: 1.18,
                     target: "operations",
                     arrowColor: colors.primary
                 },
@@ -135,6 +151,10 @@ export default {
                     bgColor: colors.backgroundDark,
                     textColor: colors.textLight,
                     connectionText: "Los datos operativos alimentan el sistema, base para el perfeccionamiento continuo.",
+                    curveDirection: "positive",
+                    curveStrengthMultiplier: 1.42,
+                    labelOffsetX: 18,
+                    labelOffsetY: -18,
                     target: "optimization",
                     arrowColor: colors.primary
                 },
@@ -149,6 +169,10 @@ export default {
                     bgColor: colors.backgroundDark,
                     textColor: colors.textLight,
                     connectionText: "Los parámetros optimizados realimentan las operaciones, asegurando la evolución y el rendimiento sostenible.",
+                    curveDirection: "positive",
+                    curveStrengthMultiplier: 1.6,
+                    labelOffsetX: -18,
+                    labelOffsetY: 22,
                     target: "operations",
                     arrowColor: colors.primary
                 }

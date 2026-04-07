@@ -1,185 +1,197 @@
 export default {
   name: 'agrobots',
-  component: 'AgrobotsIntro',
+  component: 'ColumnsAndPanels',
   content: {
     en: {
-      title: 'Who Are We?',
-      slideTitle: 'Who Are We?',
+      title: 'What is Agrobots?',
+      slideTitle: 'What is Agrobots?',
       eyebrow: 'Terrain Management as a Service',
-      headline: 'We turn underused land into autonomous, regenerative production systems.',
-      lead: 'Agrobots combines Land OS, field sensors, drones, and modular robotics to manage terrain as a living, data-driven system.',
+      headline: 'What is Agrobots?',
+      lead: 'Agrobots is building a new way to make terrain productive. We combine ecology, modular robotics and AI to operate bioromes, living systems that adapt continuously to local conditions and long-term goals.',
       pillars: [
         {
-          title: 'Sense every hectare',
-          text: 'Soil, crop, and climate signals become continuous field intelligence.',
+          title: 'Terrain Management as a Service',
+          text: 'We manage terrain as a service, replacing fragmented operational costs with one integrated model for productive, regenerative land stewardship.',
           details: [
-            'Sensor meshes track moisture, microclimate, and plant stress in real time.',
-            'Land OS turns raw field signals into operational recommendations.',
-            'Each hectare is monitored continuously instead of only at inspection time.'
+            'Agrobots does not sell machinery, licenses, or disconnected tools.',
+            'We design, deploy, and operate productive ecosystems through a service model that aligns around long-term outcomes on the land.',
+            'That means one coordinated system for monitoring, decision-making, field execution, and on-the-ground support.'
           ]
         },
         {
-          title: 'Automate field action',
-          text: 'Land OS coordinates drones and robotics so operations adapt with less manual oversight.',
+          title: 'Bioromes',
+          text: 'Bioromes are bio-robotic modular ecosystems where plants, animals, microbes, sensors, and machines work together as one adaptive terrain system.',
           details: [
-            'Drones handle mapping, inspection, and targeted interventions.',
-            'Robotic modules can be deployed gradually as the site evolves.',
-            'Operations adapt to conditions instead of fixed seasonal routines.'
+            'A biorome is not just an automated farm.',
+            'It is a living, managed ecosystem designed to be productive, resilient, and continuously adaptable.',
+            'Instead of forcing land into rigid, extractive routines, Agrobots coordinates biological and robotic modules so the terrain can respond to changing environmental, operational, and productive needs over time.'
           ]
         },
         {
-          title: 'Restore while producing',
-          text: 'Deployments improve yields, reduce inputs, and rebuild soil and water health.',
+          title: 'LandOS',
+          text: 'LandOS manages the terrain by integrating field data, directing robotic activity, coordinating sensors, and supporting ground operators in real time.',
           details: [
-            'Regeneration is measured alongside output, not treated as a side effect.',
-            'The system aims to reduce water, chemical, and labor intensity over time.',
-            'Each season creates a healthier baseline for the next one.'
+            'LandOS is the operating layer behind every biorome.',
+            'It brings together analytics, optimization, and operations to understand conditions on the ground, decide what should happen next, and coordinate execution across sensors, robotic modules, and field teams.',
+            'In practice, it helps the terrain function as one managed system rather than a collection of isolated devices and manual interventions.'
           ]
         }
       ],
-      proofTitle: 'For landowners, institutions, and cooperatives that need productivity with ecological accountability.',
+      proofSectionTitle: 'Why TMaaS matters',
+      proofTitle: 'Terrain Management as a Service gives different stakeholders a different kind of advantage. For operators, it reduces fragmentation and operational strain. For landowners, it turns difficult terrain into a managed asset. For public institutions, it supports restoration and resilience at terrain scale. For investors, it creates a recurring platform business built around long-term land performance.',
       proofChips: [
         {
-          label: 'AI + robotics',
-          visualBadge: 'AI + robotics',
-          visualCaption: 'Field sensing, aerial mapping, and robotic action are coordinated through a single operational layer.',
-          metrics: [
-            { label: 'Signal', value: 'Sensors + AI' },
-            { label: 'Action', value: 'Drones + robotics' },
-            { label: 'Loop', value: 'Continuous adaptation' }
-          ]
+          label: 'Operators',
+          panelTitle: 'Reduce operational strain without giving up control',
+          panelText: [
+            'Agrobots is built for operators facing labour pressure, input volatility, and the growing complexity of managing productive terrain. TMaaS replaces a fragmented stack of machinery, monitoring tools, contractors, and disconnected software with one coordinated operating model.',
+            'LandOS monitors conditions, guides interventions, coordinates field systems, and supports ground teams as part of one continuous service. The operator keeps control of the land and commercial output, while Agrobots takes on the complexity of making the terrain perform as one managed system.'
+          ],
+          image: {
+            src: '/img/about_1.jpg',
+            alt: 'Operators using the Agrobots terrain management platform'
+          }
         },
         {
-          label: 'Fixed annual TMaaS fee',
-          visualBadge: 'Fixed annual TMaaS',
-          visualCaption: 'Deployment, monitoring, optimization, and service are bundled into one recurring operating model.',
-          metrics: [
-            { label: 'Commercial model', value: 'Annual service fee' },
-            { label: 'Delivery', value: 'Managed operations' },
-            { label: 'Planning', value: 'Predictable cost envelope' }
-          ]
+          label: 'Landowners',
+          panelTitle: 'Turn underused land into a managed asset',
+          panelText: [
+            'For landowners, the value of TMaaS is that productive terrain no longer depends on becoming a full-time operator. Agrobots can manage idle, degraded, underused, or hard-to-run land through a service model that combines ecological design, continuous monitoring, and operational execution.',
+            'That makes it possible to move from dormant terrain to managed productivity without building an internal team or coordinating infrastructure piece by piece. TMaaS replaces ad hoc intervention with a structured long-term model for productive, restorative, or mixed-use land.'
+          ],
+          image: {
+            src: '/img/about_2.jpg',
+            alt: 'Managed terrain for landowners'
+          }
         },
         {
-          label: 'Modular deployment',
-          visualBadge: 'Modular rollout',
-          visualCaption: 'Sites can start with the right stack today and add modules as terrain, crops, and priorities evolve.',
-          metrics: [
-            { label: 'Rollout', value: 'Phased by site' },
-            { label: 'Expansion', value: 'Add capabilities over time' },
-            { label: 'Fit', value: 'Context-specific stack' }
-          ]
+          label: 'Public Sector',
+          panelTitle: 'Manage land for resilience, restoration, and public outcomes',
+          panelText: [
+            'For municipalities, agencies, and public land stewards, TMaaS offers a practical way to manage terrain with long-term environmental and operational accountability. The same model can support regeneration, ecological monitoring, landscape resilience, and other public-interest use cases where traceability and measurable outcomes matter.',
+            'Instead of relying on isolated surveys, contractors, and disconnected interventions, TMaaS provides a continuous operating layer for land. That makes it relevant wherever public institutions need stewardship rather than one-off action.'
+          ],
+          image: {
+            src: '/img/about_3.jpg',
+            alt: 'Public sector terrain stewardship using Agrobots'
+          }
         },
         {
-          label: 'Yield + restoration',
-          visualBadge: 'Yield + restoration',
-          visualCaption: 'Productive output and land recovery are treated as linked outcomes instead of a tradeoff.',
-          metrics: [
-            { label: 'Output', value: 'Higher productivity' },
-            { label: 'Inputs', value: 'Lower intensity' },
-            { label: 'Land effect', value: 'Healthier soil and water' }
-          ]
+          label: 'Investors',
+          panelTitle: 'A recurring terrain platform, not a hardware-heavy bet',
+          panelText: [
+            'For investors, Agrobots is not just a smarter way to automate agriculture. It is a recurring service model built around terrain performance. The business is structured around multi-year terrain management contracts, with LandOS at the centre and a model designed to replace fragmented operational costs with a managed service.',
+            'It is also designed to scale without taking on every capital burden directly. Partner-enabled deployment, platform reuse, and applicability across agriculture, restoration, and monitoring make TMaaS more than a single-use product. It is a terrain platform with room to compound over time.'
+          ],
+          image: {
+            src: '/img/about_4.jpg',
+            alt: 'Investor perspective on Agrobots terrain platform'
+          }
         }
       ],
-      closing: 'We operate terrain as an intelligent service that improves each season.',
-      metrics: [
-        { label: 'Model', value: 'TMaaS' },
-        { label: 'Platform', value: 'Land OS' },
-        { label: 'Outcome', value: 'Productivity + regeneration' }
-      ],
-      visualBadge: 'Land OS in the field',
-      visualCaption: 'Autonomous field intelligence for degraded and underused land.',
+      closing: '',
+      metrics: [],
+      visualBadge: '',
+      visualTitle: '',
+      visualCaption: '',
       images: [
-        { src: '/img/mechanoflower_field.jpg', alt: 'Mechanized Agrobots flower field system' }
+        { src: '/img/about_1.jpg', alt: 'Operators using the Agrobots terrain management platform' }
       ]
     },
     es: {
-      title: '¿Quiénes somos?',
-      slideTitle: '¿Quiénes somos?',
+      title: '¿Qué es Agrobots?',
+      slideTitle: '¿Qué es Agrobots?',
       eyebrow: 'Gestión de Terreno como Servicio',
-      headline: 'Convertimos terrenos infrautilizados en sistemas productivos, autónomos y regenerativos.',
-      lead: 'Agrobots combina Land OS, sensores de campo, drones y robótica modular para gestionar el terreno como un sistema vivo y guiado por datos.',
+      headline: '¿Qué es Agrobots?',
+      lead: 'Agrobots está construyendo una nueva forma de hacer productivo el terreno. Combinamos ecología, robótica modular e IA para operar bioromas, sistemas vivos que se adaptan continuamente a las condiciones locales y a los objetivos de largo plazo.',
       pillars: [
         {
-          title: 'Leer cada hectárea',
-          text: 'Las señales de suelo, cultivo y clima se convierten en inteligencia continua de campo.',
+          title: 'Gestión de Terreno como Servicio',
+          text: 'Gestionamos el terreno como un servicio, sustituyendo costes operativos fragmentados por un modelo integrado para una administración productiva y regenerativa de la tierra.',
           details: [
-            'Mallas de sensores siguen humedad, microclima y estrés vegetal en tiempo real.',
-            'Land OS convierte señales de campo en decisiones operativas.',
-            'Cada hectárea se monitoriza de forma continua, no solo en inspecciones puntuales.'
+            'Agrobots no vende maquinaria, licencias ni herramientas desconectadas.',
+            'Diseñamos, desplegamos y operamos ecosistemas productivos mediante un modelo de servicio alineado con resultados de largo plazo sobre el terreno.',
+            'Eso significa un sistema coordinado de monitorización, toma de decisiones, ejecución en campo y soporte operativo sobre el terreno.'
           ]
         },
         {
-          title: 'Automatizar la operación',
-          text: 'Land OS coordina drones y robótica para adaptar la operación con menos supervisión manual.',
+          title: 'Bioromas',
+          text: 'Los bioromas son ecosistemas bio-robóticos modulares donde plantas, animales, microbios, sensores y máquinas trabajan juntos como un sistema adaptativo del terreno.',
           details: [
-            'Los drones cubren mapeo, inspección e intervenciones dirigidas.',
-            'Los módulos robóticos pueden desplegarse por fases según evoluciona el sitio.',
-            'La operación se adapta a las condiciones y no a calendarios fijos.'
+            'Un bioroma no es solo una granja automatizada.',
+            'Es un ecosistema vivo y gestionado, diseñado para ser productivo, resiliente y continuamente adaptable.',
+            'En lugar de forzar el terreno en rutinas rígidas y extractivas, Agrobots coordina módulos biológicos y robóticos para que el territorio responda con el tiempo a necesidades ambientales, operativas y productivas cambiantes.'
           ]
         },
         {
-          title: 'Restaurar mientras produce',
-          text: 'Los despliegues mejoran rendimientos, reducen insumos y recuperan suelo y agua.',
+          title: 'LandOS',
+          text: 'LandOS gestiona el terreno integrando datos de campo, dirigiendo actividad robótica, coordinando sensores y apoyando a los operadores en tiempo real.',
           details: [
-            'La regeneración se mide junto con la producción, no como efecto secundario.',
-            'El sistema busca reducir agua, químicos y carga operativa con el tiempo.',
-            'Cada temporada deja una base más sana para la siguiente.'
+            'LandOS es la capa operativa detrás de cada bioroma.',
+            'Integra analítica, optimización y operaciones para entender las condiciones sobre el terreno, decidir qué debe ocurrir a continuación y coordinar la ejecución entre sensores, módulos robóticos y equipos de campo.',
+            'En la práctica, ayuda a que el terreno funcione como un sistema gestionado y no como un conjunto de dispositivos aislados e intervenciones manuales.'
           ]
         }
       ],
-      proofTitle: 'Para propietarios de tierra, instituciones y cooperativas que necesitan productividad con responsabilidad ecológica.',
+      proofSectionTitle: 'Por qué importa TMaaS',
+      proofTitle: 'Terrain Management as a Service ofrece una ventaja distinta para cada tipo de actor. Para los operadores, reduce la fragmentación y la presión operativa. Para los propietarios, convierte terrenos difíciles en un activo gestionado. Para las instituciones públicas, apoya restauración y resiliencia a escala territorial. Para los inversores, crea un negocio de plataforma recurrente construido alrededor del rendimiento del terreno a largo plazo.',
       proofChips: [
         {
-          label: 'IA + robótica',
-          visualBadge: 'IA + robótica',
-          visualCaption: 'La lectura del campo, el mapeo aéreo y la acción robótica se coordinan en una sola capa operativa.',
-          metrics: [
-            { label: 'Señal', value: 'Sensores + IA' },
-            { label: 'Acción', value: 'Drones + robótica' },
-            { label: 'Bucle', value: 'Adaptación continua' }
-          ]
+          label: 'Operadores',
+          panelTitle: 'Reducir la presión operativa sin perder control',
+          panelText: [
+            'Agrobots está diseñado para operadores que enfrentan presión laboral, volatilidad de insumos y una complejidad creciente en la gestión de terreno productivo. TMaaS sustituye un conjunto fragmentado de maquinaria, herramientas de monitorización, contratistas y software desconectado por un modelo operativo coordinado.',
+            'LandOS monitoriza condiciones, guía intervenciones, coordina sistemas de campo y apoya a los equipos sobre el terreno como parte de un servicio continuo. El operador mantiene el control de la tierra y del resultado comercial, mientras Agrobots asume la complejidad de hacer que el terreno funcione como un solo sistema gestionado.'
+          ],
+          image: {
+            src: '/img/about_1.jpg',
+            alt: 'Operadores usando la plataforma de gestión de terreno de Agrobots'
+          }
         },
         {
-          label: 'Tarifa anual fija TMaaS',
-          visualBadge: 'TMaaS anual fijo',
-          visualCaption: 'Despliegue, monitorización, optimización y servicio se integran en un solo modelo operativo recurrente.',
-          metrics: [
-            { label: 'Modelo comercial', value: 'Tarifa anual' },
-            { label: 'Entrega', value: 'Operación gestionada' },
-            { label: 'Planificación', value: 'Coste predecible' }
-          ]
+          label: 'Propietarios',
+          panelTitle: 'Convertir terreno infrautilizado en un activo gestionado',
+          panelText: [
+            'Para los propietarios, el valor de TMaaS es que el terreno productivo ya no depende de convertirse en un operador a tiempo completo. Agrobots puede gestionar terreno ocioso, degradado, infrautilizado o difícil de operar mediante un modelo de servicio que combina diseño ecológico, monitorización continua y ejecución operativa.',
+            'Eso permite pasar de un terreno inactivo a una productividad gestionada sin construir un equipo interno ni coordinar infraestructura pieza por pieza. TMaaS sustituye la intervención ad hoc por un modelo estructurado de largo plazo para suelo productivo, restaurativo o de uso mixto.'
+          ],
+          image: {
+            src: '/img/about_2.jpg',
+            alt: 'Terreno gestionado para propietarios'
+          }
         },
         {
-          label: 'Despliegue modular',
-          visualBadge: 'Despliegue modular',
-          visualCaption: 'El sitio puede arrancar con la configuración adecuada hoy y sumar módulos a medida que evoluciona.',
-          metrics: [
-            { label: 'Despliegue', value: 'Por fases' },
-            { label: 'Expansión', value: 'Capacidades añadibles' },
-            { label: 'Ajuste', value: 'Stack específico por contexto' }
-          ]
+          label: 'Sector Público',
+          panelTitle: 'Gestionar terreno para resiliencia, restauración y resultados públicos',
+          panelText: [
+            'Para municipios, agencias y responsables públicos del suelo, TMaaS ofrece una forma práctica de gestionar terreno con responsabilidad ambiental y operativa a largo plazo. El mismo modelo puede apoyar regeneración, monitorización ecológica, resiliencia del paisaje y otros casos de uso de interés público donde importan la trazabilidad y los resultados medibles.',
+            'En lugar de depender de estudios aislados, contratistas e intervenciones desconectadas, TMaaS aporta una capa operativa continua para el terreno. Eso lo vuelve relevante allí donde las instituciones públicas necesitan administración sostenida y no acciones puntuales.'
+          ],
+          image: {
+            src: '/img/about_3.jpg',
+            alt: 'Gestión pública del territorio con Agrobots'
+          }
         },
         {
-          label: 'Productividad + restauración',
-          visualBadge: 'Productividad + restauración',
-          visualCaption: 'La producción y la recuperación del terreno se tratan como resultados vinculados, no como una compensación.',
-          metrics: [
-            { label: 'Salida', value: 'Más productividad' },
-            { label: 'Insumos', value: 'Menor intensidad' },
-            { label: 'Terreno', value: 'Suelo y agua más sanos' }
-          ]
+          label: 'Inversores',
+          panelTitle: 'Una plataforma recurrente de terreno, no una apuesta cargada de hardware',
+          panelText: [
+            'Para los inversores, Agrobots no es solo una forma más inteligente de automatizar la agricultura. Es un modelo de servicio recurrente construido alrededor del rendimiento del terreno. El negocio se estructura sobre contratos plurianuales de gestión de terreno, con LandOS en el centro y un modelo diseñado para sustituir costes operativos fragmentados por un servicio gestionado.',
+            'También está diseñado para escalar sin asumir directamente toda la carga de capital. Despliegue apoyado en socios, reutilización de plataforma y aplicabilidad en agricultura, restauración y monitorización hacen que TMaaS sea más que un producto de un solo uso. Es una plataforma de terreno con capacidad de componer valor con el tiempo.'
+          ],
+          image: {
+            src: '/img/about_4.jpg',
+            alt: 'Perspectiva inversora sobre la plataforma territorial de Agrobots'
+          }
         }
       ],
-      closing: 'Operamos el terreno como un servicio inteligente que mejora con cada temporada.',
-      metrics: [
-        { label: 'Modelo', value: 'TMaaS' },
-        { label: 'Plataforma', value: 'Land OS' },
-        { label: 'Resultado', value: 'Productividad + regeneración' }
-      ],
-      visualBadge: 'Land OS en campo',
-      visualCaption: 'Inteligencia de campo autónoma para terrenos degradados o infrautilizados.',
+      closing: '',
+      metrics: [],
+      visualBadge: '',
+      visualTitle: '',
+      visualCaption: '',
       images: [
-        { src: '/img/mechanoflower_field.jpg', alt: 'Sistema Agrobots de campo con mecanoflor' }
+        { src: '/img/about_1.jpg', alt: 'Operadores usando la plataforma de gestión de terreno de Agrobots' }
       ]
     }
   }

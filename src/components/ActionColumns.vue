@@ -6,7 +6,7 @@ export default {
   emits: ['contact'],
   components: { Socials },
   props: {
-    title: {type: String, required: true},
+    title: { type: String, required: true },
     columns: { type: Array, required: true },
     general: {
       type: Object,
@@ -15,230 +15,384 @@ export default {
         slideTitleColor: '',
         slideIntro: '',
         slideIntroColor: '',
-        columnsPerRow: Number
+        columnsPerRow: 3
       })
     },
     currentSlideIndex: { type: Number, default: 0 }
   },
   data() {
-    return { activeSocialsColumn: null };
+    return {
+      activeSocialsColumn: null
+    };
+  },
+  watch: {
+    currentSlideIndex() {
+      this.activeSocialsColumn = null;
+    }
   },
   computed: {
-    rows() {
-      const out = [];
-      for (let i = 0; i < this.columns.length; i += this.general.columnsPerRow)
-        out.push(this.columns.slice(i, i + this.general.columnsPerRow));
-      return out;
+    gridColumns() {
+      return Math.max(this.general.columnsPerRow || 3, 1);
+    },
+    usesPortraitLayout() {
+      return this.gridColumns <= 2 && this.columns.every((column) => !!column.columnIconImg);
     }
   },
   methods: {
     toggleSocials(index) {
       this.activeSocialsColumn = this.activeSocialsColumn === index ? null : index;
     },
-    contactButtonClicked() {
-      this.$emit('contact');
+    normalizedPath(path) {
+      if (!path) return '/';
+      return path.startsWith('/') ? path : `/${path}`;
+    },
+    isExternalLink(link) {
+      return /^(https?:)?\/\//.test(link || '') || String(link || '').startsWith('mailto:');
+    },
+    handleAction(column, index) {
+      if (column.buttonLink === 'share') {
+        this.toggleSocials(index);
+        return;
+      }
+
+      if (column.buttonLink === 'contact') {
+        this.$emit('contact');
+        return;
+      }
+
+      if (column.buttonLink === 'quote') {
+        const path = this.normalizedPath(column.buttonLink);
+        if (this.$router) {
+          this.$router.push(path);
+          return;
+        }
+        window.location.assign(path);
+      }
+    },
+    columnStyle(column) {
+      return {
+        '--column-accent': column.borderColor || column.buttonBgColor || 'var(--primary, #0b874b)',
+        '--column-surface': column.columnsBgColor || 'var(--backgroundDarkTranslucent, rgba(33, 33, 33, 0.93))',
+        '--column-title': column.textColor || '#ffffff',
+        '--column-visual-tint': column.buttonBgColor || column.borderColor || 'rgba(255, 255, 255, 0.08)'
+      };
     }
   }
 };
 </script>
 
 <template>
-  <h1 class="slide-title" :style="{ color: general.slideTitleColor }">
-    {{ general.slideTitle }}
-  </h1>
-  <p class="slide-intro" :style="{ color: general.slideIntroColor }">
-    {{ general.slideIntro }}
-  </p>
-  <div class="columnsContainer">
+  <section class="action-columns-shell">
+    <h1 class="slide-title" :style="{ color: general.slideTitleColor }">
+      {{ general.slideTitle }}
+    </h1>
+    <p class="slide-intro" :style="{ color: general.slideIntroColor }">
+      {{ general.slideIntro }}
+    </p>
+
     <div
-        class="columnsRow"
-        v-for="(row, rowIndex) in rows"
-        :key="'row-' + rowIndex"
+      class="columns-grid"
+      :class="{ 'portrait-grid': usesPortraitLayout }"
+      :style="{ gridTemplateColumns: `repeat(${gridColumns}, minmax(240px, 1fr))` }"
     >
-      <div
-          class="actionColumns"
-          v-for="(column, colIndex) in row"
-          :key="column.columnTitle"
-          :style="{
-          backgroundColor: column.columnsBgColor,
-          color: column.textColor,
-          borderColor: column.borderColor,
-          borderStyle: 'solid',
-          borderWidth: column.borderWidth ? column.borderWidth + 'px' : '1px'
-        }"
+      <article
+        v-for="(column, index) in columns"
+        :key="`${column.columnTitle}-${index}`"
+        class="actionColumns"
+        :class="{ 'portrait-card': usesPortraitLayout && column.columnIconImg }"
+        :style="columnStyle(column)"
       >
-        <div class="columnIcon">
-          <img
+        <div class="columnHeader" :class="{ 'portrait-header': usesPortraitLayout && column.columnIconImg }">
+          <div class="columnVisual" :class="{ 'has-image': column.columnIconImg, 'portrait-visual': usesPortraitLayout && column.columnIconImg }">
+            <img
               v-if="column.columnIconImg"
               :src="column.columnIconImg"
-              :alt="column.columnTitle + ' icon'"
+              :alt="column.columnTitle"
               class="icon-image"
-          />
-          <span v-else>{{ column.columnIcon }}</span>
+            />
+            <span v-else class="icon-symbol">{{ column.columnIcon }}</span>
+          </div>
+
+          <div class="columnContent">
+            <h2 class="columnTitle">{{ column.columnTitle }}</h2>
+            <p class="columnText">{{ column.columnText }}</p>
+          </div>
         </div>
-        <h2 class="columnTitle">{{ column.columnTitle }}</h2>
-        <p class="columnText">{{ column.columnText }}</p>
-        <socials v-if="activeSocialsColumn === (rowIndex * general.columnsPerRow + colIndex)"></socials>
-        <a
-            v-if="column.buttonLink === 'share'"
-            href="javascript:;"
+
+        <div class="columnFooter">
+          <div
+            v-if="activeSocialsColumn === index"
+            class="columnSocials"
+          >
+            <socials></socials>
+          </div>
+
+          <button
+            v-if="['share', 'contact', 'quote'].includes(column.buttonLink)"
+            type="button"
             class="buttonLink"
-            :style="{
-            backgroundColor: column.buttonBgColor,
-            color: column.buttonTextColor,
-            borderColor: column.buttonBorderColor,
-            borderStyle: 'solid'
-          }"
-            @click="toggleSocials(rowIndex * general.columnsPerRow + colIndex)"
-        >
-          {{ column.buttonText }}
-        </a>
-        <a
-            v-else-if="column.buttonLink === 'contact'"
-            href="javascript:;"
-            class="buttonLink"
-            :style="{
-            backgroundColor: column.buttonBgColor,
-            color: column.buttonTextColor,
-            borderColor: column.buttonBorderColor,
-            borderStyle: 'solid'
-          }"
-            @click="contactButtonClicked"
-        >
-          {{ column.buttonText }}
-        </a>
-        <a
-            v-else
+            @click="handleAction(column, index)"
+          >
+            <span>{{ column.buttonText }}</span>
+            <span class="buttonArrow" aria-hidden="true">↗</span>
+          </button>
+
+          <a
+            v-else-if="isExternalLink(column.buttonLink)"
             :href="column.buttonLink"
             class="buttonLink"
             target="_blank"
-            :style="{
-            backgroundColor: column.buttonBgColor,
-            color: column.buttonTextColor,
-            borderColor: column.buttonBorderColor,
-            borderStyle: 'solid'
-          }"
-        >
-          {{ column.buttonText }}
-        </a>
-      </div>
+            rel="noreferrer"
+          >
+            <span>{{ column.buttonText }}</span>
+            <span class="buttonArrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            v-else
+            :href="normalizedPath(column.buttonLink)"
+            class="buttonLink"
+          >
+            <span>{{ column.buttonText }}</span>
+            <span class="buttonArrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </article>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>
-.columnsContainer {
+.action-columns-shell {
   display: flex;
   flex-direction: column;
-  min-height: 60vh;
+  gap: 1rem;
   width: 100%;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.columnsRow {
-  display: flex;
-  flex-direction: row;
-  gap: 1.5rem;
-  justify-content: center;
-  width: 100%;
-}
-
-.actionColumns {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 0px;
-  min-width: 240px;
-  max-width: 340px;
-  position: relative;
-  border-radius: 20px;
+  min-height: 100%;
+  padding: 1.2rem 0;
   box-sizing: border-box;
-  padding: 0.5rem;
-}
-
-.columnTitle {
-  text-align: center;
-  margin: 1.2rem 0 0.5rem 0;
-}
-
-.columnText {
-  margin: 1rem;
-  justify-self: start;
-}
-
-.buttonLink {
-  width: 55%;
-  height: 44px;
-  margin-top: auto;
-  margin-bottom: 14px;
-  align-self: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: center;
-  font-size: 1.04rem;
 }
 
 .slide-title {
-  text-align: center;
-  margin-top: 1.2rem;
-}
-.slide-intro {
-  text-align: center;
-  margin: 1.2rem;
+  margin: 0;
+  font-size: clamp(1.9rem, 2.7vw, 2.9rem);
+  line-height: 1.04;
 }
 
-.columnIcon {
-  text-align: center;
-  margin: 1.2rem 0 0.2rem 0;
-  font-size: 4rem;
-  min-height: 70px;
-  min-width: 70px;
+.slide-intro {
+  margin: 0;
+  max-width: 72ch;
+  font-size: 1rem;
+  line-height: 1.58;
+}
+
+.columns-grid {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  align-items: stretch;
+  margin-top: 0.35rem;
+}
+
+.columns-grid.portrait-grid {
+  gap: 1.15rem;
+}
+
+.actionColumns {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 100%;
+  padding: 1rem;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
+    var(--column-surface);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+}
+
+.actionColumns::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--column-accent), transparent 72%);
+  opacity: 0.95;
+}
+
+.columnHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1 1 auto;
+}
+
+.portrait-header {
+  display: grid;
+  grid-template-columns: clamp(5.9rem, 10vw, 7rem) minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+}
+
+.columnVisual {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.icon-image {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  border-radius: 50%;
-  background: #222;
-  box-shadow: 0 2px 12px #0003;
-  display: inline-block;
-  max-width: 100px;
+  min-height: 10.5rem;
+  aspect-ratio: 5 / 4;
+  border-radius: 18px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 62%),
+    rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-@media (max-width: 1100px) {
-  .columnsRow {
-    flex-wrap: wrap;
-    gap: 1rem;
+.columnVisual.has-image {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.columnVisual.portrait-visual {
+  min-height: auto;
+  aspect-ratio: 1 / 1;
+  align-self: start;
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
+    rgba(255, 255, 255, 0.025);
+}
+
+.icon-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  image-rendering: auto;
+}
+
+.icon-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.75rem;
+  height: 5.75rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--column-accent);
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  line-height: 1;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.columnContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1 1 auto;
+}
+
+.portrait-header .columnContent {
+  gap: 0.65rem;
+  padding-top: 0.1rem;
+}
+
+.columnTitle {
+  margin: 0;
+  font-size: clamp(1.08rem, 1.45vw, 1.34rem);
+  line-height: 1.22;
+  color: var(--column-title);
+}
+
+.portrait-card .columnTitle {
+  font-size: clamp(1.04rem, 1.32vw, 1.24rem);
+  line-height: 1.18;
+}
+
+.columnText {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.62;
+  color: rgba(247, 255, 247, 0.84);
+}
+
+.columnFooter {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.columnSocials {
+  padding-top: 0.2rem;
+}
+
+.columnSocials :deep(.social-list) {
+  margin: 0;
+  max-width: none;
+  padding: 0;
+}
+
+.buttonLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.78rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff;
+  text-decoration: none;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.buttonLink:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.buttonArrow {
+  color: var(--column-accent);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+@media (max-width: 960px) {
+  .columns-grid {
+    grid-template-columns: repeat(2, minmax(240px, 1fr)) !important;
   }
-  .actionColumns {
-    min-width: 220px;
-    max-width: 45vw;
+
+  .portrait-header {
+    grid-template-columns: 5.8rem minmax(0, 1fr);
   }
 }
-@media (max-width: 768px) {
-  .columnsContainer {
-    flex-direction: column;
-    gap: 0.8rem;
+
+@media (max-width: 720px) {
+  .columns-grid {
+    grid-template-columns: 1fr !important;
   }
-  .columnsRow {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-    width: 100%;
+
+  .action-columns-shell {
+    padding-top: 1rem;
   }
-  .actionColumns {
-    width: 92vw;
-    min-width: 0;
-    max-width: 100vw;
-    margin: 0.3rem 0;
+
+  .portrait-header {
+    grid-template-columns: 1fr;
+  }
+
+  .columnVisual.portrait-visual {
+    width: min(7rem, 100%);
   }
 }
 </style>

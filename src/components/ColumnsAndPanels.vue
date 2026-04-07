@@ -50,10 +50,11 @@
       </div>
 
       <div
-        v-if="proofTitle || displayProofChips.length || closing"
+        v-if="proofSectionTitle || proofTitle || displayProofChips.length || closing"
         class="intro-detail-stack"
       >
-        <div v-if="proofTitle || closing" class="intro-detail-copy">
+        <div v-if="proofSectionTitle || proofTitle || closing" class="intro-detail-copy">
+          <h2 v-if="proofSectionTitle" class="intro-proof-heading">{{ proofSectionTitle }}</h2>
           <p v-if="proofTitle" class="intro-proof-title">{{ proofTitle }}</p>
           <p v-if="closing" class="intro-closing">{{ closing }}</p>
         </div>
@@ -77,26 +78,29 @@
     </div>
 
     <aside class="intro-images" aria-label="Agrobots visuals">
-      <div class="visual-stage" :class="{ 'single-image': !secondaryImage }">
-        <div class="visual-guides" aria-hidden="true">
-          <span class="guide guide-x"></span>
-          <span class="guide guide-y"></span>
-          <span class="guide guide-ring"></span>
-        </div>
-        <img
-          v-if="primaryImage"
-          :class="secondaryImage ? 'visual-backdrop' : 'visual-primary-art'"
-          :src="primaryImage.src"
-          :alt="primaryImage.alt"
-        />
+      <div class="visual-stage">
         <span v-if="resolvedVisualBadge" class="visual-badge">{{ resolvedVisualBadge }}</span>
-        <div v-if="resolvedVisualCaption" class="visual-caption">{{ resolvedVisualCaption }}</div>
         <img
-          v-if="secondaryImage"
-          class="visual-foreground"
-          :src="secondaryImage.src"
-          :alt="secondaryImage.alt"
+          v-if="resolvedPrimaryImage"
+          class="visual-inline-image"
+          :src="resolvedPrimaryImage.src"
+          :alt="resolvedPrimaryImage.alt"
         />
+        <h3 v-if="resolvedVisualTitle" class="visual-panel-title">{{ resolvedVisualTitle }}</h3>
+        <div v-if="resolvedVisualCopy.length" class="visual-body">
+          <div class="visual-body-copy">
+            <p
+              v-for="(paragraph, index) in resolvedVisualCopy"
+              :key="`visual-copy-${index}`"
+              class="visual-body-text"
+            >
+              {{ paragraph }}
+            </p>
+          </div>
+        </div>
+        <div v-else-if="resolvedVisualTitle || resolvedVisualCopy.length" class="visual-body visual-body-empty">
+          <h3 v-if="resolvedVisualTitle" class="visual-caption-title">{{ resolvedVisualTitle }}</h3>
+        </div>
       </div>
 
       <div v-if="resolvedMetrics.length" class="visual-metrics">
@@ -115,7 +119,7 @@
 
 <script>
 export default {
-  name: 'AgrobotsIntro',
+  name: 'ColumnsAndPanels',
   data() {
     return {
       activePillarIndex: null,
@@ -129,11 +133,13 @@ export default {
     lead: { type: String, default: '' },
     introText: { type: Array, default: () => [] },
     pillars: { type: Array, default: () => [] },
+    proofSectionTitle: { type: String, default: '' },
     proofTitle: { type: String, default: '' },
     proofChips: { type: Array, default: () => [] },
     closing: { type: String, default: '' },
     metrics: { type: Array, default: () => [] },
     visualBadge: { type: String, default: '' },
+    visualTitle: { type: String, default: '' },
     visualCaption: { type: String, default: '' },
     images: { type: Array, default: () => [] }
   },
@@ -141,7 +147,7 @@ export default {
     pillars: {
       immediate: true,
       handler(newPillars) {
-        this.activePillarIndex = Array.isArray(newPillars) && newPillars.length ? 0 : null;
+        this.activePillarIndex = null;
       }
     },
     proofChips: {
@@ -174,16 +180,23 @@ export default {
       return sourceMetrics.filter((metric) => metric?.label && metric?.value);
     },
     resolvedVisualBadge() {
-      return this.activeProofChip?.visualBadge || this.visualBadge;
+      return this.activeProofChip?.visualBadge || this.activeProofChip?.label || this.visualBadge;
     },
-    resolvedVisualCaption() {
-      return this.activeProofChip?.visualCaption || this.visualCaption;
+    resolvedVisualTitle() {
+      return this.activeProofChip?.panelTitle || this.activeProofChip?.visualTitle || this.visualTitle;
     },
-    primaryImage() {
-      return this.images[0] || null;
+    resolvedVisualCopy() {
+      const source = this.activeProofChip?.panelText || this.activeProofChip?.visualCaption || this.visualCaption;
+      if (Array.isArray(source)) {
+        return source.filter(Boolean);
+      }
+      return source ? [source] : [];
     },
-    secondaryImage() {
-      return this.images[1] || null;
+    resolvedPrimaryImage() {
+      return this.normalizeImage(this.activeProofChip?.image) || this.normalizeImage(this.images[0]);
+    },
+    resolvedSecondaryImage() {
+      return this.normalizeImage(this.images[1]);
     }
   },
   methods: {
@@ -198,6 +211,20 @@ export default {
     },
     selectProofChip(index) {
       this.activeProofIndex = index;
+    },
+    normalizeImage(image) {
+      if (!image) return null;
+      if (typeof image === 'string') {
+        return {
+          src: image,
+          alt: this.slideTitle
+        };
+      }
+      if (!image.src) return null;
+      return {
+        src: image.src,
+        alt: image.alt || this.slideTitle
+      };
     }
   }
 };
@@ -218,9 +245,9 @@ export default {
 .intro-panel {
   min-height: 100%;
   padding: 1.45rem 1.8rem 1.35rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.95rem;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.15rem;
 }
 
 .intro-overview {
@@ -229,6 +256,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
+  min-height: 0;
 }
 
 .intro-header {
@@ -251,9 +279,9 @@ export default {
   align-items: center;
   padding: 0.36rem 0.78rem;
   border-radius: 999px;
-  border: 1px solid rgba(255, 213, 79, 0.3);
-  background: rgba(255, 213, 79, 0.14);
-  color: var(--accent, #ffd54f);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(247, 255, 247, 0.86);
   font-size: 0.8rem;
   font-weight: 600;
 }
@@ -261,13 +289,14 @@ export default {
 .intro-headline {
   margin: 0;
   max-width: none;
-  font-size: clamp(1.7rem, 2.7vw, 2.75rem);
-  line-height: 1.04;
+  font-size: clamp(1.68rem, 2.55vw, 2.62rem);
+  line-height: 1.05;
   color: #fff;
 }
 
 .intro-lead {
-  max-width: 60ch;
+  width: 100%;
+  max-width: none;
   margin: 0;
   font-size: 0.96rem;
   line-height: 1.55;
@@ -293,42 +322,35 @@ export default {
   width: 100%;
   min-height: 100%;
   padding: 0.88rem 0.92rem;
-  border-radius: 18px 6px 18px 6px;
+  border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  background: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
+    var(--backgroundDarkTranslucent, rgba(33, 33, 33, 0.93));
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
   appearance: none;
   color: inherit;
   text-align: left;
   cursor: pointer;
   font: inherit;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
 }
 
 .intro-pillar:hover,
 .intro-pillar.active {
   transform: translateY(-2px);
-  border-color: rgba(255, 213, 79, 0.42);
-  box-shadow: 0 0 0 1px rgba(255, 213, 79, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
 }
 
 .intro-pillar.active {
   z-index: 8;
-  background: rgba(10, 10, 10, 0.92);
-  box-shadow:
-    0 0 0 1px rgba(255, 213, 79, 0.18),
-    0 18px 32px rgba(0, 0, 0, 0.28);
-}
-
-.intro-pillar::after {
-  content: '';
-  position: absolute;
-  left: -1px;
-  right: 28%;
-  top: -1px;
-  border-top: 1px solid rgba(255, 213, 79, 0.52);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02)),
+    rgba(16, 20, 20, 0.96);
 }
 
 .intro-pillar-topline {
@@ -345,15 +367,15 @@ export default {
   width: 2rem;
   height: 2rem;
   border-radius: 999px;
-  border: 1px solid rgba(35, 122, 255, 0.45);
-  color: var(--secondary, #237aff);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(247, 255, 247, 0.78);
   font-size: 0.74rem;
   font-weight: 700;
-  background: rgba(35, 122, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .intro-pillar-toggle-indicator {
-  font-size: 1.25rem;
+  font-size: 1.12rem;
   line-height: 1;
   color: var(--accent, #ffd54f);
 }
@@ -363,7 +385,7 @@ export default {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent, #ffd54f);
+  color: #fff;
 }
 
 .intro-pillar-summary {
@@ -378,7 +400,7 @@ export default {
   flex-direction: column;
   gap: 0.55rem;
   padding-top: 0.7rem;
-  border-top: 1px dashed rgba(255, 255, 255, 0.16);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .intro-pillar-detail {
@@ -392,10 +414,12 @@ export default {
 .intro-pillar-detail::before {
   content: '';
   position: absolute;
-  left: 0;
-  top: 0.5rem;
-  width: 0.45rem;
-  border-top: 1px solid rgba(35, 122, 255, 0.54);
+  left: 0.08rem;
+  top: 0.45rem;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 999px;
+  background: rgba(11, 135, 75, 0.8);
 }
 
 .intro-copy {
@@ -413,6 +437,8 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 .intro-detail-copy {
@@ -422,19 +448,29 @@ export default {
   width: 100%;
 }
 
+.intro-proof-heading {
+  margin: 0;
+  font-size: 1.14rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+
 .intro-detail-stack {
   position: relative;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
   gap: 1rem;
-  margin-top: auto;
   padding-top: 1.15rem;
-  border-top: 1px dashed rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  min-height: 0;
 }
 
 .intro-proof-title {
   margin: 0;
+  width: 100%;
+  max-width: none;
   font-size: 0.92rem;
   line-height: 1.45;
   color: rgba(247, 255, 247, 0.76);
@@ -443,7 +479,9 @@ export default {
 .intro-proof-chips {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: minmax(0, 1fr);
   gap: 0.8rem;
+  height: 100%;
 }
 
 .intro-proof-chip {
@@ -451,28 +489,41 @@ export default {
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 58px;
+  min-height: 0;
+  height: 100%;
   padding: 0.85rem 1rem;
-  border-radius: 999px;
+  border-radius: 18px;
   border: 1px solid rgba(11, 135, 75, 0.38);
-  background: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
+    rgba(20, 30, 30, 0.46);
   color: #e6fff0;
   font-size: 0.88rem;
   line-height: 1.3;
   text-align: center;
   cursor: pointer;
   font: inherit;
-  transition: border-color 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease, transform 0.18s ease;
+}
+
+.intro-proof-chip:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
 }
 
 .intro-proof-chip.active {
-  border-color: rgba(255, 213, 79, 0.52);
-  background: rgba(255, 213, 79, 0.1);
-  box-shadow: 0 0 0 1px rgba(255, 213, 79, 0.14);
+  border-color: rgba(255, 255, 255, 0.2);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02)),
+    rgba(16, 20, 20, 0.96);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
 .intro-closing {
   margin: 0;
+  width: 100%;
+  max-width: none;
   color: #fff;
   font-size: 0.92rem;
   line-height: 1.45;
@@ -484,117 +535,89 @@ export default {
   grid-template-rows: minmax(0, 1fr) auto;
   min-height: 0;
   padding-left: 1.8rem;
-  border-left: 1px solid rgba(255, 255, 255, 0.16);
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .visual-stage {
   position: relative;
-  overflow: hidden;
   min-height: 0;
-  background: none;
-}
-
-.visual-backdrop {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: saturate(1.08) brightness(0.76);
-}
-
-.visual-primary-art {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: min(88%, 460px);
-  max-height: 76%;
-  object-fit: contain;
-  transform: translate(-50%, -48%);
-  filter:
-    drop-shadow(0 28px 42px rgba(0, 0, 0, 0.4))
-    drop-shadow(0 0 24px rgba(255, 213, 79, 0.18));
-}
-
-.visual-badge,
-.visual-caption,
-.visual-foreground {
-  position: absolute;
-  z-index: 2;
-}
-
-.visual-guides {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.guide {
-  position: absolute;
-}
-
-.guide-x {
-  left: 12%;
-  right: 12%;
-  top: 50%;
-  border-top: 1px dashed rgba(35, 122, 255, 0.28);
-}
-
-.guide-y {
-  top: 12%;
-  bottom: 12%;
-  left: 50%;
-  border-left: 1px dashed rgba(255, 213, 79, 0.24);
-}
-
-.guide-ring {
-  left: 50%;
-  top: 50%;
-  width: min(52%, 270px);
-  aspect-ratio: 1;
-  transform: translate(-50%, -50%);
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  box-shadow:
-    0 0 0 20px rgba(35, 122, 255, 0.05),
-    0 0 0 40px rgba(255, 213, 79, 0.035);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
+    var(--backgroundDarkTranslucent, rgba(20, 30, 30, 0.96));
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto minmax(0, 1fr);
+  padding: 1.15rem;
+  gap: 0.85rem;
 }
 
 .visual-badge {
-  top: 1rem;
-  left: 1rem;
   display: inline-flex;
   align-items: center;
-  padding: 0.42rem 0.82rem;
+  align-self: flex-start;
+  justify-self: start;
+  padding: 0.5rem 0.95rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  background: none;
+  background: rgba(255, 255, 255, 0.04);
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 0.88rem;
   font-weight: 600;
 }
 
-.visual-caption {
-  left: 1rem;
-  bottom: 1rem;
-  max-width: 58%;
-  padding: 0.95rem 1rem;
-  border-radius: 16px 4px 16px 4px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: none;
-  color: #fff;
-  line-height: 1.45;
+.visual-inline-image {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  justify-self: center;
+  align-self: start;
+  border-radius: 14px;
+  object-fit: contain;
+  background: rgba(8, 8, 8, 0.3);
+  padding: 0.35rem;
 }
 
-.visual-foreground {
-  right: -2%;
-  bottom: -1%;
-  width: min(56%, 340px);
-  filter:
-    drop-shadow(0 28px 36px rgba(0, 0, 0, 0.42))
-    drop-shadow(0 0 24px rgba(255, 213, 79, 0.24));
+.visual-panel-title {
+  margin: 0.15rem 0 0;
+  font-size: clamp(1.15rem, 1.6vw, 1.65rem);
+  line-height: 1.12;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.visual-body {
+  min-height: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.visual-body-copy {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding-top: 0.15rem;
+}
+
+.visual-body-empty,
+.visual-caption-title {
+  margin: 0;
+  color: #fff;
+}
+
+.visual-body-text {
+  margin: 0;
+  width: 100%;
+  font-size: 0.96rem;
+  line-height: 1.62;
+  color: rgba(247, 255, 247, 0.86);
 }
 
 .visual-metrics {
@@ -607,21 +630,19 @@ export default {
   position: relative;
   min-height: 94px;
   padding: 0.88rem 0.92rem;
-  border-radius: 16px 4px 16px 4px;
+  border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  background: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
+    rgba(20, 30, 30, 0.56);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
 }
 
 .metric-card::before {
-  content: '';
-  position: absolute;
-  left: -1px;
-  top: -1px;
-  width: 46px;
-  border-top: 1px solid rgba(255, 213, 79, 0.52);
+  display: none;
 }
 
 .metric-label {
@@ -644,6 +665,12 @@ export default {
     overflow-y: auto;
   }
 
+  .intro-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.95rem;
+  }
+
   .intro-headline {
     max-width: none;
   }
@@ -658,6 +685,7 @@ export default {
 
   .intro-detail-stack {
     margin-top: 1.25rem;
+    grid-template-rows: auto auto;
   }
 }
 
@@ -682,6 +710,17 @@ export default {
   .intro-pillar.active {
     transform: none;
   }
+
+  .visual-stage {
+    grid-template-rows: auto minmax(0, 1fr) auto minmax(0, 1fr);
+  }
+
+  .visual-inline-image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
 }
 
 @media (max-width: 720px) {
@@ -693,12 +732,8 @@ export default {
     padding: 1.2rem 0 1rem 0;
   }
 
-  .visual-caption {
-    max-width: 72%;
-  }
-
-  .visual-foreground {
-    width: min(58%, 260px);
+  .visual-stage {
+    padding: 1rem;
   }
 }
 </style>

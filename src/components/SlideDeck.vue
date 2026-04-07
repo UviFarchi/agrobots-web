@@ -160,7 +160,7 @@
 
 <script>
 import VideoFeature from './VideoFeature.vue';
-import AgrobotsIntro from './AgrobotsIntro.vue';
+import ColumnsAndPanels from './ColumnsAndPanels.vue';
 import CardGrid from './CardGrid.vue';
 import ScrollingFullBg from './ScrollingFullBg.vue';
 import ConnectionCircles from './ConnectionCircles.vue';
@@ -186,7 +186,7 @@ export default {
   name: 'AgrobotsMiniSite',
   components: {
     VideoFeature,
-    AgrobotsIntro,
+    ColumnsAndPanels,
     CardGrid,
     ScrollingFullBg,
     ConnectionCircles,
@@ -316,7 +316,6 @@ export default {
   position: absolute;
   top: 120%;
   right: 0;
-  background: var(--backgroundDark, #222);
   z-index: 100;
   display: flex;
   gap: 10px;
@@ -337,8 +336,8 @@ export default {
 
 .lang-flag.active {
   opacity: 1;
-  border-color: var(--primary);
-  box-shadow: 0 0 4px var(--accent);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 4px var(--color-accent);
 }
 
 .app-wrapper {
@@ -382,7 +381,7 @@ export default {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--color-accent);
 }
 
 .news-button-marquee {
@@ -428,7 +427,7 @@ export default {
   border-radius: 999px;
   background: rgba(255, 213, 79, 0.18);
   border: 1px solid rgba(255, 213, 79, 0.5);
-  color: var(--accent);
+  color: var(--color-accent);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -470,10 +469,10 @@ export default {
   width: min(90vw, 900px);
   max-height: 85vh;
   overflow-y: auto;
-  background: rgba(19, 19, 19, 0.96);
+  background: var(--color-surface);
   border-radius: 16px;
   padding: 1.5rem 1.2rem;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--color-border);
   position: relative;
 }
 
@@ -524,8 +523,8 @@ export default {
   position: relative;
   z-index: 0;
   flex-grow: 1;
-  background-color: var(--backgroundDark);
-  color: var(--textLight);
+  background-color: var(--color-background);
+  color: var(--color-text);
   overflow: auto;
   scrollbar-gutter: stable both-edges;
 }
@@ -543,8 +542,8 @@ export default {
 
 /* Navigation styles */
 .main-nav {
-  background-color: var(--backgroundDark);
-  border-bottom: 1px solid var(--primary);
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-primary);
   z-index: 20;
   justify-content: center;
   align-items: center;
@@ -558,7 +557,7 @@ export default {
 .nav-arrow {
   font-size: 1.2rem;
   background-color: transparent;
-  color: var(--textLight);
+  color: var(--color-text);
   border: none;
   padding: 0;
   margin: 0 2rem;
@@ -575,7 +574,7 @@ export default {
 
 .back-arrow::before {
   content: "‹";
-  color: var(--textLight);
+  color: var(--color-text);
   margin: 0 1rem;
   font-size: 2rem;
   display: inline-flex;
@@ -588,7 +587,7 @@ export default {
 
 .next-arrow::after {
   content: "›";
-  color: var(--textLight);
+  color: var(--color-text);
   margin: 0 1rem;
   font-size: 2rem;
   display: inline-flex;
@@ -617,7 +616,7 @@ export default {
 .nav-link {
   background: transparent;
   border: none;
-  color: var(--textLight);
+  color: var(--color-text);
   font-weight: 500;
   cursor: pointer;
   padding: 0.4rem 0.75rem;
@@ -625,22 +624,22 @@ export default {
 }
 
 .nav-link.active {
-  background-color: var(--primary);
-  color: var(--textDark);
+  background-color: var(--color-primary);
+  color: var(--color-text-strong);
 }
 
 .nav-link.participate {
-  background: var(--secondary, #237aff);
-  color: var(--textLight, #fff);
+  background: var(--color-secondary);
+  color: var(--color-text);
   font-weight: bold;
   border-radius: 8px;
   box-shadow: 0 2px 8px 0 rgba(35,122,255,0.16);
-  border: 2px solid var(--primary, #0b874b);
+  border: 2px solid var(--color-primary);
 }
 .nav-link.participate:hover {
-  background: var(--primary, #0b874b);
-  color: var(--textLight, #fff);
-  border-color: var(--secondary, #237aff);
+  background: var(--color-primary);
+  color: var(--color-text);
+  border-color: var(--color-secondary);
 }
 
 /* Arrow navigation */
@@ -663,7 +662,7 @@ export default {
 .body-arrow {
   font-size: 20rem;
   background-color: transparent;
-  color: var(--textLight);
+  color: var(--color-text);
   border: none;
   border-radius: 0;
   cursor: pointer;
@@ -687,9 +686,9 @@ export default {
   width: 100%;
   padding: 1rem;
   gap: 1rem 1.5rem;
-  background-color: var(--backgroundDark);
-  border-top: 1px solid var(--primary);
-  color: var(--textLight);
+  background-color: var(--color-background);
+  border-top: 1px solid var(--color-primary);
+  color: var(--color-text);
   min-height: 64px;
   font-size: 0.97rem;
 }
@@ -714,7 +713,7 @@ export default {
 .footer-link {
   background: none;
   border: none;
-  color: var(--textLight);
+  color: var(--color-text);
   font-size: 0.97rem;
   text-decoration: underline;
   padding: 0.5rem 0.5rem;
@@ -723,11 +722,11 @@ export default {
 }
 
 .footer-link:hover {
-  color: var(--accent);
+  color: var(--color-accent);
 }
 
 .footer-copyright {
-  color: var(--accent);
+  color: var(--color-accent);
   font-size: 0.97rem;
   margin-left: 0.5rem;
 }
@@ -741,9 +740,9 @@ export default {
   font-weight: 600;
   font-size: 1rem;
   border-radius: 8px;
-  background: var(--primary);
-  color: var(--textDark);
-  border: 2px solid var(--accent);
+  background: var(--color-primary);
+  color: var(--color-text-strong);
+  border: 2px solid var(--color-accent);
   box-shadow: 0 4px 20px 0 rgba(35,122,255,0.10);
   cursor: pointer;
   transition: transform 0.14s, box-shadow 0.15s, background 0.17s, color 0.13s;
@@ -754,9 +753,9 @@ export default {
 }
 .footer-cta .cta-icon { font-size: 1.2em; margin-right: 0.5em; }
 .footer-cta:hover {
-  background: var(--primary, #0b874b);
-  color: var(--textLight, #fff);
-  border-color: var(--primary, #0b874b);
+  background: var(--color-primary);
+  color: var(--color-text);
+  border-color: var(--color-primary);
   transform: scale(1.07);
 }
 
@@ -767,7 +766,7 @@ export default {
   left: 0;
   right: 0;
   top: 0;
-  background-color: var(--backgroundDarkTranslucent);
+  background-color: var(--color-background-soft);
   padding: 1rem;
   z-index: 1000;
   height: 100vh;
@@ -792,7 +791,7 @@ export default {
     justify-content: center;
     background: radial-gradient(circle at center, darkslategray 0%, black 100%);
     border-radius: 50%;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--color-primary);
   }
   .toggle-menu-img {
     width: 100%;
@@ -804,13 +803,13 @@ export default {
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--backgroundDark);
+    background-color: var(--color-background);
     flex-direction: column;
     align-items: center;
     padding: 60px 0 20px;
     transform: translateY(-100%);
     z-index: 10;
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 2px solid var(--color-primary);
   }
 
   .nav-menu.active {

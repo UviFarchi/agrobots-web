@@ -817,7 +817,6 @@ export default {
   transition: opacity 0.2s;
   white-space: normal;
   visibility: hidden;
-
 }
 
 .tooltip-icon:focus ~ .tooltip-box,
@@ -1199,4 +1198,3 @@ export default {
 
 
 </style>
-

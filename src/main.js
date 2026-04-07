@@ -1,3 +1,4 @@
+import './assets/css/base.css';
 import './assets/css/main.css';
 import siteColors from './assets/colors.js';
 import { createApp } from 'vue';

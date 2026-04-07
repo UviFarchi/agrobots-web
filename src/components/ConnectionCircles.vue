@@ -1,73 +1,76 @@
 <template>
-    <div
+  <section class="connection-shell">
+    <h1 v-if="title && hubCircleIndex() === -1" class="system-title">{{ title }}</h1>
+
+    <div class="system-stage">
+      <article
         v-for="(circle, idx) in circles"
-        :key="idx"
+        :key="circle.id || idx"
         :id="circle.id || `circle-${idx}`"
         class="action-circle"
-        :class="{ active: expanded[idx] }"
+        :class="{ active: expanded[idx], connected: isCircleConnected(idx), hub: isHubCircle(idx), 'has-image': !!circle.img }"
         :style="circleStyle(idx, circle)"
-        @click="toggleExpand(idx)"
-    >
-      <img v-if="circle.img" :src="getImageUrl(circle.img)" alt="" class="circle-image"/>
-      <h2 class="circle-title" v-html="circle.title"></h2>
-      <p v-html="circle.text"></p>
-      <button
-          v-if="expanded[idx] && circle.buttonText"
-          @click.stop="connect(idx)"
-          :style="buttonStyle(circle)"
+        :role="isHubCircle(idx) ? undefined : 'button'"
+        :tabindex="isHubCircle(idx) ? undefined : 0"
+        :aria-expanded="isHubCircle(idx) ? undefined : (expanded[idx] ? 'true' : 'false')"
+        @click="handleCircleSelect(idx)"
+        @keydown.enter.prevent="handleCircleSelect(idx)"
+        @keydown.space.prevent="handleCircleSelect(idx)"
       >
-        {{ circle.buttonText }}
-      </button>
-    </div>
+        <div v-if="circle.img" class="circle-image-wrap">
+          <img :src="getImageUrl(circle.img)" alt="" class="circle-image" />
+        </div>
 
-    <!-- Connection messages -->
-    <div
-        v-for="(arrow, index) in arrows.filter(a => a && a.connectionText)"
+        <h2 class="circle-title" v-html="circle.title"></h2>
+
+        <p
+          v-if="circle.text"
+          class="circle-text"
+          :class="{ visible: expanded[idx] || isHubCircle(idx) }"
+          v-html="circle.text"
+        ></p>
+
+        <button
+          v-if="expanded[idx] && circle.buttonText && circle.target && !isHubCircle(idx)"
+          type="button"
+          class="circle-button"
+          @click.stop="connect(idx)"
+        >
+          <span>{{ circle.buttonText }}</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </article>
+
+      <div
+        v-for="(arrow, index) in arrows.filter((item) => item && item.connectionText)"
         :key="`arrow-message-${index}`"
         class="connect-message"
         :style="getConnectionTextStyle(arrow)"
-    >
-      {{ arrow.connectionText }}
-    </div>
+      >
+        {{ arrow.connectionText }}
+      </div>
 
-    <svg class="svg-overlay">
-      <path
+      <svg class="svg-overlay">
+        <path
           v-for="(arrow, idx) in arrows"
           :key="idx"
           :d="`M${arrow.x1},${arrow.y1} Q${arrow.cx},${arrow.cy} ${arrow.x2},${arrow.y2}`"
+          pathLength="100"
           :stroke="arrow.color || '#00bcd4'"
-          stroke-width="8"
+          stroke-width="3.5"
           fill="none"
-          :marker-end="`url(#arrowhead-${idx})`"
           class="animated-arrow"
-      />
-      <defs>
-        <marker
-            v-for="(arrow, idx) in arrows"
-            :key="idx"
-            :id="`arrowhead-${idx}`"
-            markerWidth="8"
-            markerHeight="8"
-            refX="0"
-            refY="4"
-            orient="auto"
-            markerUnits="userSpaceOnUse"
-        >
-          <polygon
-              points="0 0, 8 4, 0 8"
-              :fill="arrow.color || '#00bcd4'"
-              class="fade-in-marker"
-          />
-        </marker>
-      </defs>
-    </svg>
+        />
+      </svg>
+    </div>
+  </section>
 </template>
 
 <script>
 export default {
   name: "ConnectionCircles",
   props: {
-    title: {type: String, required: true},
+    title: { type: String, required: true },
     currentSlideIndex: {
       type: Number,
       default: 0
@@ -104,13 +107,19 @@ export default {
   data() {
     return {
       expanded: {},
-      connectionText: {},
+      connected: {},
       arrows: [],
-
+      connections: []
     };
   },
   created() {
     this.initState();
+  },
+  mounted() {
+    window.addEventListener('resize', this.resetVisualConnections);
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.resetVisualConnections);
   },
   watch: {
     circles: {
@@ -118,25 +127,41 @@ export default {
         this.initState();
       },
       deep: true
-    }
-  },
-  computed: {
-    activeConnections() {
-      return this.circles
-          .map((circle, idx) => ({circle, idx}))
-          .filter(item => item.circle.connectionText && this.connectionText[item.idx]);
+    },
+    currentSlideIndex() {
+      this.initState();
     }
   },
   methods: {
     initState() {
       const expandedStates = {};
-      const textStates = {};
+      const connectedStates = {};
       this.circles.forEach((circleProps, idx) => {
-        expandedStates[idx] = circleProps.activeOnStart;
-        textStates[idx] = false;
+        const isHub = idx === this.hubCircleIndex();
+        expandedStates[idx] = isHub ? false : !!circleProps.activeOnStart;
+        connectedStates[idx] = isHub ? false : !!circleProps.activeOnStart;
       });
       this.expanded = expandedStates;
-      this.connectionText = textStates;
+      this.connected = connectedStates;
+      this.connections = [];
+      this.arrows = [];
+    },
+    hubCircleIndex() {
+      return this.circles.findIndex((circle) =>
+        circle.position === 'center-middle' || circle.position === 'center-bottom'
+      );
+    },
+    isHubCircle(idx) {
+      return idx === this.hubCircleIndex();
+    },
+    resetVisualConnections() {
+      if (window.innerWidth <= 900) {
+        this.arrows = [];
+        return;
+      }
+      this.$nextTick(() => {
+        this.rebuildArrows();
+      });
     },
     getImageUrl(img) {
       if (!img) return '';
@@ -144,95 +169,187 @@ export default {
     },
     getPositionStyle(position) {
       const positions = {
-        'top-left': 'top: 5vh; left: 5vw;',
-        'top-middle': 'top: 5vh; left: 50%; transform: translateX(-50%);',
-        'top-right': 'top: 5vh; right: 5vw;',
-        'center-left': 'top: 50%; left: 5vw; transform: translateY(-50%);',
-        'center-middle': 'top: 50%; left: 50%; transform: translate(-50%, -50%);',
-        'center-right': 'top: 50%; right: 5vw; transform: translateY(-50%);',
-        'bottom-left': 'bottom: 5vh; left: 5vw;',
-        'bottom-middle': 'bottom: 5vh; left: 50%; transform: translateX(-50%);',
-        'bottom-right': 'bottom: 5vh; right: 5vw;'
+        'top-left': { top: '6%', left: '4%' },
+        'top-middle': { top: '6%', left: '50%', transform: 'translateX(-50%)' },
+        'top-right': { top: '6%', right: '4%' },
+        'center-left': { top: '50%', left: '4%', transform: 'translateY(-50%)' },
+        'center-middle': { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' },
+        'center-right': { top: '50%', right: '4%', transform: 'translateY(-50%)' },
+        'center-bottom': { top: '72%', left: '50%', transform: 'translate(-50%, -50%)' },
+        'bottom-left': { bottom: '6%', left: '4%' },
+        'bottom-middle': { bottom: '6%', left: '50%', transform: 'translateX(-50%)' },
+        'bottom-right': { bottom: '6%', right: '4%' }
+      };
+      return positions[position] || positions['center-middle'];
+    },
+    getPositionAnchor(position, stageRect) {
+      const stageWidth = stageRect.width;
+      const stageHeight = stageRect.height;
+      const positions = {
+        'top-left': { x: stageWidth * 0.04, y: stageHeight * 0.06 },
+        'top-middle': { x: stageWidth * 0.5, y: stageHeight * 0.06 },
+        'top-right': { x: stageWidth * 0.96, y: stageHeight * 0.06 },
+        'center-left': { x: stageWidth * 0.04, y: stageHeight * 0.5 },
+        'center-middle': { x: stageWidth * 0.5, y: stageHeight * 0.5 },
+        'center-right': { x: stageWidth * 0.96, y: stageHeight * 0.5 },
+        'center-bottom': { x: stageWidth * 0.5, y: stageHeight * 0.72 },
+        'bottom-left': { x: stageWidth * 0.04, y: stageHeight * 0.94 },
+        'bottom-middle': { x: stageWidth * 0.5, y: stageHeight * 0.94 },
+        'bottom-right': { x: stageWidth * 0.96, y: stageHeight * 0.94 }
       };
       return positions[position] || positions['center-middle'];
     },
     circleStyle(idx, circle) {
-      let style = this.getPositionStyle(circle.position);
-      if (this.expanded[idx]) {
-        style += ' height:' + this.circlesOpenDiameter + '; width:' + this.circlesOpenDiameter + ';  z-index:100;';
-      } else {
-        style += ' height:' + this.circlesClosedDiameter + '; width:' + this.circlesClosedDiameter + ';';
+      const isActive = !!this.expanded[idx];
+      const isConnected = !!this.connected[idx];
+      const isHub = this.isHubCircle(idx);
+
+      if (isHub) {
+        return {
+          ...this.getPositionStyle(circle.position),
+          width: 'min(24rem, 38vw)',
+          minHeight: '0',
+          height: 'auto',
+          zIndex: 10,
+          background: 'transparent',
+          borderColor: 'transparent',
+          color: circle.textColor || '#ffffff',
+          '--circle-accent': circle.arrowColor || circle.borderColor || 'var(--primary, #0b874b)',
+          '--circle-button-bg': circle.buttonBgColor || this.connectButtonBgColor,
+          '--circle-button-text': circle.buttonTextColor || this.connectButtonTextColor,
+          '--circle-state-lift': '0px'
+        };
       }
-      if (circle.bgColor) {
-        style += ` background-color: ${circle.bgColor};`;
-      }
-      if (circle.borderColor && circle.borderWidth) {
-        style += ` outline-color: ${circle.borderColor}; outline-width: ${circle.borderWidth}px; outline-style: solid;`;
-      }
-      if (circle.textColor) {
-        style += ` color: ${circle.textColor};`;
-      }
-      return style;
+
+      const size = isActive
+        ? `min(${this.circlesOpenDiameter}, 30rem)`
+        : `min(${this.circlesClosedDiameter}, 16rem)`;
+
+      return {
+        ...this.getPositionStyle(circle.position),
+        width: size,
+        height: size,
+        minHeight: size,
+        zIndex: isActive ? 34 : isConnected ? 20 : 12,
+        background: circle.bgColor || (isHub ? 'rgba(18, 27, 28, 0.96)' : 'var(--backgroundDarkTranslucent, rgba(33,33,33,0.93))'),
+        borderColor: isActive || isConnected
+          ? (circle.borderColor || 'rgba(255,255,255,0.28)')
+          : (circle.borderColor || 'rgba(255,255,255,0.14)'),
+        color: circle.textColor || '#ffffff',
+        '--circle-accent': circle.arrowColor || circle.borderColor || 'var(--primary, #0b874b)',
+        '--circle-button-bg': circle.buttonBgColor || this.connectButtonBgColor,
+        '--circle-button-text': circle.buttonTextColor || this.connectButtonTextColor,
+        '--circle-state-lift': isActive ? '-4px' : isConnected ? '-2px' : '0px'
+      };
     },
-    buttonStyle(circle) {
-      const bgColor = circle.buttonBgColor || this.connectButtonBgColor;
-      const textColor = circle.buttonTextColor || this.connectButtonTextColor;
-      return `background-color: ${bgColor}; color: ${textColor};`;
+    isCircleConnected(idx) {
+      return !this.isHubCircle(idx) && !!this.connected[idx];
+    },
+    handleCircleSelect(idx) {
+      if (this.isHubCircle(idx)) return;
+      this.toggleExpand(idx);
+    },
+    toggleExpand(idx) {
+      const next = {};
+      this.circles.forEach((circle, index) => {
+        next[index] = false;
+      });
+      next[idx] = !this.expanded[idx];
+      this.expanded = next;
+    },
+    findTargetIndex(circle) {
+      return this.circles.findIndex((candidate) =>
+        candidate.id === circle.target || candidate.title === circle.target
+      );
+    },
+    connect(idx) {
+      const circle = this.circles[idx];
+      const targetIdx = this.findTargetIndex(circle);
+      if (targetIdx === -1) return;
+
+      const closesLoop = this.isCircleConnected(targetIdx);
+      const next = {};
+      this.circles.forEach((item, index) => {
+        next[index] = false;
+      });
+      if (!closesLoop) {
+        next[targetIdx] = true;
+      }
+      this.expanded = next;
+      this.connected = {
+        ...this.connected,
+        [idx]: true,
+        [targetIdx]: true
+      };
+      this.registerConnection(idx, targetIdx, circle.arrowColor);
+
+      this.$nextTick(() => {
+        setTimeout(() => {
+          this.rebuildArrows();
+        }, 140);
+      });
+    },
+    registerConnection(fromIdx, toIdx, arrowColor) {
+      const exists = this.connections.some((item) => item.fromIdx === fromIdx && item.toIdx === toIdx);
+      if (exists) return;
+      this.connections = [
+        ...this.connections,
+        {
+          fromIdx,
+          toIdx,
+          color: arrowColor || '#00bcd4'
+        }
+      ];
+    },
+    edgePoint(rect, dx, dy) {
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const absDx = Math.abs(dx) || 1;
+      const absDy = Math.abs(dy) || 1;
+      const scale = 1 / Math.max(absDx / (rect.width / 2), absDy / (rect.height / 2));
+
+      return {
+        x: cx + dx * scale,
+        y: cy + dy * scale
+      };
+    },
+    offsetPoint(point, dx, dy, distance) {
+      if (!distance) return point;
+      return {
+        x: point.x + (dx / distance),
+        y: point.y + (dy / distance)
+      };
     },
     getConnectionTextStyle(arrow) {
-      if (!arrow || !arrow.textPosition) {
-        return {display: 'none'};
-      }
+      const labelPosition = arrow.labelPosition || arrow.textPosition;
       return {
-        left: arrow.textPosition.x + 'px',
-        top: arrow.textPosition.y + 'px',
+        left: `${labelPosition.x}px`,
+        top: `${labelPosition.y}px`,
         transform: 'translate(-50%, -50%)',
         backgroundColor: this.connectMessageBgColor,
         color: this.connectMessageTextColor
       };
     },
-    toggleExpand(idx) {
-      if (this.expanded[idx]) {
-        const newExpanded = {...this.expanded};
-        newExpanded[idx] = false;
-        this.expanded = newExpanded;
-      } else {
-        const newExpanded = {...this.expanded};
-        Object.keys(newExpanded).forEach(key => {
-          newExpanded[key] = false;
-        });
-        newExpanded[idx] = true;
-        this.expanded = newExpanded;
+    rebuildArrows() {
+      if (window.innerWidth <= 900) {
+        this.arrows = [];
+        return;
       }
+
+      this.arrows = this.connections
+        .map((connection) => this.buildArrow(connection.fromIdx, connection.toIdx, connection.color))
+        .filter(Boolean);
     },
-    connect(idx) {
-      const circle = this.circles[idx];
-      if (!circle.target) return;
-      const targetIdx = this.circles.findIndex(c =>
-          c.id === circle.target || c.title === circle.target
-      );
-      if (targetIdx === -1) return;
-      const newExpanded = {...this.expanded};
-      newExpanded[idx] = false;
-      this.expanded = newExpanded;
-      this.$nextTick(() => {
-        setTimeout(() => {
-          this.drawArrow(idx, targetIdx, circle.arrowColor);
-        }, 300);
-      });
-    },
-    drawArrow(fromIdx, toIdx, arrowColor) {
+    buildArrow(fromIdx, toIdx, arrowColor) {
       const fromId = this.circles[fromIdx].id || `circle-${fromIdx}`;
       const toId = this.circles[toIdx].id || `circle-${toIdx}`;
-      const fromEl = document.querySelector(`#${fromId}`);
-      const toEl = document.querySelector(`#${toId}`);
-      if (!fromEl || !toEl || window.innerWidth <= 768) return;
-      const svgElement = document.querySelector(".svg-overlay");
-      const svgRect = svgElement.getBoundingClientRect();
-      const reverseConnection = this.arrows.some(arrow => {
-        return this.circles[toIdx].target === this.circles[fromIdx].id ||
-            this.circles[toIdx].target === this.circles[fromIdx].title;
-      });
+      const fromEl = this.$el.querySelector(`#${fromId}`);
+      const toEl = this.$el.querySelector(`#${toId}`);
+      const stageEl = this.$el.querySelector('.system-stage');
+
+      if (!fromEl || !toEl || !stageEl || window.innerWidth <= 900) return null;
+
+      const stageRect = stageEl.getBoundingClientRect();
       const fromRect = fromEl.getBoundingClientRect();
       const toRect = toEl.getBoundingClientRect();
       const fromCenterX = fromRect.left + fromRect.width / 2;
@@ -241,248 +358,342 @@ export default {
       const toCenterY = toRect.top + toRect.height / 2;
       const dx = toCenterX - fromCenterX;
       const dy = toCenterY - fromCenterY;
-      const distance = Math.sqrt(dx * dx + dy * dy);
+      const distance = Math.sqrt(dx * dx + dy * dy) || 1;
       const angle = Math.atan2(dy, dx);
-      const radius = fromRect.width / 2;
-      const curvatureCoefficient = -0.1;
-      let startX, startY, endX, endY, curveStrength;
-      if (reverseConnection) {
-        const startOffsetAngle = angle + Math.PI / 5;
-        const endOffsetAngle = angle + Math.PI / 1.25;
-        let initialStartX = fromCenterX + Math.cos(startOffsetAngle);
-        let initialStartY = fromCenterY + Math.sin(startOffsetAngle);
-        let initialEndX = toCenterX + Math.cos(endOffsetAngle);
-        let initialEndY = toCenterY + Math.sin(endOffsetAngle);
-        const fromRadius = fromRect.width / 2;
-        const fromRadialDist = Math.sqrt(Math.pow(initialStartX - fromCenterX, 2) + Math.pow(initialStartY - fromCenterY, 2));
-        const fromScale = fromRadius / fromRadialDist;
-        startX = fromCenterX + (initialStartX - fromCenterX) * fromScale;
-        startY = fromCenterY + (initialStartY - fromCenterY) * fromScale;
-        const toRadius = toRect.width / 2;
-        const toRadialDist = Math.sqrt(Math.pow(initialEndX - toCenterX, 2) + Math.pow(initialEndY - toCenterY, 2));
-        const toScale = toRadius / toRadialDist;
-        endX = toCenterX + (initialEndX - toCenterX) * toScale;
-        endY = toCenterY + (initialEndY - toCenterY) * toScale;
-        curveStrength = distance * -curvatureCoefficient;
-      } else {
-        startX = fromCenterX + (dx / distance) * radius;
-        startY = fromCenterY + (dy / distance) * radius;
-        endX = toCenterX - (dx / distance) * radius;
-        endY = toCenterY - (dy / distance) * radius;
-        curveStrength = distance * curvatureCoefficient;
-      }
-      const adjustedStartX = startX - svgRect.left;
-      const adjustedStartY = startY - svgRect.top;
-      const adjustedEndX = endX - svgRect.left;
-      const adjustedEndY = endY - svgRect.top;
+      const curveStrengthMultiplier = this.circles[fromIdx].curveStrengthMultiplier || 1;
+      const curveStrength = Math.min(distance * 0.12 * curveStrengthMultiplier, 140);
+      const overlap = this.circles[fromIdx].endpointOverlap ?? 4;
+      const rawStart = this.edgePoint(fromRect, dx, dy);
+      const rawEnd = this.edgePoint(toRect, -dx, -dy);
+      const start = this.offsetPoint(rawStart, -dx * overlap, -dy * overlap, distance);
+      const end = this.offsetPoint(rawEnd, dx * overlap, dy * overlap, distance);
+
+      const adjustedStartX = start.x - stageRect.left;
+      const adjustedStartY = start.y - stageRect.top;
+      const adjustedEndX = end.x - stageRect.left;
+      const adjustedEndY = end.y - stageRect.top;
       const midX = (adjustedStartX + adjustedEndX) / 2;
       const midY = (adjustedStartY + adjustedEndY) / 2;
       const perpAngle = angle + Math.PI / 2;
-      const controlX = midX + Math.cos(perpAngle) * curveStrength;
-      const controlY = midY + Math.sin(perpAngle) * curveStrength;
-      this.arrows.push({
+      const normalX = Math.cos(perpAngle);
+      const normalY = Math.sin(perpAngle);
+      const messagePosition = this.circles[fromIdx].messagePosition;
+      const labelOffsetX = this.circles[fromIdx].labelOffsetX || 0;
+      const labelOffsetY = this.circles[fromIdx].labelOffsetY || 0;
+      const curveDirection = this.circles[fromIdx].curveDirection || (messagePosition ? 'auto' : 'positive');
+      const controlCandidates = [
+        {
+          x: midX + normalX * curveStrength,
+          y: midY + normalY * curveStrength
+        },
+        {
+          x: midX - normalX * curveStrength,
+          y: midY - normalY * curveStrength
+        }
+      ];
+      let controlX = controlCandidates[0].x;
+      let controlY = controlCandidates[0].y;
+
+      if (curveDirection === 'negative') {
+        controlX = controlCandidates[1].x;
+        controlY = controlCandidates[1].y;
+      } else if (curveDirection === 'auto' && messagePosition) {
+        const anchor = this.getPositionAnchor(messagePosition, stageRect);
+        const bestCandidate = controlCandidates.reduce((best, candidate) => {
+          const bestDistance = Math.hypot(best.x - anchor.x, best.y - anchor.y);
+          const candidateDistance = Math.hypot(candidate.x - anchor.x, candidate.y - anchor.y);
+          return candidateDistance < bestDistance ? candidate : best;
+        });
+        controlX = bestCandidate.x;
+        controlY = bestCandidate.y;
+      }
+      const textBias = messagePosition ? 0.58 : 0.42;
+
+      return {
         x1: adjustedStartX,
         y1: adjustedStartY,
         x2: adjustedEndX,
         y2: adjustedEndY,
         cx: controlX,
         cy: controlY,
-        color: arrowColor,
+        color: arrowColor || '#00bcd4',
         connectionText: this.circles[fromIdx].connectionText,
+        messagePosition,
+        labelPosition: {
+          x: midX + ((controlX - midX) * textBias) + labelOffsetX,
+          y: midY + ((controlY - midY) * textBias) + labelOffsetY
+        },
         textPosition: {
-          x: midX + Math.cos(perpAngle) * (curveStrength / 2),
-          y: midY + Math.sin(perpAngle) * (curveStrength / 2)
+          x: midX + ((controlX - midX) * 0.42),
+          y: midY + ((controlY - midY) * 0.42)
         }
-      });
+      };
     }
   }
 };
 </script>
 
 <style scoped>
+.connection-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  min-height: 100%;
+  padding: 1.2rem 0;
+  box-sizing: border-box;
+}
+
+.system-title {
+  margin: 0;
+  font-size: clamp(1.9rem, 2.7vw, 2.9rem);
+  line-height: 1.04;
+  color: var(--textLight, #f7fff7);
+}
+
+.system-stage {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 42rem;
+  overflow: hidden;
+}
+
 .action-circle {
   position: absolute;
-  background: none;
-  color: white;
-  padding: 1.2rem;
-  border-radius: 100%;
-  text-align: center;
-  vertical-align: middle;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  text-align: center;
+  gap: 0.8rem;
+  padding: 1.15rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid;
+  background: rgba(22, 30, 31, 0.94);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
   box-sizing: border-box;
-  z-index: 12;
-  outline-offset: -15px;
-  outline-style: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+  overflow: hidden;
 }
 
-.action-circle img {
-  height: auto;
-  width: 100%;
+.action-circle.hub {
+  gap: 0.72rem;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible;
+  cursor: default;
 }
 
-.action-circle p {
+.action-circle.active:not(.hub) {
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 1.65rem 1.2rem 1.45rem;
+  gap: 0.72rem;
+}
+
+.action-circle:hover,
+.action-circle.connected,
+.action-circle.active {
+  transform: translateY(var(--circle-state-lift, -2px));
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.22);
+}
+
+.action-circle.connected,
+.action-circle.active {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.action-circle.hub:hover,
+.action-circle.hub.connected,
+.action-circle.hub.active {
+  transform: none;
+}
+
+.action-circle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid color-mix(in srgb, var(--circle-accent) 75%, rgba(255,255,255,0.12));
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.action-circle.connected::after,
+.action-circle.active::after {
+  opacity: 0.9;
+}
+
+.action-circle.hub::after {
   display: none;
-  margin-top: 1.2rem;
 }
 
-@keyframes fadeInText {
-  0%, 99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.circle-image-wrap {
+  width: 100%;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.action-circle.active p {
+.circle-image {
   display: block;
-  animation: fadeInText 0.3s forwards;
-  padding: 1.2rem;
+  width: auto;
+  max-width: 72%;
+  max-height: 3.8rem;
+  object-fit: contain;
 }
 
-.action-circle button {
-  margin-top: 2rem;
-  height: 2rem;
-  width: 50%;
-  border-radius: 0.5rem;
+.circle-title {
+  margin: 0;
+  width: 100%;
+  font-size: clamp(1.02rem, 1.45vw, 1.28rem);
+  line-height: 1.22;
+  color: inherit;
+  overflow-wrap: break-word;
+}
+
+.action-circle.hub .circle-title {
+  font-size: clamp(1.24rem, 1.9vw, 1.58rem);
+}
+
+.action-circle.active:not(.hub) .circle-title {
+  width: min(76%, 16rem);
+  margin-inline: auto;
+}
+
+.circle-text {
+  display: none;
+  margin: 0;
+  width: min(78%, 17rem);
+  max-width: min(78%, 17rem);
+  min-width: 0;
+  flex: 1 1 auto;
+  min-height: 0;
+  font-size: 0.94rem;
+  line-height: 1.56;
+  color: rgba(247, 255, 247, 0.84);
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  word-break: normal;
+  text-align: center;
+  margin-inline: auto;
+  padding-right: 0.2rem;
+}
+
+.action-circle.active .circle-text,
+.circle-text.visible {
+  display: block;
+}
+
+.action-circle.active:not(.hub) .circle-button {
+  align-self: center;
+}
+
+.circle-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-top: auto;
+  min-width: 9.25rem;
+  min-height: 2.65rem;
+  padding: 0.68rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.circle-button:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .connect-message {
   position: absolute;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  z-index: 90;
-  width: 15vw;
+  z-index: 25;
+  max-width: 15rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 14px;
+  font-size: 0.82rem;
+  line-height: 1.35;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  font-size: 1.2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.14);
 }
 
 .svg-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 50;
-  overflow: hidden;
+  z-index: 18;
+  overflow: visible;
 }
 
 @keyframes drawLine {
   from {
-    stroke-dasharray: 0, 100%;
+    stroke-dashoffset: 100;
   }
   to {
-    stroke-dasharray: 100%, 0;
+    stroke-dashoffset: 0;
   }
 }
 
 .animated-arrow {
-  animation: drawLine 5s ease-out forwards;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: drawLine 1.5s ease-out forwards;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+@media (max-width: 1100px) {
+  .system-stage {
+    min-height: 38rem;
   }
-  100% {
-    opacity: 1;
-  }
 }
 
-.fade-in-marker {
-  opacity: 0;
-  animation: fadeIn 0.5s ease-out forwards;
-  animation-delay: 1s;
-}
-
-@media (max-width: 768px) {
-  .slide-wrapper {
+@media (max-width: 900px) {
+  .system-stage {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    height: auto;
-    overflow-y: auto;
-    max-height: 100vh;
+    gap: 0.9rem;
+    min-height: 0;
+    overflow: visible;
   }
 
   .action-circle {
     position: relative !important;
-    margin: 0.8rem 0;
-    width: 100% !important;
-    height: auto !important;
-    transform: none !important;
-    left: auto !important;
-    right: auto !important;
     top: auto !important;
+    right: auto !important;
     bottom: auto !important;
-    border-radius: 10vw;
-    padding: 1.5rem;
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    min-height: auto !important;
+    height: auto !important;
+    border-radius: 28px;
     cursor: default;
-    pointer-events: none;
   }
 
-  /* Show all content by default */
-  .action-circle p {
-    display: block !important;
-    animation: none !important;
-    margin-top: 1rem;
-    font-size: 1rem;
-    line-height: 1.4;
+  .circle-text {
+    display: block;
   }
 
-  .action-circle img {
-    margin-bottom: 1rem;
-  }
-
-  .action-circle .circle-title {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-  }
-
-
-  .action-circle button {
- display: none;
-  }
-
-  /* Display connection messages between circles */
-  .mobile-connection {
-    display: flex;
-    align-items: center;
-    padding: 0.8rem;
-    margin: 0.3rem 0;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 0.9rem;
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-
-  .mobile-connection::before {
-    content: "↓";
-    margin-right: 0.5rem;
-    font-size: 1.2rem;
-  }
-
-  /* Hide desktop elements */
-  .svg-overlay {
+  .circle-button,
+  .svg-overlay,
+  .connect-message {
     display: none;
   }
-
-  .connect-message {
-    position: relative;
-    width: 100%;
-    margin: 0.5rem 0;
-    text-align: center;
-    box-sizing: border-box;
-    color: white;
-  }
 }
-
-
-
 </style>

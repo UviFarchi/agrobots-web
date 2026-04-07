@@ -1,76 +1,106 @@
 <template>
-    <h1 class="slide-title" :style="{ color: slideTitleColor }">
+  <section class="card-grid-shell">
+    <h1
+      v-if="!usesDiamondLayout()"
+      class="slide-title"
+      :style="{ color: slideTitleColor }"
+    >
       {{ slideTitle }}
     </h1>
-    <p class="slide-intro" :style="{ color: slideIntroColor }">
+    <p
+      v-if="!usesDiamondLayout()"
+      class="slide-intro"
+      :style="{ color: slideIntroColor }"
+    >
       {{ slideIntro }}
     </p>
-    <div
-        class="card-grid"
-        :style="{ gridTemplateColumns: `repeat(${columns}, minmax(300px, 1fr))` }"
-    >
+
+    <div class="card-stage" :class="{ 'diamond-layout': usesDiamondLayout() }">
       <div
-          v-for="(card, i) in cards"
-          :key="i"
-          class="flip-card-container"
+        class="card-grid"
+        :class="{ 'has-active': activeCard !== null }"
+        :style="{ gridTemplateColumns: `repeat(${layoutColumns()}, minmax(240px, 1fr))` }"
       >
         <div
-            v-if="lockedSet.has(i)"
-            class="placeholder"
-        ></div>
-        <div
-            class="flip-card"
-            :class="{
-            active: lockedSet.has(i) && activeCard !== i,
-            initialPosition: activeCard === i
-          }"
-            :style="activeCard === i ? initialPosition : {}"
-            @mouseenter="handleMouseEnter(i)"
-            @mouseleave="handleMouseLeave(i)"
-            @click="handleClick(i)"
+          v-if="usesDiamondLayout()"
+          class="grid-intro-slot"
+          :class="{ expandable: introNeedsClamp() }"
+          :style="introSlotStyle()"
         >
-          <div class="flip-card-inner" :class="{ flipped: isFlipped(i) }">
-            <div
-                class="flip-card-front"
-                :style="{
-                background: card.frontBg,
-                color: card.frontColor,
-                border: `1px solid ${card.frontBorder}`
-              }"
-            >
-              <div class="cardIcon" v-html="card.icon"></div>
-              <div class="cardTitle">{{ card.title }}</div>
-            </div>
-            <div
-                class="flip-card-back"
-                :style="{
-                background: card.backBg,
-                color: card.backColor,
-                border: `1px solid ${card.backBorder}`,
-                '--card-bg-color': card.backBg
-              }"
-            >
-              <div class="cardTitle">{{ card.title }}</div>
-              <p v-html=" card.backText"></p>
-              <span class="read-more">{{expandText}}</span>
-            </div>
+          <div
+            class="grid-intro-panel"
+            :tabindex="introNeedsClamp() ? 0 : undefined"
+          >
+            <h1 class="grid-floating-title" :style="{ color: slideTitleColor }">
+              {{ slideTitle }}
+            </h1>
+            <p class="grid-intro" :style="{ color: slideIntroColor }">
+              {{ slideIntro }}
+            </p>
           </div>
+        </div>
+
+        <div
+          v-for="(card, index) in cards"
+          :key="`${card.title}-${index}`"
+          class="grid-card-slot"
+          :class="{ active: isCardActive(index) }"
+          :style="slotStyle(index)"
+        >
+          <article
+            class="grid-card"
+            :class="{ active: isCardActive(index) }"
+            :style="cardStyle(card, index)"
+          >
+            <div class="grid-card-topline">
+              <button
+                type="button"
+                class="grid-card-toggle"
+                :aria-expanded="isCardActive(index) ? 'true' : 'false'"
+                :aria-label="isCardActive(index) ? 'Collapse card' : expandText"
+                @click="toggleCard(index)"
+              >
+                <span class="sr-only">{{ isCardActive(index) ? 'Collapse card' : expandText }}</span>
+                <span class="grid-card-toggle-indicator" aria-hidden="true">
+                  {{ isCardActive(index) ? '−' : '+' }}
+                </span>
+              </button>
+              <div
+                v-if="card.icon"
+                class="grid-card-icon"
+                :class="{ 'has-image': iconHasImage(card.icon) }"
+                v-html="card.icon"
+              ></div>
+            </div>
+
+            <h2 class="grid-card-title">{{ card.title }}</h2>
+
+            <p v-if="!isCardActive(index)" class="grid-card-summary">
+              {{ cardPreviewText(card) }}
+            </p>
+
+            <div
+              v-else-if="card.backText"
+              class="grid-card-body"
+              v-html="card.backText"
+            ></div>
+          </article>
         </div>
       </div>
     </div>
+  </section>
 </template>
 
 <script>
-
 export default {
   name: "CardGrid",
   props: {
-    title: {type: String, required: true},
+    title: { type: String, required: true },
     currentSlideIndex: {
       type: Number,
       default: 0
     },
-    expandText:{
+    expandText: {
       type: String,
       required: true
     },
@@ -102,250 +132,674 @@ export default {
   data() {
     return {
       activeCard: null,
-      initialPosition: {},
-      lockedSet: new Set(),
-      hoveredIndex: null
+      viewportWidth: typeof window !== 'undefined' ? window.innerWidth : 1440
     };
   },
+  mounted() {
+    document.addEventListener('pointerdown', this.handleDocumentPointerDown);
+    document.addEventListener('keydown', this.handleDocumentKeydown);
+    window.addEventListener('resize', this.handleResize);
+  },
+  beforeUnmount() {
+    document.removeEventListener('pointerdown', this.handleDocumentPointerDown);
+    document.removeEventListener('keydown', this.handleDocumentKeydown);
+    window.removeEventListener('resize', this.handleResize);
+  },
+  watch: {
+    currentSlideIndex() {
+      this.activeCard = null;
+    }
+  },
   methods: {
-    handleMouseEnter(i) {
-      this.hoveredIndex = i;
+    isCardActive(index) {
+      return this.activeCard === index;
     },
-    handleMouseLeave() {
-      this.hoveredIndex = null;
+    toggleCard(index) {
+      this.activeCard = this.activeCard === index ? null : index;
     },
-    handleClick(i) {
-      if (this.lockedSet.has(i)) {
-        this.lockedSet.delete(i);
-        return;
-      }
-      const el = document.querySelectorAll('.flip-card')[i];
-      const rect = el.getBoundingClientRect();
-      this.initialPosition = {
-        top: rect.top + 'px',
-        left: rect.left + 'px',
-        width: rect.width + 'px',
-        height: rect.height + 'px'
-      };
-      this.activeCard = i;
-      this.lockedSet.add(i);
-      setTimeout(() => {
+    handleDocumentPointerDown(event) {
+      if (this.activeCard === null) return;
+      if (event.target.closest('.grid-card-slot.active')) return;
+      this.activeCard = null;
+    },
+    handleDocumentKeydown(event) {
+      if (event.key === 'Escape' && this.activeCard !== null) {
         this.activeCard = null;
-      }, 50);
+      }
     },
-    isFlipped(i) {
-      return this.lockedSet.has(i) || this.hoveredIndex === i;
+    handleResize() {
+      this.viewportWidth = window.innerWidth;
+    },
+    iconHasImage(icon) {
+      return /<img[\s>]/i.test(icon || "");
+    },
+    plainText(html) {
+      return String(html || "")
+        .replace(/<br\s*\/?>/gi, " ")
+        .replace(/<[^>]*>/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    },
+    summaryText(html) {
+      const text = this.plainText(html);
+      if (text.length <= 180) return text;
+      return `${text.slice(0, 177).trimEnd()}...`;
+    },
+    hasExtendedText(card) {
+      return !!this.plainText(card?.backText);
+    },
+    introNeedsClamp() {
+      return this.usesDiamondLayout() && this.plainText(this.slideIntro).length > 160;
+    },
+    cardPreviewText(card) {
+      const text = this.plainText(card?.backText);
+      const limit = this.usesDiamondLayout() ? 112 : 180;
+      if (text.length <= limit) return text;
+      return `${text.slice(0, limit - 3).trimEnd()}...`;
+    },
+    usesDiamondLayout() {
+      return this.viewportWidth > 980 && (this.cards.length === 3 || this.cards.length === 4);
+    },
+    layoutColumns() {
+      return this.usesDiamondLayout() ? 3 : this.columns;
+    },
+    slotStyle(index) {
+      if (!this.usesDiamondLayout()) {
+        return {};
+      }
+
+      if (this.cards.length === 3) {
+        if (index === 0) {
+          return {
+            gridColumn: '2 / span 1',
+            gridRow: '1',
+            justifySelf: 'center'
+          };
+        }
+        if (index === 1) {
+          return {
+            gridColumn: '1 / span 1',
+            gridRow: '2',
+            justifySelf: 'start'
+          };
+        }
+        if (index === 2) {
+          return {
+            gridColumn: '3 / span 1',
+            gridRow: '2',
+            justifySelf: 'end'
+          };
+        }
+      }
+
+      if (this.cards.length === 4) {
+        if (index === 0) {
+          return {
+            gridColumn: '2 / span 1',
+            gridRow: '1',
+            justifySelf: 'center'
+          };
+        }
+        if (index === 1) {
+          return {
+            gridColumn: '1 / span 1',
+            gridRow: '2',
+            justifySelf: 'start'
+          };
+        }
+        if (index === 2) {
+          return {
+            gridColumn: '3 / span 1',
+            gridRow: '2',
+            justifySelf: 'end'
+          };
+        }
+        if (index === 3) {
+          return {
+            gridColumn: '2 / span 1',
+            gridRow: '3',
+            justifySelf: 'center'
+          };
+        }
+      }
+
+      return {};
+    },
+    introSlotStyle() {
+      if (!this.usesDiamondLayout()) {
+        return {};
+      }
+
+      return {
+        gridColumn: '2 / span 1',
+        gridRow: '2',
+        justifySelf: 'center',
+        alignSelf: 'center'
+      };
+    },
+    basePlacement(index) {
+      if (!this.usesDiamondLayout()) {
+        return {};
+      }
+
+      if (index === 0) {
+        return {
+          "--card-left": "calc((100% - var(--card-width, 100%)) / 2)",
+          "--card-right": "auto",
+          "--card-top": "0",
+          "--card-bottom": "auto",
+          "--card-translate-x": "0",
+          "--card-translate-y": "0"
+        };
+      }
+
+      if (this.cards.length === 4 && index === 3) {
+        return {
+          "--card-left": "calc((100% - var(--card-width, 100%)) / 2)",
+          "--card-right": "auto",
+          "--card-top": "auto",
+          "--card-bottom": "0",
+          "--card-translate-x": "0",
+          "--card-translate-y": "0"
+        };
+      }
+
+      return {};
+    },
+    activePlacement(index) {
+      if (this.usesDiamondLayout() && this.cards.length === 3) {
+        if (index === 0) {
+          return {
+            "--card-width": "min(23.5rem, calc(100vw - 7rem))",
+            "--card-height": "auto",
+            "--card-min-height": "18rem",
+            "--card-left": "calc((100% - var(--card-width)) / 2)",
+            "--card-right": "auto",
+            "--card-top": "0",
+            "--card-bottom": "auto",
+            "--card-translate-x": "0",
+            "--card-translate-y": "0"
+          };
+        }
+        if (index === 1) {
+          return {
+            "--card-width": "min(23.5rem, calc(100vw - 7rem))",
+            "--card-height": "auto",
+            "--card-min-height": "18rem",
+            "--card-left": "0",
+            "--card-right": "auto",
+            "--card-top": "50%",
+            "--card-bottom": "auto",
+            "--card-translate-x": "0",
+            "--card-translate-y": "-50%"
+          };
+        }
+        if (index === 2) {
+          return {
+            "--card-width": "min(23.5rem, calc(100vw - 7rem))",
+            "--card-height": "auto",
+            "--card-min-height": "18rem",
+            "--card-left": "auto",
+            "--card-right": "0",
+            "--card-top": "50%",
+            "--card-bottom": "auto",
+            "--card-translate-x": "0",
+            "--card-translate-y": "-50%"
+          };
+        }
+      }
+
+      if (this.usesDiamondLayout() && this.cards.length === 4) {
+        if (index === 0) {
+          return {
+            "--card-width": "min(23.5rem, calc(100vw - 7rem))",
+            "--card-height": "auto",
+            "--card-min-height": "18rem",
+            "--card-left": "calc((100% - var(--card-width)) / 2)",
+            "--card-right": "auto",
+            "--card-top": "0",
+            "--card-bottom": "auto",
+            "--card-translate-x": "0",
+            "--card-translate-y": "0"
+          };
+        }
+        if (index === 1) {
+          return {
+            "--card-width": "min(23.5rem, calc(100vw - 7rem))",
+            "--card-height": "auto",
+            "--card-min-height": "18rem",
+            "--card-left": "0",
+            "--card-right": "auto",
+            "--card-top": "50%",
+            "--card-bottom": "auto",
+            "--card-translate-x": "0",
+            "--card-translate-y": "-50%"
+          };
+        }
+        if (index === 2) {
+          return {
+            "--card-width": "min(23.5rem, calc(100vw - 7rem))",
+            "--card-height": "auto",
+            "--card-min-height": "18rem",
+            "--card-left": "auto",
+            "--card-right": "0",
+            "--card-top": "50%",
+            "--card-bottom": "auto",
+            "--card-translate-x": "0",
+            "--card-translate-y": "-50%"
+          };
+        }
+        if (index === 3) {
+          return {
+            "--card-width": "min(23.5rem, calc(100vw - 7rem))",
+            "--card-height": "auto",
+            "--card-min-height": "18rem",
+            "--card-left": "calc((100% - var(--card-width)) / 2)",
+            "--card-right": "auto",
+            "--card-top": "auto",
+            "--card-bottom": "0",
+            "--card-translate-x": "0",
+            "--card-translate-y": "0"
+          };
+        }
+      }
+
+      const columnIndex = index % this.columns;
+      const rowIndex = Math.floor(index / this.columns);
+      const rowCount = Math.max(Math.ceil(this.cards.length / this.columns), 1);
+      const style = {
+        "--card-width": "min(22rem, calc(100vw - 7rem))",
+        "--card-height": "auto",
+        "--card-min-height": "min(24rem, 62vh)",
+        "--card-left": "0",
+        "--card-right": "auto",
+        "--card-top": "0",
+        "--card-bottom": "auto",
+        "--card-translate-x": "0",
+        "--card-translate-y": "0"
+      };
+
+      if (this.columns === 1) {
+        style["--card-left"] = "50%";
+        style["--card-translate-x"] = "-50%";
+      } else if (columnIndex > (this.columns - 1) / 2) {
+        style["--card-left"] = "auto";
+        style["--card-right"] = "0";
+      } else if (columnIndex === Math.floor((this.columns - 1) / 2) && this.columns % 2 === 1) {
+        style["--card-left"] = "50%";
+        style["--card-translate-x"] = "-50%";
+      }
+
+      if (rowCount === 1) {
+        style["--card-top"] = "50%";
+        style["--card-bottom"] = "auto";
+        style["--card-translate-y"] = "-50%";
+      } else if (rowIndex > (rowCount - 1) / 2) {
+        style["--card-top"] = "auto";
+        style["--card-bottom"] = "0";
+      } else if (rowIndex === Math.floor((rowCount - 1) / 2) && rowCount % 2 === 1) {
+        style["--card-top"] = "50%";
+        style["--card-bottom"] = "auto";
+        style["--card-translate-y"] = "-50%";
+      }
+
+      return style;
+    },
+    cardStyle(card, index) {
+      const accent = card.frontBorder || card.backBorder || card.frontBg || card.backBg || "#ffd54f";
+      const iconBg = card.frontBg || card.backBg || "rgba(255, 255, 255, 0.08)";
+      const style = {
+        "--card-accent": accent,
+        "--card-icon-bg": iconBg
+      };
+
+      if (this.usesDiamondLayout()) {
+        Object.assign(style, this.basePlacement(index));
+      }
+
+      if (this.activeCard === index) {
+        return { ...style, ...this.activePlacement(index) };
+      }
+
+      return style;
     }
   }
 };
 </script>
 
 <style scoped>
-.card-grid {
-  display: grid;
-  gap: 5vh;
-  flex: 8;
-  position: relative;
-  margin: 1.2rem;
-}
-
-.flip-card-container {
-  position: relative;
-  width: 30vh;
-  height: 30vh;
-  margin: 0 auto;
-}
-
-.placeholder {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: transparent;
-}
-
-.flip-card {
-  perspective: 1000px;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  transform-origin: center center;
-}
-
-@keyframes fadeInText {
-  0%, 99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.flip-card.active .flip-card-back p,
-.flip-card.active .flip-card-back .read-more {
-  animation: fadeInText 0.3s forwards;
-}
-
-.flip-card.initialPosition {
-  position: fixed;
-  transition: none;
-  transform: none;
-  z-index: 1000;
-}
-
-.flip-card.active {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 60vh;
-  height: 60vh;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-  transition: all 0.3s ease;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-  border-radius: 50%;
-}
-
-.flip-card-inner.flipped {
-  transform: rotateY(180deg);
-  z-index: 1000;
-  position: absolute;
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-  border-radius: 50%;
-  backface-visibility: hidden;
+.card-grid-shell {
+  --diamond-row-height: 13.6rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.flip-card-back {
-  transform: rotateY(180deg);
-  z-index: 12;
-}
-
-.cardIcon {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  gap: 1rem;
   width: 100%;
-  min-height: 110px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cardIcon img {
-  display: block;
-  height: auto;
-  width: auto;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  margin: 0 auto;
-}
-
-.cardTitle {
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.flip-card:not(.active) .flip-card-back p {
-  line-height: 1.2em;
-  max-height: calc(1.2em * 4);
-  overflow: hidden;
-  position: relative;
-  padding-top: 1rem;
-}
-
-.flip-card:not(.active) .flip-card-back p::after {
-  content: "\.\.\.";
-  position: absolute;
-  bottom: 3px;
-  right: 0;
-  background: linear-gradient(to right, transparent, var(--card-bg-color) 80%);
-  width: 10rem;
-  text-align: right;
-  text-indent: 7rem;
-  color: var(--card-bg-color);
-}
-
-.flip-card:not(.active) .flip-card-back .read-more {
-  display: block;
-  position: absolute;
-  margin-top: calc(1.2em * 8);
-  left: 0;
-  width: 100%;
-  text-align: center;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.flip-card.active .flip-card-back p {
-  max-height: none;
-  overflow: visible;
-  padding: 3rem;
-  font-weight: lighter;
-  overflow: auto;
-}
-
-.flip-card.active .flip-card-back .read-more {
-  display: none;
+  min-height: 100%;
+  padding: 1.2rem 0;
+  box-sizing: border-box;
 }
 
 .slide-title {
-  margin: 1rem;
-  flex: 1;
+  margin: 0;
+  font-size: clamp(1.9rem, 2.7vw, 2.9rem);
+  line-height: 1.04;
 }
 
 .slide-intro {
-  flex: 1;
+  margin: 0 auto;
+  width: min(100%, 60%);
+  max-width: 72ch;
+  font-size: 1rem;
+  line-height: 1.62;
+}
+
+.card-stage {
+  width: 100%;
+  margin-top: 0.35rem;
+}
+
+.grid-intro-slot {
+  position: relative;
+  width: min(39rem, calc(100vw - 8rem));
+  max-width: 39rem;
+  min-height: var(--diamond-row-height);
+  z-index: 12;
+}
+
+.grid-intro-panel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  overflow: hidden;
+  max-height: var(--diamond-row-height);
+  transition: max-height 0.24s ease, background-color 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease, padding 0.24s ease;
+}
+
+.grid-intro-slot.expandable:hover,
+.grid-intro-slot.expandable:focus-within {
+  z-index: 32;
+}
+
+.grid-intro-slot.expandable:hover .grid-intro-panel,
+.grid-intro-slot.expandable:focus-within .grid-intro-panel {
+  max-height: min(34rem, 72vh);
+  padding: 0.1rem 0.85rem 0.95rem;
+  border-radius: 18px;
+  border: 1px solid rgba(223, 239, 241, 0.14);
+  background: rgba(16, 25, 27, 0.92);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.24);
+}
+
+.grid-floating-title {
+  margin: 0;
+  width: 100%;
+  font-size: clamp(1.9rem, 2.7vw, 2.9rem);
+  line-height: 1.04;
+}
+
+.grid-intro {
+  margin: 0;
+  width: 100%;
+  font-size: 0.98rem;
+  line-height: 1.62;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.grid-intro-slot.expandable:hover .grid-intro,
+.grid-intro-slot.expandable:focus-within .grid-intro {
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+}
+
+.card-grid {
+  display: grid;
+  gap: 1.55rem 1.85rem;
+  width: 100%;
+  align-items: start;
+  overflow: visible;
+  justify-items: center;
+}
+
+.card-grid.has-active .grid-card-slot:not(.active) .grid-card {
+  opacity: 0.46;
+  filter: saturate(0.82) brightness(0.96);
+  --card-hover-y: 0px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-grid.has-active .grid-card-slot:not(.active):hover .grid-card {
+  border-color: rgba(255, 255, 255, 0.12);
+  --card-hover-y: 0px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.grid-card-slot {
+  position: relative;
+  width: min(100%, 315px);
+  min-height: var(--diamond-row-height);
+  overflow: visible;
+}
+
+.grid-card-slot.active {
+  z-index: 30;
+}
+
+.grid-card {
+  position: absolute;
+  left: var(--card-left, 0);
+  right: var(--card-right, auto);
+  top: var(--card-top, 0);
+  bottom: var(--card-bottom, auto);
+  width: var(--card-width, 100%);
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  gap: 0.88rem;
+  min-height: var(--card-min-height, var(--diamond-row-height));
+  height: var(--card-height, 100%);
+  padding: 1.05rem 1.08rem 1.08rem;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(24, 35, 36, 0.9);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+  transform: translate(
+    var(--card-translate-x, 0),
+    calc(var(--card-translate-y, 0) + var(--card-hover-y, 0px))
+  );
+  transition: transform 0.22s ease, border-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, filter 0.2s ease, width 0.22s ease, height 0.22s ease, left 0.22s ease, right 0.22s ease, top 0.22s ease, bottom 0.22s ease;
+}
+
+.grid-card::before {
+  display: none;
+}
+
+.grid-card:hover,
+.grid-card-slot:hover .grid-card {
+  --card-hover-y: -2px;
+  border-color: rgba(223, 239, 241, 0.26);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
+}
+
+.grid-card.active {
+  --card-hover-y: 0px;
+  background: rgba(28, 40, 42, 0.96);
+  border-color: rgba(223, 239, 241, 0.24);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.22);
+}
+
+.grid-card-topline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.9rem;
+}
+
+.grid-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.9rem;
+  min-height: 2.9rem;
+  max-width: 5rem;
+  padding: 0.46rem;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--card-icon-bg) 22%, rgba(255, 255, 255, 0.08));
+  color: rgba(255, 255, 255, 0.96);
+  font-size: 1.6rem;
+  line-height: 1;
+  filter: grayscale(1) brightness(1.35);
+}
+
+.grid-card-icon.has-image {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.grid-card-icon :deep(img) {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 2.25rem;
+  object-fit: contain;
+  margin: 0 auto;
+  filter: brightness(0) invert(1) opacity(0.96);
+}
+
+.grid-card-title {
+  margin: 0;
+  font-size: clamp(1.04rem, 1.35vw, 1.26rem);
+  line-height: 1.24;
+  color: #fff;
+}
+
+.grid-card-summary {
+  margin: 0;
+  width: min(100%, 29ch);
+  font-size: 0.92rem;
+  line-height: 1.58;
+  color: rgba(236, 246, 245, 0.84);
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.grid-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  min-height: 0;
+  overflow: visible;
+  padding-right: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: rgba(236, 246, 245, 0.86);
+}
+
+.grid-card-body :deep(p) {
+  margin: 0;
+}
+
+.grid-card-body :deep(a) {
+  color: var(--card-accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.grid-card-body :deep(a:hover) {
+  text-decoration: underline;
+}
+
+.grid-card-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.7rem;
+  height: 2.7rem;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--card-accent) 58%, rgba(255, 255, 255, 0.12));
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.grid-card-toggle:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.grid-card-toggle-indicator {
+  font-size: 1.35rem;
+  line-height: 1;
+  color: var(--card-accent);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 980px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr)) !important;
+  }
+
+  .slide-intro {
+    width: min(100%, 78%);
+  }
 }
 
 @media (max-width: 768px) {
   .card-grid {
-    grid-template-columns: repeat(1, minmax(200px, 1fr)) !important;
+    grid-template-columns: 1fr !important;
   }
 
-  .flip-card.active {
-    height: 100vh;
-    width: 100vh;
-    padding-top: 3rem;
+  .slide-intro {
+    width: 100%;
   }
 
-  .flip-card.active .flip-card-back p {
-    max-width: 100vw;
+  .grid-card-slot {
+    width: 100%;
   }
 
-  .flip-card:not(.active) .flip-card-back p {
-    line-height: 1.2em;
-    max-height: calc(1.2em * 4);
+  .grid-card {
+    min-height: 15rem;
   }
 
-  .flip-card:not(.active) .flip-card-back .read-more {
-    display: block;
-    position: absolute;
-    margin-top: calc(1.2em * 7);
+  .grid-card.active {
+    --card-width: 100%;
+    --card-height: auto;
+    --card-min-height: 15rem;
+    --card-left: 0;
+    --card-right: auto;
+    --card-top: 0;
+    --card-bottom: auto;
+    --card-translate-x: 0;
+    --card-translate-y: 0;
+  }
+
+  .grid-card-toggle {
+    width: 2.7rem;
   }
 }
 </style>
