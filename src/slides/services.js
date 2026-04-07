@@ -5,29 +5,18 @@ export default {
     component: 'CardGrid',
     content: {
         en: {
-            title: 'On the ground',
+            title: 'On the Ground',
             expandText: "Click to read more",
-            slideTitle: 'What can bioromes do?',
-            slideIntro: 'Our system can be adapted to many uses.',
+            slideTitle: 'What we do on the ground',
+            slideIntro: 'Agrobots applies the same terrain intelligence platform to three practical service lines: agricultural automation and optimization, ecological monitoring, and brownfield remediation. Each one combines LandOS, field data, ecosystem design, and operational coordination, but each serves a different kind of terrain and a different kind of stakeholder.',
             slideTitleColor: colors.secondary,
             slideIntroColor: colors.textLight,
             columns: 3,
             cards: [
                 {
                     icon: '🌍',
-                    title: 'Agricultural Automation',
-                    backText: 'With Land OS, we transform conventional farms into self-sustaining, autonomous ecosystems. Imagine a system where every aspect of farming—from planting to harvest—is seamlessly managed by smart robotics and adaptive AI. This approach is tailored to the unique character of each landscape, ensuring precise care for the land and thriving crops. The result: productive, resilient farms that work in harmony with nature.',
-                    frontBg: colors.primary,
-                    frontColor: colors.textDark,
-                    frontBorder: colors.accent,
-                    backBg: colors.backgroundLight,
-                    backColor: colors.textDark,
-                    backBorder: colors.accent
-                },
-                {
-                    icon: '🧠',
-                    title: 'Brownfield Remediation',
-                    backText: 'For neglected or damaged land, Land OS offers renewal. Our approach turns degraded or contaminated sites into productive spaces by enabling natural recovery. Deploying bioromes helps heal the land—restoring soil health, increasing biodiversity, and turning forgotten fields into thriving, eco-friendly landscapes. It’s a fresh start for land that deserves a second chance.',
+                    title: 'Agricultural Automation and Optimization',
+                    backText: 'For operators, cooperatives, and land managers, Agrobots helps run terrain with more precision, continuity, and adaptability. LandOS can coordinate robotic modules, infrastructure, workflows, and human teams as one operational system. Where full automation makes sense, we can deploy it. Where people remain central, we help them work better with stronger visibility, better timing, and less fragmentation. The goal is not automation for its own sake, but better land performance and better operational control.',
                     frontBg: colors.primary,
                     frontColor: colors.textDark,
                     frontBorder: colors.accent,
@@ -38,7 +27,18 @@ export default {
                 {
                     icon: '🌾',
                     title: 'Ecological Monitoring',
-                    backText: 'Land OS also brings peace of mind to those who cherish nature. Our systems act as a watchful guardian over delicate ecosystems, continuously monitoring environmental health—from water quality to the balance of plant and animal life. This ongoing care helps keep natural surroundings robust and resilient, protecting the land for current and future generations.',
+                    backText: 'For public institutions, land stewards, conservation programs, and resilience projects, Agrobots can provide continuous ecological monitoring as an operational service. LandOS helps organize terrain data, observe change over time, and support better decisions about water, biodiversity, environmental stress, and land condition. Instead of isolated surveys and disconnected reporting, this creates a living intelligence layer for stewardship.',
+                    frontBg: colors.primary,
+                    frontColor: colors.textDark,
+                    frontBorder: colors.accent,
+                    backBg: colors.backgroundLight,
+                    backColor: colors.textDark,
+                    backBorder: colors.accent
+                },
+                {
+                    icon: '🧠',
+                    title: 'Brownfield Remediation',
+                    backText: 'For degraded, contaminated, abandoned, or underused terrain, Agrobots can support a structured path toward recovery. Using monitoring, ecosystem design, phased intervention, and long-term operational oversight, LandOS helps turn difficult land into land that can once again be understood, managed, and improved. Depending on the site, that may mean ecological restoration, productive reuse, or a staged transition from damaged terrain to viable terrain.',
                     frontBg: colors.primary,
                     frontColor: colors.textDark,
                     frontBorder: colors.accent,
@@ -49,29 +49,18 @@ export default {
             ]
         },
         es: {
-            title: 'Sobre el Terreno',
+            title: 'Sobre el terreno',
             expandText: "Pulsa para expandir",
-            slideTitle: '¿Qué pueden hacer los bioromes?',
-            slideIntro: 'Nuestro sistema se adapta a muchos usos.',
+            slideTitle: 'Qué hacemos sobre el terreno',
+            slideIntro: 'Agrobots aplica la misma plataforma de inteligencia del terreno a tres líneas de servicio prácticas: automatización y optimización agrícola, monitorización ecológica y recuperación de brownfields. Cada una combina LandOS, datos de campo, diseño ecológico y coordinación operativa, pero cada una responde a un tipo distinto de terreno y a un tipo distinto de actor.',
             slideTitleColor: colors.secondary,
             slideIntroColor: colors.textLight,
             columns: 3,
             cards: [
                 {
                     icon: '🌍',
-                    title: 'Automatización Agrícola',
-                    backText: 'Con Land OS, transformamos fincas convencionales en ecosistemas autosuficientes y autónomos. Imagina un sistema donde cada aspecto agrícola—de la siembra a la cosecha—es gestionado de forma fluida por robótica inteligente e IA adaptativa. Este enfoque se adapta al carácter único de cada terreno, asegurando un cuidado preciso y cultivos saludables. El resultado: fincas productivas y resilientes que trabajan en armonía con la naturaleza.',
-                    frontBg: colors.primary,
-                    frontColor: colors.textDark,
-                    frontBorder: colors.accent,
-                    backBg: colors.backgroundLight,
-                    backColor: colors.textDark,
-                    backBorder: colors.accent
-                },
-                {
-                    icon: '🧠',
-                    title: 'Recuperación de Terrenos',
-                    backText: 'Para tierras olvidadas o dañadas, Land OS ofrece renovación. Nuestra propuesta convierte suelos degradados o contaminados en espacios productivos fomentando la recuperación natural. El despliegue de bioromes ayuda a sanar la tierra—restaurando la salud del suelo, aumentando la biodiversidad y convirtiendo campos olvidados en paisajes prósperos y sostenibles. Es un nuevo comienzo para tierras que merecen una segunda oportunidad.',
+                    title: 'Automatización y optimización agrícola',
+                    backText: 'Para operadores, cooperativas y gestores del terreno, Agrobots ayuda a operar la tierra con más precisión, continuidad y capacidad de adaptación. LandOS puede coordinar módulos robóticos, infraestructura, flujos de trabajo y equipos humanos como un solo sistema operativo. Donde la automatización completa tiene sentido, podemos desplegarla. Donde las personas siguen siendo centrales, las ayudamos a trabajar mejor con más visibilidad, mejor timing y menos fragmentación. El objetivo no es automatizar por automatizar, sino mejorar el rendimiento del terreno y el control operativo.',
                     frontBg: colors.primary,
                     frontColor: colors.textDark,
                     frontBorder: colors.accent,
@@ -81,8 +70,19 @@ export default {
                 },
                 {
                     icon: '🌾',
-                    title: 'Monitorización Ecológica',
-                    backText: 'Land OS también da tranquilidad a quienes valoran la naturaleza. Nuestros sistemas actúan como guardianes de ecosistemas frágiles, monitorizando continuamente la salud ambiental—desde la calidad del agua hasta el equilibrio de flora y fauna. Este cuidado constante mantiene el entorno natural fuerte y resiliente, protegiendo la tierra para las generaciones presentes y futuras.',
+                    title: 'Monitorización ecológica',
+                    backText: 'Para instituciones públicas, custodios del territorio, programas de conservación y proyectos de resiliencia, Agrobots puede ofrecer monitorización ecológica continua como un servicio operativo. LandOS ayuda a organizar datos del terreno, observar cambios a lo largo del tiempo y apoyar mejores decisiones sobre agua, biodiversidad, estrés ambiental y estado del paisaje. En lugar de estudios aislados e informes desconectados, esto crea una capa viva de inteligencia para la gestión y la custodia.',
+                    frontBg: colors.primary,
+                    frontColor: colors.textDark,
+                    frontBorder: colors.accent,
+                    backBg: colors.backgroundLight,
+                    backColor: colors.textDark,
+                    backBorder: colors.accent
+                },
+                {
+                    icon: '🧠',
+                    title: 'Recuperación de brownfields',
+                    backText: 'Para terrenos degradados, contaminados, abandonados o infrautilizados, Agrobots puede apoyar un camino estructurado hacia la recuperación. Mediante monitorización, diseño ecológico, intervención por fases y supervisión operativa de largo plazo, LandOS ayuda a convertir terrenos difíciles en terrenos que vuelven a poder entenderse, gestionarse y mejorarse. Según el sitio, eso puede significar restauración ecológica, reutilización productiva o una transición por etapas desde terreno dañado hasta terreno viable.',
                     frontBg: colors.primary,
                     frontColor: colors.textDark,
                     frontBorder: colors.accent,

@@ -9,7 +9,7 @@ export default {
       expandText: "Click to read more",
       slideTitle: 'Partners & Consortium',
       slideIntro:
-          "Agrobots is building an open, collaborative ecosystem for the future of land management and modular automation. Through the ACES protocol and our growing consortium, we are uniting leading partners in robotics, sensing, energy infrastructure, and ecological engineering to define a shared standard for interoperable machines. This joint effort allows drones, sensors, robotic platforms, tools, and power systems from different manufacturers to connect effortlessly through a common physical interface and a structured digital protocol. With Smart Farm Robotix, Smart City Charge, Dronak, Sintropia, and other contributors, we are shaping a foundation where modular automation becomes accessible, scalable, and compatible across environments. Together, we accelerate innovation, reduce integration barriers, and ensure that every component in the TMaaS ecosystem can work reliably as part of a larger, intelligent whole.",
+          "Agrobots is building an open, collaborative ecosystem for the future of land management and modular automation. Through the ACES protocol and our growing consortium, we are uniting leading partners in robotics, sensing, and ecological engineering to define a shared standard for interoperable machines. This joint effort allows drones, sensors, robotic platforms, and tools from different manufacturers to connect through a common physical interface and a structured digital protocol. With Smart Farm Robotix, Dronak, Sintropia, and other contributors, we are shaping a foundation where modular automation becomes accessible, scalable, and compatible across environments. Together, we accelerate innovation, reduce integration barriers, and help ensure that every component in the TMaaS ecosystem can work reliably as part of a larger intelligent whole.",
       slideTitleColor: colors.secondary,
       slideIntroColor: colors.textLight,
       columns: 2,
@@ -53,19 +53,6 @@ export default {
           backBorder: colors.accent,
           buttonText: "Learn more"
         },
-        {
-          icon: '<img src="/img/scc_logo.png" alt="smart city charge" height="100">',
-          title: 'Smart City Charge',
-          backText:
-              "Smart City Charge builds smart, decentralized charging and energy-management infrastructure for sustainable mobility and distributed power systems. Their expertise in resilient micro-infrastructure, power routing, and edge-connected stations supports the backbone of modular robotics and IoT deployments. As part of ACES, they help ensure reliable power delivery across diverse environments.<br/><a href='https://smartcitycharge.de/'>https://smartcitycharge.de/</a>",
-          frontBg: colors.primary,
-          frontColor: colors.textDark,
-          frontBorder: colors.accent,
-          backBg: colors.backgroundLight,
-          backColor: colors.textDark,
-          backBorder: colors.accent,
-          buttonText: "Learn more"
-        }
       ]
     },
     es: {
@@ -73,7 +60,7 @@ export default {
       expandText: "Pulsa para expandir",
       slideTitle: 'Partners y Consorcio',
       slideIntro:
-          "Agrobots está construyendo un ecosistema abierto y colaborativo para el futuro de la gestión del terreno y la automatización modular. A través del protocolo ACES y nuestro consorcio en expansión, unimos a líderes en robótica, sensorización, infraestructura energética e ingeniería ecológica para definir un estándar común de interoperabilidad entre máquinas. Este esfuerzo conjunto permite que drones, sensores, plataformas robóticas, herramientas y sistemas de energía de distintos fabricantes se conecten sin esfuerzo mediante un conector físico unificado y un protocolo digital estructurado. Con Smart Farm Robotix, Smart City Charge, Dronak, Sintropia y otros colaboradores, estamos creando una base donde la automatización modular sea accesible, escalable y compatible en cualquier entorno. Juntos aceleramos la innovación, reducimos las barreras de integración y garantizamos que cada componente del ecosistema TMaaS funcione de forma fiable como parte de un sistema inteligente mayor.",
+          "Agrobots está construyendo un ecosistema abierto y colaborativo para el futuro de la gestión del terreno y la automatización modular. A través del protocolo ACES y de nuestro consorcio en crecimiento, unimos a líderes en robótica, sensorización e ingeniería ecológica para definir un estándar común de interoperabilidad entre máquinas. Este esfuerzo conjunto permite que drones, sensores, plataformas robóticas y herramientas de distintos fabricantes se conecten mediante una interfaz física común y un protocolo digital estructurado. Con Smart Farm Robotix, Dronak, Sintropia y otros colaboradores, estamos creando una base donde la automatización modular sea accesible, escalable y compatible entre distintos entornos. Juntos aceleramos la innovación, reducimos barreras de integración y ayudamos a garantizar que cada componente del ecosistema TMaaS pueda funcionar de forma fiable como parte de un sistema inteligente mayor.",
       slideTitleColor: colors.secondary,
       slideIntroColor: colors.textLight,
       columns: 2,
@@ -117,21 +104,6 @@ export default {
           backBorder: colors.accent,
           buttonText: "Leer Más"
         },
-        {
-          icon: '<img src="/img/scc_logo.png" alt="smart city charge" height="100">',
-          title: 'Smart City Charge',
-          backText:
-              "Smart City Charge construye infraestructura inteligente y descentralizada de carga y gestión energética para movilidad sostenible y sistemas de energía distribuidos. Su experiencia en microinfraestructura resiliente, enrutamiento de energía y estaciones conectadas en el borde fortalece el despliegue de robótica modular y dispositivos IoT. Como parte de ACES, garantiza suministro eléctrico fiable en entornos diversos.<br/><a href='https://smartcitycharge.de/'>https://smartcitycharge.de/</a>",
-          frontBg: colors.primary,
-          frontColor: colors.textDark,
-          frontBorder: colors.accent,
-          backBg: colors.backgroundLight,
-          backColor: colors.textDark,
-          backBorder: colors.accent,
-          buttonText: "Leer Más"
-        }
-
-
       ]
     }
   }

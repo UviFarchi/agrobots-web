@@ -7,33 +7,33 @@ export default {
       slideTitle: 'What is Agrobots?',
       eyebrow: 'Terrain Management as a Service',
       headline: 'What is Agrobots?',
-      lead: 'Agrobots is building a new way to make terrain productive. We combine ecology, modular robotics and AI to operate bioromes, living systems that adapt continuously to local conditions and long-term goals.',
+      lead: 'Agrobots builds a new way to make terrain productive. We combine ecology, modular robotics, AI, and human operational knowledge to run bioromes, living systems that adapt to local conditions and long-term goals. Where full automation makes sense, we can deploy it. Where people remain central to the work, we give them better data, better coordination, and better tools without asking them to abandon their land or way of life.',
       pillars: [
         {
           title: 'Terrain Management as a Service',
-          text: 'We manage terrain as a service, replacing fragmented operational costs with one integrated model for productive, regenerative land stewardship.',
+          text: 'We manage terrain as a service, replacing fragmented operational costs with one coordinated model for productive and regenerative land stewardship.',
           details: [
-            'Agrobots does not sell machinery, licenses, or disconnected tools.',
-            'We design, deploy, and operate productive ecosystems through a service model that aligns around long-term outcomes on the land.',
-            'That means one coordinated system for monitoring, decision-making, field execution, and on-the-ground support.'
+            'Agrobots does not sell isolated machines, licenses, or disconnected tools.',
+            'We design, deploy, and operate terrain systems through a service model aligned with long-term outcomes on the land.',
+            'That means one coordinated layer for monitoring, decision-making, field execution, and operational support.'
           ]
         },
         {
           title: 'Bioromes',
-          text: 'Bioromes are bio-robotic modular ecosystems where plants, animals, microbes, sensors, and machines work together as one adaptive terrain system.',
+          text: 'Bioromes are bio-robotic modular ecosystems where plants, animals, microbes, sensors, machines, and human operators can function as one adaptive terrain system.',
           details: [
             'A biorome is not just an automated farm.',
-            'It is a living, managed ecosystem designed to be productive, resilient, and continuously adaptable.',
-            'Instead of forcing land into rigid, extractive routines, Agrobots coordinates biological and robotic modules so the terrain can respond to changing environmental, operational, and productive needs over time.'
+            'It is a managed living system designed to be productive, resilient, and responsive to changing ecological and operational conditions.',
+            'Depending on the site, some functions can be fully automated while others remain human-led and technology-assisted.'
           ]
         },
         {
           title: 'LandOS',
-          text: 'LandOS manages the terrain by integrating field data, directing robotic activity, coordinating sensors, and supporting ground operators in real time.',
+          text: 'LandOS is the operating layer behind every biorome, coordinating data, machines, workflows, and human teams in real time.',
           details: [
-            'LandOS is the operating layer behind every biorome.',
-            'It brings together analytics, optimization, and operations to understand conditions on the ground, decide what should happen next, and coordinate execution across sensors, robotic modules, and field teams.',
-            'In practice, it helps the terrain function as one managed system rather than a collection of isolated devices and manual interventions.'
+            'LandOS helps understand what is happening on the land, decide what should happen next, and coordinate execution across sensors, robotic modules, and people.',
+            'It can support fully automated operations where that makes sense, but it can also help operators and field teams work with greater precision and less fragmentation.',
+            'In practice, it turns terrain management into one connected operational system instead of a patchwork of manual interventions and isolated devices.'
           ]
         }
       ],
@@ -103,33 +103,33 @@ export default {
       slideTitle: '¿Qué es Agrobots?',
       eyebrow: 'Gestión de Terreno como Servicio',
       headline: '¿Qué es Agrobots?',
-      lead: 'Agrobots está construyendo una nueva forma de hacer productivo el terreno. Combinamos ecología, robótica modular e IA para operar bioromas, sistemas vivos que se adaptan continuamente a las condiciones locales y a los objetivos de largo plazo.',
+      lead: 'Agrobots construye una nueva forma de hacer productivo el terreno. Combinamos ecología, robótica modular, IA y conocimiento operativo humano para gestionar bioromas, sistemas vivos que se adaptan a las condiciones locales y a los objetivos de largo plazo. Donde la automatización completa tiene sentido, podemos desplegarla. Donde las personas siguen siendo centrales en el trabajo, les damos mejores datos, mejor coordinación y mejores herramientas sin pedirles que abandonen su tierra ni su forma de vida.',
       pillars: [
         {
           title: 'Gestión de Terreno como Servicio',
-          text: 'Gestionamos el terreno como un servicio, sustituyendo costes operativos fragmentados por un modelo integrado para una administración productiva y regenerativa de la tierra.',
+          text: 'Gestionamos el terreno como un servicio, sustituyendo costes operativos fragmentados por un modelo coordinado para una gestión productiva y regenerativa de la tierra.',
           details: [
-            'Agrobots no vende maquinaria, licencias ni herramientas desconectadas.',
-            'Diseñamos, desplegamos y operamos ecosistemas productivos mediante un modelo de servicio alineado con resultados de largo plazo sobre el terreno.',
-            'Eso significa un sistema coordinado de monitorización, toma de decisiones, ejecución en campo y soporte operativo sobre el terreno.'
+            'Agrobots no vende máquinas aisladas, licencias ni herramientas desconectadas.',
+            'Diseñamos, desplegamos y operamos sistemas de terreno mediante un modelo de servicio alineado con resultados de largo plazo sobre la tierra.',
+            'Eso significa una sola capa coordinada para monitorización, toma de decisiones, ejecución en campo y soporte operativo.'
           ]
         },
         {
           title: 'Bioromas',
-          text: 'Los bioromas son ecosistemas bio-robóticos modulares donde plantas, animales, microbios, sensores y máquinas trabajan juntos como un sistema adaptativo del terreno.',
+          text: 'Los bioromas son ecosistemas bio-robóticos modulares donde plantas, animales, microbios, sensores, máquinas y operadores humanos pueden funcionar como un solo sistema adaptativo del terreno.',
           details: [
             'Un bioroma no es solo una granja automatizada.',
-            'Es un ecosistema vivo y gestionado, diseñado para ser productivo, resiliente y continuamente adaptable.',
-            'En lugar de forzar el terreno en rutinas rígidas y extractivas, Agrobots coordina módulos biológicos y robóticos para que el territorio responda con el tiempo a necesidades ambientales, operativas y productivas cambiantes.'
+            'Es un sistema vivo gestionado, diseñado para ser productivo, resiliente y capaz de responder a condiciones ecológicas y operativas cambiantes.',
+            'Según el sitio, algunas funciones pueden automatizarse por completo, mientras otras siguen siendo lideradas por personas con apoyo tecnológico.'
           ]
         },
         {
           title: 'LandOS',
-          text: 'LandOS gestiona el terreno integrando datos de campo, dirigiendo actividad robótica, coordinando sensores y apoyando a los operadores en tiempo real.',
+          text: 'LandOS es la capa operativa detrás de cada bioroma, coordinando datos, máquinas, flujos de trabajo y equipos humanos en tiempo real.',
           details: [
-            'LandOS es la capa operativa detrás de cada bioroma.',
-            'Integra analítica, optimización y operaciones para entender las condiciones sobre el terreno, decidir qué debe ocurrir a continuación y coordinar la ejecución entre sensores, módulos robóticos y equipos de campo.',
-            'En la práctica, ayuda a que el terreno funcione como un sistema gestionado y no como un conjunto de dispositivos aislados e intervenciones manuales.'
+            'LandOS ayuda a entender qué está ocurriendo sobre el terreno, decidir qué debe ocurrir a continuación y coordinar la ejecución entre sensores, módulos robóticos y personas.',
+            'Puede sostener operaciones totalmente automatizadas donde tenga sentido, pero también puede ayudar a operadores y equipos de campo a trabajar con mayor precisión y menos fragmentación.',
+            'En la práctica, convierte la gestión del terreno en un solo sistema operativo conectado en lugar de un mosaico de intervenciones manuales y dispositivos aislados.'
           ]
         }
       ],

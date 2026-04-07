@@ -5,7 +5,7 @@ export default {
         en: {
             title: 'Welcome',
             introTitle: "Welcome to The Future of Farming",
-            welcomeText: "Agrobots offers Terrain Management as a Servce, turning land into intelligent, regenerative production systems powered by LandOS.",
+            welcomeText: "Agrobots offers Terrain Management as a Service, turning land into intelligent, regenerative production systems powered by LandOS.",
             welcomeHint: "This video gives you a quick overview of Agrobots before you start the experience.",
             navigationHeading: "Navigation",
             navigationHint: "Use the arrows on the edges of the screen to move through the site, or the tabs at the top to jump to a specific topic.",
@@ -108,7 +108,7 @@ export default {
         es: {
             title: 'Bienvenida',
             introTitle: "Bienvenidos al Futuro de la Agricultura",
-            welcomeText: "Agrobots provee Servicios de Gestión del Terreno, convirtiendo tierra en sistemas productivos regenerativos e inteligentes con LandOS.",
+            welcomeText: "Agrobots ofrece Gestión de Terreno como Servicio, convirtiendo la tierra en sistemas productivos inteligentes y regenerativos impulsados por LandOS.",
             welcomeHint: "Este video te da una visión general rápida de Agrobots antes de empezar la experiencia.",
             navigationHeading: "Navegación",
             navigationHint: "Usa las flechas en los bordes de la pantalla para moverte por el sitio, o las pestañas de arriba para ir a un tema específico.",

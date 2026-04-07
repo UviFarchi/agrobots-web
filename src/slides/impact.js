@@ -15,7 +15,7 @@ export default {
                 default: {
                     textPosition: "right",
                     bgImage: "/img/impact_main.png",
-                    title: "What we aim to achieve",
+                    title: "What we aim to change",
                     titleColor: colors.primary,
                     paragraphsColor: colors.textLight,
                     hotspots: [
@@ -23,22 +23,22 @@ export default {
                             id: "impact1",
                             left: "65%",
                             top: "35%",
-                            label: "Regenerative Ecosystems",
-                            info: "Agrobots is more than a technological upgrade—it’s a complete reimagining of agriculture. Every field becomes a living ecosystem where nature and technology work in harmony. We restore overworked soils, turning them into regenerative landscapes managed by intelligent systems that boost yields, restore balance, and reduce waste—redefining productivity sustainably.",
+                            label: "Impact on Agriculture",
+                            info: "Agrobots is designed to make agriculture more resilient, more observable, and more precise at the terrain level. That means better use of water, nutrients, labor, and interventions, combined with a management model that can respond to local variation instead of treating the whole site as uniform."
                         },
                         {
                             id: "impact2",
                             left: "35%",
                             top: "70%",
                             label: "The Cost of Inaction",
-                            info: "The cost of inaction is high. Relying on conventional methods—fossil-fuel machinery, chemical inputs, monocultures—depletes soils, strains water, and increases storage and transport costs. Without innovation, supply chains become fragile and food systems vulnerable to climate and market shocks."
+                            info: "The cost of inaction is high. Relying on conventional methods, fossil-fuel machinery, chemical dependency, rigid workflows, and monoculture logic depletes soil, strains water, and leaves producers exposed to climate and market shocks. Without better terrain intelligence and more adaptive operations, agriculture becomes more fragile every year."
                         },
                         {
                             id: "impact3",
                             left: "87%",
                             top: "38%",
-                            label: "Transformative Opportunity",
-                            info: "Now, more than ever, we can turn these challenges into opportunities. With just-in-place and just-in-time Agriculture 4.0 principles, Agrobots produces food exactly where and when it’s needed. We create vibrant ecosystems that preserve biodiversity while delivering affordable, high-quality food for everyone. The choice is clear: innovation and balance will nourish both the land and our communities."
+                            label: "Impact on the Industry",
+                            info: "Agrobots also points toward a different agricultural technology model. Through modular systems and ACES-based interoperability, it supports a move away from locked, monolithic machinery stacks and toward more flexible, multi-provider operational ecosystems. That matters not only for farms, but for how the industry itself evolves."
                         }
                     ]
                 },
@@ -54,21 +54,28 @@ export default {
                             left: "36%",
                             top: "70%",
                             label: "Empowering Communities",
-                            info: "Agrobots is committed to uplifting communities. For farmers and rural workers, our technology brings not just efficiency, but hope and opportunity. Automating laborious tasks and optimizing every aspect of farming frees time and resources, empowering communities to focus on innovation, education, and prosperity.",
+                            info: "Agrobots can help rural communities do more with the land they already know. By reducing operational strain, improving visibility, and coordinating work more effectively, the system gives farmers, land stewards, and rural workers more room to focus on decisions, improvement, and long-term stability."
                         },
                         {
                             id: "human2",
                             left: "40%",
                             top: "20%",
-                            label: "Tools for Thriving",
-                            info: "Picture rural landscapes where technology and tradition blend. Agrobots equips people with the tools and knowledge they need to thrive, fostering job creation and sustainable practices. Every stakeholder—from family farms to large producers—benefits from a healthier, more reliable food supply."
+                            label: "Better Work and Better Tools",
+                            info: "The system can automate what is dangerous, highly repetitive, too precision-sensitive, or too hard to staff, while also giving human teams better information and better coordination. In places where full automation makes sense, it can be deployed. In places where people remain central, technology helps them work more safely and more effectively."
                         },
                         {
                             id: "human3",
                             left: "65%",
                             top: "35%",
                             label: "Local Prosperity",
-                            info: "By freeing up time and reducing repetitive labor, Agrobots enables local families and rural entrepreneurs to focus on high-value activities, from education to value-added production. This transition supports the emergence of new rural businesses and helps keep younger generations invested in agriculture."
+                            info: "By freeing time and reducing fragmented manual work, Agrobots can help rural families and entrepreneurs move toward higher-value activity, from specialized production to services, education, and local enterprise. Better-managed land can support stronger local economies instead of draining people and resources away from them."
+                        },
+                        {
+                            id: "human4",
+                            left: "80%",
+                            top: "22%",
+                            label: "Connected Participation",
+                            info: "Because the system depends on data, communications, and digital coordination, it can also help bring better connectivity and infrastructure into places that are often left behind. Access to the internet, digital tools, and operational platforms gives rural communities more ways to participate in the wider economy without giving up their connection to the land."
                         }
                     ]
                 },
@@ -83,22 +90,22 @@ export default {
                             id: "env1",
                             left: "52%",
                             top: "65%",
-                            label: "Regenerative Model",
-                            info: "Our approach is about healing the planet as much as feeding it. Agrobots enables a regenerative model that dramatically reduces chemical and fossil fuel use. By orchestrating the interplay of plants, microbes, and robotics, we restore soil balance, save water, and enhance biodiversity. The land evolves into a vibrant, self-sustaining ecosystem that stores carbon and adapts to climate change—a blueprint for environmental renewal and a healthier planet for future generations.",
+                            label: "Regenerative Management",
+                            info: "Agrobots supports a terrain model that aims to restore ecological function while keeping the land productive. Better timing, better monitoring, and more precise intervention can reduce unnecessary inputs and help the site recover biological strength over time."
                         },
                         {
                             id: "env2",
                             left: "41%",
                             top: "27%",
                             label: "Climate Adaptation",
-                            info: "Agrobots’ monitoring and adaptive systems enable land managers to respond quickly to environmental shifts—whether it’s rainfall patterns, temperature swings, or emerging pests. This climate resilience ensures agricultural productivity even in the face of unpredictable weather."
+                            info: "Because the system observes and responds continuously, it can help land managers adapt faster to heat, drought, rainfall variation, pests, and other environmental shifts. This matters not as a slogan, but as day-to-day operational resilience."
                         },
                         {
                             id: "env3",
                             left: "85%",
                             top: "43%",
-                            label: "Biodiversity Boost",
-                            info: "Through precision management and minimizing chemical inputs, our systems foster pollinator populations and restore native species—helping to rebuild biodiversity from the ground up."
+                            label: "Biodiversity Conditions",
+                            info: "By reducing blanket intervention and improving precision, the system can create better conditions for biodiversity rather than constantly working against it. That is important both ecologically and operationally, because healthier terrain tends to be more stable and more resilient."
                         }
                     ]
                 }
@@ -115,7 +122,7 @@ export default {
                 default: {
                     textPosition: "right",
                     bgImage: "/img/impact_main.png",
-                    title: "El impacto que queremos tener",
+                    title: "Lo que queremos cambiar",
                     titleColor: colors.primary,
                     paragraphsColor: colors.textLight,
                     hotspots: [
@@ -123,8 +130,8 @@ export default {
                             id: "impact1",
                             left: "65%",
                             top: "35%",
-                            label: "Ecosistemas regenerativos",
-                            info: "Agrobots es mucho más que una actualización tecnológica: es una reinvención total de la agricultura. Cada parcela se convierte en un ecosistema vivo donde naturaleza y tecnología trabajan en armonía. Recuperamos suelos agotados, transformándolos en paisajes regenerativos gestionados por sistemas inteligentes que aumentan el rendimiento, restauran el equilibrio y reducen el desperdicio—definiendo una nueva productividad sostenible.",
+                            label: "Impacto en la agricultura",
+                            info: "Agrobots está diseñado para hacer la agricultura más resiliente, más observable y más precisa a escala del terreno. Eso significa un mejor uso del agua, de los nutrientes, del trabajo y de las intervenciones, junto con un modelo de gestión capaz de responder a la variación local en lugar de tratar todo el sitio como si fuera uniforme.",
                             openOnStart: true
                         },
                         {
@@ -132,14 +139,14 @@ export default {
                             left: "35%",
                             top: "70%",
                             label: "El coste de no innovar",
-                            info: "El coste de no innovar es alto. Seguir con métodos convencionales—maquinaria fósil, insumos químicos, monocultivos—empobrece el suelo, presiona los recursos hídricos y encarece el almacenamiento y transporte. Sin innovación, las cadenas de suministro se vuelven frágiles y los sistemas alimentarios son vulnerables al clima y el mercado."
+                            info: "El coste de no innovar es alto. Depender de métodos convencionales, maquinaria fósil, dependencia química, flujos de trabajo rígidos y lógica de monocultivo agota el suelo, presiona el agua y deja a los productores expuestos a shocks climáticos y de mercado. Sin mejor inteligencia del terreno y operaciones más adaptativas, la agricultura se vuelve más frágil cada año."
                         },
                         {
                             id: "impact3",
                             left: "87%",
                             top: "38%",
-                            label: "Oportunidad transformadora",
-                            info: "Hoy más que nunca, podemos convertir estos retos en oportunidades. Con los principios de Agricultura 4.0—just-in-place y just-in-time—Agrobots produce alimentos justo donde y cuando se necesitan. Creamos ecosistemas vibrantes que conservan la biodiversidad y ofrecen alimentos accesibles y de calidad para todos. La elección es clara: innovación y equilibrio nutrirán tanto la tierra como las comunidades."
+                            label: "Impacto en la industria",
+                            info: "Agrobots también apunta hacia un modelo distinto de tecnología agrícola. A través de sistemas modulares e interoperabilidad basada en ACES, apoya una transición desde pilas cerradas y monolíticas de maquinaria hacia ecosistemas operativos más flexibles y con múltiples proveedores. Eso importa no solo para las fincas, sino también para la evolución de la industria en sí."
                         }
                     ]
                 },
@@ -155,22 +162,29 @@ export default {
                             left: "36%",
                             top: "70%",
                             label: "Empoderamiento rural",
-                            info: "El compromiso de Agrobots es con las comunidades. Para agricultores y trabajadores rurales, nuestra tecnología aporta no solo eficiencia, sino esperanza y oportunidad. Automatizar tareas pesadas y optimizar cada aspecto agrícola libera tiempo y recursos, empoderando a las comunidades para centrarse en la innovación, la educación y la prosperidad local.",
+                            info: "Agrobots puede ayudar a las comunidades rurales a hacer más con la tierra que ya conocen. Al reducir la presión operativa, mejorar la visibilidad y coordinar mejor el trabajo, el sistema da a agricultores, gestores del territorio y trabajadores rurales más margen para centrarse en decisiones, mejora y estabilidad de largo plazo.",
                             openOnStart: true
                         },
                         {
                             id: "human2",
                             left: "40%",
                             top: "20%",
-                            label: "Herramientas para prosperar",
-                            info: "Imagina paisajes rurales donde tecnología y tradición conviven. Agrobots brinda herramientas y conocimiento para prosperar, fomentando empleo y sostenibilidad. Todos los actores—desde pequeñas familias hasta grandes productores—se benefician de un suministro más sano y fiable."
+                            label: "Mejor trabajo y mejores herramientas",
+                            info: "El sistema puede automatizar lo que es peligroso, altamente repetitivo, demasiado sensible a la precisión o demasiado difícil de cubrir con personal, y al mismo tiempo dar a los equipos humanos mejor información y mejor coordinación. En los lugares donde la automatización completa tiene sentido, puede desplegarse. En los lugares donde las personas siguen siendo centrales, la tecnología les ayuda a trabajar con más seguridad y más eficacia."
                         },
                         {
                             id: "human3",
                             left: "65%",
                             top: "35%",
                             label: "Prosperidad local",
-                            info: "Al liberar tiempo y reducir la carga de tareas repetitivas, Agrobots permite que familias y emprendedores rurales se enfoquen en actividades de mayor valor, desde la formación hasta la producción diferenciada. Así surge una economía rural más dinámica y los jóvenes encuentran más motivos para quedarse en el campo."
+                            info: "Al liberar tiempo y reducir el trabajo manual fragmentado, Agrobots puede ayudar a familias rurales y emprendedores a avanzar hacia actividades de mayor valor, desde producción especializada hasta servicios, formación y empresa local. Un terreno mejor gestionado puede sostener economías locales más fuertes en lugar de vaciar de personas y recursos el entorno rural."
+                        },
+                        {
+                            id: "human4",
+                            left: "80%",
+                            top: "22%",
+                            label: "Participación conectada",
+                            info: "Como el sistema depende de datos, comunicaciones y coordinación digital, también puede ayudar a llevar mejor conectividad e infraestructura a lugares que a menudo quedan atrás. El acceso a internet, a herramientas digitales y a plataformas operativas da a las comunidades rurales más formas de participar en la economía amplia sin renunciar a su vínculo con la tierra."
                         }
                     ]
                 },
@@ -185,8 +199,8 @@ export default {
                             id: "env1",
                             left: "52%",
                             top: "65%",
-                            label: "Modelo regenerativo",
-                            info: "Nuestra visión es sanar el planeta a la vez que lo alimentamos. Agrobots impulsa un modelo regenerativo que reduce drásticamente el uso de químicos y combustibles fósiles. Al coordinar plantas, microbios y robótica, restauramos el equilibrio del suelo, ahorramos agua y mejoramos la biodiversidad. El terreno evoluciona hacia un ecosistema vivo, capaz de almacenar carbono y adaptarse al cambio climático—una hoja de ruta para la renovación ambiental y un planeta más sano para las próximas generaciones.",
+                            label: "Gestión regenerativa",
+                            info: "Agrobots apoya un modelo de terreno que busca restaurar la función ecológica mientras mantiene la productividad. Mejor timing, mejor monitorización y una intervención más precisa pueden reducir insumos innecesarios y ayudar a que el sitio recupere fuerza biológica con el tiempo.",
                             openOnStart: true
                         },
                         {
@@ -194,14 +208,14 @@ export default {
                             left: "60%",
                             top: "20%",
                             label: "Adaptación climática",
-                            info: "El monitoreo y los sistemas adaptativos de Agrobots permiten responder rápidamente a cambios ambientales—lluvias, sequías, plagas—garantizando la productividad agrícola incluso ante fenómenos climáticos extremos."
+                            info: "Como el sistema observa y responde de forma continua, puede ayudar a los gestores del territorio a adaptarse más rápido al calor, a la sequía, a la variación de lluvias, a las plagas y a otros cambios ambientales. Esto importa no como un eslogan, sino como resiliencia operativa cotidiana."
                         },
                         {
                             id: "env3",
                             left: "85%",
                             top: "43%",
-                            label: "Más biodiversidad",
-                            info: "La gestión precisa y la reducción de químicos permiten recuperar polinizadores y especies nativas, reconstruyendo la biodiversidad desde la base del ecosistema."
+                            label: "Condiciones para la biodiversidad",
+                            info: "Al reducir la intervención indiscriminada y mejorar la precisión, el sistema puede crear mejores condiciones para la biodiversidad en lugar de trabajar constantemente contra ella. Eso importa tanto ecológicamente como operativamente, porque un terreno más sano tiende a ser más estable y más resiliente."
                         }
                     ]
                 }

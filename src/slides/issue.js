@@ -9,7 +9,7 @@ export default {
             expandText: "Click to read more",
             slideTitle: "What’s Wrong with Farming?",
             slideIntro:
-                "Modern agriculture delivers more food than ever, but at a serious cost: degraded soils, dwindling water, rising emissions, and growing waste. Current models push for maximum yield using chemicals and heavy machinery, leaving ecosystems fragile and farmers exposed to risk. To ensure food security and restore the land, we need a smarter, regenerative approach—one that uses advanced technology to work with nature, not against it. Here’s what we’re up against:",
+                "Modern agriculture produces more food than ever, but at a serious cost: degraded soils, water stress, rising emissions, fragile supply chains, and growing waste. Too many current systems depend on chemicals, heavy machinery, and rigid routines that treat the land as uniform and predictable. To secure food production without exhausting the terrain that sustains it, we need a more adaptive and regenerative model. Here is what we are up against:",
             columns: 2,
             slideTitleColor: colors.secondary,
             slideIntroColor: colors.textLight,
@@ -17,7 +17,7 @@ export default {
                 {
                     icon: "🌍",
                     title: "Ecological Damage",
-                    backText: "Intensive farming practices — monocultures, pesticides, synthetic fertilizers—degrade soil, pollute water, and reduce biodiversity. Over 70% of freshwater is used for agriculture, much of it wasted or contaminated. We need systems that heal the land while producing more with less.",
+                    backText: "Intensive agriculture often relies on monocultures, synthetic inputs, and repeated mechanical stress that degrade soil structure, pollute water, and reduce biodiversity. The same land that is pushed hardest often becomes less resilient over time, needing more intervention just to maintain output. This is not only an ecological problem. It is an operational one, because damaged terrain becomes harder and more expensive to manage well.",
                     frontBg: colors.primary,
                     frontColor: colors.textDark,
                     frontBorder: colors.secondary,
@@ -28,7 +28,7 @@ export default {
                 {
                     icon: "🧠",
                     title: "Lack of Precision",
-                    backText: "Bigger machines and uniform methods can't adapt to local needs or sudden change. Heavy mechanization compacts soil, burns fossil fuels, and is blind to the complexity of real ecosystems. Modular, data-driven robotics are the next step.",
+                    backText: "Large machines and uniform treatment plans are efficient only when the land behaves uniformly, which real terrain never does. Different zones need different timing, different care, and different responses to weather, biology, and market pressure. When management lacks precision, operators either over-apply resources or react too late. A modular, data-driven system makes it possible to respond locally instead of treating the whole site as one flat average.",
                     frontBg: colors.primary,
                     frontColor: colors.textDark,
                     frontBorder: colors.secondary,
@@ -39,7 +39,7 @@ export default {
                 {
                     icon: "🌾",
                     title: "Food Waste & Inefficiency",
-                    backText: "One-third of food produced globally is lost before it reaches the plate. Inefficient logistics, overproduction, and poor management waste resources and damage the environment. Smart, local, and automated systems can slash waste and boost freshness.",
+                    backText: "A significant share of food is lost before it is consumed, not only because of transport and storage, but also because production, timing, and logistics are poorly matched. Systems that overproduce, move products long distances, or respond too slowly to real demand waste land, water, labor, and energy. Smarter terrain management can reduce waste by improving timing, coordination, and local operational visibility.",
                     frontBg: colors.primary,
                     frontColor: colors.textDark,
                     frontBorder: colors.secondary,
@@ -50,7 +50,7 @@ export default {
                 {
                     icon: "🕰️",
                     title: "Short-Term Focus",
-                    backText: "Conventional agriculture prioritizes quick gains over long-term resilience. Monocultures and input-heavy models increase vulnerability to disease, drought, and climate shocks. Only adaptive, data-driven management can future-proof our food supply.",
+                    backText: "Many agricultural systems are optimized for immediate output rather than long-term resilience. That can mean exhausting soil, locking in dependency on expensive inputs, and increasing exposure to drought, disease, pests, and market shocks. A short-term approach may look efficient for a season, but it often makes the next season harder. More adaptive management is necessary if agriculture is to stay productive under changing conditions.",
                     frontBg: colors.primary,
                     frontColor: colors.textDark,
                     frontBorder: colors.secondary,
@@ -65,7 +65,7 @@ export default {
             expandText: "Pulsa para expandir",
             slideTitle: "¿Qué está mal en la agricultura?",
             slideIntro:
-                "La agricultura moderna produce más alimentos que nunca, pero a un coste grave: suelos degradados, agua cada vez más escasa, emisiones crecientes y desperdicio alimentario. El modelo actual prioriza el rendimiento máximo usando insumos químicos y maquinaria pesada, dejando los ecosistemas frágiles y a los agricultores expuestos. Para garantizar la seguridad alimentaria y restaurar el suelo, necesitamos un enfoque más inteligente y regenerativo, apoyado en tecnología avanzada que trabaje con la naturaleza. Estos son los grandes retos:",
+                "La agricultura moderna produce más alimentos que nunca, pero a un coste muy serio: suelos degradados, presión sobre el agua, emisiones crecientes, cadenas de suministro frágiles y un gran desperdicio. Demasiados sistemas actuales dependen de químicos, maquinaria pesada y rutinas rígidas que tratan la tierra como si fuera uniforme y predecible. Para asegurar la producción alimentaria sin agotar el terreno que la sostiene, necesitamos un modelo más adaptativo y regenerativo. Estos son algunos de los problemas de fondo:",
             columns: 2,
             slideTitleColor: colors.secondary,
             slideIntroColor: colors.textLight,
@@ -73,7 +73,7 @@ export default {
                 {
                     icon: "🌍",
                     title: "Daño ecológico",
-                    backText: "Las prácticas intensivas — monocultivos, pesticidas, fertilizantes sintéticos—degradan el suelo, contaminan el agua y reducen la biodiversidad. Más del 70% del agua dulce se destina a la agricultura, gran parte desperdiciada o contaminada. Necesitamos sistemas que regeneren la tierra y produzcan más con menos.",
+                    backText: "La agricultura intensiva suele depender de monocultivos, insumos sintéticos y estrés mecánico repetido que degradan la estructura del suelo, contaminan el agua y reducen la biodiversidad. La misma tierra que se fuerza más termina siendo menos resiliente con el tiempo y necesita más intervención solo para mantener el rendimiento. No es solo un problema ecológico. También es un problema operativo, porque un terreno dañado es más difícil y más caro de gestionar bien.",
                     frontBg: colors.primary,
                     frontColor: colors.textDark,
                     frontBorder: colors.secondary,
@@ -84,7 +84,7 @@ export default {
                 {
                     icon: "🧠",
                     title: "Falta de precisión",
-                    backText: "Las grandes máquinas y métodos uniformes no se adaptan a las condiciones locales ni a cambios repentinos. La mecanización pesada compacta el suelo, consume combustibles fósiles y no ve la complejidad real de los ecosistemas. La robótica modular y el análisis de datos son el siguiente paso.",
+                    backText: "Las grandes máquinas y los planes uniformes solo son eficientes cuando el terreno se comporta de forma uniforme, y el terreno real nunca funciona así. Distintas zonas necesitan distintos tiempos, distintos cuidados y distintas respuestas al clima, a la biología y a la presión del mercado. Cuando la gestión carece de precisión, los operadores o aplican recursos de más o reaccionan demasiado tarde. Un sistema modular y guiado por datos permite responder localmente en lugar de tratar todo el sitio como un promedio plano.",
                     frontBg: colors.primary,
                     frontColor: colors.textDark,
                     frontBorder: colors.secondary,
@@ -95,7 +95,7 @@ export default {
                 {
                     icon: "🌾",
                     title: "Desperdicio e ineficiencia",
-                    backText: "Un tercio de los alimentos producidos se pierde antes de llegar al plato. La logística ineficiente, la sobreproducción y la mala gestión desperdician recursos y dañan el entorno. Sistemas inteligentes, automatizados y locales pueden reducir drásticamente el desperdicio y mejorar la frescura.",
+                    backText: "Una parte importante de los alimentos se pierde antes de ser consumida, no solo por transporte y almacenamiento, sino también porque producción, calendario y logística están mal alineados. Los sistemas que sobreproducen, mueven producto a largas distancias o reaccionan demasiado despacio a la demanda real desperdician tierra, agua, trabajo y energía. Una gestión más inteligente del terreno puede reducir ese desperdicio mejorando el momento de actuación, la coordinación y la visibilidad operativa local.",
                     frontBg: colors.primary,
                     frontColor: colors.textDark,
                     frontBorder: colors.secondary,
@@ -106,7 +106,7 @@ export default {
                 {
                     icon: "🕰️",
                     title: "Enfoque cortoplacista",
-                    backText: "La agricultura convencional prioriza la ganancia inmediata sobre la resiliencia a largo plazo. Los monocultivos y modelos dependientes de insumos incrementan la vulnerabilidad ante enfermedades, sequías y cambios climáticos. Solo la gestión adaptativa y basada en datos puede asegurar el futuro alimentario.",
+                    backText: "Muchos sistemas agrícolas están optimizados para el rendimiento inmediato y no para la resiliencia de largo plazo. Eso puede agotar el suelo, fijar dependencia de insumos caros y aumentar la exposición a sequías, enfermedades, plagas y shocks de mercado. Un enfoque cortoplacista puede parecer eficiente durante una temporada, pero a menudo hace más difícil la siguiente. Hace falta una gestión más adaptativa si la agricultura quiere seguir siendo productiva bajo condiciones cambiantes.",
                     frontBg: colors.primary,
                     frontColor: colors.textDark,
                     frontBorder: colors.secondary,

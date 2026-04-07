@@ -22,21 +22,21 @@ export default {
                             left: "30%",
                             top: "30%",
                             label: "Modular Ecosystems",
-                            info: "Bio-Robotic Modular Ecosystems, or bioromes, are at the core of our approach to agriculture. Rather than depending on massive, single-purpose machines and uniform fields, we deploy a network of modular, specialized robotic units—each dedicated to a specific function like seeding, monitoring, feeding, or harvesting. This flexible, task-based approach ensures every action is precise and adaptable, minimizing waste and resource use.",
+                            info: "A biorome is a bio-robotic modular ecosystem designed to make terrain productive through coordinated biological and operational intelligence. Instead of treating a site as a uniform machine, Agrobots treats it as a living system made up of many interacting parts.",
                         },
                         {
                             id: "bio1-ai",
                             left: "70%",
                             top: "24%",
                             label: "Real-Time AI Coordination",
-                            info: "Our advanced AI coordinates all modules in real time, continuously integrating sensor data, weather, and even market signals to guide the system toward optimal performance. Each biorome becomes a living, self-optimizing ecosystem that balances plants, animals, and microbes. The result is higher productivity with drastically fewer chemical inputs and ongoing regeneration of soil and biodiversity."
+                            info: "LandOS coordinates plants, animals, microbes, sensors, robotic modules, and human workflows in real time. Some functions can be fully automated where conditions allow it. Others can remain human-led, supported by better visibility, better timing, and better coordination."
                         },
                         {
                             id: "bio1-evolve",
                             left: "54%",
                             top: "62%",
                             label: "Living Systems",
-                            info: "Bioromes evolve as living systems, adapting to local conditions and serving the communities around them. By leveraging diversity and natural cycles, they deliver resilient agriculture, reduced environmental impact, and a steady supply of fresh food—even as climate and market conditions shift."
+                            info: "Because a biorome is modular, it can change over time as conditions, goals, and terrain realities change. That makes it possible to build systems that are productive, resilient, and locally adapted without locking the land into one rigid operating model."
                         }
                     ]
                 },
@@ -132,7 +132,7 @@ export default {
                             left: "30%",
                             top: "30%",
                             label: "Ecosistemas modulares",
-                            info: "Los Ecosistemas Bio-Robóticos Modulares, o bioromes, están en el corazón de nuestra propuesta agrícola. En lugar de depender de grandes máquinas de un solo uso y monocultivos, desplegamos una red de unidades robóticas modulares, cada una especializada en una función: siembra, monitorización, alimentación o cosecha. Esta arquitectura flexible y basada en tareas permite una acción precisa y adaptable, minimizando el desperdicio y el uso de recursos.",
+                            info: "Un bioroma es un ecosistema bio-robótico modular diseñado para hacer productivo el terreno mediante inteligencia biológica y operativa coordinada. En lugar de tratar un sitio como una máquina uniforme, Agrobots lo trata como un sistema vivo formado por muchas partes que interactúan entre sí.",
                             openOnStart: true
                         },
                         {
@@ -140,14 +140,14 @@ export default {
                             left: "70%",
                             top: "24%",
                             label: "Coordinación en tiempo real",
-                            info: "Nuestra IA avanzada coordina todos los módulos en tiempo real, integrando datos de sensores, previsiones climáticas e incluso señales de mercado para guiar el sistema hacia el rendimiento óptimo. Cada biorome se convierte en un ecosistema vivo y auto-optimizador que equilibra plantas, animales y microbios. El resultado es una mayor productividad con muchos menos insumos químicos y una regeneración continua del suelo y la biodiversidad."
+                            info: "LandOS coordina en tiempo real plantas, animales, microbios, sensores, módulos robóticos y flujos de trabajo humanos. Algunas funciones pueden automatizarse por completo donde las condiciones lo permitan. Otras pueden seguir siendo lideradas por personas, con mejor visibilidad, mejor timing y mejor coordinación."
                         },
                         {
                             id: "bio1-evolve",
                             left: "54%",
                             top: "62%",
                             label: "Sistemas vivos",
-                            info: "Con el tiempo, los bioromes evolucionan como sistemas vivos, adaptándose a las condiciones locales y sirviendo a las comunidades. Al aprovechar la diversidad y los ciclos naturales, ofrecen una agricultura resiliente, menor impacto ambiental y un suministro estable de alimentos frescos—adaptándose tanto al clima como a las condiciones del mercado."
+                            info: "Como un bioroma es modular, puede cambiar con el tiempo a medida que cambian las condiciones, los objetivos y la realidad del terreno. Eso permite construir sistemas productivos, resilientes y adaptados localmente sin encerrar la tierra en un único modelo rígido de operación."
                         }
                     ]
                 },

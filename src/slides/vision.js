@@ -23,7 +23,7 @@ export default {
                             left: "52%",
                             top: "10%",
                             label: "How farming should be",
-                            info: "We believe agriculture can be regenerative, productive, and resilient—all at once.",
+                            info: "We believe agriculture can be productive, regenerative, and resilient at the same time. The goal is not simply to produce more, but to manage land in a way that strengthens the systems that keep it alive.",
                             openOnStart: true
                         },
                         {
@@ -31,21 +31,21 @@ export default {
                             left: "63%",
                             top: "75%",
                             label: "Self-Optimizing Ecosystem",
-                            info: "With Agrobots, every hectare becomes a self-optimizing ecosystem—guided by AI, managed through modular robotics, and designed to restore the health of soil, water, and biodiversity."
+                            info: "In our vision, each site becomes a managed ecosystem where biological processes, field operations, and long-term goals are coordinated instead of treated as separate problems. Productivity comes from understanding interactions on the land and responding precisely, not from forcing uniformity everywhere."
                         },
                         {
                             id: "hotspot2",
                             left: "50%",
                             top: "49%",
-                            label: "Land OS Platform",
-                            info: "Our platform, Land OS, unites real-time environmental data, automated decision-making, and decentralized field operations. By replacing the old model of extractive, input-heavy agriculture, we create systems that adapt and improve with every season—lowering costs, increasing yields, and regenerating the land."
+                            label: "LandOS Platform",
+                            info: "LandOS makes this practical by bringing together real-time field data, analytics, optimization, and operations. It helps determine what is happening, what should happen next, and how people and machines should respond. That turns terrain management into a continuous operational loop rather than a series of isolated decisions."
                         },
                         {
                             id: "hotspot3",
                             left: "35%",
                             top: "75%",
                             label: "Harmony for Future Generations",
-                            info: "We are committed to setting a new standard: agriculture that operates in harmony with natural cycles, leverages data to boost efficiency, and leaves a positive legacy for future generations. This is the future we are building—where technology and ecology thrive together."
+                            info: "We want agriculture to remain viable for the people who live from it and for the land that sustains it. That means systems that reduce waste, preserve options for future generations, and let human communities benefit from technology without being pushed off the land they know."
                         }
                     ]
                 }
@@ -70,7 +70,7 @@ export default {
                             left: "52%",
                             top: "10%",
                             label: "Visión",
-                            info: "Creemos que la agricultura puede ser regenerativa, productiva y resiliente a la vez.",
+                            info: "Creemos que la agricultura puede ser productiva, regenerativa y resiliente al mismo tiempo. El objetivo no es solo producir más, sino gestionar la tierra de una forma que refuerce los sistemas que la mantienen viva.",
                             openOnStart: true
                         },
                         {
@@ -78,21 +78,21 @@ export default {
                             left: "63%",
                             top: "75%",
                             label: "Ecosistema auto-optimizador",
-                            info: "Con Agrobots, cada hectárea se convierte en un ecosistema auto-optimizador, guiado por IA, gestionado mediante robótica modular y diseñado para restaurar la salud del suelo, el agua y la biodiversidad."
+                            info: "En nuestra visión, cada sitio se convierte en un ecosistema gestionado donde los procesos biológicos, las operaciones de campo y los objetivos de largo plazo se coordinan en lugar de tratarse como problemas separados. La productividad surge de entender las interacciones del terreno y responder con precisión, no de imponer uniformidad en todas partes."
                         },
                         {
                             id: "hotspot2",
                             left: "50%",
                             top: "49%",
-                            label: "Plataforma Land OS",
-                            info: "Nuestra plataforma, Land OS, unifica datos ambientales en tiempo real, toma de decisiones automatizada y operaciones de campo descentralizadas. Al reemplazar el modelo antiguo de agricultura extractiva y dependiente de insumos, creamos sistemas que se adaptan y mejoran con cada temporada—reduciendo costes, aumentando el rendimiento y regenerando la tierra."
+                            label: "Plataforma LandOS",
+                            info: "LandOS vuelve esto práctico al reunir datos de campo en tiempo real, analítica, optimización y operaciones. Ayuda a determinar qué está ocurriendo, qué debería ocurrir a continuación y cómo deben responder personas y máquinas. Así, la gestión del terreno pasa a ser un bucle operativo continuo y no una serie de decisiones aisladas."
                         },
                         {
                             id: "hotspot3",
                             left: "35%",
                             top: "75%",
                             label: "Armonía para las próximas generaciones",
-                            info: "Nos comprometemos a marcar un nuevo estándar: una agricultura que funciona en armonía con los ciclos naturales, utiliza datos para mejorar la eficiencia y deja un legado positivo para las próximas generaciones. Este es el futuro que construimos—donde la tecnología y la ecología prosperan juntas."
+                            info: "Queremos que la agricultura siga siendo viable para quienes viven de ella y para la tierra que la sostiene. Eso significa sistemas que reduzcan desperdicio, preserven opciones para las próximas generaciones y permitan que las comunidades humanas se beneficien de la tecnología sin verse expulsadas de la tierra que conocen."
                         }
                     ]
                 }
