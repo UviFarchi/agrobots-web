@@ -1121,13 +1121,23 @@ export default {
 
 
 @media (max-width: 700px) {
+  .quote-builder {
+    min-height: 100svh;
+    justify-content: flex-start;
+    padding: 0.75rem;
+    box-sizing: border-box;
+  }
+
   .button-row {
-    align-items: self-start;
-    flex: 2; }
+    align-items: flex-start;
+    flex: 2;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
 
   .floating_logo {
-    top: 7px;
-    right: 8px;
+    position: static;
+    margin: 0 0 0.8rem;
     font-size: 0.95rem;
     gap: 6px;
   }
@@ -1141,11 +1151,13 @@ export default {
   }
 
   .form-card {
-    padding: 2rem 2rem;
-    max-width: 100vw;
+    padding: 1.25rem 1rem 1rem;
+    width: 100%;
+    max-width: 100%;
     min-width: 0;
-    border-radius: 0;
-    max-height: 100vh;
+    height: auto;
+    max-height: none;
+    border-radius: 20px;
   }
 
   .card-group, .pill-group, .icon-group {
@@ -1160,6 +1172,17 @@ export default {
 
   .inline-row {
     gap: 0.6em;
+    flex-wrap: wrap;
+  }
+
+  .nav-left,
+  .nav-right {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .nav-right {
+    justify-content: space-between;
   }
 
   .estimate-table th, .estimate-table td {
@@ -1167,8 +1190,31 @@ export default {
     font-size: 0.98em;
   }
 
+  .input,
+  select,
+  .CountrySelect,
+  .RegionSelect,
+  .input-unit {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .tooltip-box {
+    left: 0;
+    right: auto;
+    width: min(16rem, calc(100vw - 3rem));
+  }
+
   .subcard {
     width: 100%;
+  }
+
+  .toast {
+    left: 0.75rem;
+    right: 0.75rem;
+    min-width: 0;
+    max-width: none;
+    transform: none;
   }
 }
 

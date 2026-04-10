@@ -391,6 +391,13 @@ export default {
 
   .columnVisual.portrait-visual {
     width: min(7rem, 100%);
+    margin: 0 auto;
+  }
+
+  .buttonLink {
+    width: 100%;
+    justify-content: space-between;
+    align-self: stretch;
   }
 }
 </style>

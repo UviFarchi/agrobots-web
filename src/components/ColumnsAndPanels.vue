@@ -662,6 +662,8 @@ export default {
 @media (max-width: 1200px) {
   .agrobots-intro {
     grid-template-columns: 1fr;
+    height: auto;
+    min-height: 100%;
     overflow-y: auto;
   }
 
@@ -669,6 +671,7 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 0.95rem;
+    min-height: 0;
   }
 
   .intro-headline {
@@ -690,6 +693,21 @@ export default {
 }
 
 @media (max-width: 860px) {
+  .agrobots-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: auto;
+  }
+
+  .intro-panel,
+  .intro-images,
+  .intro-overview,
+  .intro-detail-stack,
+  .intro-proof {
+    min-height: auto;
+  }
+
   .intro-pillar-grid,
   .visual-metrics,
   .intro-proof-chips {
@@ -697,13 +715,14 @@ export default {
   }
 
   .intro-pillar-slot {
-    min-height: auto;
+    min-height: 0;
   }
 
   .intro-pillar {
     position: relative;
     inset: auto;
-    min-height: 8rem;
+    min-height: 0;
+    height: auto;
   }
 
   .intro-pillar:hover,
@@ -711,29 +730,87 @@ export default {
     transform: none;
   }
 
+  .intro-detail-stack {
+    margin-top: 0.85rem;
+    padding-top: 0.95rem;
+    gap: 0.9rem;
+  }
+
+  .intro-proof {
+    flex: 0 0 auto;
+  }
+
+  .intro-proof-chips {
+    height: auto;
+    grid-auto-rows: auto;
+  }
+
+  .intro-images {
+    grid-template-rows: auto auto;
+    gap: 0.85rem;
+  }
+
   .visual-stage {
-    grid-template-rows: auto minmax(0, 1fr) auto minmax(0, 1fr);
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    min-height: auto;
   }
 
   .visual-inline-image {
-    width: auto;
+    width: min(100%, 28rem);
     max-width: 100%;
     height: auto;
-    max-height: 100%;
+    max-height: none;
+  }
+
+  .visual-panel-title {
+    margin-top: 0;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+
+  .visual-body,
+  .visual-body-copy {
+    min-height: auto;
+  }
+
+  .intro-proof-chip {
+    min-height: 3.5rem;
+    height: auto;
   }
 }
 
 @media (max-width: 720px) {
   .agrobots-intro {
     padding: 1rem;
+    overflow: visible;
   }
 
   .intro-panel {
-    padding: 1.2rem 0 1rem 0;
+    padding: 1rem 0 0.85rem 0;
   }
 
   .visual-stage {
-    padding: 1rem;
+    padding: 0.95rem;
+  }
+
+  .intro-images {
+    padding-left: 0;
+    padding-top: 0.9rem;
+  }
+
+  .intro-header {
+    gap: 0.55rem;
+  }
+
+  .intro-headline {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+
+  .intro-pillar {
+    padding: 0.82rem 0.85rem;
   }
 }
 </style>

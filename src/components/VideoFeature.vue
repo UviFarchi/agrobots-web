@@ -449,7 +449,15 @@ export default {
 }
 
 @media (max-width: 980px) {
+  .video-feature-root {
+    height: auto;
+    min-height: 100%;
+    overflow: auto;
+  }
+
   .intro-shell {
+    height: auto;
+    min-height: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: auto minmax(280px, 1fr);
   }
@@ -476,6 +484,7 @@ export default {
   }
 
   .intro-shell {
+    gap: 0.85rem;
     padding-top: 1rem;
   }
 
@@ -491,6 +500,22 @@ export default {
   .intro-copy-body {
     gap: 0.85rem;
     margin-top: 0.85rem;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .primary-action {
+    width: 100%;
+  }
+
+  .video-card {
+    min-height: 15rem;
+  }
+
+  .video-overlay {
+    padding: 0.85rem;
   }
 
   .video-callout {

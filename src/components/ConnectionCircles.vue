@@ -3,43 +3,54 @@
     <h1 v-if="title && hubIndex === -1" class="system-title">{{ title }}</h1>
 
     <div class="system-stage">
-      <article
-        v-for="(circle, idx) in circles"
-        :key="circle.id || idx"
-        :id="circle.id || `circle-${idx}`"
-        class="action-circle"
-        :class="{ active: expanded[idx], connected: isCircleConnected(idx), hub: isHubCircle(idx), 'has-image': !!circle.img }"
-        :style="circleStyle(idx, circle)"
-        :role="isHubCircle(idx) ? undefined : 'button'"
-        :tabindex="isHubCircle(idx) ? undefined : 0"
-        :aria-expanded="isHubCircle(idx) ? undefined : (expanded[idx] ? 'true' : 'false')"
-        @click="handleCircleSelect(idx)"
-        @keydown.enter.prevent="handleCircleSelect(idx)"
-        @keydown.space.prevent="handleCircleSelect(idx)"
-      >
-        <div v-if="circle.img" class="circle-image-wrap">
-          <img :src="getImageUrl(circle.img)" alt="" class="circle-image" />
-        </div>
-
-        <h2 class="circle-title" v-html="circle.title"></h2>
-
-        <p
-          v-if="circle.text"
-          class="circle-text"
-          :class="{ visible: expanded[idx] || isHubCircle(idx) }"
-          v-html="circle.text"
-        ></p>
-
-        <button
-          v-if="expanded[idx] && circle.buttonText && canConnect(circle) && !isHubCircle(idx)"
-          type="button"
-          class="circle-button"
-          @click.stop="connect(idx)"
+      <template v-for="(circle, idx) in circles" :key="circle.id || idx">
+        <article
+          :id="circle.id || `circle-${idx}`"
+          class="action-circle"
+          :class="{ active: expanded[idx], connected: isCircleConnected(idx), hub: isHubCircle(idx), 'has-image': !!circle.img }"
+          :style="circleStyle(idx, circle)"
+          :role="isHubCircle(idx) ? undefined : 'button'"
+          :tabindex="isHubCircle(idx) ? undefined : 0"
+          :aria-expanded="isHubCircle(idx) ? undefined : (expanded[idx] ? 'true' : 'false')"
+          @click="handleCircleSelect(idx)"
+          @keydown.enter.prevent="handleCircleSelect(idx)"
+          @keydown.space.prevent="handleCircleSelect(idx)"
         >
-          <span>{{ circle.buttonText }}</span>
-          <span aria-hidden="true">→</span>
-        </button>
-      </article>
+          <div v-if="circle.img" class="circle-image-wrap">
+            <img :src="getImageUrl(circle.img)" alt="" class="circle-image" />
+          </div>
+
+          <h2 class="circle-title" v-html="circle.title"></h2>
+
+          <p
+            v-if="circle.text"
+            class="circle-text"
+            :class="{ visible: expanded[idx] || isHubCircle(idx) }"
+            v-html="circle.text"
+          ></p>
+
+          <button
+            v-if="expanded[idx] && circle.buttonText && canConnect(circle) && !isHubCircle(idx)"
+            type="button"
+            class="circle-button"
+            @click.stop="connect(idx)"
+          >
+            <span>{{ circle.buttonText }}</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </article>
+
+        <div
+          v-for="connector in mobileConnectionItems(idx)"
+          :key="connector.key"
+          class="mobile-connector"
+          :style="{ '--connector-color': connector.color || 'var(--primary, #0b874b)' }"
+        >
+          <span class="mobile-connector-line" aria-hidden="true"></span>
+          <span class="mobile-connector-dot" aria-hidden="true"></span>
+          <p class="mobile-connector-text">{{ connector.text }}</p>
+        </div>
+      </template>
 
       <div
         v-for="(arrow, index) in connectionMessages"
@@ -352,6 +363,16 @@ export default {
         color: this.connectMessageTextColor
       };
     },
+    mobileConnectionItems(idx) {
+      return this.connections
+        .filter((connection) => connection.fromIdx === idx)
+        .map((connection) => ({
+          key: `${connection.fromIdx}-${connection.toIdx}`,
+          color: connection.color,
+          text: this.circles[connection.fromIdx]?.connectionText
+        }))
+        .filter((connection) => connection.text);
+    },
     rebuildArrows() {
       if (window.innerWidth <= 900) {
         this.arrows = [];
@@ -663,6 +684,10 @@ export default {
   backdrop-filter: blur(6px);
 }
 
+.mobile-connector {
+  display: none;
+}
+
 .svg-overlay {
   position: absolute;
   inset: 0;
@@ -698,7 +723,7 @@ export default {
   .system-stage {
     display: flex;
     flex-direction: column;
-    gap: 0.9rem;
+    gap: 1rem;
     min-height: 0;
     overflow: visible;
   }
@@ -714,17 +739,74 @@ export default {
     min-height: auto !important;
     height: auto !important;
     border-radius: 28px;
-    cursor: default;
+    cursor: pointer;
+  }
+
+  .circle-title,
+  .circle-text,
+  .action-circle.hub .circle-title,
+  .action-circle.hub .circle-text {
+    width: 100%;
+    max-width: none;
   }
 
   .circle-text {
-    display: block;
+    overflow: visible;
+    padding-right: 0;
   }
 
-  .circle-button,
   .svg-overlay,
   .connect-message {
     display: none;
+  }
+
+  .circle-button {
+    display: inline-flex;
+    width: 100%;
+    margin-top: 0.45rem;
+  }
+
+  .action-circle.active:not(.hub) {
+    padding: 1.2rem 1rem 1rem;
+  }
+
+  .mobile-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.32rem;
+    margin: -0.1rem 0 0.15rem;
+    padding: 0 0.65rem;
+  }
+
+  .mobile-connector-line {
+    width: 2px;
+    height: 0.95rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--connector-color) 70%, rgba(255, 255, 255, 0.08));
+    opacity: 0.85;
+  }
+
+  .mobile-connector-dot {
+    width: 0.46rem;
+    height: 0.46rem;
+    border-radius: 999px;
+    background: var(--connector-color);
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--connector-color) 16%, transparent);
+  }
+
+  .mobile-connector-text {
+    margin: 0;
+    width: 100%;
+    max-width: 26rem;
+    padding: 0.5rem 0.72rem;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+    color: rgba(247, 255, 247, 0.8);
+    font-size: 0.8rem;
+    line-height: 1.35;
+    text-align: center;
   }
 }
 </style>

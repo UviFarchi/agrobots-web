@@ -752,12 +752,46 @@ export default {
 }
 
 @media (max-width: 980px) {
+  .card-stage {
+    overflow: visible;
+  }
+
   .card-grid {
     grid-template-columns: repeat(2, minmax(220px, 1fr)) !important;
+    gap: 1rem;
   }
 
   .slide-intro {
     width: min(100%, 78%);
+  }
+
+  .grid-card-slot {
+    width: 100%;
+    min-height: 0;
+  }
+
+  .grid-card {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    width: 100%;
+    min-height: 15rem;
+    height: auto;
+    transform: none !important;
+  }
+
+  .grid-card.active {
+    --card-width: 100%;
+    --card-height: auto;
+    --card-min-height: 15rem;
+    --card-left: auto;
+    --card-right: auto;
+    --card-top: auto;
+    --card-bottom: auto;
+    --card-translate-x: 0;
+    --card-translate-y: 0;
   }
 }
 
@@ -778,16 +812,10 @@ export default {
     min-height: 15rem;
   }
 
-  .grid-card.active {
-    --card-width: 100%;
-    --card-height: auto;
-    --card-min-height: 15rem;
-    --card-left: 0;
-    --card-right: auto;
-    --card-top: 0;
-    --card-bottom: auto;
-    --card-translate-x: 0;
-    --card-translate-y: 0;
+  .grid-card-summary,
+  .grid-card-body {
+    width: 100%;
+    max-width: none;
   }
 
   .grid-card-toggle {
