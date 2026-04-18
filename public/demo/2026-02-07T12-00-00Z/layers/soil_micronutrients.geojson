@@ -1,0 +1,1265 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-1",
+        "sample_id": "SOIL-001",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "fe_mg_kg": 69.9,
+        "mn_mg_kg": 20.4,
+        "zn_mg_kg": 1.15,
+        "cu_mg_kg": 0.64,
+        "b_mg_kg": 0.47,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Watch",
+        "micronutrient_score": 86.3,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-001 watch, limiting Zn, score 89.6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735608249530175,
+          43.54812255391404
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-2",
+        "sample_id": "SOIL-002",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "fe_mg_kg": 69.6,
+        "mn_mg_kg": 26.2,
+        "zn_mg_kg": 1.49,
+        "cu_mg_kg": 0.49,
+        "b_mg_kg": 0.32,
+        "limiting_element": "Cu",
+        "sufficiency_class": "Deficient",
+        "micronutrient_score": 80.1,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-002 deficient, limiting Cu, score 83.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730508425977231,
+          43.547144109118854
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-3",
+        "sample_id": "SOIL-003",
+        "zone_name": "Corn",
+        "ecology": "Wet Meadow Delta",
+        "fe_mg_kg": 63.8,
+        "mn_mg_kg": 18.2,
+        "zn_mg_kg": 1.37,
+        "cu_mg_kg": 0.9,
+        "b_mg_kg": 0.39,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-003 adequate, limiting Zn, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735356131863365,
+          43.54930223732215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-4",
+        "sample_id": "SOIL-004",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 53.0,
+        "mn_mg_kg": 19.7,
+        "zn_mg_kg": 1.38,
+        "cu_mg_kg": 0.93,
+        "b_mg_kg": 0.57,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-004 adequate, limiting Zn, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735921246618157,
+          43.55345772238334
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-5",
+        "sample_id": "SOIL-005",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "fe_mg_kg": 66.3,
+        "mn_mg_kg": 27.5,
+        "zn_mg_kg": 1.65,
+        "cu_mg_kg": 0.61,
+        "b_mg_kg": 0.37,
+        "limiting_element": "Cu",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 95.0,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-005 adequate, limiting Cu, score 98.3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729876516373612,
+          43.551614350990874
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-6",
+        "sample_id": "SOIL-006",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 38.5,
+        "mn_mg_kg": 20.5,
+        "zn_mg_kg": 1.78,
+        "cu_mg_kg": 0.99,
+        "b_mg_kg": 0.45,
+        "limiting_element": "Fe",
+        "sufficiency_class": "Watch",
+        "micronutrient_score": 85.5,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-006 watch, limiting Fe, score 88.8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73416130666255,
+          43.55530585892457
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-7",
+        "sample_id": "SOIL-007",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 40.8,
+        "mn_mg_kg": 21.7,
+        "zn_mg_kg": 1.69,
+        "cu_mg_kg": 0.93,
+        "b_mg_kg": 0.49,
+        "limiting_element": "Fe",
+        "sufficiency_class": "Watch",
+        "micronutrient_score": 88.9,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-007 watch, limiting Fe, score 92.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73416130666255,
+          43.55583951417812
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-8",
+        "sample_id": "SOIL-008",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 53.8,
+        "mn_mg_kg": 19.1,
+        "zn_mg_kg": 1.43,
+        "cu_mg_kg": 0.76,
+        "b_mg_kg": 0.49,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-008 adequate, limiting Zn, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729746091761337,
+          43.55585005238519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-9",
+        "sample_id": "SOIL-009",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "fe_mg_kg": 58.1,
+        "mn_mg_kg": 22.0,
+        "zn_mg_kg": 1.27,
+        "cu_mg_kg": 0.49,
+        "b_mg_kg": 0.36,
+        "limiting_element": "Cu",
+        "sufficiency_class": "Deficient",
+        "micronutrient_score": 79.8,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-009 deficient, limiting Cu, score 83.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73256243814215,
+          43.54777198492047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-10",
+        "sample_id": "SOIL-010",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 70.1,
+        "mn_mg_kg": 16.3,
+        "zn_mg_kg": 1.08,
+        "cu_mg_kg": 0.7,
+        "b_mg_kg": 0.35,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Deficient",
+        "micronutrient_score": 80.2,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-010 deficient, limiting Zn, score 83.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.738063870180758,
+          43.550502961642636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-11",
+        "sample_id": "SOIL-011",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "fe_mg_kg": 69.1,
+        "mn_mg_kg": 20.9,
+        "zn_mg_kg": 1.16,
+        "cu_mg_kg": 0.59,
+        "b_mg_kg": 0.31,
+        "limiting_element": "B",
+        "sufficiency_class": "Watch",
+        "micronutrient_score": 83.5,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-011 watch, limiting B, score 86.8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732774270130871,
+          43.54933464939164
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-12",
+        "sample_id": "SOIL-012",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 54.8,
+        "mn_mg_kg": 19.8,
+        "zn_mg_kg": 1.41,
+        "cu_mg_kg": 0.88,
+        "b_mg_kg": 0.31,
+        "limiting_element": "B",
+        "sufficiency_class": "Watch",
+        "micronutrient_score": 86.2,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-012 watch, limiting B, score 89.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7358391295373785,
+          43.55262768614193
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-13",
+        "sample_id": "SOIL-013",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "fe_mg_kg": 69.7,
+        "mn_mg_kg": 20.6,
+        "zn_mg_kg": 1.09,
+        "cu_mg_kg": 0.62,
+        "b_mg_kg": 0.38,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Deficient",
+        "micronutrient_score": 81.9,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-013 deficient, limiting Zn, score 85.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730665273250281,
+          43.55226527524249
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-14",
+        "sample_id": "SOIL-014",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 52.3,
+        "mn_mg_kg": 17.4,
+        "zn_mg_kg": 1.5,
+        "cu_mg_kg": 0.96,
+        "b_mg_kg": 0.29,
+        "limiting_element": "B",
+        "sufficiency_class": "Deficient",
+        "micronutrient_score": 81.5,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-014 deficient, limiting B, score 84.8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73665424609938,
+          43.55408522424178
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-15",
+        "sample_id": "SOIL-015",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 54.8,
+        "mn_mg_kg": 19.0,
+        "zn_mg_kg": 1.45,
+        "cu_mg_kg": 0.7,
+        "b_mg_kg": 0.38,
+        "limiting_element": "B",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-015 adequate, limiting B, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731667187120838,
+          43.55591291942676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-16",
+        "sample_id": "SOIL-016",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 49.6,
+        "mn_mg_kg": 19.6,
+        "zn_mg_kg": 1.3,
+        "cu_mg_kg": 0.68,
+        "b_mg_kg": 0.48,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 93.2,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-016 adequate, limiting Zn, score 96.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731490806786376,
+          43.556915142214685
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-17",
+        "sample_id": "SOIL-017",
+        "zone_name": "Cover Crop",
+        "ecology": "Atlantic Valley Floor",
+        "fe_mg_kg": 71.0,
+        "mn_mg_kg": 25.1,
+        "zn_mg_kg": 1.27,
+        "cu_mg_kg": 0.85,
+        "b_mg_kg": 0.62,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Watch",
+        "micronutrient_score": 93.6,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-017 watch, limiting Zn, score 96.9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73393100979738,
+          43.547804075602
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-18",
+        "sample_id": "SOIL-018",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 64.2,
+        "mn_mg_kg": 24.1,
+        "zn_mg_kg": 1.57,
+        "cu_mg_kg": 0.84,
+        "b_mg_kg": 0.61,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-018 adequate, limiting Zn, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.739153733599948,
+          43.55049012257061
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-19",
+        "sample_id": "SOIL-019",
+        "zone_name": "Cover Crop",
+        "ecology": "Atlantic Valley Floor",
+        "fe_mg_kg": 81.4,
+        "mn_mg_kg": 24.0,
+        "zn_mg_kg": 1.1,
+        "cu_mg_kg": 0.84,
+        "b_mg_kg": 0.63,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Deficient",
+        "micronutrient_score": 84.9,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-019 deficient, limiting Zn, score 88.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731696529703681,
+          43.5509032030828
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-20",
+        "sample_id": "SOIL-020",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 58.6,
+        "mn_mg_kg": 27.3,
+        "zn_mg_kg": 1.69,
+        "cu_mg_kg": 1.04,
+        "b_mg_kg": 0.49,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-020 adequate, limiting Zn, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729459271986097,
+          43.553752316464625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-21",
+        "sample_id": "SOIL-021",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 63.3,
+        "mn_mg_kg": 27.7,
+        "zn_mg_kg": 1.99,
+        "cu_mg_kg": 0.87,
+        "b_mg_kg": 0.46,
+        "limiting_element": "B",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-021 adequate, limiting B, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735015900507052,
+          43.55583903055168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-22",
+        "sample_id": "SOIL-022",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 54.2,
+        "mn_mg_kg": 31.1,
+        "zn_mg_kg": 2.19,
+        "cu_mg_kg": 0.79,
+        "b_mg_kg": 0.42,
+        "limiting_element": "B",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-022 adequate, limiting B, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.727050717530208,
+          43.55470780138734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-23",
+        "sample_id": "SOIL-023",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 64.4,
+        "mn_mg_kg": 20.9,
+        "zn_mg_kg": 2.02,
+        "cu_mg_kg": 1.38,
+        "b_mg_kg": 0.57,
+        "limiting_element": "Mn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-023 adequate, limiting Mn, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.738942608874486,
+          43.54852762470353
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-24",
+        "sample_id": "SOIL-024",
+        "zone_name": "Pasture",
+        "ecology": "Atlantic Valley Floor",
+        "fe_mg_kg": 74.3,
+        "mn_mg_kg": 25.9,
+        "zn_mg_kg": 1.51,
+        "cu_mg_kg": 1.16,
+        "b_mg_kg": 0.67,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-024 adequate, limiting Zn, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734534745983951,
+          43.54874504762575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-25",
+        "sample_id": "SOIL-025",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 65.8,
+        "mn_mg_kg": 27.2,
+        "zn_mg_kg": 1.62,
+        "cu_mg_kg": 1.14,
+        "b_mg_kg": 0.59,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-025 adequate, limiting Zn, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7384746663405695,
+          43.55203722049659
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-26",
+        "sample_id": "SOIL-026",
+        "zone_name": "Pasture",
+        "ecology": "Atlantic Valley Floor",
+        "fe_mg_kg": 79.9,
+        "mn_mg_kg": 26.2,
+        "zn_mg_kg": 1.17,
+        "cu_mg_kg": 1.01,
+        "b_mg_kg": 0.85,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Watch",
+        "micronutrient_score": 88.5,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-026 watch, limiting Zn, score 91.8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733545112422832,
+          43.55203722049659
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-27",
+        "sample_id": "SOIL-027",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 75.7,
+        "mn_mg_kg": 25.8,
+        "zn_mg_kg": 1.8,
+        "cu_mg_kg": 1.03,
+        "b_mg_kg": 0.55,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-027 adequate, limiting Zn, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.738175747307097,
+          43.55289571981069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-28",
+        "sample_id": "SOIL-028",
+        "zone_name": "Pasture",
+        "ecology": "Atlantic Valley Floor",
+        "fe_mg_kg": 70.3,
+        "mn_mg_kg": 23.9,
+        "zn_mg_kg": 1.97,
+        "cu_mg_kg": 1.06,
+        "b_mg_kg": 0.69,
+        "limiting_element": "Mn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-028 adequate, limiting Mn, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7300533450644355,
+          43.55223734121667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-29",
+        "sample_id": "SOIL-029",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 77.4,
+        "mn_mg_kg": 31.5,
+        "zn_mg_kg": 1.63,
+        "cu_mg_kg": 0.89,
+        "b_mg_kg": 0.71,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-029 adequate, limiting Zn, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733753062707605,
+          43.557338599708835
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-30",
+        "sample_id": "SOIL-030",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 72.9,
+        "mn_mg_kg": 31.4,
+        "zn_mg_kg": 2.19,
+        "cu_mg_kg": 0.76,
+        "b_mg_kg": 0.54,
+        "limiting_element": "Cu",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-030 adequate, limiting Cu, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729048168648236,
+          43.55662710091666
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-31",
+        "sample_id": "SOIL-031",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 73.5,
+        "mn_mg_kg": 30.9,
+        "zn_mg_kg": 1.52,
+        "cu_mg_kg": 1.07,
+        "b_mg_kg": 0.59,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-031 adequate, limiting Zn, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7340161215632275,
+          43.55836969359754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-32",
+        "sample_id": "SOIL-032",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 56.6,
+        "mn_mg_kg": 37.1,
+        "zn_mg_kg": 2.08,
+        "cu_mg_kg": 0.81,
+        "b_mg_kg": 0.51,
+        "limiting_element": "Fe",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-032 adequate, limiting Fe, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729215147808442,
+          43.558486397799264
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-33",
+        "sample_id": "SOIL-033",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "fe_mg_kg": 69.6,
+        "mn_mg_kg": 50.0,
+        "zn_mg_kg": 2.62,
+        "cu_mg_kg": 1.11,
+        "b_mg_kg": 0.57,
+        "limiting_element": "Fe",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-033 adequate, limiting Fe, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736541436468183,
+          43.55047227328974
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-34",
+        "sample_id": "SOIL-034",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "fe_mg_kg": 86.0,
+        "mn_mg_kg": 39.1,
+        "zn_mg_kg": 1.95,
+        "cu_mg_kg": 1.37,
+        "b_mg_kg": 0.61,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-034 adequate, limiting Zn, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729027640898314,
+          43.5529044102836
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-35",
+        "sample_id": "SOIL-035",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "fe_mg_kg": 101.8,
+        "mn_mg_kg": 36.5,
+        "zn_mg_kg": 1.76,
+        "cu_mg_kg": 1.46,
+        "b_mg_kg": 0.61,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-035 adequate, limiting Zn, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7317450893315005,
+          43.554210249644235
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-36",
+        "sample_id": "SOIL-036",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "fe_mg_kg": 108.5,
+        "mn_mg_kg": 43.2,
+        "zn_mg_kg": 1.5,
+        "cu_mg_kg": 1.1,
+        "b_mg_kg": 0.84,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-036 adequate, limiting Zn, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.727508705870868,
+          43.554105134604086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-37",
+        "sample_id": "SOIL-037",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 65.9,
+        "mn_mg_kg": 42.0,
+        "zn_mg_kg": 1.92,
+        "cu_mg_kg": 1.2,
+        "b_mg_kg": 0.44,
+        "limiting_element": "B",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-037 adequate, limiting B, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.739108856851447,
+          43.550001219790225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-38",
+        "sample_id": "SOIL-038",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 107.3,
+        "mn_mg_kg": 22.2,
+        "zn_mg_kg": 1.85,
+        "cu_mg_kg": 1.5,
+        "b_mg_kg": 0.6,
+        "limiting_element": "Mn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-038 adequate, limiting Mn, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734717521630234,
+          43.55349122912272
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-39",
+        "sample_id": "SOIL-039",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 112.6,
+        "mn_mg_kg": 24.2,
+        "zn_mg_kg": 1.46,
+        "cu_mg_kg": 1.43,
+        "b_mg_kg": 0.69,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-039 adequate, limiting Zn, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736456175858674,
+          43.55462185504814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-40",
+        "sample_id": "SOIL-040",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 102.9,
+        "mn_mg_kg": 30.1,
+        "zn_mg_kg": 1.11,
+        "cu_mg_kg": 1.5,
+        "b_mg_kg": 0.64,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Watch",
+        "micronutrient_score": 85.4,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-040 watch, limiting Zn, score 88.7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.726891536186529,
+          43.555441031682584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-41",
+        "sample_id": "SOIL-041",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "fe_mg_kg": 88.1,
+        "mn_mg_kg": 41.4,
+        "zn_mg_kg": 1.26,
+        "cu_mg_kg": 1.06,
+        "b_mg_kg": 0.65,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Watch",
+        "micronutrient_score": 93.1,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-041 watch, limiting Zn, score 96.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729741712492113,
+          43.55783002621978
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-42",
+        "sample_id": "SOIL-042",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "fe_mg_kg": 47.3,
+        "mn_mg_kg": 25.7,
+        "zn_mg_kg": 1.65,
+        "cu_mg_kg": 1.02,
+        "b_mg_kg": 0.38,
+        "limiting_element": "Fe",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-042 adequate, limiting Fe, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730417894712543,
+          43.549261326610036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-43",
+        "sample_id": "SOIL-043",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "fe_mg_kg": 50.4,
+        "mn_mg_kg": 23.4,
+        "zn_mg_kg": 1.63,
+        "cu_mg_kg": 0.98,
+        "b_mg_kg": 0.43,
+        "limiting_element": "Fe",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-043 adequate, limiting Fe, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730252214552506,
+          43.549563771424594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-44",
+        "sample_id": "SOIL-044",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "fe_mg_kg": 69.6,
+        "mn_mg_kg": 24.2,
+        "zn_mg_kg": 1.54,
+        "cu_mg_kg": 0.77,
+        "b_mg_kg": 0.6,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-044 adequate, limiting Zn, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729883486739407,
+          43.55041352546505
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_micronutrients-45",
+        "sample_id": "SOIL-045",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "fe_mg_kg": 58.3,
+        "mn_mg_kg": 28.8,
+        "zn_mg_kg": 1.47,
+        "cu_mg_kg": 0.8,
+        "b_mg_kg": 0.43,
+        "limiting_element": "Zn",
+        "sufficiency_class": "Adequate",
+        "micronutrient_score": 96.7,
+        "units": "mg/kg",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_micronutrients",
+        "summary": "SOIL-045 adequate, limiting Zn, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731288781553872,
+          43.55195364779662
+        ]
+      }
+    }
+  ]
+}

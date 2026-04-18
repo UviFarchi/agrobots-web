@@ -1,0 +1,467 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-1",
+        "class": "CCC",
+        "name": "Command and Control Center",
+        "assembly_group": "Infrastructure",
+        "role": "Mission planning, orchestration, safety lockout",
+        "provides": "All operational layers, dispatch, QA",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73355,
+          43.5519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-2",
+        "class": "AAA",
+        "name": "Autonomous Agronomy Assembly",
+        "assembly_group": "Infrastructure",
+        "role": "Field orchestration and agronomy automation",
+        "provides": "Crop classification, resources, operations routing",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73175,
+          43.5531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-3",
+        "class": "OPS-01",
+        "name": "Variable Rate Application Assembly",
+        "assembly_group": "Operations",
+        "role": "Precision spray and nutrient delivery",
+        "provides": "Macronutrients, fertility, crop classification",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7351,
+          43.54935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-4",
+        "class": "OPS-02",
+        "name": "Field Logistics Assembly",
+        "assembly_group": "Operations",
+        "role": "Input transport and task execution support",
+        "provides": "Resources, roads, assemblies",
+        "status": "Standby",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.72995,
+          43.5579
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-5",
+        "class": "ATM-01",
+        "name": "North Weather Mast",
+        "assembly_group": "Atmosphere sensing",
+        "role": "Meteorological sensing",
+        "provides": "Air temp, humidity, pressure, wind speed, cloud cover",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7361,
+          43.55605
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-6",
+        "class": "ATM-02",
+        "name": "South Weather Mast",
+        "assembly_group": "Atmosphere sensing",
+        "role": "Meteorological sensing",
+        "provides": "Air temp, humidity, pressure, wind speed, cloud cover",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.72985,
+          43.54805
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-7",
+        "class": "SOL-01",
+        "name": "Solar Survey Assembly",
+        "assembly_group": "Atmosphere sensing",
+        "role": "Solar potential sensing and calibration",
+        "provides": "Solar",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73145,
+          43.5558
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-8",
+        "class": "SOIL-01",
+        "name": "West Soil Chemistry Cart",
+        "assembly_group": "Soil sensing",
+        "role": "Soil lab sampling and chemistry",
+        "provides": "Micronutrients, fertility, pH, organic matter, macronutrients",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736,
+          43.55265
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-9",
+        "class": "SOIL-02",
+        "name": "Central Soil Fertility Rig",
+        "assembly_group": "Soil sensing",
+        "role": "Nutrient and fertility profiling",
+        "provides": "Fertility, macronutrients, pH, organic matter",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73055,
+          43.55045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-10",
+        "class": "SOIL-03",
+        "name": "East Density Probe Cluster",
+        "assembly_group": "Soil sensing",
+        "role": "Compaction and density measurement",
+        "provides": "Bulk density, pH, organic matter",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.72895,
+          43.55645
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-11",
+        "class": "WAT-01",
+        "name": "Main Channel Water Quality Station",
+        "assembly_group": "Water sensing",
+        "role": "Surface-water chemistry monitoring",
+        "provides": "Water temperature, water pH, dissolved oxygen, electrical conductivity, nitrates",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7321,
+          43.55115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-12",
+        "class": "WAT-02",
+        "name": "Estuary Water Quality Station",
+        "assembly_group": "Water sensing",
+        "role": "Estuary and reservoir water monitoring",
+        "provides": "Water temperature, water pH, dissolved oxygen, electrical conductivity, nitrates",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.72805,
+          43.55385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-13",
+        "class": "GWT-01",
+        "name": "Groundwater Probe Cluster",
+        "assembly_group": "Water sensing",
+        "role": "Subsurface water depth monitoring",
+        "provides": "Groundwater WTD",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73435,
+          43.5487
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-14",
+        "class": "FLD-01",
+        "name": "Flood Watch Assembly",
+        "assembly_group": "Water sensing",
+        "role": "Floodplain and wetness observation",
+        "provides": "Flood hazard, wetlands",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7312,
+          43.5591
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-15",
+        "class": "BIO-01",
+        "name": "Flora Vision Mast",
+        "assembly_group": "Biota sensing",
+        "role": "Plant census and canopy recognition",
+        "provides": "Flora census",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73575,
+          43.5552
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-16",
+        "class": "BIO-02",
+        "name": "Fauna Herd Tracker",
+        "assembly_group": "Biota sensing",
+        "role": "Livestock and wildlife tracking",
+        "provides": "Fauna census",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7309,
+          43.5497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-17",
+        "class": "MIC-01",
+        "name": "Microbiota Lab Pod",
+        "assembly_group": "Biota sensing",
+        "role": "Microbial sampling and assay",
+        "provides": "Microbiota",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7331,
+          43.54785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-18",
+        "class": "MYC-01",
+        "name": "Mycorrhizal Imaging Array",
+        "assembly_group": "Biota sensing",
+        "role": "Subsurface network imaging",
+        "provides": "Mycorrhizal",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7326,
+          43.5568
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-19",
+        "class": "RS-01",
+        "name": "RGB Survey Tower",
+        "assembly_group": "Remote sensing",
+        "role": "Visible-spectrum imagery capture",
+        "provides": "RGB imagery, land cover",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7349,
+          43.55375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-20",
+        "class": "RS-02",
+        "name": "Thermal Survey Tower",
+        "assembly_group": "Remote sensing",
+        "role": "Infrared and thermal capture",
+        "provides": "Infrared",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7294,
+          43.5526
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-21",
+        "class": "DEM-01",
+        "name": "Terrain Survey Beacon",
+        "assembly_group": "Remote sensing",
+        "role": "Elevation control and terrain reference",
+        "provides": "DEM, boundaries",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7282,
+          43.55745
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "assemblies-22",
+        "class": "LULC-01",
+        "name": "Land Cover Classification Rig",
+        "assembly_group": "Remote sensing",
+        "role": "Surface classification and ecological interpretation",
+        "provides": "Crop classification, ecological context, land cover",
+        "status": "Active",
+        "timestamp": "2026-02-10",
+        "layer_id": "assemblies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73535,
+          43.55105
+        ]
+      }
+    }
+  ]
+}

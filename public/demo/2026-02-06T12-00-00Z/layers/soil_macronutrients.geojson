@@ -1,0 +1,1861 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-1",
+        "sample_id": "MAC-001",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 48.8,
+        "p_mg_kg": 22.8,
+        "k_mg_kg": 127.5,
+        "ca_mg_kg": 702.7,
+        "mg_mg_kg": 107.7,
+        "s_mg_kg": 16.2,
+        "limiting_nutrient": "K",
+        "supply_class": "Adequate",
+        "balance_score": 95.5,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-001 adequate, limiting K, score 99.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735402606605836,
+          43.5479321014484
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-2",
+        "sample_id": "MAC-002",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 49.6,
+        "p_mg_kg": 29.4,
+        "k_mg_kg": 133.0,
+        "ca_mg_kg": 495.3,
+        "mg_mg_kg": 92.2,
+        "s_mg_kg": 18.9,
+        "limiting_nutrient": "Ca",
+        "supply_class": "Watch",
+        "balance_score": 87.4,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-002 watch, limiting Ca, score 91.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730742964879922,
+          43.547066855997784
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-3",
+        "sample_id": "MAC-003",
+        "zone_name": "Corn",
+        "ecology": "Wet Meadow Delta",
+        "n_mg_kg": 43.3,
+        "p_mg_kg": 23.4,
+        "k_mg_kg": 153.8,
+        "ca_mg_kg": 727.5,
+        "mg_mg_kg": 88.0,
+        "s_mg_kg": 14.9,
+        "limiting_nutrient": "S",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-003 adequate, limiting S, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734929414823457,
+          43.54903330562284
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-4",
+        "sample_id": "MAC-004",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 51.9,
+        "p_mg_kg": 24.8,
+        "k_mg_kg": 142.0,
+        "ca_mg_kg": 705.1,
+        "mg_mg_kg": 92.8,
+        "s_mg_kg": 15.5,
+        "limiting_nutrient": "S",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-004 adequate, limiting S, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737834808487543,
+          43.55116375283982
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-5",
+        "sample_id": "MAC-005",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 52.7,
+        "p_mg_kg": 29.6,
+        "k_mg_kg": 153.6,
+        "ca_mg_kg": 650.6,
+        "mg_mg_kg": 74.7,
+        "s_mg_kg": 13.4,
+        "limiting_nutrient": "Mg",
+        "supply_class": "Watch",
+        "balance_score": 89.1,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-005 watch, limiting Mg, score 93.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731998071250975,
+          43.550502961642636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-6",
+        "sample_id": "MAC-006",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 44.6,
+        "p_mg_kg": 25.4,
+        "k_mg_kg": 153.8,
+        "ca_mg_kg": 680.7,
+        "mg_mg_kg": 94.3,
+        "s_mg_kg": 17.2,
+        "limiting_nutrient": "N",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-006 adequate, limiting N, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737850372984063,
+          43.55220054166697
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-7",
+        "sample_id": "MAC-007",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 46.3,
+        "p_mg_kg": 32.4,
+        "k_mg_kg": 150.4,
+        "ca_mg_kg": 611.6,
+        "mg_mg_kg": 95.0,
+        "s_mg_kg": 15.6,
+        "limiting_nutrient": "Ca",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-007 adequate, limiting Ca, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73131540076015,
+          43.55305245548919
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-8",
+        "sample_id": "MAC-008",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 38.7,
+        "p_mg_kg": 22.0,
+        "k_mg_kg": 162.5,
+        "ca_mg_kg": 899.3,
+        "mg_mg_kg": 97.9,
+        "s_mg_kg": 12.8,
+        "limiting_nutrient": "S",
+        "supply_class": "Watch",
+        "balance_score": 87.7,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-008 watch, limiting S, score 91.7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73594259952907,
+          43.55428040085199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-9",
+        "sample_id": "MAC-009",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 43.9,
+        "p_mg_kg": 26.6,
+        "k_mg_kg": 151.5,
+        "ca_mg_kg": 771.6,
+        "mg_mg_kg": 95.1,
+        "s_mg_kg": 14.5,
+        "limiting_nutrient": "S",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-009 adequate, limiting S, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732602970072024,
+          43.55573752967714
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-10",
+        "sample_id": "MAC-010",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 40.7,
+        "p_mg_kg": 24.3,
+        "k_mg_kg": 152.6,
+        "ca_mg_kg": 812.1,
+        "mg_mg_kg": 96.3,
+        "s_mg_kg": 14.4,
+        "limiting_nutrient": "S",
+        "supply_class": "Adequate",
+        "balance_score": 95.9,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-010 adequate, limiting S, score 99.9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733810299688632,
+          43.55695038191256
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-11",
+        "sample_id": "MAC-011",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 41.5,
+        "p_mg_kg": 26.6,
+        "k_mg_kg": 127.2,
+        "ca_mg_kg": 522.9,
+        "mg_mg_kg": 100.5,
+        "s_mg_kg": 18.1,
+        "limiting_nutrient": "Ca",
+        "supply_class": "Watch",
+        "balance_score": 90.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-011 watch, limiting Ca, score 94.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73258825879643,
+          43.54717279732188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-12",
+        "sample_id": "MAC-012",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 42.5,
+        "p_mg_kg": 18.8,
+        "k_mg_kg": 136.4,
+        "ca_mg_kg": 686.2,
+        "mg_mg_kg": 92.2,
+        "s_mg_kg": 16.4,
+        "limiting_nutrient": "P",
+        "supply_class": "Watch",
+        "balance_score": 89.4,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-012 watch, limiting P, score 93.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736603297045477,
+          43.54879941524857
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-13",
+        "sample_id": "MAC-013",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 42.3,
+        "p_mg_kg": 21.9,
+        "k_mg_kg": 139.8,
+        "ca_mg_kg": 602.5,
+        "mg_mg_kg": 92.8,
+        "s_mg_kg": 16.8,
+        "limiting_nutrient": "P",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-013 adequate, limiting P, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737409180495207,
+          43.55057036458949
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-14",
+        "sample_id": "MAC-014",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 50.0,
+        "p_mg_kg": 25.9,
+        "k_mg_kg": 133.4,
+        "ca_mg_kg": 547.6,
+        "mg_mg_kg": 79.0,
+        "s_mg_kg": 17.6,
+        "limiting_nutrient": "Mg",
+        "supply_class": "Watch",
+        "balance_score": 92.1,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-014 watch, limiting Mg, score 96.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733271248316291,
+          43.55011779147186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-15",
+        "sample_id": "MAC-015",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 42.2,
+        "p_mg_kg": 25.6,
+        "k_mg_kg": 156.5,
+        "ca_mg_kg": 651.6,
+        "mg_mg_kg": 69.8,
+        "s_mg_kg": 13.6,
+        "limiting_nutrient": "Mg",
+        "supply_class": "Watch",
+        "balance_score": 84.8,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-015 watch, limiting Mg, score 88.8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7353944913713715,
+          43.55266573934047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-16",
+        "sample_id": "MAC-016",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 51.3,
+        "p_mg_kg": 24.0,
+        "k_mg_kg": 123.3,
+        "ca_mg_kg": 643.0,
+        "mg_mg_kg": 92.1,
+        "s_mg_kg": 15.7,
+        "limiting_nutrient": "K",
+        "supply_class": "Watch",
+        "balance_score": 93.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-016 watch, limiting K, score 97.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730464141224246,
+          43.55210392740328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-17",
+        "sample_id": "MAC-017",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 35.2,
+        "p_mg_kg": 24.7,
+        "k_mg_kg": 167.4,
+        "ca_mg_kg": 655.1,
+        "mg_mg_kg": 76.4,
+        "s_mg_kg": 13.4,
+        "limiting_nutrient": "N",
+        "supply_class": "Watch",
+        "balance_score": 87.2,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-017 watch, limiting N, score 91.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736268612933187,
+          43.55448691592556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-18",
+        "sample_id": "MAC-018",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 36.9,
+        "p_mg_kg": 25.3,
+        "k_mg_kg": 142.4,
+        "ca_mg_kg": 681.2,
+        "mg_mg_kg": 99.7,
+        "s_mg_kg": 12.2,
+        "limiting_nutrient": "S",
+        "supply_class": "Watch",
+        "balance_score": 84.9,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-018 watch, limiting S, score 88.9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729828939935005,
+          43.555005199670724
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-19",
+        "sample_id": "MAC-019",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 37.3,
+        "p_mg_kg": 25.0,
+        "k_mg_kg": 138.8,
+        "ca_mg_kg": 719.3,
+        "mg_mg_kg": 100.0,
+        "s_mg_kg": 11.6,
+        "limiting_nutrient": "S",
+        "supply_class": "Watch",
+        "balance_score": 82.1,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-019 watch, limiting S, score 86.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730161613347947,
+          43.55566397976191
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-20",
+        "sample_id": "MAC-020",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 39.5,
+        "p_mg_kg": 24.6,
+        "k_mg_kg": 128.0,
+        "ca_mg_kg": 711.8,
+        "mg_mg_kg": 107.5,
+        "s_mg_kg": 13.9,
+        "limiting_nutrient": "S",
+        "supply_class": "Watch",
+        "balance_score": 92.4,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-020 watch, limiting S, score 96.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7320138973266275,
+          43.557967219566194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-21",
+        "sample_id": "MAC-021",
+        "zone_name": "Cover Crop",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 52.9,
+        "p_mg_kg": 28.1,
+        "k_mg_kg": 140.8,
+        "ca_mg_kg": 810.3,
+        "mg_mg_kg": 120.7,
+        "s_mg_kg": 21.5,
+        "limiting_nutrient": "K",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-021 adequate, limiting K, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7335808766691345,
+          43.54715744725601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-22",
+        "sample_id": "MAC-022",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 48.5,
+        "p_mg_kg": 24.9,
+        "k_mg_kg": 157.7,
+        "ca_mg_kg": 736.9,
+        "mg_mg_kg": 121.4,
+        "s_mg_kg": 20.2,
+        "limiting_nutrient": "P",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-022 adequate, limiting P, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.739545713542146,
+          43.54993118815669
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-23",
+        "sample_id": "MAC-023",
+        "zone_name": "Cover Crop",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 56.0,
+        "p_mg_kg": 25.1,
+        "k_mg_kg": 146.2,
+        "ca_mg_kg": 691.2,
+        "mg_mg_kg": 131.1,
+        "s_mg_kg": 24.3,
+        "limiting_nutrient": "K",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-023 adequate, limiting K, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733174987178478,
+          43.54890199588199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-24",
+        "sample_id": "MAC-024",
+        "zone_name": "Cover Crop",
+        "ecology": "Wet Meadow Delta",
+        "n_mg_kg": 55.0,
+        "p_mg_kg": 32.8,
+        "k_mg_kg": 142.5,
+        "ca_mg_kg": 568.4,
+        "mg_mg_kg": 125.5,
+        "s_mg_kg": 24.1,
+        "limiting_nutrient": "Ca",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-024 adequate, limiting Ca, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734483791388945,
+          43.55100382935315
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-25",
+        "sample_id": "MAC-025",
+        "zone_name": "Cover Crop",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 62.0,
+        "p_mg_kg": 26.1,
+        "k_mg_kg": 147.7,
+        "ca_mg_kg": 724.9,
+        "mg_mg_kg": 112.7,
+        "s_mg_kg": 23.2,
+        "limiting_nutrient": "K",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-025 adequate, limiting K, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732107325863492,
+          43.55210392740328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-26",
+        "sample_id": "MAC-026",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 43.4,
+        "p_mg_kg": 36.8,
+        "k_mg_kg": 169.0,
+        "ca_mg_kg": 631.2,
+        "mg_mg_kg": 97.2,
+        "s_mg_kg": 19.4,
+        "limiting_nutrient": "N",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-026 adequate, limiting N, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737403067182644,
+          43.554014936461584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-27",
+        "sample_id": "MAC-027",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 49.2,
+        "p_mg_kg": 30.8,
+        "k_mg_kg": 166.1,
+        "ca_mg_kg": 778.5,
+        "mg_mg_kg": 88.1,
+        "s_mg_kg": 19.8,
+        "limiting_nutrient": "Mg",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-027 adequate, limiting Mg, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729522285209528,
+          43.553793496152714
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-28",
+        "sample_id": "MAC-028",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 50.8,
+        "p_mg_kg": 27.4,
+        "k_mg_kg": 160.5,
+        "ca_mg_kg": 886.1,
+        "mg_mg_kg": 100.9,
+        "s_mg_kg": 17.3,
+        "limiting_nutrient": "S",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-028 adequate, limiting S, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732409956797807,
+          43.55646011333612
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-29",
+        "sample_id": "MAC-029",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 49.1,
+        "p_mg_kg": 26.3,
+        "k_mg_kg": 211.7,
+        "ca_mg_kg": 988.6,
+        "mg_mg_kg": 118.5,
+        "s_mg_kg": 20.5,
+        "limiting_nutrient": "N",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-029 adequate, limiting N, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.738981965709108,
+          43.548512268878824
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-30",
+        "sample_id": "MAC-030",
+        "zone_name": "Pasture",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 50.7,
+        "p_mg_kg": 26.5,
+        "k_mg_kg": 197.7,
+        "ca_mg_kg": 1028.3,
+        "mg_mg_kg": 133.1,
+        "s_mg_kg": 16.0,
+        "limiting_nutrient": "S",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-030 adequate, limiting S, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7316377289717675,
+          43.547890141205066
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-31",
+        "sample_id": "MAC-031",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 58.5,
+        "p_mg_kg": 30.2,
+        "k_mg_kg": 176.0,
+        "ca_mg_kg": 945.1,
+        "mg_mg_kg": 132.6,
+        "s_mg_kg": 26.1,
+        "limiting_nutrient": "K",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-031 adequate, limiting K, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735971622833632,
+          43.550106670478876
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-32",
+        "sample_id": "MAC-032",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 55.1,
+        "p_mg_kg": 30.4,
+        "k_mg_kg": 179.0,
+        "ca_mg_kg": 953.5,
+        "mg_mg_kg": 121.6,
+        "s_mg_kg": 26.9,
+        "limiting_nutrient": "K",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-032 adequate, limiting K, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7383061223134915,
+          43.55199015410926
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-33",
+        "sample_id": "MAC-033",
+        "zone_name": "Pasture",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 51.1,
+        "p_mg_kg": 27.9,
+        "k_mg_kg": 193.9,
+        "ca_mg_kg": 911.8,
+        "mg_mg_kg": 134.6,
+        "s_mg_kg": 21.1,
+        "limiting_nutrient": "N",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-033 adequate, limiting N, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729642548904623,
+          43.55170368596312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-34",
+        "sample_id": "MAC-034",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 63.1,
+        "p_mg_kg": 32.4,
+        "k_mg_kg": 143.2,
+        "ca_mg_kg": 990.5,
+        "mg_mg_kg": 144.4,
+        "s_mg_kg": 25.0,
+        "limiting_nutrient": "K",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-034 adequate, limiting K, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734880013112004,
+          43.55338436843627
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-35",
+        "sample_id": "MAC-035",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 67.1,
+        "p_mg_kg": 31.0,
+        "k_mg_kg": 148.7,
+        "ca_mg_kg": 956.6,
+        "mg_mg_kg": 142.6,
+        "s_mg_kg": 26.4,
+        "limiting_nutrient": "K",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-035 adequate, limiting K, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734932456394504,
+          43.55419020324881
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-36",
+        "sample_id": "MAC-036",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 62.2,
+        "p_mg_kg": 37.6,
+        "k_mg_kg": 165.2,
+        "ca_mg_kg": 777.1,
+        "mg_mg_kg": 129.4,
+        "s_mg_kg": 30.5,
+        "limiting_nutrient": "K",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-036 adequate, limiting K, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737072574490081,
+          43.55650658324505
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-37",
+        "sample_id": "MAC-037",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 56.6,
+        "p_mg_kg": 32.3,
+        "k_mg_kg": 166.3,
+        "ca_mg_kg": 990.3,
+        "mg_mg_kg": 120.2,
+        "s_mg_kg": 24.4,
+        "limiting_nutrient": "K",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-037 adequate, limiting K, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732015755837954,
+          43.55581092426534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-38",
+        "sample_id": "MAC-038",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 58.2,
+        "p_mg_kg": 37.7,
+        "k_mg_kg": 160.3,
+        "ca_mg_kg": 918.1,
+        "mg_mg_kg": 127.0,
+        "s_mg_kg": 23.5,
+        "limiting_nutrient": "K",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-038 adequate, limiting K, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735112222662745,
+          43.55872119571209
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-39",
+        "sample_id": "MAC-039",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 50.6,
+        "p_mg_kg": 40.9,
+        "k_mg_kg": 177.5,
+        "ca_mg_kg": 761.9,
+        "mg_mg_kg": 121.1,
+        "s_mg_kg": 28.3,
+        "limiting_nutrient": "N",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-039 adequate, limiting N, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729210687028857,
+          43.55819803098653
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-40",
+        "sample_id": "MAC-040",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 52.7,
+        "p_mg_kg": 32.7,
+        "k_mg_kg": 203.2,
+        "ca_mg_kg": 815.1,
+        "mg_mg_kg": 115.8,
+        "s_mg_kg": 22.5,
+        "limiting_nutrient": "N",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-040 adequate, limiting N, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731922371650622,
+          43.5595373135289
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-41",
+        "sample_id": "MAC-041",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 43.1,
+        "p_mg_kg": 33.6,
+        "k_mg_kg": 199.0,
+        "ca_mg_kg": 1027.5,
+        "mg_mg_kg": 130.8,
+        "s_mg_kg": 26.3,
+        "limiting_nutrient": "N",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-041 adequate, limiting N, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736646605207578,
+          43.550643784908495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-42",
+        "sample_id": "MAC-042",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "n_mg_kg": 53.9,
+        "p_mg_kg": 25.7,
+        "k_mg_kg": 166.4,
+        "ca_mg_kg": 1373.7,
+        "mg_mg_kg": 153.7,
+        "s_mg_kg": 20.8,
+        "limiting_nutrient": "P",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-042 adequate, limiting P, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7344897925816,
+          43.55264458839866
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-43",
+        "sample_id": "MAC-043",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "n_mg_kg": 50.5,
+        "p_mg_kg": 26.7,
+        "k_mg_kg": 191.6,
+        "ca_mg_kg": 1112.0,
+        "mg_mg_kg": 152.6,
+        "s_mg_kg": 25.8,
+        "limiting_nutrient": "N",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-043 adequate, limiting N, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7291292175546,
+          43.552922072525604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-44",
+        "sample_id": "MAC-044",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "n_mg_kg": 59.2,
+        "p_mg_kg": 22.6,
+        "k_mg_kg": 177.4,
+        "ca_mg_kg": 1252.5,
+        "mg_mg_kg": 159.9,
+        "s_mg_kg": 20.0,
+        "limiting_nutrient": "P",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-044 adequate, limiting P, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73325840256985,
+          43.554050068379674
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-45",
+        "sample_id": "MAC-045",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "n_mg_kg": 56.0,
+        "p_mg_kg": 28.9,
+        "k_mg_kg": 172.7,
+        "ca_mg_kg": 1013.5,
+        "mg_mg_kg": 178.6,
+        "s_mg_kg": 23.8,
+        "limiting_nutrient": "K",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-045 adequate, limiting K, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.728729599340625,
+          43.554162046845455
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-46",
+        "sample_id": "MAC-046",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "n_mg_kg": 56.5,
+        "p_mg_kg": 32.9,
+        "k_mg_kg": 160.5,
+        "ca_mg_kg": 1061.4,
+        "mg_mg_kg": 160.2,
+        "s_mg_kg": 25.9,
+        "limiting_nutrient": "K",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-046 adequate, limiting K, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735578157235307,
+          43.55587391926217
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-47",
+        "sample_id": "MAC-047",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "n_mg_kg": 50.0,
+        "p_mg_kg": 34.3,
+        "k_mg_kg": 178.8,
+        "ca_mg_kg": 1006.1,
+        "mg_mg_kg": 145.4,
+        "s_mg_kg": 27.7,
+        "limiting_nutrient": "N",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-047 adequate, limiting N, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736408687657006,
+          43.55703772818776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-48",
+        "sample_id": "MAC-048",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 43.9,
+        "p_mg_kg": 25.5,
+        "k_mg_kg": 121.8,
+        "ca_mg_kg": 693.6,
+        "mg_mg_kg": 109.0,
+        "s_mg_kg": 19.9,
+        "limiting_nutrient": "K",
+        "supply_class": "Watch",
+        "balance_score": 92.9,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-048 watch, limiting K, score 96.9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.739258005185181,
+          43.54966101848002
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-49",
+        "sample_id": "MAC-049",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 47.3,
+        "p_mg_kg": 21.3,
+        "k_mg_kg": 132.3,
+        "ca_mg_kg": 684.3,
+        "mg_mg_kg": 117.3,
+        "s_mg_kg": 15.6,
+        "limiting_nutrient": "K",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-049 adequate, limiting K, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.739304781170744,
+          43.551454625776444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-50",
+        "sample_id": "MAC-050",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 48.1,
+        "p_mg_kg": 18.8,
+        "k_mg_kg": 118.8,
+        "ca_mg_kg": 927.3,
+        "mg_mg_kg": 102.5,
+        "s_mg_kg": 14.7,
+        "limiting_nutrient": "P",
+        "supply_class": "Watch",
+        "balance_score": 88.7,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-050 watch, limiting P, score 92.7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737239714614498,
+          43.553350215131736
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-51",
+        "sample_id": "MAC-051",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 44.2,
+        "p_mg_kg": 20.6,
+        "k_mg_kg": 130.3,
+        "ca_mg_kg": 731.4,
+        "mg_mg_kg": 116.3,
+        "s_mg_kg": 16.2,
+        "limiting_nutrient": "P",
+        "supply_class": "Adequate",
+        "balance_score": 95.4,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-051 adequate, limiting P, score 99.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730714405643904,
+          43.55370159190584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-52",
+        "sample_id": "MAC-052",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 49.7,
+        "p_mg_kg": 15.1,
+        "k_mg_kg": 137.7,
+        "ca_mg_kg": 853.2,
+        "mg_mg_kg": 97.5,
+        "s_mg_kg": 15.3,
+        "limiting_nutrient": "P",
+        "supply_class": "Deficient",
+        "balance_score": 78.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-052 deficient, limiting P, score 82.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735397492132159,
+          43.55399655489092
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-53",
+        "sample_id": "MAC-053",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 48.9,
+        "p_mg_kg": 21.0,
+        "k_mg_kg": 109.4,
+        "ca_mg_kg": 910.3,
+        "mg_mg_kg": 110.6,
+        "s_mg_kg": 15.3,
+        "limiting_nutrient": "K",
+        "supply_class": "Watch",
+        "balance_score": 85.4,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-053 watch, limiting K, score 89.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729209082573472,
+          43.55514167818531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-54",
+        "sample_id": "MAC-054",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 50.5,
+        "p_mg_kg": 16.9,
+        "k_mg_kg": 132.8,
+        "ca_mg_kg": 725.0,
+        "mg_mg_kg": 117.9,
+        "s_mg_kg": 16.9,
+        "limiting_nutrient": "P",
+        "supply_class": "Watch",
+        "balance_score": 84.1,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-054 watch, limiting P, score 88.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733875016941436,
+          43.55707903573541
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-55",
+        "sample_id": "MAC-055",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 58.5,
+        "p_mg_kg": 15.2,
+        "k_mg_kg": 121.1,
+        "ca_mg_kg": 867.9,
+        "mg_mg_kg": 114.8,
+        "s_mg_kg": 13.5,
+        "limiting_nutrient": "P",
+        "supply_class": "Deficient",
+        "balance_score": 76.8,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-055 deficient, limiting P, score 80.8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.727266006344891,
+          43.55705241748966
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-56",
+        "sample_id": "MAC-056",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "n_mg_kg": 53.0,
+        "p_mg_kg": 22.6,
+        "k_mg_kg": 111.7,
+        "ca_mg_kg": 681.6,
+        "mg_mg_kg": 137.7,
+        "s_mg_kg": 15.3,
+        "limiting_nutrient": "K",
+        "supply_class": "Watch",
+        "balance_score": 87.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-056 watch, limiting K, score 91.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730748940176716,
+          43.55951023878187
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-57",
+        "sample_id": "MAC-057",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 32.7,
+        "p_mg_kg": 30.6,
+        "k_mg_kg": 159.0,
+        "ca_mg_kg": 677.9,
+        "mg_mg_kg": 95.6,
+        "s_mg_kg": 21.7,
+        "limiting_nutrient": "N",
+        "supply_class": "Watch",
+        "balance_score": 85.9,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-057 watch, limiting N, score 89.9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730849021576311,
+          43.54884611816177
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-58",
+        "sample_id": "MAC-058",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 33.0,
+        "p_mg_kg": 30.3,
+        "k_mg_kg": 158.7,
+        "ca_mg_kg": 657.0,
+        "mg_mg_kg": 103.5,
+        "s_mg_kg": 19.4,
+        "limiting_nutrient": "N",
+        "supply_class": "Watch",
+        "balance_score": 86.4,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-058 watch, limiting N, score 90.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730608497693017,
+          43.54901432689614
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-59",
+        "sample_id": "MAC-059",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 38.1,
+        "p_mg_kg": 27.0,
+        "k_mg_kg": 165.3,
+        "ca_mg_kg": 626.9,
+        "mg_mg_kg": 111.9,
+        "s_mg_kg": 16.4,
+        "limiting_nutrient": "N",
+        "supply_class": "Adequate",
+        "balance_score": 94.5,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-059 adequate, limiting N, score 98.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730317970301119,
+          43.549305115843346
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-60",
+        "sample_id": "MAC-060",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 43.5,
+        "p_mg_kg": 23.5,
+        "k_mg_kg": 162.4,
+        "ca_mg_kg": 717.1,
+        "mg_mg_kg": 107.6,
+        "s_mg_kg": 16.7,
+        "limiting_nutrient": "N",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-060 adequate, limiting N, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730930657408789,
+          43.55029182240434
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-61",
+        "sample_id": "MAC-061",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 51.0,
+        "p_mg_kg": 24.9,
+        "k_mg_kg": 125.8,
+        "ca_mg_kg": 955.6,
+        "mg_mg_kg": 101.6,
+        "s_mg_kg": 15.1,
+        "limiting_nutrient": "K",
+        "supply_class": "Adequate",
+        "balance_score": 94.5,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-061 adequate, limiting K, score 98.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735213520051306,
+          43.55132071107921
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-62",
+        "sample_id": "MAC-062",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 45.3,
+        "p_mg_kg": 27.0,
+        "k_mg_kg": 136.9,
+        "ca_mg_kg": 754.9,
+        "mg_mg_kg": 124.4,
+        "s_mg_kg": 13.0,
+        "limiting_nutrient": "S",
+        "supply_class": "Watch",
+        "balance_score": 89.6,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-062 watch, limiting S, score 93.6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730444059409928,
+          43.55142375961533
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-63",
+        "sample_id": "MAC-063",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 54.3,
+        "p_mg_kg": 24.0,
+        "k_mg_kg": 128.2,
+        "ca_mg_kg": 949.1,
+        "mg_mg_kg": 98.1,
+        "s_mg_kg": 16.6,
+        "limiting_nutrient": "K",
+        "supply_class": "Adequate",
+        "balance_score": 96.0,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-063 adequate, limiting K, score 100.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.728567690708074,
+          43.55171325099265
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_macronutrients-64",
+        "sample_id": "MAC-064",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "n_mg_kg": 52.6,
+        "p_mg_kg": 27.7,
+        "k_mg_kg": 120.9,
+        "ca_mg_kg": 889.0,
+        "mg_mg_kg": 108.3,
+        "s_mg_kg": 16.2,
+        "limiting_nutrient": "K",
+        "supply_class": "Watch",
+        "balance_score": 92.5,
+        "timestamp": "2026-02-06T12:00:00Z",
+        "layer_id": "soil_macronutrients",
+        "units": "mg/kg",
+        "summary": "MAC-064 watch, limiting K, score 96.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729556671982273,
+          43.55219510134686
+        ]
+      }
+    }
+  ]
+}

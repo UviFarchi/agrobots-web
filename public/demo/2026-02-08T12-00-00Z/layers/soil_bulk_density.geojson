@@ -1,0 +1,1605 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-1",
+        "sample_id": "BD-001",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.43,
+        "porosity_pct": 45.3,
+        "compaction_class": "High",
+        "rooting_risk": "Restricted",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-001 high compaction, bulk density 1.45 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735425672491921,
+          43.54797726336864
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-2",
+        "sample_id": "BD-002",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.47,
+        "porosity_pct": 43.8,
+        "compaction_class": "High",
+        "rooting_risk": "Restricted",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-002 high compaction, bulk density 1.49 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730717132748309,
+          43.54702062279408
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-3",
+        "sample_id": "BD-003",
+        "zone_name": "Corn",
+        "ecology": "Wet Meadow Delta",
+        "bd_g_cm3": 1.37,
+        "porosity_pct": 47.5,
+        "compaction_class": "High",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-003 high compaction, bulk density 1.39 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734919609269617,
+          43.548993692074355
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-4",
+        "sample_id": "BD-004",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.46,
+        "porosity_pct": 44.2,
+        "compaction_class": "High",
+        "rooting_risk": "Restricted",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-004 high compaction, bulk density 1.48 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737841955275467,
+          43.55117307217689
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-5",
+        "sample_id": "BD-005",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.49,
+        "porosity_pct": 43.0,
+        "compaction_class": "High",
+        "rooting_risk": "Restricted",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-005 high compaction, bulk density 1.51 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731998071250975,
+          43.550502961642636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-6",
+        "sample_id": "BD-006",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.39,
+        "porosity_pct": 46.8,
+        "compaction_class": "High",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-006 high compaction, bulk density 1.41 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737868074161366,
+          43.55219601579458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-7",
+        "sample_id": "BD-007",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.46,
+        "porosity_pct": 44.2,
+        "compaction_class": "High",
+        "rooting_risk": "Restricted",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-007 high compaction, bulk density 1.48 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731268450128152,
+          43.55298851560016
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-8",
+        "sample_id": "BD-008",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.34,
+        "porosity_pct": 48.7,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-008 moderate compaction, bulk density 1.36 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735804491301796,
+          43.554105134604086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-9",
+        "sample_id": "BD-009",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.42,
+        "porosity_pct": 45.7,
+        "compaction_class": "High",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-009 high compaction, bulk density 1.44 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732573450382464,
+          43.555753069570905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-10",
+        "sample_id": "BD-010",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.37,
+        "porosity_pct": 47.5,
+        "compaction_class": "High",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-010 high compaction, bulk density 1.39 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733808929551777,
+          43.556989590966474
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-11",
+        "sample_id": "BD-011",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.4,
+        "porosity_pct": 46.4,
+        "compaction_class": "High",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-011 high compaction, bulk density 1.42 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732566935665743,
+          43.547124257984855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-12",
+        "sample_id": "BD-012",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.35,
+        "porosity_pct": 48.3,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-012 moderate compaction, bulk density 1.37 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7366509088762125,
+          43.548844199971825
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-13",
+        "sample_id": "BD-013",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.36,
+        "porosity_pct": 47.9,
+        "compaction_class": "High",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-013 high compaction, bulk density 1.38 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737427561137538,
+          43.55055475589584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-14",
+        "sample_id": "BD-014",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.47,
+        "porosity_pct": 43.8,
+        "compaction_class": "High",
+        "rooting_risk": "Restricted",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-014 high compaction, bulk density 1.49 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733271248316291,
+          43.55011779147186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-15",
+        "sample_id": "BD-015",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.39,
+        "porosity_pct": 46.8,
+        "compaction_class": "High",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-015 high compaction, bulk density 1.41 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735376179637587,
+          43.55268934392115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-16",
+        "sample_id": "BD-016",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.47,
+        "porosity_pct": 43.8,
+        "compaction_class": "High",
+        "rooting_risk": "Restricted",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-016 high compaction, bulk density 1.49 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730464141224246,
+          43.55210392740328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-17",
+        "sample_id": "BD-017",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.31,
+        "porosity_pct": 49.8,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-017 moderate compaction, bulk density 1.33 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7362763196536575,
+          43.55451447786022
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-18",
+        "sample_id": "BD-018",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.34,
+        "porosity_pct": 48.7,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-018 moderate compaction, bulk density 1.36 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7298522660755085,
+          43.55502015632932
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-19",
+        "sample_id": "BD-019",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.35,
+        "porosity_pct": 48.3,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-019 moderate compaction, bulk density 1.37 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730162678348128,
+          43.55565454041501
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-20",
+        "sample_id": "BD-020",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.38,
+        "porosity_pct": 47.2,
+        "compaction_class": "High",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-020 high compaction, bulk density 1.4 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732006370426537,
+          43.55793755931689
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-21",
+        "sample_id": "BD-021",
+        "zone_name": "Cover Crop",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.34,
+        "porosity_pct": 48.7,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-021 moderate compaction, bulk density 1.36 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733549933000094,
+          43.54711922373097
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-22",
+        "sample_id": "BD-022",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.24,
+        "porosity_pct": 52.5,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-022 moderate compaction, bulk density 1.26 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.739545713542146,
+          43.54993118815669
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-23",
+        "sample_id": "BD-023",
+        "zone_name": "Cover Crop",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.31,
+        "porosity_pct": 49.8,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-023 moderate compaction, bulk density 1.33 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733174987178478,
+          43.54890199588199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-24",
+        "sample_id": "BD-024",
+        "zone_name": "Cover Crop",
+        "ecology": "Wet Meadow Delta",
+        "bd_g_cm3": 1.35,
+        "porosity_pct": 48.3,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-024 moderate compaction, bulk density 1.37 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734484116076841,
+          43.55095584580465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-25",
+        "sample_id": "BD-025",
+        "zone_name": "Cover Crop",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.38,
+        "porosity_pct": 47.2,
+        "compaction_class": "High",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-025 high compaction, bulk density 1.4 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732107325863492,
+          43.55210392740328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-26",
+        "sample_id": "BD-026",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.29,
+        "porosity_pct": 50.6,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-026 moderate compaction, bulk density 1.31 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737403067182644,
+          43.554014936461584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-27",
+        "sample_id": "BD-027",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.32,
+        "porosity_pct": 49.4,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-027 moderate compaction, bulk density 1.34 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729499811078383,
+          43.55382306337315
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-28",
+        "sample_id": "BD-028",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.32,
+        "porosity_pct": 49.4,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-028 moderate compaction, bulk density 1.34 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7323936387127175,
+          43.55643184918099
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-29",
+        "sample_id": "BD-029",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.23,
+        "porosity_pct": 52.8,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-029 moderate compaction, bulk density 1.25 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.738994490529163,
+          43.548573719213
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-30",
+        "sample_id": "BD-030",
+        "zone_name": "Pasture",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.24,
+        "porosity_pct": 52.5,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-030 moderate compaction, bulk density 1.26 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7316667710917715,
+          43.54793760024987
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-31",
+        "sample_id": "BD-031",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.37,
+        "porosity_pct": 47.5,
+        "compaction_class": "High",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-031 high compaction, bulk density 1.39 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7359528890243,
+          43.55008009467475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-32",
+        "sample_id": "BD-032",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.34,
+        "porosity_pct": 48.7,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-032 moderate compaction, bulk density 1.36 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.738296559494244,
+          43.551971289983236
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-33",
+        "sample_id": "BD-033",
+        "zone_name": "Pasture",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.24,
+        "porosity_pct": 52.5,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-033 moderate compaction, bulk density 1.26 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729579948102189,
+          43.55154486775044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-34",
+        "sample_id": "BD-034",
+        "zone_name": "Pasture",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.41,
+        "porosity_pct": 46.0,
+        "compaction_class": "High",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-034 high compaction, bulk density 1.43 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7348808041159325,
+          43.55333758429398
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-35",
+        "sample_id": "BD-035",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.45,
+        "porosity_pct": 44.5,
+        "compaction_class": "High",
+        "rooting_risk": "Restricted",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-035 high compaction, bulk density 1.47 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734886243603916,
+          43.55411459800506
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-36",
+        "sample_id": "BD-036",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.45,
+        "porosity_pct": 44.5,
+        "compaction_class": "High",
+        "rooting_risk": "Restricted",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-036 high compaction, bulk density 1.47 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737072574490081,
+          43.55650658324505
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-37",
+        "sample_id": "BD-037",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.34,
+        "porosity_pct": 48.7,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-037 moderate compaction, bulk density 1.36 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732030208718288,
+          43.55579789233176
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-38",
+        "sample_id": "BD-038",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.39,
+        "porosity_pct": 46.8,
+        "compaction_class": "High",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-038 high compaction, bulk density 1.41 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735095581988598,
+          43.558728840298684
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-39",
+        "sample_id": "BD-039",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.34,
+        "porosity_pct": 48.7,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-039 moderate compaction, bulk density 1.36 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7292185494001675,
+          43.55825557405891
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-40",
+        "sample_id": "BD-040",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.28,
+        "porosity_pct": 50.9,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-040 moderate compaction, bulk density 1.3 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731909098048481,
+          43.559549866562655
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-41",
+        "sample_id": "BD-041",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.02,
+        "porosity_pct": 60.8,
+        "compaction_class": "Low",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-041 low compaction, bulk density 1.04 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736677551288729,
+          43.550687303577426
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-42",
+        "sample_id": "BD-042",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "bd_g_cm3": 1.08,
+        "porosity_pct": 58.5,
+        "compaction_class": "Low",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-042 low compaction, bulk density 1.1 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734502464765835,
+          43.55263085999445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-43",
+        "sample_id": "BD-043",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "bd_g_cm3": 1.08,
+        "porosity_pct": 58.5,
+        "compaction_class": "Low",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-043 low compaction, bulk density 1.1 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.72912409598614,
+          43.55290128804318
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-44",
+        "sample_id": "BD-044",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "bd_g_cm3": 1.06,
+        "porosity_pct": 59.2,
+        "compaction_class": "Low",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-044 low compaction, bulk density 1.08 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733228568563676,
+          43.55403396911169
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-45",
+        "sample_id": "BD-045",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "bd_g_cm3": 1.09,
+        "porosity_pct": 58.1,
+        "compaction_class": "Low",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-045 low compaction, bulk density 1.11 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.728708390325563,
+          43.55417284633061
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-46",
+        "sample_id": "BD-046",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "bd_g_cm3": 1.14,
+        "porosity_pct": 56.2,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-046 moderate compaction, bulk density 1.16 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735541831002053,
+          43.555880152745765
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-47",
+        "sample_id": "BD-047",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "bd_g_cm3": 1.14,
+        "porosity_pct": 56.2,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-047 moderate compaction, bulk density 1.16 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736215287461606,
+          43.556906824685214
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-48",
+        "sample_id": "BD-048",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.06,
+        "porosity_pct": 59.2,
+        "compaction_class": "Low",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-048 low compaction, bulk density 1.08 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.739257796858215,
+          43.54968042764119
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-49",
+        "sample_id": "BD-049",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.02,
+        "porosity_pct": 60.8,
+        "compaction_class": "Low",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-049 low compaction, bulk density 1.04 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.739257420379531,
+          43.55143838038528
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-50",
+        "sample_id": "BD-050",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.02,
+        "porosity_pct": 60.8,
+        "compaction_class": "Low",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-050 low compaction, bulk density 1.04 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73727922060778,
+          43.55334193235639
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-51",
+        "sample_id": "BD-051",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.0,
+        "porosity_pct": 61.5,
+        "compaction_class": "Low",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-051 low compaction, bulk density 1.02 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730775172502651,
+          43.55372364619181
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-52",
+        "sample_id": "BD-052",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 0.93,
+        "porosity_pct": 64.2,
+        "compaction_class": "Low",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-052 low compaction, bulk density 0.95 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735372812456487,
+          43.55395352729666
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-53",
+        "sample_id": "BD-053",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 0.99,
+        "porosity_pct": 61.9,
+        "compaction_class": "Low",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-053 low compaction, bulk density 1.01 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729196705822004,
+          43.555151642250955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-54",
+        "sample_id": "BD-054",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.0,
+        "porosity_pct": 61.5,
+        "compaction_class": "Low",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-054 low compaction, bulk density 1.02 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73389004791138,
+          43.55700653850497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-55",
+        "sample_id": "BD-055",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.06,
+        "porosity_pct": 59.2,
+        "compaction_class": "Low",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-055 low compaction, bulk density 1.08 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.727179107153974,
+          43.556912972898914
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-56",
+        "sample_id": "BD-056",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "bd_g_cm3": 1.13,
+        "porosity_pct": 56.6,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-056 moderate compaction, bulk density 1.15 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730749678300766,
+          43.55950669003853
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-57",
+        "sample_id": "BD-057",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.15,
+        "porosity_pct": 55.8,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-057 moderate compaction, bulk density 1.17 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730872923193622,
+          43.5489067192335
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-58",
+        "sample_id": "BD-058",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.19,
+        "porosity_pct": 54.3,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-058 moderate compaction, bulk density 1.21 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7306229207370025,
+          43.54903197546264
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-59",
+        "sample_id": "BD-059",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.24,
+        "porosity_pct": 52.5,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-059 moderate compaction, bulk density 1.26 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730291327438445,
+          43.549302423346695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-60",
+        "sample_id": "BD-060",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.2,
+        "porosity_pct": 54.0,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-060 moderate compaction, bulk density 1.22 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73093192192246,
+          43.55029668643779
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-61",
+        "sample_id": "BD-061",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.29,
+        "porosity_pct": 50.6,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-061 moderate compaction, bulk density 1.31 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735204811338312,
+          43.551303098211854
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-62",
+        "sample_id": "BD-062",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.32,
+        "porosity_pct": 49.4,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-062 moderate compaction, bulk density 1.34 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730421655260995,
+          43.5513875026229
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-63",
+        "sample_id": "BD-063",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.29,
+        "porosity_pct": 50.6,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Low",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-063 moderate compaction, bulk density 1.31 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.728494686001635,
+          43.55166889940114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_bulk_density-64",
+        "sample_id": "BD-064",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "bd_g_cm3": 1.32,
+        "porosity_pct": 49.4,
+        "compaction_class": "Moderate",
+        "rooting_risk": "Watch",
+        "sampling_depth_cm": 20,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "soil_bulk_density",
+        "units": "g/cm³",
+        "summary": "BD-064 moderate compaction, bulk density 1.34 g/cm³"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729489229794597,
+          43.55219210012202
+        ]
+      }
+    }
+  ]
+}

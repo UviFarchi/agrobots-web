@@ -1,0 +1,1760 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-1",
+        "sample_id": "OM-001",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 3.3,
+        "om_class": "Moderate",
+        "dominant_pool": "Residue-derived humus",
+        "organic_input_type": "Crop residue",
+        "c_n_ratio": 9.9,
+        "humification_index": 0.43,
+        "stability_class": "Active",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-001 moderate OM 3.3%, residue-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735378123257579,
+          43.54787999558691
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-2",
+        "sample_id": "OM-002",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 3.3,
+        "om_class": "Moderate",
+        "dominant_pool": "Residue-derived humus",
+        "organic_input_type": "Digestate amendment",
+        "c_n_ratio": 11.0,
+        "humification_index": 0.42,
+        "stability_class": "Active",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-002 moderate OM 3.3%, residue-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7307855782188994,
+          43.54715296601983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-3",
+        "sample_id": "OM-003",
+        "zone_name": "Corn",
+        "ecology": "Wet Meadow Delta",
+        "om_pct": 3.0,
+        "om_class": "Moderate",
+        "dominant_pool": "Residue-derived humus",
+        "organic_input_type": "Crop residue",
+        "c_n_ratio": 10.0,
+        "humification_index": 0.51,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-003 moderate OM 3.0%, residue-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7349287799712005,
+          43.54907755742949
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-4",
+        "sample_id": "OM-004",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 3.5,
+        "om_class": "Moderate",
+        "dominant_pool": "Particulate organic matter",
+        "organic_input_type": "Digestate amendment",
+        "c_n_ratio": 10.2,
+        "humification_index": 0.48,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-004 moderate OM 3.5%, particulate organic matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737846446327504,
+          43.55116355793013
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-5",
+        "sample_id": "OM-005",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 3.5,
+        "om_class": "Moderate",
+        "dominant_pool": "Particulate organic matter",
+        "organic_input_type": "Crop residue",
+        "c_n_ratio": 11.0,
+        "humification_index": 0.49,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-005 moderate OM 3.5%, particulate organic matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731998071250975,
+          43.550502961642636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-6",
+        "sample_id": "OM-006",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 3.0,
+        "om_class": "Moderate",
+        "dominant_pool": "Particulate organic matter",
+        "organic_input_type": "Digestate amendment",
+        "c_n_ratio": 10.3,
+        "humification_index": 0.5,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-006 moderate OM 3.0%, particulate organic matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737825053680302,
+          43.55219489223706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-7",
+        "sample_id": "OM-007",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 3.0,
+        "om_class": "Moderate",
+        "dominant_pool": "Residue-derived humus",
+        "organic_input_type": "Crop residue",
+        "c_n_ratio": 11.5,
+        "humification_index": 0.47,
+        "stability_class": "Active",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-007 moderate OM 3.0%, residue-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731376825148845,
+          43.55314034737776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-8",
+        "sample_id": "OM-008",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 2.7,
+        "om_class": "Moderate",
+        "dominant_pool": "Particulate organic matter",
+        "organic_input_type": "Digestate amendment",
+        "c_n_ratio": 9.8,
+        "humification_index": 0.56,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-008 moderate OM 2.7%, particulate organic matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7359160141902175,
+          43.554176862840386
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-9",
+        "sample_id": "OM-009",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 2.9,
+        "om_class": "Moderate",
+        "dominant_pool": "Residue-derived humus",
+        "organic_input_type": "Crop residue",
+        "c_n_ratio": 10.5,
+        "humification_index": 0.51,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-009 moderate OM 2.9%, residue-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732650331358941,
+          43.55572257134513
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-10",
+        "sample_id": "OM-010",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 2.7,
+        "om_class": "Moderate",
+        "dominant_pool": "Residue-derived humus",
+        "organic_input_type": "Digestate amendment",
+        "c_n_ratio": 10.1,
+        "humification_index": 0.52,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-010 moderate OM 2.7%, residue-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73381552240245,
+          43.55690217369827
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-11",
+        "sample_id": "OM-011",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 2.8,
+        "om_class": "Moderate",
+        "dominant_pool": "Residue-derived humus",
+        "organic_input_type": "Straw incorporation",
+        "c_n_ratio": 10.2,
+        "humification_index": 0.4,
+        "stability_class": "Active",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-011 moderate OM 2.8%, residue-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732613422614233,
+          43.54725112337214
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-12",
+        "sample_id": "OM-012",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 2.8,
+        "om_class": "Moderate",
+        "dominant_pool": "Residue-derived humus",
+        "organic_input_type": "Crop residue",
+        "c_n_ratio": 9.1,
+        "humification_index": 0.48,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-012 moderate OM 2.8%, residue-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7365406057528245,
+          43.548732667682
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-13",
+        "sample_id": "OM-013",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 2.8,
+        "om_class": "Moderate",
+        "dominant_pool": "Particulate organic matter",
+        "organic_input_type": "Straw incorporation",
+        "c_n_ratio": 9.7,
+        "humification_index": 0.46,
+        "stability_class": "Active",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-013 moderate OM 2.8%, particulate organic matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737370789293268,
+          43.5505804162698
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-14",
+        "sample_id": "OM-014",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 3.3,
+        "om_class": "Moderate",
+        "dominant_pool": "Particulate organic matter",
+        "organic_input_type": "Crop residue",
+        "c_n_ratio": 10.0,
+        "humification_index": 0.43,
+        "stability_class": "Active",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-014 moderate OM 3.3%, particulate organic matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733271248316291,
+          43.55011779147186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-15",
+        "sample_id": "OM-015",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 2.8,
+        "om_class": "Moderate",
+        "dominant_pool": "Particulate organic matter",
+        "organic_input_type": "Straw incorporation",
+        "c_n_ratio": 10.3,
+        "humification_index": 0.51,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-015 moderate OM 2.8%, particulate organic matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735428950834221,
+          43.55263122655293
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-16",
+        "sample_id": "OM-016",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 3.3,
+        "om_class": "Moderate",
+        "dominant_pool": "Particulate organic matter",
+        "organic_input_type": "Crop residue",
+        "c_n_ratio": 9.3,
+        "humification_index": 0.44,
+        "stability_class": "Active",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-016 moderate OM 3.3%, particulate organic matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730268912054844,
+          43.55197990031692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-17",
+        "sample_id": "OM-017",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 2.4,
+        "om_class": "Low",
+        "dominant_pool": "Residue-derived humus",
+        "organic_input_type": "Straw incorporation",
+        "c_n_ratio": 10.6,
+        "humification_index": 0.52,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-017 low OM 2.4%, residue-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736247869187849,
+          43.5544184617578
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-18",
+        "sample_id": "OM-018",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 2.5,
+        "om_class": "Moderate",
+        "dominant_pool": "Residue-derived humus",
+        "organic_input_type": "Crop residue",
+        "c_n_ratio": 10.2,
+        "humification_index": 0.47,
+        "stability_class": "Active",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-018 moderate OM 2.5%, residue-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729796127075313,
+          43.55497104116869
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-19",
+        "sample_id": "OM-019",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 2.6,
+        "om_class": "Moderate",
+        "dominant_pool": "Particulate organic matter",
+        "organic_input_type": "Straw incorporation",
+        "c_n_ratio": 10.0,
+        "humification_index": 0.47,
+        "stability_class": "Active",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-019 moderate OM 2.6%, particulate organic matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730148401632637,
+          43.55567892768232
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-20",
+        "sample_id": "OM-020",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 2.7,
+        "om_class": "Moderate",
+        "dominant_pool": "Residue-derived humus",
+        "organic_input_type": "Crop residue",
+        "c_n_ratio": 9.7,
+        "humification_index": 0.46,
+        "stability_class": "Active",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-020 moderate OM 2.7%, residue-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732017024097013,
+          43.55801735184889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-21",
+        "sample_id": "OM-021",
+        "zone_name": "Cover Crop",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 4.2,
+        "om_class": "High",
+        "dominant_pool": "Active root-derived humus",
+        "organic_input_type": "Cover crop biomass",
+        "c_n_ratio": 10.3,
+        "humification_index": 0.53,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-021 high OM 4.2%, active root-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733629340269207,
+          43.54724644535079
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-22",
+        "sample_id": "OM-022",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 3.6,
+        "om_class": "Moderate",
+        "dominant_pool": "Particulate organic matter",
+        "organic_input_type": "Green manure",
+        "c_n_ratio": 10.8,
+        "humification_index": 0.53,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-022 moderate OM 3.6%, particulate organic matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.739545713542146,
+          43.54993118815669
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-23",
+        "sample_id": "OM-023",
+        "zone_name": "Cover Crop",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 4.1,
+        "om_class": "High",
+        "dominant_pool": "Particulate organic matter",
+        "organic_input_type": "Cover crop biomass",
+        "c_n_ratio": 10.4,
+        "humification_index": 0.49,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-023 high OM 4.1%, particulate organic matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733174987178478,
+          43.54890199588199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-24",
+        "sample_id": "OM-024",
+        "zone_name": "Cover Crop",
+        "ecology": "Wet Meadow Delta",
+        "om_pct": 4.3,
+        "om_class": "High",
+        "dominant_pool": "Active root-derived humus",
+        "organic_input_type": "Green manure",
+        "c_n_ratio": 11.3,
+        "humification_index": 0.42,
+        "stability_class": "Active",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-024 high OM 4.3%, active root-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734489536533022,
+          43.551071732479784
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-25",
+        "sample_id": "OM-025",
+        "zone_name": "Cover Crop",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 4.6,
+        "om_class": "High",
+        "dominant_pool": "Particulate organic matter",
+        "organic_input_type": "Cover crop biomass",
+        "c_n_ratio": 10.3,
+        "humification_index": 0.53,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-025 high OM 4.6%, particulate organic matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731905503533184,
+          43.55204739350923
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-26",
+        "sample_id": "OM-026",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 3.6,
+        "om_class": "Moderate",
+        "dominant_pool": "Particulate organic matter",
+        "organic_input_type": "Green manure",
+        "c_n_ratio": 12.4,
+        "humification_index": 0.49,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-026 moderate OM 3.6%, particulate organic matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737403067182644,
+          43.554014936461584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-27",
+        "sample_id": "OM-027",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 4.0,
+        "om_class": "High",
+        "dominant_pool": "Particulate organic matter",
+        "organic_input_type": "Cover crop biomass",
+        "c_n_ratio": 11.3,
+        "humification_index": 0.57,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-027 high OM 4.0%, particulate organic matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729562916369706,
+          43.55375369128146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-28",
+        "sample_id": "OM-028",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 4.0,
+        "om_class": "High",
+        "dominant_pool": "Active root-derived humus",
+        "organic_input_type": "Green manure",
+        "c_n_ratio": 10.7,
+        "humification_index": 0.61,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-028 high OM 4.0%, active root-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732422709723205,
+          43.55651779046981
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-29",
+        "sample_id": "OM-029",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 3.9,
+        "om_class": "Moderate",
+        "dominant_pool": "Stable humus pool",
+        "organic_input_type": "Pasture manure",
+        "c_n_ratio": 13.2,
+        "humification_index": 0.67,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-029 moderate OM 3.9%, stable humus pool"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7388737441317765,
+          43.54861771652686
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-30",
+        "sample_id": "OM-030",
+        "zone_name": "Pasture",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 4.1,
+        "om_class": "High",
+        "dominant_pool": "Root-derived humus",
+        "organic_input_type": "Perennial root turnover",
+        "c_n_ratio": 12.9,
+        "humification_index": 0.67,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-030 high OM 4.1%, root-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731604659534578,
+          43.547820907763395
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-31",
+        "sample_id": "OM-031",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 5.4,
+        "om_class": "High",
+        "dominant_pool": "Root-derived humus",
+        "organic_input_type": "Pasture manure",
+        "c_n_ratio": 11.9,
+        "humification_index": 0.63,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-031 high OM 5.4%, root-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735984963958089,
+          43.55015512698587
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-32",
+        "sample_id": "OM-032",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 5.0,
+        "om_class": "High",
+        "dominant_pool": "Root-derived humus",
+        "organic_input_type": "Perennial root turnover",
+        "c_n_ratio": 12.0,
+        "humification_index": 0.64,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-032 high OM 5.0%, root-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.738304366935422,
+          43.55203003681943
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-33",
+        "sample_id": "OM-033",
+        "zone_name": "Pasture",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 4.1,
+        "om_class": "High",
+        "dominant_pool": "Root-derived humus",
+        "organic_input_type": "Pasture manure",
+        "c_n_ratio": 13.0,
+        "humification_index": 0.61,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-033 high OM 4.1%, root-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729642548904623,
+          43.55170368596312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-34",
+        "sample_id": "OM-034",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 5.9,
+        "om_class": "High",
+        "dominant_pool": "Root-derived humus",
+        "organic_input_type": "Perennial root turnover",
+        "c_n_ratio": 10.7,
+        "humification_index": 0.62,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-034 high OM 5.9%, root-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734878214545213,
+          43.5534514113761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-35",
+        "sample_id": "OM-035",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 6.3,
+        "om_class": "Very High",
+        "dominant_pool": "Stable humus pool",
+        "organic_input_type": "Pasture manure",
+        "c_n_ratio": 10.7,
+        "humification_index": 0.61,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-035 very high OM 6.3%, stable humus pool"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735014281917364,
+          43.554331666135894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-36",
+        "sample_id": "OM-036",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 6.2,
+        "om_class": "Very High",
+        "dominant_pool": "Stable humus pool",
+        "organic_input_type": "Perennial root turnover",
+        "c_n_ratio": 12.0,
+        "humification_index": 0.54,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-036 very high OM 6.2%, stable humus pool"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737072574490081,
+          43.55650658324505
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-37",
+        "sample_id": "OM-037",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 5.1,
+        "om_class": "High",
+        "dominant_pool": "Stable humus pool",
+        "organic_input_type": "Pasture manure",
+        "c_n_ratio": 11.8,
+        "humification_index": 0.64,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-037 high OM 5.1%, stable humus pool"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731992441280278,
+          43.55581814603623
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-38",
+        "sample_id": "OM-038",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 5.5,
+        "om_class": "High",
+        "dominant_pool": "Root-derived humus",
+        "organic_input_type": "Perennial root turnover",
+        "c_n_ratio": 12.0,
+        "humification_index": 0.59,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-038 high OM 5.5%, root-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735159968964274,
+          43.558692196945586
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-39",
+        "sample_id": "OM-039",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 4.9,
+        "om_class": "High",
+        "dominant_pool": "Root-derived humus",
+        "organic_input_type": "Pasture manure",
+        "c_n_ratio": 13.2,
+        "humification_index": 0.53,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-039 high OM 4.9%, root-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.72920487443647,
+          43.55808969439664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-40",
+        "sample_id": "OM-040",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 4.4,
+        "om_class": "High",
+        "dominant_pool": "Root-derived humus",
+        "organic_input_type": "Perennial root turnover",
+        "c_n_ratio": 13.9,
+        "humification_index": 0.57,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-040 high OM 4.4%, root-derived humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7319573784075954,
+          43.559545233461975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-41",
+        "sample_id": "OM-041",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "om_pct": 5.7,
+        "om_class": "High",
+        "dominant_pool": "Hydromorphic detrital matter",
+        "organic_input_type": "Alluvial detritus",
+        "c_n_ratio": 15.3,
+        "humification_index": 0.62,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-041 high OM 5.7%, hydromorphic detrital matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7365774642014875,
+          43.55054076427195
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-42",
+        "sample_id": "OM-042",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "om_pct": 6.4,
+        "om_class": "Very High",
+        "dominant_pool": "Hydromorphic detrital matter",
+        "organic_input_type": "Riparian litter",
+        "c_n_ratio": 12.5,
+        "humification_index": 0.74,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-042 very high OM 6.4%, hydromorphic detrital matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734469109881627,
+          43.55265296325901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-43",
+        "sample_id": "OM-043",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "om_pct": 6.3,
+        "om_class": "Very High",
+        "dominant_pool": "Stable humus pool",
+        "organic_input_type": "Alluvial detritus",
+        "c_n_ratio": 13.9,
+        "humification_index": 0.66,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-043 very high OM 6.3%, stable humus pool"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729111653774304,
+          43.55295537982464
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-44",
+        "sample_id": "OM-044",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 6.3,
+        "om_class": "Very High",
+        "dominant_pool": "Hydromorphic detrital matter",
+        "organic_input_type": "Riparian litter",
+        "c_n_ratio": 13.3,
+        "humification_index": 0.7,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-044 very high OM 6.3%, hydromorphic detrital matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733355927223688,
+          43.554097282745545
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-45",
+        "sample_id": "OM-045",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "om_pct": 6.4,
+        "om_class": "Very High",
+        "dominant_pool": "Hydromorphic detrital matter",
+        "organic_input_type": "Alluvial detritus",
+        "c_n_ratio": 13.8,
+        "humification_index": 0.61,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-045 very high OM 6.4%, hydromorphic detrital matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.728785986476526,
+          43.5541472380283
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-46",
+        "sample_id": "OM-046",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "om_pct": 7.0,
+        "om_class": "Very High",
+        "dominant_pool": "Stable humus pool",
+        "organic_input_type": "Riparian litter",
+        "c_n_ratio": 13.1,
+        "humification_index": 0.63,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-046 very high OM 7.0%, stable humus pool"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735666117427234,
+          43.55585635653637
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-47",
+        "sample_id": "OM-047",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "om_pct": 6.9,
+        "om_class": "Very High",
+        "dominant_pool": "Stable humus pool",
+        "organic_input_type": "Alluvial detritus",
+        "c_n_ratio": 13.6,
+        "humification_index": 0.62,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-047 very high OM 6.9%, stable humus pool"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736385165517555,
+          43.55693897730648
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-48",
+        "sample_id": "OM-048",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 7.6,
+        "om_class": "Very High",
+        "dominant_pool": "Forest humus",
+        "organic_input_type": "Woody root turnover",
+        "c_n_ratio": 15.2,
+        "humification_index": 0.65,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-048 very high OM 7.6%, forest humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.739236000056236,
+          43.54960069442022
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-49",
+        "sample_id": "OM-049",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 7.1,
+        "om_class": "Very High",
+        "dominant_pool": "Stable humus pool",
+        "organic_input_type": "Forest litter",
+        "c_n_ratio": 16.4,
+        "humification_index": 0.64,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-049 very high OM 7.1%, stable humus pool"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73932514687382,
+          43.55146667392495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-50",
+        "sample_id": "OM-050",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 7.2,
+        "om_class": "Very High",
+        "dominant_pool": "Forest humus",
+        "organic_input_type": "Woody root turnover",
+        "c_n_ratio": 14.3,
+        "humification_index": 0.78,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-050 very high OM 7.2%, forest humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737204080996,
+          43.55334166516241
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-51",
+        "sample_id": "OM-051",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 5.7,
+        "om_class": "High",
+        "dominant_pool": "Stable humus pool",
+        "organic_input_type": "Forest litter",
+        "c_n_ratio": 16.0,
+        "humification_index": 0.71,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-051 high OM 5.7%, stable humus pool"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732261374423421,
+          43.55349705558244
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-52",
+        "sample_id": "OM-052",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 7.2,
+        "om_class": "Very High",
+        "dominant_pool": "Stable humus pool",
+        "organic_input_type": "Woody root turnover",
+        "c_n_ratio": 15.3,
+        "humification_index": 0.75,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-052 very high OM 7.2%, stable humus pool"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737067951838639,
+          43.554697931745324
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-53",
+        "sample_id": "OM-053",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 6.7,
+        "om_class": "Very High",
+        "dominant_pool": "Forest humus",
+        "organic_input_type": "Forest litter",
+        "c_n_ratio": 16.3,
+        "humification_index": 0.66,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-053 very high OM 6.7%, forest humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7321714091637395,
+          43.555154530382794
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-54",
+        "sample_id": "OM-054",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 6.7,
+        "om_class": "Very High",
+        "dominant_pool": "Stable humus pool",
+        "organic_input_type": "Woody root turnover",
+        "c_n_ratio": 13.9,
+        "humification_index": 0.81,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-054 very high OM 6.7%, stable humus pool"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73673944048419,
+          43.556670614066185
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-55",
+        "sample_id": "OM-055",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 6.5,
+        "om_class": "Very High",
+        "dominant_pool": "Stable humus pool",
+        "organic_input_type": "Forest litter",
+        "c_n_ratio": 15.2,
+        "humification_index": 0.7,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-055 very high OM 6.5%, stable humus pool"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732208725096761,
+          43.55703125105129
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-56",
+        "sample_id": "OM-056",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 6.9,
+        "om_class": "Very High",
+        "dominant_pool": "Forest humus",
+        "organic_input_type": "Woody root turnover",
+        "c_n_ratio": 15.8,
+        "humification_index": 0.68,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-056 very high OM 6.9%, forest humus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735127166093324,
+          43.55914285977942
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-57",
+        "sample_id": "OM-057",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "om_pct": 8.5,
+        "om_class": "Very High",
+        "dominant_pool": "Stable humus pool",
+        "organic_input_type": "Forest litter",
+        "c_n_ratio": 14.1,
+        "humification_index": 0.66,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-057 very high OM 8.5%, stable humus pool"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7307252115964795,
+          43.55947460546477
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-58",
+        "sample_id": "OM-058",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 3.1,
+        "om_class": "Moderate",
+        "dominant_pool": "Mixed mineral-associated OM",
+        "organic_input_type": "Grass litter",
+        "c_n_ratio": 11.5,
+        "humification_index": 0.48,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-058 moderate OM 3.1%, mixed mineral-associated om"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730823521865876,
+          43.54877369341523
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-59",
+        "sample_id": "OM-059",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 3.5,
+        "om_class": "Moderate",
+        "dominant_pool": "Particulate organic matter",
+        "organic_input_type": "Mixed field residues",
+        "c_n_ratio": 11.5,
+        "humification_index": 0.46,
+        "stability_class": "Active",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-059 moderate OM 3.5%, particulate organic matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730563051254207,
+          43.54896404237307
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-60",
+        "sample_id": "OM-060",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 3.7,
+        "om_class": "Moderate",
+        "dominant_pool": "Mixed mineral-associated OM",
+        "organic_input_type": "Grass litter",
+        "c_n_ratio": 11.9,
+        "humification_index": 0.46,
+        "stability_class": "Active",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-060 moderate OM 3.7%, mixed mineral-associated om"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730330725162502,
+          43.549313420699086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-61",
+        "sample_id": "OM-061",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 3.2,
+        "om_class": "Moderate",
+        "dominant_pool": "Particulate organic matter",
+        "organic_input_type": "Mixed field residues",
+        "c_n_ratio": 11.7,
+        "humification_index": 0.53,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-061 moderate OM 3.2%, particulate organic matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73092519570723,
+          43.55030275838045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-62",
+        "sample_id": "OM-062",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 3.9,
+        "om_class": "Moderate",
+        "dominant_pool": "Mixed mineral-associated OM",
+        "organic_input_type": "Grass litter",
+        "c_n_ratio": 9.9,
+        "humification_index": 0.62,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-062 moderate OM 3.9%, mixed mineral-associated om"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73524844125172,
+          43.55133457547575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-63",
+        "sample_id": "OM-063",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 4.2,
+        "om_class": "High",
+        "dominant_pool": "Particulate organic matter",
+        "organic_input_type": "Mixed field residues",
+        "c_n_ratio": 10.5,
+        "humification_index": 0.54,
+        "stability_class": "Balanced",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-063 high OM 4.2%, particulate organic matter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730448412840112,
+          43.55144902307719
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-64",
+        "sample_id": "OM-064",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 3.9,
+        "om_class": "Moderate",
+        "dominant_pool": "Mixed mineral-associated OM",
+        "organic_input_type": "Grass litter",
+        "c_n_ratio": 9.9,
+        "humification_index": 0.63,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-064 moderate OM 3.9%, mixed mineral-associated om"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.728674421202947,
+          43.551781880790756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_organic_matter-65",
+        "sample_id": "OM-065",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "om_pct": 4.1,
+        "om_class": "High",
+        "dominant_pool": "Mixed mineral-associated OM",
+        "organic_input_type": "Mixed field residues",
+        "c_n_ratio": 9.5,
+        "humification_index": 0.62,
+        "stability_class": "Stable",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "soil_organic_matter",
+        "units": "%",
+        "summary": "OM-065 high OM 4.1%, mixed mineral-associated om"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729642951679066,
+          43.55220116296267
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "source": "https://s3.amazonaws.com/elevation-tiles-prod/geotiff/12/1971/1496.tif",
+  "tile": {
+    "z": 12,
+    "x": 1971,
+    "y": 1496
+  },
+  "projection": "EPSG:3857",
+  "bbox": {
+    "west": -6.767578125,
+    "south": 43.51668853502907,
+    "east": -6.6796875,
+    "north": 43.58039085560785
+  },
+  "pixel_size_m": 27.7,
+  "notes": "Web Mercator elevation tile from elevation-tiles-prod covering the Coana sample polygon (Asturias, Spain)."
+}

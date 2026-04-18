@@ -1,0 +1,141 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "groundwater_wtd-1",
+        "depth_m": 2.02,
+        "timestamp": "2026-02-07",
+        "layer_id": "groundwater_wtd",
+        "units": "m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731226164875044,
+          43.556240681453566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "groundwater_wtd-2",
+        "depth_m": 2.44,
+        "timestamp": "2026-02-07",
+        "layer_id": "groundwater_wtd",
+        "units": "m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730048594286211,
+          43.556853697281944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "groundwater_wtd-3",
+        "depth_m": 1.41,
+        "timestamp": "2026-02-07",
+        "layer_id": "groundwater_wtd",
+        "units": "m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731090366817694,
+          43.551246336216416
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "groundwater_wtd-4",
+        "depth_m": 0.49,
+        "timestamp": "2026-02-07",
+        "layer_id": "groundwater_wtd",
+        "units": "m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732022903398346,
+          43.558025255650435
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "groundwater_wtd-5",
+        "depth_m": 1.66,
+        "timestamp": "2026-02-07",
+        "layer_id": "groundwater_wtd",
+        "units": "m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737664673920599,
+          43.54841625963221
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "groundwater_wtd-6",
+        "depth_m": 2.64,
+        "timestamp": "2026-02-07",
+        "layer_id": "groundwater_wtd",
+        "units": "m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.726548988545029,
+          43.55479919126353
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "groundwater_wtd-7",
+        "depth_m": 2.36,
+        "timestamp": "2026-02-07",
+        "layer_id": "groundwater_wtd",
+        "units": "m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.728599351106863,
+          43.55401464529566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "groundwater_wtd-8",
+        "depth_m": 0.56,
+        "timestamp": "2026-02-07",
+        "layer_id": "groundwater_wtd",
+        "units": "m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729690604692056,
+          43.55172314176041
+        ]
+      }
+    }
+  ]
+}

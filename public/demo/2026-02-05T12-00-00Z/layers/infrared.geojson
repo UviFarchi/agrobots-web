@@ -1,0 +1,175 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "infrared-1",
+        "ndvi": 0.35,
+        "timestamp": "2026-02-05",
+        "layer_id": "infrared",
+        "units": "NDVI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734201738754032,
+          43.55072998217323
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "infrared-2",
+        "ndvi": 0.46,
+        "timestamp": "2026-02-05",
+        "layer_id": "infrared",
+        "units": "NDVI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729347575250325,
+          43.55650039354806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "infrared-3",
+        "ndvi": 0.53,
+        "timestamp": "2026-02-05",
+        "layer_id": "infrared",
+        "units": "NDVI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729765027416598,
+          43.55513264117139
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "infrared-4",
+        "ndvi": 0.6,
+        "timestamp": "2026-02-05",
+        "layer_id": "infrared",
+        "units": "NDVI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732497553528191,
+          43.55966200702942
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "infrared-5",
+        "ndvi": 0.42,
+        "timestamp": "2026-02-05",
+        "layer_id": "infrared",
+        "units": "NDVI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73444194975979,
+          43.556237004787995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "infrared-6",
+        "ndvi": 0.75,
+        "timestamp": "2026-02-05",
+        "layer_id": "infrared",
+        "units": "NDVI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729830203860498,
+          43.55161860212463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "infrared-7",
+        "ndvi": 0.69,
+        "timestamp": "2026-02-05",
+        "layer_id": "infrared",
+        "units": "NDVI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733688763740549,
+          43.55118642781167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "infrared-8",
+        "ndvi": 0.72,
+        "timestamp": "2026-02-05",
+        "layer_id": "infrared",
+        "units": "NDVI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737420393816548,
+          43.551555787964865
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "infrared-9",
+        "ndvi": 0.77,
+        "timestamp": "2026-02-05",
+        "layer_id": "infrared",
+        "units": "NDVI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731158230996304,
+          43.552699140607274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "infrared-10",
+        "ndvi": 0.4,
+        "timestamp": "2026-02-05",
+        "layer_id": "infrared",
+        "units": "NDVI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732628488612903,
+          43.56133729154886
+        ]
+      }
+    }
+  ]
+}

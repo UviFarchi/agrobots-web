@@ -1,0 +1,175 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cloud_cover-1",
+        "value": 62.0,
+        "timestamp": "2026-02-10",
+        "layer_id": "cloud_cover",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734207853989044,
+          43.549691243271745
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cloud_cover-2",
+        "value": 45.0,
+        "timestamp": "2026-02-10",
+        "layer_id": "cloud_cover",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729922853056102,
+          43.549520786173
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cloud_cover-3",
+        "value": 54.0,
+        "timestamp": "2026-02-10",
+        "layer_id": "cloud_cover",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.726218530818542,
+          43.55670475170974
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cloud_cover-4",
+        "value": 39.0,
+        "timestamp": "2026-02-10",
+        "layer_id": "cloud_cover",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732888833270923,
+          43.54823766226575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cloud_cover-5",
+        "value": 39.0,
+        "timestamp": "2026-02-10",
+        "layer_id": "cloud_cover",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735395786458808,
+          43.555719047670365
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cloud_cover-6",
+        "value": 89.0,
+        "timestamp": "2026-02-10",
+        "layer_id": "cloud_cover",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731303192155881,
+          43.549965706091584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cloud_cover-7",
+        "value": 38.0,
+        "timestamp": "2026-02-10",
+        "layer_id": "cloud_cover",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736793623726068,
+          43.557010531697834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cloud_cover-8",
+        "value": 80.0,
+        "timestamp": "2026-02-10",
+        "layer_id": "cloud_cover",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73214205244577,
+          43.553867727812715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cloud_cover-9",
+        "value": 76.0,
+        "timestamp": "2026-02-10",
+        "layer_id": "cloud_cover",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734201698941512,
+          43.55377733155
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cloud_cover-10",
+        "value": 55.0,
+        "timestamp": "2026-02-10",
+        "layer_id": "cloud_cover",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736644850698849,
+          43.54934560601879
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_pressure-1",
+        "value": 988.6,
+        "timestamp": "2026-02-04",
+        "layer_id": "air_pressure",
+        "units": "hPa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7305963549220245,
+          43.554897137655644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_pressure-2",
+        "value": 993.6,
+        "timestamp": "2026-02-04",
+        "layer_id": "air_pressure",
+        "units": "hPa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731165493034774,
+          43.548086338625474
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_pressure-3",
+        "value": 1008.6,
+        "timestamp": "2026-02-04",
+        "layer_id": "air_pressure",
+        "units": "hPa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733780660469851,
+          43.561570692940194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_pressure-4",
+        "value": 985.6,
+        "timestamp": "2026-02-04",
+        "layer_id": "air_pressure",
+        "units": "hPa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736439077819928,
+          43.55431463879345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_pressure-5",
+        "value": 999.6,
+        "timestamp": "2026-02-04",
+        "layer_id": "air_pressure",
+        "units": "hPa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73594945185556,
+          43.5565297891616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_pressure-6",
+        "value": 997.6,
+        "timestamp": "2026-02-04",
+        "layer_id": "air_pressure",
+        "units": "hPa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732584306615113,
+          43.55876596984718
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_pressure-7",
+        "value": 995.6,
+        "timestamp": "2026-02-04",
+        "layer_id": "air_pressure",
+        "units": "hPa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729421388331052,
+          43.54835592990718
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_pressure-8",
+        "value": 1008.6,
+        "timestamp": "2026-02-04",
+        "layer_id": "air_pressure",
+        "units": "hPa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732438706014635,
+          43.55054389239661
+        ]
+      }
+    }
+  ]
+}

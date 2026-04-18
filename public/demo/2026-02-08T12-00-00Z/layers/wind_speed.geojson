@@ -1,0 +1,175 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "wind_speed-1",
+        "value": 2.6,
+        "timestamp": "2026-02-08",
+        "layer_id": "wind_speed",
+        "units": "m/s"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734225400823492,
+          43.55075983891502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "wind_speed-2",
+        "value": 7.2,
+        "timestamp": "2026-02-08",
+        "layer_id": "wind_speed",
+        "units": "m/s"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.727222536249084,
+          43.553394798024165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "wind_speed-3",
+        "value": 8.3,
+        "timestamp": "2026-02-08",
+        "layer_id": "wind_speed",
+        "units": "m/s"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732431419129767,
+          43.54711032835552
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "wind_speed-4",
+        "value": 1.1,
+        "timestamp": "2026-02-08",
+        "layer_id": "wind_speed",
+        "units": "m/s"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737132427610659,
+          43.552720944291075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "wind_speed-5",
+        "value": 8.0,
+        "timestamp": "2026-02-08",
+        "layer_id": "wind_speed",
+        "units": "m/s"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733762717520326,
+          43.55307263153664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "wind_speed-6",
+        "value": 3.0,
+        "timestamp": "2026-02-08",
+        "layer_id": "wind_speed",
+        "units": "m/s"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730083792717087,
+          43.54877867069216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "wind_speed-7",
+        "value": 4.8,
+        "timestamp": "2026-02-08",
+        "layer_id": "wind_speed",
+        "units": "m/s"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.726587820018324,
+          43.55557290466935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "wind_speed-8",
+        "value": 7.2,
+        "timestamp": "2026-02-08",
+        "layer_id": "wind_speed",
+        "units": "m/s"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73195860195646,
+          43.55435088897879
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "wind_speed-9",
+        "value": 5.2,
+        "timestamp": "2026-02-08",
+        "layer_id": "wind_speed",
+        "units": "m/s"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.738998928582373,
+          43.549275420520985
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "wind_speed-10",
+        "value": 1.6,
+        "timestamp": "2026-02-08",
+        "layer_id": "wind_speed",
+        "units": "m/s"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730687110361197,
+          43.550065960347624
+        ]
+      }
+    }
+  ]
+}

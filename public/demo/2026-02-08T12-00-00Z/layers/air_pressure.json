@@ -1,0 +1,404 @@
+{
+  "source": "NASA POWER (latest reanalysis + GFS blend)",
+  "variable": "PS",
+  "units": "hPa",
+  "note": "Daily surface air pressure over the Coana parcel: last 7 days observed, next 7 days forecast.",
+  "period": {
+    "observed_start": "2025-02-23",
+    "observed_end": "2025-03-01",
+    "forecast_start": "2025-03-02",
+    "forecast_end": "2025-03-08"
+  },
+  "points": [
+    {
+      "name": "center",
+      "lon": -6.732,
+      "lat": 43.554,
+      "elevation_m": 263.31,
+      "series": [
+        {
+          "date": "2025-02-23",
+          "type": "observed",
+          "value": 1011.2
+        },
+        {
+          "date": "2025-02-24",
+          "type": "observed",
+          "value": 1013.2
+        },
+        {
+          "date": "2025-02-25",
+          "type": "observed",
+          "value": 1016.2
+        },
+        {
+          "date": "2025-02-26",
+          "type": "observed",
+          "value": 1014.2
+        },
+        {
+          "date": "2025-02-27",
+          "type": "observed",
+          "value": 1010.2
+        },
+        {
+          "date": "2025-02-28",
+          "type": "observed",
+          "value": 1006.2
+        },
+        {
+          "date": "2025-03-01",
+          "type": "observed",
+          "value": 1004.2
+        },
+        {
+          "date": "2025-03-02",
+          "type": "forecast",
+          "value": 1005.2
+        },
+        {
+          "date": "2025-03-03",
+          "type": "forecast",
+          "value": 1007.2
+        },
+        {
+          "date": "2025-03-04",
+          "type": "forecast",
+          "value": 1009.2
+        },
+        {
+          "date": "2025-03-05",
+          "type": "forecast",
+          "value": 1012.2
+        },
+        {
+          "date": "2025-03-06",
+          "type": "forecast",
+          "value": 1014.2
+        },
+        {
+          "date": "2025-03-07",
+          "type": "forecast",
+          "value": 1011.2
+        },
+        {
+          "date": "2025-03-08",
+          "type": "forecast",
+          "value": 1008.2
+        }
+      ]
+    },
+    {
+      "name": "ne",
+      "lon": -6.726,
+      "lat": 43.562,
+      "elevation_m": 263.31,
+      "series": [
+        {
+          "date": "2025-02-23",
+          "type": "observed",
+          "value": 1011.2
+        },
+        {
+          "date": "2025-02-24",
+          "type": "observed",
+          "value": 1013.2
+        },
+        {
+          "date": "2025-02-25",
+          "type": "observed",
+          "value": 1016.2
+        },
+        {
+          "date": "2025-02-26",
+          "type": "observed",
+          "value": 1014.2
+        },
+        {
+          "date": "2025-02-27",
+          "type": "observed",
+          "value": 1010.2
+        },
+        {
+          "date": "2025-02-28",
+          "type": "observed",
+          "value": 1006.2
+        },
+        {
+          "date": "2025-03-01",
+          "type": "observed",
+          "value": 1004.2
+        },
+        {
+          "date": "2025-03-02",
+          "type": "forecast",
+          "value": 1005.2
+        },
+        {
+          "date": "2025-03-03",
+          "type": "forecast",
+          "value": 1007.2
+        },
+        {
+          "date": "2025-03-04",
+          "type": "forecast",
+          "value": 1009.2
+        },
+        {
+          "date": "2025-03-05",
+          "type": "forecast",
+          "value": 1012.2
+        },
+        {
+          "date": "2025-03-06",
+          "type": "forecast",
+          "value": 1014.2
+        },
+        {
+          "date": "2025-03-07",
+          "type": "forecast",
+          "value": 1011.2
+        },
+        {
+          "date": "2025-03-08",
+          "type": "forecast",
+          "value": 1008.2
+        }
+      ]
+    },
+    {
+      "name": "nw",
+      "lon": -6.74,
+      "lat": 43.562,
+      "elevation_m": 263.31,
+      "series": [
+        {
+          "date": "2025-02-23",
+          "type": "observed",
+          "value": 1011.2
+        },
+        {
+          "date": "2025-02-24",
+          "type": "observed",
+          "value": 1013.2
+        },
+        {
+          "date": "2025-02-25",
+          "type": "observed",
+          "value": 1016.2
+        },
+        {
+          "date": "2025-02-26",
+          "type": "observed",
+          "value": 1014.2
+        },
+        {
+          "date": "2025-02-27",
+          "type": "observed",
+          "value": 1010.2
+        },
+        {
+          "date": "2025-02-28",
+          "type": "observed",
+          "value": 1006.2
+        },
+        {
+          "date": "2025-03-01",
+          "type": "observed",
+          "value": 1004.2
+        },
+        {
+          "date": "2025-03-02",
+          "type": "forecast",
+          "value": 1005.2
+        },
+        {
+          "date": "2025-03-03",
+          "type": "forecast",
+          "value": 1007.2
+        },
+        {
+          "date": "2025-03-04",
+          "type": "forecast",
+          "value": 1009.2
+        },
+        {
+          "date": "2025-03-05",
+          "type": "forecast",
+          "value": 1012.2
+        },
+        {
+          "date": "2025-03-06",
+          "type": "forecast",
+          "value": 1014.2
+        },
+        {
+          "date": "2025-03-07",
+          "type": "forecast",
+          "value": 1011.2
+        },
+        {
+          "date": "2025-03-08",
+          "type": "forecast",
+          "value": 1008.2
+        }
+      ]
+    },
+    {
+      "name": "se",
+      "lon": -6.726,
+      "lat": 43.546,
+      "elevation_m": 263.31,
+      "series": [
+        {
+          "date": "2025-02-23",
+          "type": "observed",
+          "value": 1011.2
+        },
+        {
+          "date": "2025-02-24",
+          "type": "observed",
+          "value": 1013.2
+        },
+        {
+          "date": "2025-02-25",
+          "type": "observed",
+          "value": 1016.2
+        },
+        {
+          "date": "2025-02-26",
+          "type": "observed",
+          "value": 1014.2
+        },
+        {
+          "date": "2025-02-27",
+          "type": "observed",
+          "value": 1010.2
+        },
+        {
+          "date": "2025-02-28",
+          "type": "observed",
+          "value": 1006.2
+        },
+        {
+          "date": "2025-03-01",
+          "type": "observed",
+          "value": 1004.2
+        },
+        {
+          "date": "2025-03-02",
+          "type": "forecast",
+          "value": 1005.2
+        },
+        {
+          "date": "2025-03-03",
+          "type": "forecast",
+          "value": 1007.2
+        },
+        {
+          "date": "2025-03-04",
+          "type": "forecast",
+          "value": 1009.2
+        },
+        {
+          "date": "2025-03-05",
+          "type": "forecast",
+          "value": 1012.2
+        },
+        {
+          "date": "2025-03-06",
+          "type": "forecast",
+          "value": 1014.2
+        },
+        {
+          "date": "2025-03-07",
+          "type": "forecast",
+          "value": 1011.2
+        },
+        {
+          "date": "2025-03-08",
+          "type": "forecast",
+          "value": 1008.2
+        }
+      ]
+    },
+    {
+      "name": "sw",
+      "lon": -6.74,
+      "lat": 43.546,
+      "elevation_m": 263.31,
+      "series": [
+        {
+          "date": "2025-02-23",
+          "type": "observed",
+          "value": 1011.2
+        },
+        {
+          "date": "2025-02-24",
+          "type": "observed",
+          "value": 1013.2
+        },
+        {
+          "date": "2025-02-25",
+          "type": "observed",
+          "value": 1016.2
+        },
+        {
+          "date": "2025-02-26",
+          "type": "observed",
+          "value": 1014.2
+        },
+        {
+          "date": "2025-02-27",
+          "type": "observed",
+          "value": 1010.2
+        },
+        {
+          "date": "2025-02-28",
+          "type": "observed",
+          "value": 1006.2
+        },
+        {
+          "date": "2025-03-01",
+          "type": "observed",
+          "value": 1004.2
+        },
+        {
+          "date": "2025-03-02",
+          "type": "forecast",
+          "value": 1005.2
+        },
+        {
+          "date": "2025-03-03",
+          "type": "forecast",
+          "value": 1007.2
+        },
+        {
+          "date": "2025-03-04",
+          "type": "forecast",
+          "value": 1009.2
+        },
+        {
+          "date": "2025-03-05",
+          "type": "forecast",
+          "value": 1012.2
+        },
+        {
+          "date": "2025-03-06",
+          "type": "forecast",
+          "value": 1014.2
+        },
+        {
+          "date": "2025-03-07",
+          "type": "forecast",
+          "value": 1011.2
+        },
+        {
+          "date": "2025-03-08",
+          "type": "forecast",
+          "value": 1008.2
+        }
+      ]
+    }
+  ]
+}

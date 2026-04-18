@@ -1,0 +1,845 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-1",
+        "sample_id": "MIC-01",
+        "ecology": "Deciduous Atlantic Forest",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 196517.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 196517 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 158355 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 113227 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 106362 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 82059 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 196517 CFU/g; Pathogen Suppression: Bacillus subtilis 158355 CFU/g; Nutrient Synthesis: Penicillium bilaiae 113227 CFU/g; Cellulose Degradation: Trichoderma harzianum 106362 CFU/g; Pathogen Load: Fusarium oxysporum 82059 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737775129715661,
+          43.5490038585056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-2",
+        "sample_id": "MIC-02",
+        "ecology": "Deciduous Atlantic Forest",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 189892.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 189892 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 132510 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 103842 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 127752 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 99978 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 189892 CFU/g; Pathogen Suppression: Bacillus subtilis 132510 CFU/g; Nutrient Synthesis: Penicillium bilaiae 103842 CFU/g; Cellulose Degradation: Trichoderma harzianum 127752 CFU/g; Pathogen Load: Fusarium oxysporum 99978 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735952208207474,
+          43.548596342609436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-3",
+        "sample_id": "MIC-03",
+        "ecology": "Atlantic Valley Floor",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 167814.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 167814 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 126606 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 128672 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 145759 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 88904 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 167814 CFU/g; Pathogen Suppression: Bacillus subtilis 126606 CFU/g; Nutrient Synthesis: Penicillium bilaiae 128672 CFU/g; Cellulose Degradation: Trichoderma harzianum 145759 CFU/g; Pathogen Load: Fusarium oxysporum 88904 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7339016614877,
+          43.54794593325221
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-4",
+        "sample_id": "MIC-04",
+        "ecology": "Atlantic Valley Floor",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 165990.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 165990 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 151575 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 145991 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 130684 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 68706 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 165990 CFU/g; Pathogen Suppression: Bacillus subtilis 151575 CFU/g; Nutrient Synthesis: Penicillium bilaiae 145991 CFU/g; Cellulose Degradation: Trichoderma harzianum 130684 CFU/g; Pathogen Load: Fusarium oxysporum 68706 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732177312141826,
+          43.54758718357632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-5",
+        "sample_id": "MIC-05",
+        "ecology": "Atlantic Valley Floor",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 198046.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 198046 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 175332 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 130400 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 111317 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 72363 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 198046 CFU/g; Pathogen Suppression: Bacillus subtilis 175332 CFU/g; Nutrient Synthesis: Penicillium bilaiae 130400 CFU/g; Cellulose Degradation: Trichoderma harzianum 111317 CFU/g; Pathogen Load: Fusarium oxysporum 72363 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730740578333075,
+          43.54826489624215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-6",
+        "sample_id": "MIC-06",
+        "ecology": "Deciduous Atlantic Forest",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 190309.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 190309 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 171536 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 135615 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 111662 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 69762 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 190309 CFU/g; Pathogen Suppression: Bacillus subtilis 171536 CFU/g; Nutrient Synthesis: Penicillium bilaiae 135615 CFU/g; Cellulose Degradation: Trichoderma harzianum 111662 CFU/g; Pathogen Load: Fusarium oxysporum 69762 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.739216680859389,
+          43.54985669422245
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-7",
+        "sample_id": "MIC-07",
+        "ecology": "Wet Meadow Delta",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 165841.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 165841 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 123405 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 128114 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 148825 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 95320 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 165841 CFU/g; Pathogen Suppression: Bacillus subtilis 123405 CFU/g; Nutrient Synthesis: Penicillium bilaiae 128114 CFU/g; Cellulose Degradation: Trichoderma harzianum 148825 CFU/g; Pathogen Load: Fusarium oxysporum 95320 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73558161216214,
+          43.55008442750566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-8",
+        "sample_id": "MIC-08",
+        "ecology": "Wet Meadow Delta",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Penicillium bilaiae",
+        "dominant_function_group": "Nutrient Synthesis",
+        "dominant_abundance_cfu_g": 152758.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 149912 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 149444 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 152758 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 143989 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 85411 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 149912 CFU/g; Pathogen Suppression: Bacillus subtilis 149444 CFU/g; Nutrient Synthesis: Penicillium bilaiae 152758 CFU/g; Cellulose Degradation: Trichoderma harzianum 143989 CFU/g; Pathogen Load: Fusarium oxysporum 85411 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7338027985951125,
+          43.55009722844573
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-9",
+        "sample_id": "MIC-09",
+        "ecology": "Atlantic Valley Floor",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 177272.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 177272 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 171749 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 145973 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 132286 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 83611 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 177272 CFU/g; Pathogen Suppression: Bacillus subtilis 171749 CFU/g; Nutrient Synthesis: Penicillium bilaiae 145973 CFU/g; Cellulose Degradation: Trichoderma harzianum 132286 CFU/g; Pathogen Load: Fusarium oxysporum 83611 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732174919341615,
+          43.54988769469635
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-10",
+        "sample_id": "MIC-10",
+        "ecology": "Atlantic Valley Floor",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 202026.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 202026 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 163380 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 132095 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 131433 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 79973 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 202026 CFU/g; Pathogen Suppression: Bacillus subtilis 163380 CFU/g; Nutrient Synthesis: Penicillium bilaiae 132095 CFU/g; Cellulose Degradation: Trichoderma harzianum 131433 CFU/g; Pathogen Load: Fusarium oxysporum 79973 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730497388169381,
+          43.549825362553015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-11",
+        "sample_id": "MIC-11",
+        "ecology": "Atlantic Valley Floor",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 177001.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 177001 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 156569 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 146223 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 132035 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 71738 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 177001 CFU/g; Pathogen Suppression: Bacillus subtilis 156569 CFU/g; Nutrient Synthesis: Penicillium bilaiae 146223 CFU/g; Cellulose Degradation: Trichoderma harzianum 132035 CFU/g; Pathogen Load: Fusarium oxysporum 71738 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729415395276266,
+          43.5511399970591
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-12",
+        "sample_id": "MIC-12",
+        "ecology": "Deciduous Atlantic Forest",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 191533.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 191533 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 143401 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 117978 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 134654 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 96557 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 191533 CFU/g; Pathogen Suppression: Bacillus subtilis 143401 CFU/g; Nutrient Synthesis: Penicillium bilaiae 117978 CFU/g; Cellulose Degradation: Trichoderma harzianum 134654 CFU/g; Pathogen Load: Fusarium oxysporum 96557 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7385799558385635,
+          43.55207150317322
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-13",
+        "sample_id": "MIC-13",
+        "ecology": "Deciduous Atlantic Forest",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 142879.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 142879 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 130944 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 128251 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 141420 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 109589 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 142879 CFU/g; Pathogen Suppression: Bacillus subtilis 130944 CFU/g; Nutrient Synthesis: Penicillium bilaiae 128251 CFU/g; Cellulose Degradation: Trichoderma harzianum 141420 CFU/g; Pathogen Load: Fusarium oxysporum 109589 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735657453787136,
+          43.55317295108853
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-14",
+        "sample_id": "MIC-14",
+        "ecology": "Atlantic Valley Floor",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Trichoderma harzianum",
+        "dominant_function_group": "Cellulose Degradation",
+        "dominant_abundance_cfu_g": 156445.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 153400 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 136717 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 133844 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 156445 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 114108 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 153400 CFU/g; Pathogen Suppression: Bacillus subtilis 136717 CFU/g; Nutrient Synthesis: Penicillium bilaiae 133844 CFU/g; Cellulose Degradation: Trichoderma harzianum 156445 CFU/g; Pathogen Load: Fusarium oxysporum 114108 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733790419070141,
+          43.55272377407598
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-15",
+        "sample_id": "MIC-15",
+        "ecology": "Atlantic Valley Floor",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Trichoderma harzianum",
+        "dominant_function_group": "Cellulose Degradation",
+        "dominant_abundance_cfu_g": 161240.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 159595 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 141335 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 150604 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 161240 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 93112 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 159595 CFU/g; Pathogen Suppression: Bacillus subtilis 141335 CFU/g; Nutrient Synthesis: Penicillium bilaiae 150604 CFU/g; Cellulose Degradation: Trichoderma harzianum 161240 CFU/g; Pathogen Load: Fusarium oxysporum 93112 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731886559406841,
+          43.55248325485718
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-16",
+        "sample_id": "MIC-16",
+        "ecology": "Atlantic Valley Floor",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 158188.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 158188 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 157073 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 153719 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 137895 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 78792 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 158188 CFU/g; Pathogen Suppression: Bacillus subtilis 157073 CFU/g; Nutrient Synthesis: Penicillium bilaiae 153719 CFU/g; Cellulose Degradation: Trichoderma harzianum 137895 CFU/g; Pathogen Load: Fusarium oxysporum 78792 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730343507184372,
+          43.5528599012624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-17",
+        "sample_id": "MIC-17",
+        "ecology": "Riparian Alder Gallery",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 178559.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 178559 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 154494 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 122534 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 123896 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 95897 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 178559 CFU/g; Pathogen Suppression: Bacillus subtilis 154494 CFU/g; Nutrient Synthesis: Penicillium bilaiae 122534 CFU/g; Cellulose Degradation: Trichoderma harzianum 123896 CFU/g; Pathogen Load: Fusarium oxysporum 95897 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.728867669481717,
+          43.55324038359232
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-18",
+        "sample_id": "MIC-18",
+        "ecology": "Atlantic Valley Floor",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 174261.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 174261 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 122576 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 109511 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 142488 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 110963 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 174261 CFU/g; Pathogen Suppression: Bacillus subtilis 122576 CFU/g; Nutrient Synthesis: Penicillium bilaiae 109511 CFU/g; Cellulose Degradation: Trichoderma harzianum 142488 CFU/g; Pathogen Load: Fusarium oxysporum 110963 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.727137557764666,
+          43.553072052347076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-19",
+        "sample_id": "MIC-19",
+        "ecology": "Riparian Alder Gallery",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 152569.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 152569 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 98657 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 97992 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 146921 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 122941 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 152569 CFU/g; Pathogen Suppression: Bacillus subtilis 98657 CFU/g; Nutrient Synthesis: Penicillium bilaiae 97992 CFU/g; Cellulose Degradation: Trichoderma harzianum 146921 CFU/g; Pathogen Load: Fusarium oxysporum 122941 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735720006756061,
+          43.55581436039181
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-20",
+        "sample_id": "MIC-20",
+        "ecology": "Deciduous Atlantic Forest",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Trichoderma harzianum",
+        "dominant_function_group": "Cellulose Degradation",
+        "dominant_abundance_cfu_g": 160968.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 124865 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 106284 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 135245 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 160968 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 105763 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 124865 CFU/g; Pathogen Suppression: Bacillus subtilis 106284 CFU/g; Nutrient Synthesis: Penicillium bilaiae 135245 CFU/g; Cellulose Degradation: Trichoderma harzianum 160968 CFU/g; Pathogen Load: Fusarium oxysporum 105763 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733709342013394,
+          43.55560883604035
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-21",
+        "sample_id": "MIC-21",
+        "ecology": "Deciduous Atlantic Forest",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Penicillium bilaiae",
+        "dominant_function_group": "Nutrient Synthesis",
+        "dominant_abundance_cfu_g": 140879.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 137062 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 139465 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 140879 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 139605 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 94854 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 137062 CFU/g; Pathogen Suppression: Bacillus subtilis 139465 CFU/g; Nutrient Synthesis: Penicillium bilaiae 140879 CFU/g; Cellulose Degradation: Trichoderma harzianum 139605 CFU/g; Pathogen Load: Fusarium oxysporum 94854 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732109754636617,
+          43.55572079561833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-22",
+        "sample_id": "MIC-22",
+        "ecology": "Deciduous Atlantic Forest",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 170140.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 170140 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 144672 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 118995 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 128680 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 99093 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 170140 CFU/g; Pathogen Suppression: Bacillus subtilis 144672 CFU/g; Nutrient Synthesis: Penicillium bilaiae 118995 CFU/g; Cellulose Degradation: Trichoderma harzianum 128680 CFU/g; Pathogen Load: Fusarium oxysporum 99093 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730579488317958,
+          43.555702215326036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-23",
+        "sample_id": "MIC-23",
+        "ecology": "Deciduous Atlantic Forest",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 172382.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 172382 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 116877 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 106614 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 134409 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 98979 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 172382 CFU/g; Pathogen Suppression: Bacillus subtilis 116877 CFU/g; Nutrient Synthesis: Penicillium bilaiae 106614 CFU/g; Cellulose Degradation: Trichoderma harzianum 134409 CFU/g; Pathogen Load: Fusarium oxysporum 98979 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7287938800943685,
+          43.555767453628555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-24",
+        "sample_id": "MIC-24",
+        "ecology": "Deciduous Atlantic Forest",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 145484.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 145484 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 111774 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 110524 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 126976 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 99027 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 145484 CFU/g; Pathogen Suppression: Bacillus subtilis 111774 CFU/g; Nutrient Synthesis: Penicillium bilaiae 110524 CFU/g; Cellulose Degradation: Trichoderma harzianum 126976 CFU/g; Pathogen Load: Fusarium oxysporum 99027 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7270707471658815,
+          43.55617295361366
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-25",
+        "sample_id": "MIC-25",
+        "ecology": "Deciduous Atlantic Forest",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 147704.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 147704 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 124904 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 113452 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 126780 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 101191 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 147704 CFU/g; Pathogen Suppression: Bacillus subtilis 124904 CFU/g; Nutrient Synthesis: Penicillium bilaiae 113452 CFU/g; Cellulose Degradation: Trichoderma harzianum 126780 CFU/g; Pathogen Load: Fusarium oxysporum 101191 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734067385928294,
+          43.55858153570106
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-26",
+        "sample_id": "MIC-26",
+        "ecology": "Deciduous Atlantic Forest",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 168106.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 168106 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 131382 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 111919 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 132123 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 100343 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 168106 CFU/g; Pathogen Suppression: Bacillus subtilis 131382 CFU/g; Nutrient Synthesis: Penicillium bilaiae 111919 CFU/g; Cellulose Degradation: Trichoderma harzianum 132123 CFU/g; Pathogen Load: Fusarium oxysporum 100343 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732301954847711,
+          43.558212657493925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-27",
+        "sample_id": "MIC-27",
+        "ecology": "Deciduous Atlantic Forest",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 173738.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 173738 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 126434 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 116830 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 129102 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 81862 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 173738 CFU/g; Pathogen Suppression: Bacillus subtilis 126434 CFU/g; Nutrient Synthesis: Penicillium bilaiae 116830 CFU/g; Cellulose Degradation: Trichoderma harzianum 129102 CFU/g; Pathogen Load: Fusarium oxysporum 81862 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730546223414258,
+          43.5582926709025
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-28",
+        "sample_id": "MIC-28",
+        "ecology": "Deciduous Atlantic Forest",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 174290.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 174290 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 138134 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 111383 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 104743 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 75203 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 174290 CFU/g; Pathogen Suppression: Bacillus subtilis 138134 CFU/g; Nutrient Synthesis: Penicillium bilaiae 111383 CFU/g; Cellulose Degradation: Trichoderma harzianum 104743 CFU/g; Pathogen Load: Fusarium oxysporum 75203 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729045208714057,
+          43.558726385890225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-29",
+        "sample_id": "MIC-29",
+        "ecology": "Deciduous Atlantic Forest",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 173304.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 173304 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 124290 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 116453 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 140424 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 94332 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 173304 CFU/g; Pathogen Suppression: Bacillus subtilis 124290 CFU/g; Nutrient Synthesis: Penicillium bilaiae 116453 CFU/g; Cellulose Degradation: Trichoderma harzianum 140424 CFU/g; Pathogen Load: Fusarium oxysporum 94332 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7336355877790375,
+          43.56095787188489
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "microbiota-30",
+        "sample_id": "MIC-30",
+        "ecology": "Deciduous Atlantic Forest",
+        "assay": "eDNA + culture assay",
+        "analysis_count": 5,
+        "dominant_species": "Azotobacter chroococcum",
+        "dominant_function_group": "Nitrogen Fixing",
+        "dominant_abundance_cfu_g": 166456.0,
+        "analysis_nitrogen_fixing": "Nitrogen Fixing: Azotobacter chroococcum 166456 CFU/g",
+        "analysis_pathogen_suppression": "Pathogen Suppression: Bacillus subtilis 133770 CFU/g",
+        "analysis_nutrient_synthesis": "Nutrient Synthesis: Penicillium bilaiae 134876 CFU/g",
+        "analysis_cellulose_degradation": "Cellulose Degradation: Trichoderma harzianum 139534 CFU/g",
+        "analysis_pathogen_load": "Pathogen Load: Fusarium oxysporum 78220 CFU/g",
+        "timestamp": "2026-02-10T12:00:00Z",
+        "layer_id": "microbiota",
+        "summary": "Nitrogen Fixing: Azotobacter chroococcum 166456 CFU/g; Pathogen Suppression: Bacillus subtilis 133770 CFU/g; Nutrient Synthesis: Penicillium bilaiae 134876 CFU/g; Cellulose Degradation: Trichoderma harzianum 139534 CFU/g; Pathogen Load: Fusarium oxysporum 78220 CFU/g"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732693443000307,
+          43.56114702669032
+        ]
+      }
+    }
+  ]
+}

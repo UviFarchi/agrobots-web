@@ -1,0 +1,181 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "station_id": "WQ-01",
+        "station_name": "Río Navia station 1",
+        "waterbody": "Río Navia",
+        "water_type": "river",
+        "source": "OpenStreetMap",
+        "timestamp": "2026-02-06T12:00:00Z",
+        "id": "water_electrical_conductivity-wq-01",
+        "layer_id": "water_electrical_conductivity",
+        "ec": 204.0,
+        "units": "µS/cm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729507792366583,
+          43.547827251114896
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_id": "WQ-02",
+        "station_name": "Río Navia station 2",
+        "waterbody": "Río Navia",
+        "water_type": "river",
+        "source": "OpenStreetMap",
+        "timestamp": "2026-02-06T12:00:00Z",
+        "id": "water_electrical_conductivity-wq-02",
+        "layer_id": "water_electrical_conductivity",
+        "ec": 191.0,
+        "units": "µS/cm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729326783917994,
+          43.548099295177515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_id": "WQ-03",
+        "station_name": "Río Navia station 3",
+        "waterbody": "Río Navia",
+        "water_type": "river",
+        "source": "OpenStreetMap",
+        "timestamp": "2026-02-06T12:00:00Z",
+        "id": "water_electrical_conductivity-wq-03",
+        "layer_id": "water_electrical_conductivity",
+        "ec": 195.0,
+        "units": "µS/cm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729448450040191,
+          43.5493577271172
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_id": "WQ-04",
+        "station_name": "Río Navia station 4",
+        "waterbody": "Río Navia",
+        "water_type": "river",
+        "source": "OpenStreetMap",
+        "timestamp": "2026-02-06T12:00:00Z",
+        "id": "water_electrical_conductivity-wq-04",
+        "layer_id": "water_electrical_conductivity",
+        "ec": 173.0,
+        "units": "µS/cm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729844184073854,
+          43.550516687727956
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_id": "WQ-05",
+        "station_name": "Río Navia station 5",
+        "waterbody": "Río Navia",
+        "water_type": "river",
+        "source": "OpenStreetMap",
+        "timestamp": "2026-02-06T12:00:00Z",
+        "id": "water_electrical_conductivity-wq-05",
+        "layer_id": "water_electrical_conductivity",
+        "ec": 188.0,
+        "units": "µS/cm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729827464445388,
+          43.550826653895804
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_id": "WQ-06",
+        "station_name": "Río Navia station 6",
+        "waterbody": "Río Navia",
+        "water_type": "river",
+        "source": "OpenStreetMap",
+        "timestamp": "2026-02-06T12:00:00Z",
+        "id": "water_electrical_conductivity-wq-06",
+        "layer_id": "water_electrical_conductivity",
+        "ec": 204.0,
+        "units": "µS/cm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729620018798777,
+          43.55096282817571
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_id": "WQ-07",
+        "station_name": "Navia purification pond 1 station 1",
+        "waterbody": "Navia purification pond 1",
+        "water_type": "wastewater",
+        "source": "OpenStreetMap",
+        "timestamp": "2026-02-06T12:00:00Z",
+        "id": "water_electrical_conductivity-wq-07",
+        "layer_id": "water_electrical_conductivity",
+        "ec": 989.0,
+        "units": "µS/cm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729279863017301,
+          43.552884773084706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_id": "WQ-08",
+        "station_name": "Navia purification pond 2 station 1",
+        "waterbody": "Navia purification pond 2",
+        "water_type": "wastewater",
+        "source": "OpenStreetMap",
+        "timestamp": "2026-02-06T12:00:00Z",
+        "id": "water_electrical_conductivity-wq-08",
+        "layer_id": "water_electrical_conductivity",
+        "ec": 973.0,
+        "units": "µS/cm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729567169272461,
+          43.55244778472855
+        ]
+      }
+    }
+  ]
+}

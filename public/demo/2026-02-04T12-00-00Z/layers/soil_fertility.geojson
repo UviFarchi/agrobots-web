@@ -1,0 +1,1130 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-1",
+        "sample_id": "SOIL-001",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "cec_cmol_kg": 12.6,
+        "base_saturation_pct": 55.2,
+        "salinity_ds_m": 0.28,
+        "buffering_class": "Moderate",
+        "fertility_index": 54.6,
+        "fertility_class": "Moderate",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-001 moderate fertility, CEC 12.6 cmol/kg, BS 55.2%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735608249530175,
+          43.54812255391404
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-2",
+        "sample_id": "SOIL-002",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "cec_cmol_kg": 12.0,
+        "base_saturation_pct": 62.3,
+        "salinity_ds_m": 0.35,
+        "buffering_class": "Moderate",
+        "fertility_index": 55.6,
+        "fertility_class": "Moderate",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-002 moderate fertility, CEC 12.0 cmol/kg, BS 62.3%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730508425977231,
+          43.547144109118854
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-3",
+        "sample_id": "SOIL-003",
+        "zone_name": "Corn",
+        "ecology": "Wet Meadow Delta",
+        "cec_cmol_kg": 10.5,
+        "base_saturation_pct": 55.2,
+        "salinity_ds_m": 0.3,
+        "buffering_class": "Moderate",
+        "fertility_index": 48.2,
+        "fertility_class": "Moderate",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-003 moderate fertility, CEC 10.5 cmol/kg, BS 55.2%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735356131863365,
+          43.54930223732215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-4",
+        "sample_id": "SOIL-004",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 13.4,
+        "base_saturation_pct": 50.1,
+        "salinity_ds_m": 0.17,
+        "buffering_class": "Moderate",
+        "fertility_index": 61.0,
+        "fertility_class": "High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-004 high fertility, CEC 13.4 cmol/kg, BS 50.1%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735921246618157,
+          43.55345772238334
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-5",
+        "sample_id": "SOIL-005",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "cec_cmol_kg": 11.8,
+        "base_saturation_pct": 57.9,
+        "salinity_ds_m": 0.27,
+        "buffering_class": "Moderate",
+        "fertility_index": 54.0,
+        "fertility_class": "Moderate",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-005 moderate fertility, CEC 11.8 cmol/kg, BS 57.9%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729876516373612,
+          43.551614350990874
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-6",
+        "sample_id": "SOIL-006",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 12.2,
+        "base_saturation_pct": 54.1,
+        "salinity_ds_m": 0.19,
+        "buffering_class": "Moderate",
+        "fertility_index": 59.4,
+        "fertility_class": "High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-006 high fertility, CEC 12.2 cmol/kg, BS 54.1%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73416130666255,
+          43.55530585892457
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-7",
+        "sample_id": "SOIL-007",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 12.8,
+        "base_saturation_pct": 52.8,
+        "salinity_ds_m": 0.2,
+        "buffering_class": "Moderate",
+        "fertility_index": 60.2,
+        "fertility_class": "High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-007 high fertility, CEC 12.8 cmol/kg, BS 52.8%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73416130666255,
+          43.55583951417812
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-8",
+        "sample_id": "SOIL-008",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 13.7,
+        "base_saturation_pct": 62.4,
+        "salinity_ds_m": 0.21,
+        "buffering_class": "Moderate",
+        "fertility_index": 68.0,
+        "fertility_class": "High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-008 high fertility, CEC 13.7 cmol/kg, BS 62.4%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729746091761337,
+          43.55585005238519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-9",
+        "sample_id": "SOIL-009",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "cec_cmol_kg": 10.9,
+        "base_saturation_pct": 58.6,
+        "salinity_ds_m": 0.29,
+        "buffering_class": "Moderate",
+        "fertility_index": 51.5,
+        "fertility_class": "Moderate",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-009 moderate fertility, CEC 10.9 cmol/kg, BS 58.6%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73256243814215,
+          43.54777198492047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-10",
+        "sample_id": "SOIL-010",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 10.2,
+        "base_saturation_pct": 57.0,
+        "salinity_ds_m": 0.28,
+        "buffering_class": "Moderate",
+        "fertility_index": 53.8,
+        "fertility_class": "Moderate",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-010 moderate fertility, CEC 10.2 cmol/kg, BS 57.0%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.738063870180758,
+          43.550502961642636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-11",
+        "sample_id": "SOIL-011",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "cec_cmol_kg": 9.4,
+        "base_saturation_pct": 56.2,
+        "salinity_ds_m": 0.35,
+        "buffering_class": "Low",
+        "fertility_index": 44.8,
+        "fertility_class": "Moderate",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-011 moderate fertility, CEC 9.4 cmol/kg, BS 56.2%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732774270130871,
+          43.54933464939164
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-12",
+        "sample_id": "SOIL-012",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 9.5,
+        "base_saturation_pct": 45.6,
+        "salinity_ds_m": 0.25,
+        "buffering_class": "Low",
+        "fertility_index": 45.9,
+        "fertility_class": "Moderate",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-012 moderate fertility, CEC 9.5 cmol/kg, BS 45.6%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7358391295373785,
+          43.55262768614193
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-13",
+        "sample_id": "SOIL-013",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "cec_cmol_kg": 10.8,
+        "base_saturation_pct": 54.0,
+        "salinity_ds_m": 0.27,
+        "buffering_class": "Moderate",
+        "fertility_index": 49.0,
+        "fertility_class": "Moderate",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-013 moderate fertility, CEC 10.8 cmol/kg, BS 54.0%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730665273250281,
+          43.55226527524249
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-14",
+        "sample_id": "SOIL-014",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 9.4,
+        "base_saturation_pct": 47.1,
+        "salinity_ds_m": 0.23,
+        "buffering_class": "Low",
+        "fertility_index": 46.8,
+        "fertility_class": "Moderate",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-014 moderate fertility, CEC 9.4 cmol/kg, BS 47.1%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73665424609938,
+          43.55408522424178
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-15",
+        "sample_id": "SOIL-015",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 10.5,
+        "base_saturation_pct": 58.2,
+        "salinity_ds_m": 0.2,
+        "buffering_class": "Moderate",
+        "fertility_index": 56.7,
+        "fertility_class": "Moderate",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-015 moderate fertility, CEC 10.5 cmol/kg, BS 58.2%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731667187120838,
+          43.55591291942676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-16",
+        "sample_id": "SOIL-016",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 12.5,
+        "base_saturation_pct": 56.9,
+        "salinity_ds_m": 0.16,
+        "buffering_class": "Moderate",
+        "fertility_index": 62.4,
+        "fertility_class": "High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-016 high fertility, CEC 12.5 cmol/kg, BS 56.9%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731490806786376,
+          43.556915142214685
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-17",
+        "sample_id": "SOIL-017",
+        "zone_name": "Cover Crop",
+        "ecology": "Atlantic Valley Floor",
+        "cec_cmol_kg": 14.4,
+        "base_saturation_pct": 66.3,
+        "salinity_ds_m": 0.23,
+        "buffering_class": "Moderate",
+        "fertility_index": 66.8,
+        "fertility_class": "High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-017 high fertility, CEC 14.4 cmol/kg, BS 66.3%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73393100979738,
+          43.547804075602
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-18",
+        "sample_id": "SOIL-018",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 14.0,
+        "base_saturation_pct": 64.8,
+        "salinity_ds_m": 0.17,
+        "buffering_class": "Moderate",
+        "fertility_index": 70.9,
+        "fertility_class": "High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-018 high fertility, CEC 14.0 cmol/kg, BS 64.8%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.739153733599948,
+          43.55049012257061
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-19",
+        "sample_id": "SOIL-019",
+        "zone_name": "Cover Crop",
+        "ecology": "Atlantic Valley Floor",
+        "cec_cmol_kg": 14.6,
+        "base_saturation_pct": 65.3,
+        "salinity_ds_m": 0.22,
+        "buffering_class": "Moderate",
+        "fertility_index": 67.0,
+        "fertility_class": "High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-019 high fertility, CEC 14.6 cmol/kg, BS 65.3%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731696529703681,
+          43.5509032030828
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-20",
+        "sample_id": "SOIL-020",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 13.8,
+        "base_saturation_pct": 54.6,
+        "salinity_ds_m": 0.18,
+        "buffering_class": "Moderate",
+        "fertility_index": 64.5,
+        "fertility_class": "High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-020 high fertility, CEC 13.8 cmol/kg, BS 54.6%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729459271986097,
+          43.553752316464625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-21",
+        "sample_id": "SOIL-021",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 11.2,
+        "base_saturation_pct": 63.8,
+        "salinity_ds_m": 0.2,
+        "buffering_class": "Moderate",
+        "fertility_index": 61.8,
+        "fertility_class": "High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-021 high fertility, CEC 11.2 cmol/kg, BS 63.8%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735015900507052,
+          43.55583903055168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-22",
+        "sample_id": "SOIL-022",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 10.5,
+        "base_saturation_pct": 60.2,
+        "salinity_ds_m": 0.2,
+        "buffering_class": "Moderate",
+        "fertility_index": 57.8,
+        "fertility_class": "High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-022 high fertility, CEC 10.5 cmol/kg, BS 60.2%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.727050717530208,
+          43.55470780138734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-23",
+        "sample_id": "SOIL-023",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 18.6,
+        "base_saturation_pct": 65.6,
+        "salinity_ds_m": 0.14,
+        "buffering_class": "High",
+        "fertility_index": 85.0,
+        "fertility_class": "Very High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-023 very high fertility, CEC 18.6 cmol/kg, BS 65.6%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.738942608874486,
+          43.54852762470353
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-24",
+        "sample_id": "SOIL-024",
+        "zone_name": "Pasture",
+        "ecology": "Atlantic Valley Floor",
+        "cec_cmol_kg": 19.3,
+        "base_saturation_pct": 71.2,
+        "salinity_ds_m": 0.17,
+        "buffering_class": "High",
+        "fertility_index": 84.6,
+        "fertility_class": "Very High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-024 very high fertility, CEC 19.3 cmol/kg, BS 71.2%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734534745983951,
+          43.54874504762575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-25",
+        "sample_id": "SOIL-025",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 18.7,
+        "base_saturation_pct": 66.0,
+        "salinity_ds_m": 0.19,
+        "buffering_class": "High",
+        "fertility_index": 84.6,
+        "fertility_class": "Very High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-025 very high fertility, CEC 18.7 cmol/kg, BS 66.0%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7384746663405695,
+          43.55203722049659
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-26",
+        "sample_id": "SOIL-026",
+        "zone_name": "Pasture",
+        "ecology": "Atlantic Valley Floor",
+        "cec_cmol_kg": 20.9,
+        "base_saturation_pct": 76.3,
+        "salinity_ds_m": 0.15,
+        "buffering_class": "High",
+        "fertility_index": 88.8,
+        "fertility_class": "Very High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-026 very high fertility, CEC 20.9 cmol/kg, BS 76.3%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733545112422832,
+          43.55203722049659
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-27",
+        "sample_id": "SOIL-027",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 15.9,
+        "base_saturation_pct": 69.9,
+        "salinity_ds_m": 0.21,
+        "buffering_class": "Moderate",
+        "fertility_index": 78.5,
+        "fertility_class": "Very High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-027 very high fertility, CEC 15.9 cmol/kg, BS 69.9%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.738175747307097,
+          43.55289571981069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-28",
+        "sample_id": "SOIL-028",
+        "zone_name": "Pasture",
+        "ecology": "Atlantic Valley Floor",
+        "cec_cmol_kg": 17.8,
+        "base_saturation_pct": 72.1,
+        "salinity_ds_m": 0.14,
+        "buffering_class": "Moderate",
+        "fertility_index": 81.4,
+        "fertility_class": "Very High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-028 very high fertility, CEC 17.8 cmol/kg, BS 72.1%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7300533450644355,
+          43.55223734121667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-29",
+        "sample_id": "SOIL-029",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 17.5,
+        "base_saturation_pct": 71.4,
+        "salinity_ds_m": 0.14,
+        "buffering_class": "Moderate",
+        "fertility_index": 85.1,
+        "fertility_class": "Very High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-029 very high fertility, CEC 17.5 cmol/kg, BS 71.4%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733753062707605,
+          43.557338599708835
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-30",
+        "sample_id": "SOIL-030",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 13.0,
+        "base_saturation_pct": 69.2,
+        "salinity_ds_m": 0.2,
+        "buffering_class": "Moderate",
+        "fertility_index": 70.0,
+        "fertility_class": "High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-030 high fertility, CEC 13.0 cmol/kg, BS 69.2%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729048168648236,
+          43.55662710091666
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-31",
+        "sample_id": "SOIL-031",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 18.7,
+        "base_saturation_pct": 66.3,
+        "salinity_ds_m": 0.16,
+        "buffering_class": "High",
+        "fertility_index": 85.3,
+        "fertility_class": "Very High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-031 very high fertility, CEC 18.7 cmol/kg, BS 66.3%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7340161215632275,
+          43.55836969359754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-32",
+        "sample_id": "SOIL-032",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 14.8,
+        "base_saturation_pct": 64.1,
+        "salinity_ds_m": 0.2,
+        "buffering_class": "Moderate",
+        "fertility_index": 72.3,
+        "fertility_class": "High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-032 high fertility, CEC 14.8 cmol/kg, BS 64.1%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729215147808442,
+          43.558486397799264
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-33",
+        "sample_id": "SOIL-033",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "cec_cmol_kg": 18.5,
+        "base_saturation_pct": 56.7,
+        "salinity_ds_m": 0.32,
+        "buffering_class": "High",
+        "fertility_index": 76.5,
+        "fertility_class": "Very High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-033 very high fertility, CEC 18.5 cmol/kg, BS 56.7%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736541436468183,
+          43.55047227328974
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-34",
+        "sample_id": "SOIL-034",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "cec_cmol_kg": 20.9,
+        "base_saturation_pct": 59.1,
+        "salinity_ds_m": 0.39,
+        "buffering_class": "High",
+        "fertility_index": 83.4,
+        "fertility_class": "Very High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-034 very high fertility, CEC 20.9 cmol/kg, BS 59.1%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729027640898314,
+          43.5529044102836
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-35",
+        "sample_id": "SOIL-035",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "cec_cmol_kg": 22.2,
+        "base_saturation_pct": 58.4,
+        "salinity_ds_m": 0.34,
+        "buffering_class": "High",
+        "fertility_index": 87.7,
+        "fertility_class": "Very High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-035 very high fertility, CEC 22.2 cmol/kg, BS 58.4%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7317450893315005,
+          43.554210249644235
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-36",
+        "sample_id": "SOIL-036",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "cec_cmol_kg": 19.5,
+        "base_saturation_pct": 68.5,
+        "salinity_ds_m": 0.35,
+        "buffering_class": "High",
+        "fertility_index": 85.4,
+        "fertility_class": "Very High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-036 very high fertility, CEC 19.5 cmol/kg, BS 68.5%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.727508705870868,
+          43.554105134604086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-37",
+        "sample_id": "SOIL-037",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 22.3,
+        "base_saturation_pct": 48.0,
+        "salinity_ds_m": 0.14,
+        "buffering_class": "High",
+        "fertility_index": 85.7,
+        "fertility_class": "Very High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-037 very high fertility, CEC 22.3 cmol/kg, BS 48.0%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.739108856851447,
+          43.550001219790225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-38",
+        "sample_id": "SOIL-038",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 26.0,
+        "base_saturation_pct": 54.8,
+        "salinity_ds_m": 0.07,
+        "buffering_class": "High",
+        "fertility_index": 88.8,
+        "fertility_class": "Very High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-038 very high fertility, CEC 26.0 cmol/kg, BS 54.8%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734717521630234,
+          43.55349122912272
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-39",
+        "sample_id": "SOIL-039",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 25.3,
+        "base_saturation_pct": 58.5,
+        "salinity_ds_m": 0.09,
+        "buffering_class": "High",
+        "fertility_index": 88.8,
+        "fertility_class": "Very High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-039 very high fertility, CEC 25.3 cmol/kg, BS 58.5%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736456175858674,
+          43.55462185504814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-40",
+        "sample_id": "SOIL-040",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 26.2,
+        "base_saturation_pct": 57.4,
+        "salinity_ds_m": 0.11,
+        "buffering_class": "High",
+        "fertility_index": 88.8,
+        "fertility_class": "Very High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-040 very high fertility, CEC 26.2 cmol/kg, BS 57.4%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.726891536186529,
+          43.555441031682584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-41",
+        "sample_id": "SOIL-041",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "cec_cmol_kg": 20.7,
+        "base_saturation_pct": 56.1,
+        "salinity_ds_m": 0.16,
+        "buffering_class": "High",
+        "fertility_index": 85.3,
+        "fertility_class": "Very High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-041 very high fertility, CEC 20.7 cmol/kg, BS 56.1%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729741712492113,
+          43.55783002621978
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-42",
+        "sample_id": "SOIL-042",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "cec_cmol_kg": 16.8,
+        "base_saturation_pct": 53.3,
+        "salinity_ds_m": 0.17,
+        "buffering_class": "Moderate",
+        "fertility_index": 67.5,
+        "fertility_class": "High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-042 high fertility, CEC 16.8 cmol/kg, BS 53.3%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730417894712543,
+          43.549261326610036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-43",
+        "sample_id": "SOIL-043",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "cec_cmol_kg": 16.6,
+        "base_saturation_pct": 54.5,
+        "salinity_ds_m": 0.19,
+        "buffering_class": "Moderate",
+        "fertility_index": 67.2,
+        "fertility_class": "High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-043 high fertility, CEC 16.6 cmol/kg, BS 54.5%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730252214552506,
+          43.549563771424594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-44",
+        "sample_id": "SOIL-044",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "cec_cmol_kg": 13.4,
+        "base_saturation_pct": 65.3,
+        "salinity_ds_m": 0.17,
+        "buffering_class": "Moderate",
+        "fertility_index": 64.5,
+        "fertility_class": "High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-044 high fertility, CEC 13.4 cmol/kg, BS 65.3%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729883486739407,
+          43.55041352546505
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_fertility-45",
+        "sample_id": "SOIL-045",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "cec_cmol_kg": 14.1,
+        "base_saturation_pct": 54.4,
+        "salinity_ds_m": 0.23,
+        "buffering_class": "Moderate",
+        "fertility_index": 59.3,
+        "fertility_class": "High",
+        "timestamp": "2026-02-04T12:00:00Z",
+        "layer_id": "soil_fertility",
+        "summary": "SOIL-045 high fertility, CEC 14.1 cmol/kg, BS 54.4%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731288781553872,
+          43.55195364779662
+        ]
+      }
+    }
+  ]
+}

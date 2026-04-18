@@ -1,0 +1,155 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "pt-1",
+        "value": 4.1,
+        "units": "mm/day"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734429876990374,
+          43.54802467040645
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "pt-2",
+        "value": 1.8,
+        "units": "mm/day"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737887835198866,
+          43.55169914974047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "pt-3",
+        "value": 2.9,
+        "units": "mm/day"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734024356680991,
+          43.547703088653655
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "pt-4",
+        "value": 2.3,
+        "units": "mm/day"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.739141874607307,
+          43.55135081667935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "pt-5",
+        "value": 3.9,
+        "units": "mm/day"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732109020433329,
+          43.55054813617776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "pt-6",
+        "value": 3.7,
+        "units": "mm/day"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729380041361584,
+          43.55179913807381
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "pt-7",
+        "value": 2.6,
+        "units": "mm/day"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737228588488818,
+          43.55604874748099
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "pt-8",
+        "value": 2.6,
+        "units": "mm/day"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73455563106716,
+          43.558616321354314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "pt-9",
+        "value": 3.2,
+        "units": "mm/day"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7305526819960715,
+          43.55652024371447
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "pt-10",
+        "value": 3.2,
+        "units": "mm/day"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.727685782442389,
+          43.55408330495798
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "resources-1",
+        "class": "Water",
+        "name": "Irrigation manifold",
+        "timestamp": "2026-02-05",
+        "layer_id": "resources"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7339437891314935,
+          43.550673734168676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "resources-2",
+        "class": "Electricity",
+        "name": "Main power cabinet",
+        "timestamp": "2026-02-05",
+        "layer_id": "resources"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735296797740724,
+          43.548075733805945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "resources-3",
+        "class": "Fuel",
+        "name": "Fuel storage tank",
+        "timestamp": "2026-02-05",
+        "layer_id": "resources"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732758125718352,
+          43.55123811538369
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "resources-4",
+        "class": "Organic Waste",
+        "name": "Compost collection bay",
+        "timestamp": "2026-02-05",
+        "layer_id": "resources"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734597179682104,
+          43.55589541387666
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "resources-5",
+        "class": "Fertilizer",
+        "name": "Fertilizer silo",
+        "timestamp": "2026-02-05",
+        "layer_id": "resources"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729400226852065,
+          43.558534380818365
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "resources-6",
+        "class": "Electricity",
+        "name": "Field distribution node",
+        "timestamp": "2026-02-05",
+        "layer_id": "resources"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729684252850001,
+          43.54911324014222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "resources-7",
+        "class": "Water",
+        "name": "North irrigation riser",
+        "timestamp": "2026-02-05",
+        "layer_id": "resources"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73625,
+          43.55605
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "resources-8",
+        "class": "Water",
+        "name": "Reservoir feed outlet",
+        "timestamp": "2026-02-05",
+        "layer_id": "resources"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.72895,
+          43.55735
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "resources-9",
+        "class": "Water",
+        "name": "South pump station",
+        "timestamp": "2026-02-05",
+        "layer_id": "resources"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73485,
+          43.54795
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "resources-10",
+        "class": "Water",
+        "name": "East hydrant cluster",
+        "timestamp": "2026-02-05",
+        "layer_id": "resources"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.72795,
+          43.55345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "resources-11",
+        "class": "Water",
+        "name": "Riparian intake valve",
+        "timestamp": "2026-02-05",
+        "layer_id": "resources"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73185,
+          43.55955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "resources-12",
+        "class": "Electricity",
+        "name": "North transformer pad",
+        "timestamp": "2026-02-05",
+        "layer_id": "resources"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73605,
+          43.55415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "resources-13",
+        "class": "Electricity",
+        "name": "Sensor power spur",
+        "timestamp": "2026-02-05",
+        "layer_id": "resources"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73155,
+          43.55235
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "resources-14",
+        "class": "Electricity",
+        "name": "Pump control cabinet",
+        "timestamp": "2026-02-05",
+        "layer_id": "resources"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73415,
+          43.54955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "resources-15",
+        "class": "Electricity",
+        "name": "East inverter rack",
+        "timestamp": "2026-02-05",
+        "layer_id": "resources"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.72855,
+          43.55565
+        ]
+      }
+    }
+  ]
+}

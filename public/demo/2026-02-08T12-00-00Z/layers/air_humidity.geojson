@@ -1,0 +1,209 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_humidity-1",
+        "value": 67.8,
+        "timestamp": "2026-02-08",
+        "layer_id": "air_humidity",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7349475077091014,
+          43.54965456234975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_humidity-2",
+        "value": 79.8,
+        "timestamp": "2026-02-08",
+        "layer_id": "air_humidity",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.727035531317946,
+          43.556675251155646
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_humidity-3",
+        "value": 92.8,
+        "timestamp": "2026-02-08",
+        "layer_id": "air_humidity",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737835597003821,
+          43.55237537822041
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_humidity-4",
+        "value": 81.8,
+        "timestamp": "2026-02-08",
+        "layer_id": "air_humidity",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731178929896454,
+          43.55521700122281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_humidity-5",
+        "value": 65.8,
+        "timestamp": "2026-02-08",
+        "layer_id": "air_humidity",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7357118963545375,
+          43.55058686627258
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_humidity-6",
+        "value": 71.8,
+        "timestamp": "2026-02-08",
+        "layer_id": "air_humidity",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735722723169489,
+          43.55679377513438
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_humidity-7",
+        "value": 67.8,
+        "timestamp": "2026-02-08",
+        "layer_id": "air_humidity",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.727344301293589,
+          43.55364648757298
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_humidity-8",
+        "value": 67.8,
+        "timestamp": "2026-02-08",
+        "layer_id": "air_humidity",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7366731874556205,
+          43.5552877381401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_humidity-9",
+        "value": 92.8,
+        "timestamp": "2026-02-08",
+        "layer_id": "air_humidity",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73453939639271,
+          43.549811676781054
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_humidity-10",
+        "value": 60.8,
+        "timestamp": "2026-02-08",
+        "layer_id": "air_humidity",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7330012618577975,
+          43.547755855083054
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_humidity-11",
+        "value": 60.8,
+        "timestamp": "2026-02-08",
+        "layer_id": "air_humidity",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729054823500846,
+          43.55305906304458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "air_humidity-12",
+        "value": 87.8,
+        "timestamp": "2026-02-08",
+        "layer_id": "air_humidity",
+        "units": "%"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732727674183508,
+          43.56184705885562
+        ]
+      }
+    }
+  ]
+}

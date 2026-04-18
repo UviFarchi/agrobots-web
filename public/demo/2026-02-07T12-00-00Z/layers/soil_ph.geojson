@@ -1,0 +1,1633 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-1",
+        "sample_id": "PH-001",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 6.08,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-001 target pH 6.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735368210411694,
+          43.54785841107713
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-2",
+        "sample_id": "PH-002",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 5.88,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-002 target pH 6.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732229911902059,
+          43.54822388723178
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-3",
+        "sample_id": "PH-003",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 6.18,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-003 target pH 6.3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736138098905747,
+          43.54944219190368
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-4",
+        "sample_id": "PH-004",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 6.08,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-004 target pH 6.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732431529126641,
+          43.549398009951375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-5",
+        "sample_id": "PH-005",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 6.08,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-005 target pH 6.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737345444569798,
+          43.55131537482422
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-6",
+        "sample_id": "PH-006",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 6.18,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-006 target pH 6.3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731998071250975,
+          43.550502961642636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-7",
+        "sample_id": "PH-007",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.98,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-007 target pH 6.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737811829362613,
+          43.55218400647721
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-8",
+        "sample_id": "PH-008",
+        "zone_name": "Corn",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 5.98,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-008 target pH 6.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733731187051211,
+          43.55185377650318
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-9",
+        "sample_id": "PH-009",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.78,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-009 target pH 5.9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736865667139928,
+          43.55477972128624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-10",
+        "sample_id": "PH-010",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.68,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-010 target pH 5.8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7276283005383695,
+          43.55376517235019
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-11",
+        "sample_id": "PH-011",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.78,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-011 target pH 5.9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.72954810009009,
+          43.55567995230722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-12",
+        "sample_id": "PH-012",
+        "zone_name": "Corn",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.88,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-012 target pH 6.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733312353156493,
+          43.55699358139271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-13",
+        "sample_id": "PH-013",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 5.98,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-013 target pH 6.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732626621371964,
+          43.54732638255531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-14",
+        "sample_id": "PH-014",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 5.78,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-014 target pH 5.9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729733074570548,
+          43.54770127156151
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-15",
+        "sample_id": "PH-015",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 5.78,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-015 target pH 5.9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729620396314149,
+          43.548773846022755
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-16",
+        "sample_id": "PH-016",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.98,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-016 target pH 6.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7359042418485116,
+          43.551755352596885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-17",
+        "sample_id": "PH-017",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 6.18,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-017 target pH 6.3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731556572518338,
+          43.551436999683425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-18",
+        "sample_id": "PH-018",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 5.88,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-018 target pH 6.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735468627398991,
+          43.55260285812551
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-19",
+        "sample_id": "PH-019",
+        "zone_name": "Wheat",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 5.98,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-019 target pH 6.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730310467335481,
+          43.551997097335615
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-20",
+        "sample_id": "PH-020",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.78,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-020 target pH 5.9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736746828163798,
+          43.55404750968436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-21",
+        "sample_id": "PH-021",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 6.18,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-021 target pH 6.3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732381189970033,
+          43.55371494067685
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-22",
+        "sample_id": "PH-022",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 6.08,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-022 target pH 6.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7337505105027375,
+          43.555413454919304
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-23",
+        "sample_id": "PH-023",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.68,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-023 target pH 5.8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.727280558686938,
+          43.556021152920316
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-24",
+        "sample_id": "PH-024",
+        "zone_name": "Wheat",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.98,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-024 target pH 6.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733718849084736,
+          43.560188766482064
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-25",
+        "sample_id": "PH-025",
+        "zone_name": "Cover Crop",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 6.18,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-025 target pH 6.3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733642935320809,
+          43.54729102422808
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-26",
+        "sample_id": "PH-026",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.88,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-026 target pH 6.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.739545713542146,
+          43.54993118815669
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-27",
+        "sample_id": "PH-027",
+        "zone_name": "Cover Crop",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 5.98,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-027 target pH 6.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733607252506011,
+          43.54877299524755
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-28",
+        "sample_id": "PH-028",
+        "zone_name": "Cover Crop",
+        "ecology": "Wet Meadow Delta",
+        "ph": 6.18,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-028 target pH 6.3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735206899637485,
+          43.55057257545172
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-29",
+        "sample_id": "PH-029",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 6.38,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-029 target pH 6.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736775815395279,
+          43.552591346367855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-30",
+        "sample_id": "PH-030",
+        "zone_name": "Cover Crop",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 6.28,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-030 target pH 6.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.728688014169159,
+          43.55267057175147
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-31",
+        "sample_id": "PH-031",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 6.28,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-031 target pH 6.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734268179442211,
+          43.553894592783905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-32",
+        "sample_id": "PH-032",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 6.48,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-032 target pH 6.6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.72703355884838,
+          43.554852649805056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-33",
+        "sample_id": "PH-033",
+        "zone_name": "Cover Crop",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.98,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-033 target pH 6.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732418193566627,
+          43.55654201224549
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-34",
+        "sample_id": "PH-034",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.88,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-034 target pH 6.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7388737441317765,
+          43.54861771652686
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-35",
+        "sample_id": "PH-035",
+        "zone_name": "Pasture",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 5.98,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-035 target pH 6.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734737389209539,
+          43.54861267974633
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-36",
+        "sample_id": "PH-036",
+        "zone_name": "Pasture",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 6.28,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-036 target pH 6.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73018694626276,
+          43.547237677654834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-37",
+        "sample_id": "PH-037",
+        "zone_name": "Pasture",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 5.88,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-037 target pH 6.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732620821063257,
+          43.55039178346482
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-38",
+        "sample_id": "PH-038",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.98,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-038 target pH 6.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73829159242756,
+          43.55204697247036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-39",
+        "sample_id": "PH-039",
+        "zone_name": "Pasture",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 6.08,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-039 target pH 6.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729642548904623,
+          43.55170368596312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-40",
+        "sample_id": "PH-040",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 6.08,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-040 target pH 6.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736913640933286,
+          43.55250416884344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-41",
+        "sample_id": "PH-041",
+        "zone_name": "Pasture",
+        "ecology": "Riparian Alder Gallery",
+        "ph": 6.28,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-041 target pH 6.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737249262299103,
+          43.55544009437463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-42",
+        "sample_id": "PH-042",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 6.08,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-042 target pH 6.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730272648680367,
+          43.55385788882153
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-43",
+        "sample_id": "PH-043",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 6.18,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-043 target pH 6.3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736943926607366,
+          43.556867881255535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-44",
+        "sample_id": "PH-044",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.98,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-044 target pH 6.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731987052813838,
+          43.555813792702445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-45",
+        "sample_id": "PH-045",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 6.28,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-045 target pH 6.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7360518110231755,
+          43.55755650259058
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-46",
+        "sample_id": "PH-046",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 6.38,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-046 target pH 6.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731801222993691,
+          43.55891862456234
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-47",
+        "sample_id": "PH-047",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.98,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-047 target pH 6.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.734826240477074,
+          43.55992330105589
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-48",
+        "sample_id": "PH-048",
+        "zone_name": "Pasture",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 6.58,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-048 target pH 6.7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730852619306427,
+          43.55932794089845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-49",
+        "sample_id": "PH-049",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "ph": 5.68,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-049 target pH 5.8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.736543189636147,
+          43.55048626478066
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-50",
+        "sample_id": "PH-050",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "ph": 5.48,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-050 target pH 5.6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7293009914862045,
+          43.552370755030054
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-51",
+        "sample_id": "PH-051",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "ph": 5.48,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-051 target pH 5.6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729450657238876,
+          43.55243796021621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-52",
+        "sample_id": "PH-052",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "ph": 5.28,
+        "ph_class": "Acidic",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-052 acidic pH 5.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73472902408639,
+          43.554736541763056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-53",
+        "sample_id": "PH-053",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "ph": 5.38,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-053 target pH 5.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7303870352555535,
+          43.554146801168436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-54",
+        "sample_id": "PH-054",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "ph": 4.98,
+        "ph_class": "Acidic",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-054 acidic pH 5.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.727189540092337,
+          43.554105134604086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-55",
+        "sample_id": "PH-055",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.38,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-055 target pH 5.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.728478008669139,
+          43.555892896116006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-56",
+        "sample_id": "PH-056",
+        "zone_name": "Riparian Buffer",
+        "ecology": "Riparian Alder Gallery",
+        "ph": 5.28,
+        "ph_class": "Acidic",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-056 acidic pH 5.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7360175541305045,
+          43.55669073646795
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-57",
+        "sample_id": "PH-057",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.28,
+        "ph_class": "Acidic",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-057 acidic pH 5.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7392123005975755,
+          43.549540486149226
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-58",
+        "sample_id": "PH-058",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.48,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-058 target pH 5.6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.739321110607445,
+          43.551468460490845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-59",
+        "sample_id": "PH-059",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.08,
+        "ph_class": "Acidic",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-059 acidic pH 5.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737185873969266,
+          43.553328986936094
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-60",
+        "sample_id": "PH-060",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.38,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-060 target pH 5.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732261374423421,
+          43.55349705558244
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-61",
+        "sample_id": "PH-061",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.18,
+        "ph_class": "Acidic",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-061 acidic pH 5.3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.737087973145722,
+          43.554769135826284
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-62",
+        "sample_id": "PH-062",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.38,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-062 target pH 5.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7321157595639285,
+          43.55514990714821
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-63",
+        "sample_id": "PH-063",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 4.98,
+        "ph_class": "Acidic",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-063 acidic pH 5.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7368130277306495,
+          43.556724546862
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-64",
+        "sample_id": "PH-064",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.28,
+        "ph_class": "Acidic",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-064 acidic pH 5.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732225199111276,
+          43.55706427550974
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-65",
+        "sample_id": "PH-065",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.38,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-065 target pH 5.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735148330795389,
+          43.559192104114004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-66",
+        "sample_id": "PH-066",
+        "zone_name": "Deciduous Atlantic Forest",
+        "ecology": "Deciduous Atlantic Forest",
+        "ph": 5.08,
+        "ph_class": "Acidic",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-066 acidic pH 5.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730700034567932,
+          43.559430563955466
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-67",
+        "sample_id": "PH-067",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 5.88,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-067 target pH 6.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730813345258268,
+          43.548744440691
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-68",
+        "sample_id": "PH-068",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 5.88,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-068 target pH 6.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730533078636771,
+          43.548929664171354
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-69",
+        "sample_id": "PH-069",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 5.98,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-069 target pH 6.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730324397220521,
+          43.54931736131332
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-70",
+        "sample_id": "PH-070",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 5.98,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-070 target pH 6.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730918349449746,
+          43.55031403461117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-71",
+        "sample_id": "PH-071",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 5.38,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-071 target pH 5.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735276600466234,
+          43.55133907864801
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-72",
+        "sample_id": "PH-072",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 5.58,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-072 target pH 5.7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73044115342646,
+          43.55145034867202
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-73",
+        "sample_id": "PH-073",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 5.38,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-073 target pH 5.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.728725837667116,
+          43.5518169938348
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "soil_ph-74",
+        "sample_id": "PH-074",
+        "zone_name": "Atlantic Valley Floor",
+        "ecology": "Atlantic Valley Floor",
+        "ph": 5.38,
+        "ph_class": "Target",
+        "timestamp": "2026-02-07T12:00:00Z",
+        "layer_id": "soil_ph",
+        "units": "pH",
+        "summary": "PH-074 target pH 5.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729679378746161,
+          43.55220426529998
+        ]
+      }
+    }
+  ]
+}

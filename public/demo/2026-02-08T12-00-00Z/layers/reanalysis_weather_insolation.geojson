@@ -1,0 +1,461 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-1",
+        "sensor": "SOL-01",
+        "source": "On-site pyranometer",
+        "value": 728.7,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7385604502093805,
+          43.54876374311655
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-2",
+        "sensor": "SOL-02",
+        "source": "On-site pyranometer",
+        "value": 711.3,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7366260836214185,
+          43.54863417262121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-3",
+        "sensor": "SOL-03",
+        "source": "On-site pyranometer",
+        "value": 739.8,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7342982387158195,
+          43.548370992481544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-4",
+        "sensor": "SOL-04",
+        "source": "On-site pyranometer",
+        "value": 752.4,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731970393810222,
+          43.54788049138341
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-5",
+        "sensor": "SOL-05",
+        "source": "On-site pyranometer",
+        "value": 727.0,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.730262143357504,
+          43.547574679606626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-6",
+        "sensor": "SOL-06",
+        "source": "On-site pyranometer",
+        "value": 726.5,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7366260836214185,
+          43.55030284092257
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-7",
+        "sensor": "SOL-07",
+        "source": "On-site pyranometer",
+        "value": 757.1,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7342982387158195,
+          43.55030284092257
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-8",
+        "sensor": "SOL-08",
+        "source": "On-site pyranometer",
+        "value": 745.7,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731970393810222,
+          43.55030284092257
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-9",
+        "sensor": "SOL-09",
+        "source": "On-site pyranometer",
+        "value": 738.8,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73023663348654,
+          43.54997765228907
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-10",
+        "sensor": "SOL-10",
+        "source": "On-site pyranometer",
+        "value": 733.2,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.738186656594358,
+          43.5525941789303
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-11",
+        "sensor": "SOL-11",
+        "source": "On-site pyranometer",
+        "value": 739.4,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7342982387158195,
+          43.552971117190324
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-12",
+        "sensor": "SOL-12",
+        "source": "On-site pyranometer",
+        "value": 761.9,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731970393810222,
+          43.552971117190324
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-13",
+        "sensor": "SOL-13",
+        "source": "On-site pyranometer",
+        "value": 745.3,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729642548904625,
+          43.55298542847512
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-14",
+        "sensor": "SOL-14",
+        "source": "On-site pyranometer",
+        "value": 722.6,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.727477255699123,
+          43.55310383904356
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-15",
+        "sensor": "SOL-15",
+        "source": "On-site pyranometer",
+        "value": 707.3,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.73635958523472,
+          43.556242097999245
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-16",
+        "sensor": "SOL-16",
+        "source": "On-site pyranometer",
+        "value": 746.0,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.731970393810222,
+          43.55563939345807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-17",
+        "sensor": "SOL-17",
+        "source": "On-site pyranometer",
+        "value": 719.8,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729642548904625,
+          43.55563939345807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-18",
+        "sensor": "SOL-18",
+        "source": "On-site pyranometer",
+        "value": 725.9,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.727364514353857,
+          43.55572114568467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-19",
+        "sensor": "SOL-19",
+        "source": "On-site pyranometer",
+        "value": 719.4,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.735832915023815,
+          43.55777601640387
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-20",
+        "sensor": "SOL-20",
+        "source": "On-site pyranometer",
+        "value": 732.2,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.7342982387158195,
+          43.55777044680204
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-21",
+        "sensor": "SOL-21",
+        "source": "On-site pyranometer",
+        "value": 723.8,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.729642548904625,
+          43.55765165385465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-22",
+        "sensor": "SOL-22",
+        "source": "On-site pyranometer",
+        "value": 710.8,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.728113404837973,
+          43.55783200989888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-23",
+        "sensor": "SOL-23",
+        "source": "On-site pyranometer",
+        "value": 732.5,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.733644125001235,
+          43.56120588288991
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reanalysis_weather_insolation-24",
+        "sensor": "SOL-24",
+        "source": "On-site pyranometer",
+        "value": 746.2,
+        "timestamp": "2026-02-08T12:00:00Z",
+        "layer_id": "reanalysis_weather_insolation",
+        "units": "W/m2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.732784983540743,
+          43.561418185438654
+        ]
+      }
+    }
+  ]
+}
