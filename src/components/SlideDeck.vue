@@ -77,13 +77,13 @@
 
     <footer class="app-footer">
       <div class="footer-cta-row">
-    
+        <a class="footer-cta demo-cta" href="/demo/index.html">
+          {{ footerDemoLabel }}
+        </a>
         <button @click="toggleContact" class="footer-cta contact-cta">
-
           {{ $t('footer.contact') }}
         </button>
         <a class="footer-cta quote-cta" href="/quote">
-
           {{ $t('footer.quote') }}
         </a>
       </div>
@@ -244,6 +244,9 @@ export default {
     },
     footerNewsTitle() {
       return introSlide.content[this.currentLang]?.newsTitle || 'Agrobots News';
+    },
+    footerDemoLabel() {
+      return this.currentLang === 'es' ? 'Ir a la demo' : 'Go to demo';
     },
     tickerShouldAnimate() {
       return this.footerNewsItems.length > 1;
@@ -705,6 +708,7 @@ export default {
   grid-area: cta;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
   min-width: 0;
   justify-self: start;
@@ -843,6 +847,7 @@ export default {
   }
   .footer-cta-row {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     gap: 0.6rem;
@@ -850,8 +855,9 @@ export default {
     margin-bottom: 0.5rem;
   }
   .footer-cta {
-    width: 48vw;
-    min-width: 120px;
+    flex: 1 1 calc(50% - 0.6rem);
+    width: auto;
+    min-width: 140px;
     max-width: 210px;
     height: 48px;
     font-size: 0.97rem;

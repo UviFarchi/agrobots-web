@@ -61,7 +61,16 @@
       <p>{{ activeHotspot.info }}</p>
       <button @click="activeHotspot = null" aria-label="Close">×</button>
     </div>
-    <div class="pan-bg-slide" :style="{ 'background-image': currentBgImage }"></div>
+    <div class="pan-bg-slide">
+      <img
+          v-if="currentBgSrc"
+          :key="currentBgSrc"
+          class="pan-bg-image"
+          :src="currentBgSrc"
+          alt=""
+          decoding="async"
+      />
+    </div>
   </div>
 </template>
 
@@ -105,12 +114,12 @@ export default {
         '--button-text-color': this.buttonTextColor
       };
     },
-    currentBgImage() {
+    currentBgSrc() {
       if (!this.modes) return "";
       if (this.mode && this.modes[this.mode]) {
-        return `url(${this.modes[this.mode].bgImage})`;
+        return this.modes[this.mode].bgImage;
       } else if (this.modes.default) {
-        return `url(${this.modes.default.bgImage})`;
+        return this.modes.default.bgImage;
       }
       return "";
     },
@@ -329,27 +338,37 @@ export default {
 }
 
 .pan-bg-slide {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   z-index: -1;
   position: absolute;
-  height: 100%;
-  width: 100vw;
-  animation: panBackground 30s linear infinite;
+  inset: 0;
+  overflow: hidden;
 }
 
-@keyframes panBackground {
-  0% { background-position: 0% 50%; }
-  10% { background-position: 0% 50%; }
-  20% { background-position: 50% 50%; }
-  30% { background-position: 50% 50%; }
-  40% { background-position: 100% 50%; }
-  60% { background-position: 100% 50%; }
-  70% { background-position: 50% 50%; }
-  80% { background-position: 50% 50%; }
-  90% { background-position: 0% 50%; }
-  100% { background-position: 0% 50%; }
+.pan-bg-image {
+  display: block;
+  width: 108%;
+  min-width: 108%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  image-rendering: auto;
+  backface-visibility: hidden;
+  transform: translate3d(-2%, 0, 0) scale(1.02);
+  will-change: transform;
+  animation: panImage 30s linear infinite;
+}
+
+@keyframes panImage {
+  0% { transform: translate3d(-2%, 0, 0) scale(1.02); }
+  10% { transform: translate3d(-2%, 0, 0) scale(1.02); }
+  20% { transform: translate3d(0%, 0, 0) scale(1.02); }
+  30% { transform: translate3d(0%, 0, 0) scale(1.02); }
+  40% { transform: translate3d(2%, 0, 0) scale(1.02); }
+  60% { transform: translate3d(2%, 0, 0) scale(1.02); }
+  70% { transform: translate3d(0%, 0, 0) scale(1.02); }
+  80% { transform: translate3d(0%, 0, 0) scale(1.02); }
+  90% { transform: translate3d(-2%, 0, 0) scale(1.02); }
+  100% { transform: translate3d(-2%, 0, 0) scale(1.02); }
 }
 
 /* Responsive for mobile */

@@ -6,6 +6,8 @@ export default {
     content: {
         en: {
             title: 'LandOS',
+            ctaLabel: 'Go to demo',
+            ctaHref: '/demo/index.html',
             connectMessageBgColor: colors.backgroundLightTranslucent,
             connectMessageTextColor: colors.textDark,
             connectButtonBgColor: colors.secondary,
@@ -72,6 +74,8 @@ export default {
         },
         es: {
             title: 'LandOS',
+            ctaLabel: 'Ir a la demo',
+            ctaHref: '/demo/index.html',
             connectMessageBgColor: colors.backgroundLightTranslucent,
             connectMessageTextColor: colors.textDark,
             connectButtonBgColor: colors.secondary,

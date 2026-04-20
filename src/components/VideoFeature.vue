@@ -64,6 +64,7 @@
             frameborder="0"
             allow="autoplay; encrypted-media"
             allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"
           ></iframe>
           <button class="modal-close" @click="closeModal" aria-label="Close video">×</button>
         </div>

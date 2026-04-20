@@ -1,1 +1,13 @@
-{}
+{
+  "routes": [
+    {
+      "route": "/demo",
+      "redirect": "/demo/",
+      "statusCode": 301
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/static/*", "/assets/*", "/api/*", "/demo/*"]
+  }
+}

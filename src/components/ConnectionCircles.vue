@@ -1,6 +1,11 @@
 <template>
   <section class="connection-shell">
     <h1 v-if="title && hubIndex === -1" class="system-title">{{ title }}</h1>
+    <div v-if="ctaLabel && ctaHref" class="connection-cta-row">
+      <a class="connection-cta" :href="ctaHref">
+        {{ ctaLabel }}
+      </a>
+    </div>
 
     <div class="system-stage">
       <template v-for="(circle, idx) in circles" :key="circle.id || idx">
@@ -109,6 +114,14 @@ export default {
   name: "ConnectionCircles",
   props: {
     title: { type: String, required: true },
+    ctaLabel: {
+      type: String,
+      default: ""
+    },
+    ctaHref: {
+      type: String,
+      default: ""
+    },
     currentSlideIndex: {
       type: Number,
       default: 0
@@ -494,6 +507,34 @@ export default {
   color: var(--textLight, #f7fff7);
 }
 
+.connection-cta-row {
+  display: flex;
+  align-items: center;
+}
+
+.connection-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.7rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid var(--primary, #0b874b);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--textLight, #f7fff7);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+
+.connection-cta:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: color-mix(in srgb, var(--primary, #0b874b) 78%, #ffffff);
+}
+
 .system-stage {
   position: relative;
   flex: 1 1 auto;
@@ -720,6 +761,14 @@ export default {
 }
 
 @media (max-width: 900px) {
+  .connection-cta-row {
+    width: 100%;
+  }
+
+  .connection-cta {
+    width: 100%;
+  }
+
   .system-stage {
     display: flex;
     flex-direction: column;
